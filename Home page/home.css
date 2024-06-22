@@ -2,6 +2,7 @@ body {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
+
 .profile-icon {
   font-size: 22px;
   cursor: pointer;
@@ -15,9 +16,9 @@ body {
   display: none;
 }
 
-#authModal{
+#authModal {
   background-color: rgba(128, 128, 128, 0.303);
-  border: 2px solid ;
+  border: 2px solid;
   border-radius: 10px;
   color: white;
   width: 60%;
@@ -124,7 +125,7 @@ section a {
   position: absolute;
   left: -100%;
   width: 100%;
-  top: 15px;
+  top: 60px;
   text-align: center;
   color: white;
   font-weight: bold;
@@ -134,7 +135,7 @@ section a {
 
 .story:hover .play-text {
   left: 0;
-  top: 15px;
+  top: 60px;
 }
 
 #shortModal {
@@ -254,17 +255,24 @@ input[type="radio"]:checked + .radios-buttons label[for="radio3"] {
 .item-img {
   cursor: pointer;
   overflow: hidden;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .item-img img {
   transition: all ease 0.6s;
+  width: 318px;
+  height: 318px;
 }
 
 .item-img img:hover {
   scale: 1.2;
 }
 
-.card-title{
+.card-title-div {
+  border-radius: 0px 0px 10px 10px;
+}
+
+.card-title {
   cursor: pointer;
 }
 .carousel-control-prev,
@@ -314,7 +322,6 @@ input[type="radio"]:checked + .radios-buttons label[for="radio3"] {
 .custom-slider {
   display: flex;
   transition: transform 0.5s ease;
-  
 }
 
 .custom-slide {
@@ -372,4 +379,3 @@ input[type="radio"]:checked + .radios-buttons label[for="radio3"] {
 .custom-slider-control-next {
   right: 10px;
 }
-
