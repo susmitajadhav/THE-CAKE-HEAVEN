@@ -129,16 +129,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 $(document).ready(function () {
-  $("#shortModal").on("show.bs.modal", function (event) {
-    var button = $(event.relatedTarget); // Button that triggered the modal
-    var videoUrl = button.data("video"); // Extract info from data-* attributes
-    var modal = $(this);
-    modal.find("iframe").attr("src", videoUrl);
+  $(".story").on("click", function () {
+    var videoSrc = $(this).data("video");
+    $("#shortModal iframe").attr("src", videoSrc);
   });
 
   $("#shortModal").on("hidden.bs.modal", function () {
-    var modal = $(this);
-    modal.find("iframe").attr("src", "");
+    $("#shortModal iframe").attr("src", "");
   });
 });
 
@@ -267,5 +264,3 @@ setInterval(() => {
 }, 5000);
 
 Object.keys(customSliders).forEach((id) => updateCustomSlider(id));
-
-

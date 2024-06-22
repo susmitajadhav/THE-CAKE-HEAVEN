@@ -1,6 +1,5 @@
 body {
-  /* background-color: #fadadd; */
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
 .profile-icon {
@@ -57,17 +56,9 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Poppins", sans-serif;
   font-weight: 700;
 }
 
-p {
-  font-family: "Lora", serif;
-}
-.header {
-  /* background-color: #fadadd; */
-  font-family: "Poppins", sans-serif;
-}
 .main-page {
   min-height: 200vh;
 }
@@ -133,8 +124,9 @@ section a {
   position: absolute;
   left: -100%;
   width: 100%;
+  top: 15px;
   text-align: center;
-  color: rgb(222, 88, 157);
+  color: white;
   font-weight: bold;
   font-size: 1rem;
   transition: left 0.3s;
@@ -142,6 +134,7 @@ section a {
 
 .story:hover .play-text {
   left: 0;
+  top: 15px;
 }
 
 #shortModal {
