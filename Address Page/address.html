@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="address.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        font-family: "Gill Sans", sans-serif;
+      }
+
+      .breadcrumb {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .breadcrumb a {
+        color: black;
+      }
+      footer,
+      section {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .address-form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .address-card {
+        max-width: 300px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .radio-selector {
+        scale: 1.2;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d-flex header justify-content-between pb-2">
+      <div class="col pt-2 px-2">
+        <img
+          src="../Media/logo.jpg"
+          class="border-end border-dark rounded-pill"
+          width="80px"
+          height="80px"
+          alt=""
+        />
+      </div>
+      <div class="col mt-2 align-self-center">
+        <input
+          class="form-control rounded-pill"
+          type="search"
+          placeholder="Search for cakes, desserts, and more"
+          aria-label="Search"
+        />
+      </div>
+      <div class="col text-end icons align-self-center mb-1">
+        <a href="../Category Page/cake_list.html"
+          ><i
+            class="fas fa-cart-shopping px-4"
+            style="font-size: 22px; cursor: pointer; color: black"
+          ></i
+        ></a>
+
+        <a href="../Cart Page/wishlist.html"
+          ><i
+            class="fas fa-heart"
+            style="font-size: 22px; cursor: pointer; color: black"
+          ></i
+        ></a>
+        <a href="../Profile Page/profile.html"
+          ><i
+            class="fa fa-user px-4"
+            aria-hidden="true"
+            style="font-size: 22px; cursor: pointer; color: black"
+          ></i
+        ></a>
+      </div>
+    </div>
+
+    <div class="d-flex breadcrumb mb-0">
+      <div class="mt-1 mb-1">
+        <a class="nav-link active" href="../Cart Page/cart.html">Cart /</a>
+      </div>
+      <div class="mt-1 mb-1">
+        <a class="nav-link" href="../Address Page/address.html"
+          >Delivery Address /</a
+        >
+      </div>
+      <div class="mt-1 mb-1">
+        <a class="nav-link" href="../Cart Page/review.html">Review Order</a>
+      </div>
+    </div>
+
+    <div class="pt-5">
+      <h2 class="mb-4 text-center">Shipping Address</h2>
+      <div
+        id="noSavedAddressMessage"
+        class="alert alert-warning"
+        style="display: none"
+      >
+        You don't have a saved address.
+        <button class="btn btn-primary btn-sm mt-2" onclick="showAddressForm()">
+          Add Address
+        </button>
+      </div>
+      <div class="text-center" id="savedAddressesList" style="display: none">
+        <h5>Saved Addresses</h5>
+        <div id="savedAddresses" class="row"></div>
+        <div>
+          <button class="btn btn-primary btn-md" onclick="showAddressForm()">
+            Add Another Address
+          </button>
+        </div>
+        <div>
+          <button
+            id="reviewOrderButton"
+            class="btn btn-success btn-lg mt-4 mb-3"
+            onclick="reviewOrder()"
+          >
+            Review Your Order
+          </button>
+        </div>
+      </div>
+      <form class="address-form" id="addressForm" style="display: none">
+        <div class="mb-3">
+          <label for="fullNameInput" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullNameInput" required />
+        </div>
+        <div class="mb-3">
+          <label for="mobileNumberInput" class="form-label"
+            >Contact Number</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="mobileNumberInput"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="addressInput" class="form-label">Address</label>
+          <input type="text" class="form-control" id="addressInput" required />
+        </div>
+        <div class="mb-3">
+          <label for="cityInput" class="form-label">City</label>
+          <input type="text" class="form-control" id="cityInput" required />
+        </div>
+        <div class="mb-3">
+          <label for="stateInput" class="form-label">State</label>
+          <input type="text" class="form-control" id="stateInput" required />
+        </div>
+        <div class="mb-3">
+          <label for="zipInput" class="form-label">Zip Code</label>
+          <input type="text" class="form-control" id="zipInput" required />
+        </div>
+        <div class="mb-3">
+          <label for="countryInput" class="form-label">Country</label>
+          <input type="text" class="form-control" id="countryInput" required />
+        </div>
+        <div class="mb-3 form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="saveAddressCheckbox"
+          />
+          <label class="form-check-label" for="saveAddressCheckbox"
+            >Save this address for future orders</label
+          >
+        </div>
+        <button
+          type="button"
+          class="btn btn-primary btn-block"
+          onclick="saveAddress()"
+        >
+          Save and Continue
+        </button>
+      </form>
+    </div>
+
+    <footer class="text-center text-lg-start bg-body-tertiary mt-0">
+      <section
+        class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom"
+      >
+        <div class="me-3 d-none d-lg-block">
+          <span>Get connected with us on social networks :</span>
+        </div>
+
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="border-bottom">
+        <div class="container text-center text-md-start pt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>THE CAKE HEAVEN
+              </h6>
+              <p>
+                "Experience the divine taste of our handcrafted delights at The
+                Cake Heaven where every bite is a slice of paradise. Join us in
+                celebrating life's sweetest moments!"
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">COLLECTIONS</h6>
+              <p>
+                <a href="#!" class="text-reset">Same Day Cakes</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Classic Cakes</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Custom Cakes</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Cup Cakes</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Desserts</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Flowers</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Anniversary Cakes</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Birthday Cakes</a>
+              </p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">QUICK LINKS</h6>
+              <p>
+                <a href="#!" class="text-reset">Contact Us</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">About us</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Privacy Policy</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Terms & Conditions</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Shipping Policy</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Return & Refund Policy</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">FAQs</a>
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                info@example.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center pb-3 pt-3">
+        © 2024 Copyright:
+        <a class="text-reset fw-bold text-light" href="https://mdbootstrap.com/"
+          >Example.com</a
+        >
+      </section>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var currentLocation = window.location.pathname;
+        var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+        navLinks.forEach(function (link) {
+          if (link.getAttribute("href") === currentLocation) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      });
+
+      function showAddressForm() {
+        document.getElementById("addressForm").style.display = "block";
+        document.getElementById("savedAddressesList").style.display = "none";
+        document.getElementById("noSavedAddressMessage").style.display = "none";
+      }
+
+      function saveAddress() {
+        const address = {
+          fullName: document.getElementById("fullNameInput").value,
+          mobileNumber: document.getElementById("mobileNumberInput").value,
+          address: document.getElementById("addressInput").value,
+          city: document.getElementById("cityInput").value,
+          state: document.getElementById("stateInput").value,
+          zip: document.getElementById("zipInput").value,
+          country: document.getElementById("countryInput").value,
+          saveAddress: document.getElementById("saveAddressCheckbox").checked,
+        };
+
+        let addresses =
+          JSON.parse(localStorage.getItem("savedAddresses")) || [];
+        addresses.push(address);
+        localStorage.setItem("savedAddresses", JSON.stringify(addresses));
+
+        displaySavedAddresses();
+      }
+
+      function deleteAddress(index) {
+        let addresses = JSON.parse(localStorage.getItem("savedAddresses"));
+        addresses.splice(index, 1);
+        localStorage.setItem("savedAddresses", JSON.stringify(addresses));
+        displaySavedAddresses();
+      }
+
+      function displaySavedAddresses() {
+        const addresses =
+          JSON.parse(localStorage.getItem("savedAddresses")) || [];
+        const savedAddresses = document.getElementById("savedAddresses");
+        savedAddresses.innerHTML = "";
+
+        if (addresses.length > 0) {
+          addresses.forEach((address, index) => {
+            const addressCard = document.createElement("div");
+            addressCard.className = "address-card";
+            addressCard.innerHTML = `
+        <input type="radio" name="selectedAddress" class="radio-selector" onclick="selectAddress(${index})">
+        <p>${address.fullName}</p>
+        <p>${address.mobileNumber}</p>
+        <p>${address.address}</p>
+        <p>${address.city}, ${address.state}, ${address.zip}</p>
+        <p>${address.country}</p>
+        <button class="btn btn-secondary btn-sm" onclick="editAddress(${index})">Edit</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteAddress(${index})">Delete</button>
+      `;
+            savedAddresses.appendChild(addressCard);
+          });
+
+          document.getElementById("savedAddressesList").style.display = "block";
+          document.getElementById("addressForm").style.display = "none";
+          document.getElementById("noSavedAddressMessage").style.display =
+            "none";
+        } else {
+          document.getElementById("noSavedAddressMessage").style.display =
+            "block";
+        }
+      }
+
+      function editAddress(index) {
+        const addresses = JSON.parse(localStorage.getItem("savedAddresses"));
+        const address = addresses[index];
+        document.getElementById("fullNameInput").value = address.fullName;
+        document.getElementById("mobileNumberInput").value =
+          address.mobileNumber;
+        document.getElementById("addressInput").value = address.address;
+        document.getElementById("cityInput").value = address.city;
+        document.getElementById("stateInput").value = address.state;
+        document.getElementById("zipInput").value = address.zip;
+        document.getElementById("countryInput").value = address.country;
+        document.getElementById("saveAddressCheckbox").checked =
+          address.saveAddress;
+
+        showAddressForm();
+
+        addresses.splice(index, 1); // Remove the address being edited
+        localStorage.setItem("savedAddresses", JSON.stringify(addresses)); // Update the saved addresses
+      }
+
+      function selectAddress(index) {
+        const addresses = JSON.parse(localStorage.getItem("savedAddresses"));
+        const selectedAddress = addresses[index];
+        localStorage.setItem(
+          "selectedShippingAddress",
+          JSON.stringify(selectedAddress)
+        );
+      }
+
+      function reviewOrder() {
+        const selectedAddress = localStorage.getItem("selectedShippingAddress");
+        if (selectedAddress) {
+          window.location.href = "../Cart Page/review.html";
+        } else {
+          alert("Please select a shipping address.");
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        displaySavedAddresses();
+      });
+    </script>
+  </body>
+</html>

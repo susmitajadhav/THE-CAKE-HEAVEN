@@ -1,0 +1,37 @@
+body {
+    font-family: "Gill Sans", sans-serif;
+  }
+  .cp {
+    min-height: 100vh;
+  }
+  .breadcrumb {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .breadcrumb a {
+    color: black;
+  }
+  .empty-message {
+    text-align: center;
+    font-size: 18px;
+    display: none;
+  }
+  .empty-cart-image {
+    width: 30rem;
+    mix-blend-mode: multiply;
+  }
+  footer,
+  section {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .cake-img {
+    width: 150px;
+  }
+  .cake-card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .order-summary {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    display: none
+  }
