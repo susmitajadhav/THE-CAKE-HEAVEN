@@ -217,7 +217,7 @@ Object.keys(carousels).forEach((id) => updateCarousel(id));
 let customSliders = {
   "custom-slider-reviews": {
     currentIndex: 0,
-    visibleItems: 2,
+    visibleItems: 3,
   },
 };
 
