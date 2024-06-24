@@ -112,38 +112,47 @@
       </div>
     </div>
 
-
     <div
-    class="col-12 col-sm-12 col-md-12 justify-content-center breadcrumb mb-0 mt-2"
-  >
-    <div class="row">
-      <div class="pt-3 px-2 pb-3 col-2 col-sm-3 col-md-3">
-        <a class="nav-link active" href="../Home page/home.html">Home</a>
-      </div>
-      <div class="pt-3 px-2 pb-3 col-2 col-sm-3 col-md-3">
-        <a class="nav-link" href="../Category Page/cake_list.html">Catalogue</a>
-      </div>
-      <div class="pt-3 px-5 pb-3 col-2 col-sm-3 col-md-3">
-        <a class="nav-link" href="">About</a>
-      </div>
-      <div class="pt-3 px-5 pb-3 col-2 col-sm-3 col-md-3">
-        <a class="nav-link" href="">Contact</a>
-      </div>
-    </div>
-  </div>
-
-    <div
-      class="pb-5 pt-2 col-lg-12"
+      class="col-12 col-sm-12 col-md-12 justify-content-center breadcrumb mb-0 mt-2"
     >
       <div class="row">
+        <div class="pt-3 px-2 pb-3 col-2 col-sm-3 col-md-3">
+          <a class="nav-link active" href="../Home page/home.html">Home</a>
+        </div>
+        <div class="pt-3 px-2 pb-3 col-2 col-sm-3 col-md-3">
+          <a class="nav-link" href="../Category Page/cake_list.html"
+            >Catalogue</a
+          >
+        </div>
+        <div class="pt-3 px-5 pb-3 col-2 col-sm-3 col-md-3">
+          <a class="nav-link" href="">About</a>
+        </div>
+        <div class="pt-3 px-5 pb-3 col-2 col-sm-3 col-md-3">
+          <a class="nav-link" href="">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pb-5 pt-2 col-lg-12">
+      <div class="row">
         <div class="col-lg-2 mt-4 side-card text-center align-self-top">
-          <a class="nav-link active mt-4 mx-2 mb-3" href="../Profile Page/profile.html"
+          <a
+            class="nav-link active mt-4 mx-2 mb-3"
+            href="../Profile Page/profile.html"
             >My Account</a
           >
-          <a class="nav-link mt-3 mx-2 mb-3" href="../Cart Page/orders.html">My Orders</a>
-          <a class="nav-link mt-3 mx-2 mb-3" href="../Cart Page/wishlist.html">My Wishlist</a>
-          <a class="nav-link mt-3 mx-2 mb-3" href="../Wallet Page/wallet.html">My Wallet</a>
-          <a class="nav-link mt-3 mx-2 mb-4" href="../Address Page/manage-address.html"
+          <a class="nav-link mt-3 mx-2 mb-3" href="../Cart Page/orders.html"
+            >My Orders</a
+          >
+          <a class="nav-link mt-3 mx-2 mb-3" href="../Cart Page/wishlist.html"
+            >My Wishlist</a
+          >
+          <a class="nav-link mt-3 mx-2 mb-3" href="../Wallet Page/wallet.html"
+            >My Wallet</a
+          >
+          <a
+            class="nav-link mt-3 mx-2 mb-4"
+            href="../Address Page/manage-address.html"
             >Manage Address</a
           >
         </div>
@@ -151,13 +160,12 @@
           <h2 class="mb-4 text-center">Wallet Details</h2>
           <div class="container mt-5">
             <div id="rewardBalance" class="mb-4">
-                <!-- Reward balance will be displayed here -->
+              <!-- Reward balance will be displayed here -->
             </div>
             <div id="rewardHistory">
-                <!-- Reward history will be dynamically inserted here -->
+              <!-- Reward history will be dynamically inserted here -->
             </div>
-        </div>
-
+          </div>
         </div>
       </div>
     </div>
@@ -297,22 +305,24 @@
       });
 
       const rewardHistory = [
-        { date: '2024-01-01', amount: 50 },
-        { date: '2024-02-01', amount: 30 },
-        { date: '2024-03-01', amount: 20 }
-    ];
-    if (!localStorage.getItem('rewardHistory')) {
-        localStorage.setItem('rewardHistory', JSON.stringify(rewardHistory));
-    }
+        { date: "2024-01-01", amount: 50 },
+        { date: "2024-02-01", amount: 30 },
+        { date: "2024-03-01", amount: 20 },
+      ];
+      if (!localStorage.getItem("rewardHistory")) {
+        localStorage.setItem("rewardHistory", JSON.stringify(rewardHistory));
+      }
 
-      document.addEventListener('DOMContentLoaded', () => {
-    const rewardBalanceContainer = document.getElementById('rewardBalance');
-    const rewardHistoryContainer = document.getElementById('rewardHistory');
-    const rewardCredits = parseInt(localStorage.getItem('rewardCredits'), 10) || 100;
-    const rewardHistory = JSON.parse(localStorage.getItem('rewardHistory')) || [];
+      document.addEventListener("DOMContentLoaded", () => {
+        const rewardBalanceContainer = document.getElementById("rewardBalance");
+        const rewardHistoryContainer = document.getElementById("rewardHistory");
+        const rewardCredits =
+          parseInt(localStorage.getItem("rewardCredits"), 10) || 100;
+        const rewardHistory =
+          JSON.parse(localStorage.getItem("rewardHistory")) || [];
 
-    const loadWallet = () => {
-        rewardBalanceContainer.innerHTML = `
+        const loadWallet = () => {
+          rewardBalanceContainer.innerHTML = `
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Reward Credits Balance</h5>
@@ -323,15 +333,16 @@
             </div>
         `;
 
-        if (rewardHistory.length === 0) {
-            rewardHistoryContainer.innerHTML = '<p class="text-center">No reward history available.</p>';
+          if (rewardHistory.length === 0) {
+            rewardHistoryContainer.innerHTML =
+              '<p class="text-center">No reward history available.</p>';
             return;
-        }
+          }
 
-        rewardHistoryContainer.innerHTML = '';
-        rewardHistory.forEach((historyItem, index) => {
-            const historyCard = document.createElement('div');
-            historyCard.className = 'card mb-3';
+          rewardHistoryContainer.innerHTML = "";
+          rewardHistory.forEach((historyItem, index) => {
+            const historyCard = document.createElement("div");
+            historyCard.className = "card mb-3";
             historyCard.innerHTML = `
                 <div class="card-body">
                     <h5 class="card-title">Transaction ${index + 1}</h5>
@@ -342,12 +353,11 @@
                 </div>
             `;
             rewardHistoryContainer.appendChild(historyCard);
-        });
-    };
+          });
+        };
 
-    loadWallet();
-});
-
+        loadWallet();
+      });
     </script>
   </body>
 </html>

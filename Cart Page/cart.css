@@ -25,9 +25,11 @@ body {
   }
   .cake-img {
     width: 150px;
+    border-radius: 10px 0px 0px 10px;
   }
   .cake-card {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
   }
   .order-summary {
     border: 1px solid #ddd;

@@ -24,17 +24,19 @@
       body {
         font-family: "Gill Sans", sans-serif;
       }
+
       .breadcrumb {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
       .breadcrumb a {
         color: black;
       }
-      .main-page {
+      .main-page{
         min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      }
+      footer,
+      section {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
       .address-form {
         max-width: 500px;
@@ -44,6 +46,7 @@
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
+
       .address-card {
         max-width: 300px;
         margin: 20px auto;
@@ -55,24 +58,6 @@
       .radio-selector {
         scale: 1.2;
         cursor: pointer;
-      }
-      #reviewOrderButton {
-        background: linear-gradient(135deg, black, grey);
-        border: none;
-        padding: 15px 30px;
-        font-size: 18px;
-        color: #fff;
-        border-radius: 50px;
-        transition: all ease 0.3s;
-        display: none; /* Initially hidden */
-      }
-      #reviewOrderButton:hover {
-        background: linear-gradient(135deg, grey, black);
-        scale: 0.98;
-      }
-      footer,
-      section {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
     </style>
   </head>
@@ -132,6 +117,7 @@
         <a class="nav-link" href="../Cart Page/review.html">Review Order</a>
       </div>
     </div>
+
     <div class="container main-page col-lg-12">
       <div class="row">
         <h2 class="my-4 text-center fw-bold">Shipping Address</h2>
@@ -143,35 +129,36 @@
           >
             You don't have a saved address.
             <button
-              class="btn btn-primary btn-sm"
+              class="btn btn-primary btn-sm mt-2"
               onclick="showAddressForm()"
             >
               Add Address
             </button>
           </div>
           <div
-            id="savedAddressesList"
             class="text-center"
+            id="savedAddressesList"
             style="display: none"
           >
-            <h5>Saved Addresses</h5>
-            <div id="savedAddresses" class="row gx-0"></div>
+        </div>
+        <h5>Saved Addresses</h5>
+        <div id="savedAddresses" class="row gx-0"></div>
+        <div>
+          <button
+            class="btn btn-primary btn-md"
+            onclick="showAddressForm()"
+          >
+            Add Another Address
+          </button>
+        </div>
+        </div>
+        <div class="container col-lg-4 text-center mt-2">
+          <div class="container mt-5">
+            
             <div>
               <button
-                class="btn btn-primary btn-md mb-4"
-                onclick="showAddressForm()"
-              >
-                Add Another Address
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="container col-lg-4 pt-5 px-5">
-          <div class="container mt-5 px-5">
-            <div class="">
-              <button
                 id="reviewOrderButton"
-                class="btn btn-success btn-lg"
+                class="btn btn-success btn-lg mt-4 mb-3"
                 onclick="reviewOrder()"
               >
                 Review Your Order
@@ -250,6 +237,7 @@
         </form>
       </div>
     </div>
+
     <footer class="text-center text-lg-start bg-body-tertiary mt-0">
       <section
         class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom"
@@ -371,6 +359,19 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var currentLocation = window.location.pathname;
+        var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+        navLinks.forEach(function (link) {
+          if (link.getAttribute("href") === currentLocation) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      });
+
       function showAddressForm() {
         document.getElementById("addressForm").style.display = "block";
         document.getElementById("savedAddressesList").style.display = "none";
@@ -415,28 +416,25 @@
             const addressCard = document.createElement("div");
             addressCard.className = "address-card";
             addressCard.innerHTML = `
-                        <input type="radio" name="selectedAddress" class="radio-selector" onclick="selectAddress(${index})">
-                        <p>${address.fullName}</p>
-                        <p>${address.mobileNumber}</p>
-                        <p>${address.address}</p>
-                        <p>${address.city}, ${address.state}, ${address.zip}</p>
-                        <p>${address.country}</p>
-                        <button class="btn btn-secondary btn-sm" onclick="editAddress(${index})">Edit</button>
-                        <button class="btn btn-danger btn-sm" onclick="deleteAddress(${index})">Delete</button>
-                    `;
+        <input type="radio" name="selectedAddress" class="radio-selector" onclick="selectAddress(${index})">
+        <p>${address.fullName}</p>
+        <p>${address.mobileNumber}</p>
+        <p>${address.address}</p>
+        <p>${address.city}, ${address.state}, ${address.zip}</p>
+        <p>${address.country}</p>
+        <button class="btn btn-secondary btn-sm" onclick="editAddress(${index})">Edit</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteAddress(${index})">Delete</button>
+      `;
             savedAddresses.appendChild(addressCard);
           });
 
           document.getElementById("savedAddressesList").style.display = "block";
-          document.getElementById("reviewOrderButton").style.display = "block";
           document.getElementById("addressForm").style.display = "none";
           document.getElementById("noSavedAddressMessage").style.display =
             "none";
         } else {
           document.getElementById("noSavedAddressMessage").style.display =
             "block";
-          document.getElementById("savedAddressesList").style.display = "none";
-          document.getElementById("reviewOrderButton").style.display = "none";
         }
       }
 
