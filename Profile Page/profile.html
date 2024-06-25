@@ -38,12 +38,15 @@
         scale: 1.05;
         color: black;
       }
-      
-      .side-card {
+
+      .sticky-filter {
+        position: sticky;
+        top: 20px;
+        padding: 10px;
         background-color: white;
         border: 1px solid #ddd;
         border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
       .side-card a {
         font-size: 20px;
@@ -114,40 +117,49 @@
       </div>
     </div>
 
-
     <div
-    class="col-12 col-sm-12 col-md-12 justify-content-center breadcrumb mb-0 mt-2"
-  >
-    <div class="row">
-      <div class="pt-3 px-2 pb-3 col-2 col-sm-3 col-md-3">
-        <a class="nav-link active" href="../Home page/home.html">Home</a>
-      </div>
-      <div class="pt-3 px-2 pb-3 col-2 col-sm-3 col-md-3">
-        <a class="nav-link" href="../Category Page/cake_list.html">Catalogue</a>
-      </div>
-      <div class="pt-3 px-5 pb-3 col-2 col-sm-3 col-md-3">
-        <a class="nav-link" href="">About</a>
-      </div>
-      <div class="pt-3 px-5 pb-3 col-2 col-sm-3 col-md-3">
-        <a class="nav-link" href="">Contact</a>
+      class="col-12 col-sm-12 col-md-12 justify-content-center breadcrumb mb-0 mt-2"
+    >
+      <div class="row">
+        <div class="pt-3 px-2 pb-3 col-2 col-sm-3 col-md-3">
+          <a class="nav-link active" href="../Home page/home.html">Home</a>
+        </div>
+        <div class="pt-3 px-2 pb-3 col-2 col-sm-3 col-md-3">
+          <a class="nav-link" href="../Category Page/cake_list.html"
+            >Catalogue</a
+          >
+        </div>
+        <div class="pt-3 px-5 pb-3 col-2 col-sm-3 col-md-3">
+          <a class="nav-link" href="">About</a>
+        </div>
+        <div class="pt-3 px-5 pb-3 col-2 col-sm-3 col-md-3">
+          <a class="nav-link" href="">Contact</a>
+        </div>
       </div>
     </div>
-  </div>
 
-
-    <div
-      class="pb-5 pt-2 col-lg-12">
+    <div class="pb-5 pt-2 col-lg-12">
       <div class="row">
         <div class="col-lg-2 mt-4 side-card text-center align-self-top">
-          <a class="nav-link active mt-4 mx-2 mb-3" href="profile.html"
-            >My Account</a
-          >
-          <a class="nav-link mt-3 mx-2 mb-3" href="../Cart Page/orders.html">My Orders</a>
-          <a class="nav-link mt-3 mx-2 mb-3" href="../Cart Page/wishlist.html">My Wishlist</a>
-          <a class="nav-link mt-3 mx-2 mb-3" href="../Wallet Page/wallet.html">My Wallet</a>
-          <a class="nav-link mt-3 mx-2 mb-4" href="../Address Page/manage-address.html"
-            >Manage Address</a
-          >
+          <div class="sticky-filter">
+            <a
+              class="nav-link active mt-4 mx-2 mb-3"
+              href="../Profile Page/profile.html"
+              >My Account</a
+            >
+            <a class="nav-link mt-3 mx-2 mb-3" href="../Cart Page/orders.html"
+              >My Orders</a
+            >
+            <a class="nav-link mt-3 mx-2 mb-3" href="../Cart Page/wishlist.html"
+              >My Wishlist</a
+            >
+            <a class="nav-link mt-3 mx-2 mb-3" href="../Wallet Page/wallet.html"
+              >My Wallet</a
+            >
+            <a class="nav-link mt-3 mx-2 mb-4" href="../Address Page/manage-address.html"
+              >Manage Address</a
+            >
+          </div>
         </div>
         <div class="container col-lg-4 text-center mt-2">
           <h1><strong>Profile Details</strong></h1>

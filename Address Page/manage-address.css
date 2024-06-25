@@ -14,12 +14,16 @@ body {
     scale: 1.05;
     color: black;
   }
-  .side-card {
+  .sticky-filter {
+    position: sticky;
+    top: 20px;
+    padding: 10px;
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+ 
   .side-card a {
     font-size: 20px;
     font-weight: bold;
@@ -47,7 +51,7 @@ body {
   }
 
   .address-card {
-    max-width: 600px;
+    width: 280px;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ddd;

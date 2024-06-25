@@ -20,7 +20,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
   </head>
 
   <body>
@@ -42,10 +41,16 @@
           aria-label="Search"
         />
       </div>
-      <div class="col text-end icons align-self-center mb-1">
+      <div class="col text-end icons align-self-center px-1 mb-1">
+        <a href="../index.html"
+          ><i
+            class="fas fa-home"
+            style="font-size: 22px; cursor: pointer; color: black"
+          ></i
+        ></a>
         <a href="../Cart Page/cart.html"
           ><i
-            class="fas fa-cart-shopping px-4"
+            class="fas fa-cart-shopping px-3"
             style="font-size: 22px; cursor: pointer; color: black"
           ></i
         ></a>
@@ -58,7 +63,7 @@
         ></a>
         <a href="../Profile Page/profile.html"
           ><i
-            class="fa fa-user px-4"
+            class="fa fa-user px-3"
             aria-hidden="true"
             style="font-size: 22px; cursor: pointer; color: black"
           ></i
@@ -71,16 +76,25 @@
         <a class="nav-link active" href="../Cart Page/cart.html">Cart /</a>
       </div>
       <div class="mt-1 mb-1">
-        <a class="nav-link" href="../Address Page/address.html">Delivery Address /</a>
+        <a class="nav-link" href="../Address Page/address.html"
+          >Delivery Address /</a
+        >
       </div>
       <div class="mt-1 mb-1">
         <a class="nav-link" href="../Cart Page/review.html">Review Order</a>
       </div>
     </div>
 
-    <div class="container col-md-12 col-lg-12 pt-4 cp">
+    <div class="container main-page col-md-12 col-lg-12 pt-4">
       <h1 class="text-center mb-4" id="page-title">Your Cart</h1>
-      <div class="empty-message text-center" id="empty-message"><img src="../Media/preview.png" class="empty-cart-image img-fluid" alt="Empty Cart"><h1>There are no items in the cart.</h1></div>
+      <div class="empty-message text-center" id="empty-message">
+        <img
+          src="../Media/preview.png"
+          class="empty-cart-image img-fluid"
+          alt="Empty Cart"
+        />
+        <h1>There are no items in the cart.</h1>
+      </div>
       <div class="row">
         <div class="col-md-9 col-xl-9 col-lg-9" id="carts-items">
           <div id="cartItems" class="mx-2">
@@ -88,10 +102,7 @@
           </div>
         </div>
         <div class="col-md-3 col-xl-3 col-lg-3 px-4">
-          <div
-            class="card order-summary text-center"
-            id="order-summary"
-          >
+          <div class="card order-summary text-center" id="order-summary">
             <h4>Order Summary</h4>
             <p>Items Price: <span id="itemsPrice">₹0</span></p>
             <p>Shipping Charge: <span id="shippingCharge">₹40</span></p>
