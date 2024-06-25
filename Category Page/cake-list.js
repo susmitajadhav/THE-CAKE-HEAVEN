@@ -202,7 +202,7 @@
         const priceRangeValue = document.getElementById("priceRange").value;
         document.getElementById(
           "priceRangeValue"
-        ).textContent = `Rs. 200 - Rs. ${priceRangeValue}`;
+        ).textContent = `Rs. 200 - Rs. ${priceRangeValue} - Rs. 5000`;
       }
 
       function displayFilteredCakes(cakes) {
