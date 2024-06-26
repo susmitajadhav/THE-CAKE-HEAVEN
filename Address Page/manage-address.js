@@ -53,7 +53,7 @@ savedAddresses.innerHTML = "";
 if (addresses.length > 0) {
   addresses.forEach((address, index) => {
     const addressCard = document.createElement("div");
-    addressCard.className = "address-card";
+    addressCard.className = "address-card col-lg-3 mx-2";
     addressCard.innerHTML = `
     <p>${address.fullName}</p>
     <p>${address.mobileNumber}</p>

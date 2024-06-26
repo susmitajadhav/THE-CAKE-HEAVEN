@@ -57,7 +57,7 @@
         margin-bottom: 20px;
       }
       .cake-img {
-        width: 100px;
+        width: 120px;
       }
 
       footer,
@@ -145,9 +145,9 @@
       </div>
     </div>
 
-    <div class="d-flex breadcrumb mb-0">
+    <div class="breadcrumb mb-0">
       <div class="mt-1 mb-1">
-        <a class="nav-link active" href="../Cart Page/cart.html">Cart /</a>
+        <a class="nav-link " href="../Cart Page/cart.html">Cart /</a>
       </div>
       <div class="mt-1 mb-1">
         <a class="nav-link" href="../Address Page/address.html"
@@ -155,7 +155,7 @@
         >
       </div>
       <div class="mt-1 mb-1">
-        <a class="nav-link" href="../Cart Page/review.html">Review Order</a>
+        <a class="nav-link active" href="../Cart Page/review.html">Review Order</a>
       </div>
     </div>
 
@@ -171,15 +171,10 @@
       </div>
       <div class="row">
         <div class="col-lg-6 text-center">
-          <div id="Address-box">
-            <div id="shippingAddressCard" class="address-card">
-              <h3>Shipping Address</h3>
-              <p id="shippingAddressContent"></p>
-              <a href="../Address Page/address.html"
-                ><button class="btn btn-secondary btn-sm">
-                  Change Address
-                </button></a
-              >
+          <div class="order-container" id="cart-Container">
+            <h3 class="text-center" id="page-title">Order Items</h3>
+            <div id="cartItems" class="">
+              <!-- Cart items will be dynamically inserted here -->
             </div>
           </div>
           <!-- Delivery Details Form -->
@@ -259,73 +254,81 @@
               id="deliveryDetails"
               class="delivery-details-card text-center"
             ></div>
-            <div class="order-container" id="cart-Container">
-              <h3 class="text-center" id="page-title">Order Items</h3>
-              <div id="cartItems" class="">
-                <!-- Cart items will be dynamically inserted here -->
-              </div>
+          </div>
+          <div id="Address-box">
+            <div id="shippingAddressCard" class="address-card">
+              <h3>Shipping Address</h3>
+              <p id="shippingAddressContent"></p>
+              <a href="../Address Page/address.html"
+                ><button class="btn btn-secondary btn-sm">
+                  Change Address
+                </button></a
+              >
             </div>
           </div>
         </div>
         <div class="col-lg-6 text-center">
-          
-          <div class="sticky-filter my-4 ">
-          <div class="col-md-12 text-center py-4" id="Order-Summary">
-            <div class="order-summary" id="order-summary" style="display: none">
-              <h4>Order Summary</h4>
-              <p>Items Price: <span id="itemsPrice">₹0</span></p>
-              <p>Shipping Charge: <span id="shippingCharge">₹40</span></p>
-              <h5>Total Price: <span id="totalPrice">₹40</span></h5>
-              <div id="promoCodeSection" class="">
-                <p
-                  id="applyPromoText"
-                  class="text-primary pt-2"
-                  style="cursor: pointer"
-                  onclick="showPromoInput()"
-                >
-                  Have a promo code? Apply
-                </p>
-                <div
-                  class="input-group mb-3"
-                  id="promoInputSection"
-                  style="display: none"
-                >
-                  <input
-                    type="text"
-                    id="promoCodeInput"
-                    class="form-control"
-                    placeholder="Enter Promo Code"
-                  />
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    id="applyPromoButton"
-                    onclick="applyPromoCode()"
+          <div class="sticky-filter my-4">
+            <div class="col-md-12 text-center py-4" id="Order-Summary">
+              <div
+                class="order-summary"
+                id="order-summary"
+                style="display: none"
+              >
+                <h4>Order Summary</h4>
+                <p>Items Price: <span id="itemsPrice">₹0</span></p>
+                <p>Shipping Charge: <span id="shippingCharge">₹40</span></p>
+                <h5>Total Price: <span id="totalPrice">₹40</span></h5>
+                <div id="promoCodeSection" class="">
+                  <p
+                    id="applyPromoText"
+                    class="text-primary pt-2"
+                    style="cursor: pointer"
+                    onclick="showPromoInput()"
                   >
-                    Apply
-                  </button>
-                </div>
-                <div
-                  id="appliedPromoCodeSection"
-                  class="input-group mb-3"
-                  style="display: none"
-                >
-                  <input
-                    type="text"
-                    id="appliedPromoCode"
-                    class="form-control"
-                    readonly
-                  />
-                  <button
-                    class="btn btn-outline-danger"
-                    type="button"
-                    id="removePromoButton"
-                    onclick="removePromoCode()"
+                    Have a promo code? Apply
+                  </p>
+                  <div
+                    class="input-group mb-3"
+                    id="promoInputSection"
+                    style="display: none"
                   >
-                    &#x2715;
-                  </button>
+                    <input
+                      type="text"
+                      id="promoCodeInput"
+                      class="form-control"
+                      placeholder="Enter Promo Code"
+                    />
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      id="applyPromoButton"
+                      onclick="applyPromoCode()"
+                    >
+                      Apply
+                    </button>
+                  </div>
+                  <div
+                    id="appliedPromoCodeSection"
+                    class="input-group mb-3"
+                    style="display: none"
+                  >
+                    <input
+                      type="text"
+                      id="appliedPromoCode"
+                      class="form-control"
+                      readonly
+                    />
+                    <button
+                      class="btn btn-outline-danger"
+                      type="button"
+                      id="removePromoButton"
+                      onclick="removePromoCode()"
+                    >
+                      &#x2715;
+                    </button>
+                  </div>
                 </div>
-              </div>
                 <div class="" id="proceed-btn">
                   <button
                     class="btn btn-success btn-lg btn-block"
@@ -334,8 +337,8 @@
                     Proceed to Pay
                   </button>
                 </div>
+              </div>
             </div>
-          </div>
           </div>
         </div>
       </div>
@@ -687,16 +690,16 @@
                 <div class="cake-card d-flex justify-content-between align-items-center mb-3">
                     <img src="${item.image}" class="cake-img" alt="${item.name}">
                     <div class="">
-                        <h5>${item.name}</h5>
-                        <p>${item.weight}, ${item.eggOrEggless}</p>
-                        <p>Rs. ${item.price}</p>
+                        <h5 class="mt-1 fs-6">${item.name}</h5>
+                        <p class="">${item.weight}, ${item.eggOrEggless}</p>
+                        <p class="">Rs. ${item.price}</p>
                     </div>
                     <div class="d-flex align-items-center">
                         <button class="btn btn-outline-secondary" onclick="decreaseQuantity(${index})">-</button>
-                        <input type="text" value="${item.quantity}" class="form-control mx-2 text-center" style="width: 50px;" readonly>
+                        <input type="text" value="${item.quantity}" class="form-control mx-1 text-center" style="width: 45px;" readonly>
                         <button class="btn btn-outline-secondary" onclick="increaseQuantity(${index})">+</button>
                     </div>
-                    <div class="px-4">
+                    <div class="px-2">
                         <button class="btn btn-danger" onclick="removeFromCart(${index})">Remove</button>
                     </div>
                 </div>

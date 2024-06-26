@@ -51,7 +51,7 @@ body {
   }
 
   .address-card {
-    width: 280px;
+    max-width: 280px;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ddd;

@@ -133,7 +133,7 @@
       <div class="col pt-2 px-2">
         <img
           src="../Media/logo.jpg"
-          class="border-end border-dark rounded-pill"
+          class="border-end border-dark rounded-circle"
           width="80px"
           height="80px"
           alt=""
@@ -747,14 +747,14 @@
             (item) => item && item.id === cake.id
           );
           const heartClass = isWishlisted ? "fas" : "far";
-          const heartColor = isWishlisted ? "red" : "black";
+          const heartColor = isWishlisted ? "red" : "grey";
           const cakeCard = `
       <div class="card product-card mb-4 mt-4">
         <img src="${cake.image}" class="" alt="${cake.name}">
         <span class="wishlist-icon mx-3" onclick="toggleWishlist(${index}, this)">
-          <i class="${heartClass} fa-heart heart-icon" style="scale:1.8; color:${heartColor};"></i>
+          <i class="${heartClass} fa-heart heart-icon rounded-circle" style="scale:1.8; color:${heartColor};"></i>
         </span>
-        <div class="d-flex justify-content-between px-1">
+        <div class="d-flex justify-content-between">
           <div class="px-2">
             <span><p class="card-text fs-5 fw-bold">${cake.name}</p></span>
             <span><p class="small card-text">${cake.weight}</p></span>
@@ -762,7 +762,7 @@
             <p class="small card-text rating">${cake.rating} <span class="text-warning fa fa-star"></span></p>
           </div>
           <div class="align-self-end">
-            <button class="btn border qb-btn my-2 " onclick="quickBuy(${index})">Quick Buy</button>
+            <button class="btn border qb-btn my-4 me-1" onclick="quickBuy(${index})">Quick Buy</button>
           </div>
         </div>
       </div>
@@ -852,7 +852,7 @@
         <span class="wishlist-icon mx-3" onclick="toggleWishlist(${index}, this)">
           <i class="${heartClass} fa-heart heart-icon" style="scale:1.8; color:${heartColor};"></i>
         </span>
-        <div class="d-flex justify-content-between px-1">
+        <div class="d-flex justify-content-between">
           <div class="px-2">
             <span><p class="card-text fs-5 fw-bold">${cake.name}</p></span>
             <span><p class="small card-text">${cake.weight}</p></span>
