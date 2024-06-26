@@ -1,6 +1,64 @@
 body {
   font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: rgb(60, 60, 60);
+}
+
+.toggle-switch {
+  top: 20px;
+  right: 20px;
+}
+
+.toggle-switch input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-switch label {
+  display: block;
+  width: 50px;
+  height: 25px;
+  background-color: gray;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-switch label .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-switch label .sun {
+  left: 5px;
+  color: #f7df06;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.toggle-switch label .moon {
+  right: 5px;
+  color: #ffff;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.toggle-switch input[type="checkbox"]:checked + label .sun {
+  opacity: 0;
+}
+
+.toggle-switch input[type="checkbox"]:checked + label .moon {
+  opacity: 1;
 }
 
 .profile-icon {
@@ -54,11 +112,6 @@ body {
     transform: translateX(-50%);
   }
 }
-h1,
-h2,
-h3 {
-  font-weight: 700;
-}
 
 .main-page {
   min-height: 200vh;
@@ -86,7 +139,7 @@ h3 {
 
 footer,
 section {
-  background-color: #ffabc7;
+  background-color: #ffabc7; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 section a {

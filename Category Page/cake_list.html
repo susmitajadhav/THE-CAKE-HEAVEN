@@ -26,21 +26,10 @@
     <style>
       body {
         background-color: #e8e0ff;
-        font-family: Arial, sans-serif;
-      }
-      h1,
-      h2,
-      h3 {
         font-family: "Poppins", sans-serif;
-        font-weight: 700;
-      }
-
-      p {
-        font-family: "Lora", serif;
       }
       .header {
         background-color: #fadadd;
-        font-family: "Poppins", sans-serif;
       }
       .main-page {
         min-height: 200vh;
@@ -756,7 +745,7 @@
         </span>
         <div class="d-flex justify-content-between">
           <div class="px-2">
-            <span><p class="card-text fs-5 fw-bold">${cake.name}</p></span>
+            <span><b class="card-text">${cake.name}</b></span>
             <span><p class="small card-text">${cake.weight}</p></span>
             <span><p class="small card-text">Rs. ${cake.price}</p></span>
             <p class="small card-text rating">${cake.rating} <span class="text-warning fa fa-star"></span></p>
@@ -780,7 +769,7 @@
         if (wishlistIndex > -1) {
           wishlist.splice(wishlistIndex, 1);
           element.querySelector("i").classList.replace("fas", "far");
-          element.querySelector("i").style.color = "black"; // Change color to black when removed from wishlist
+          element.querySelector("i").style.color = "grey"; // Change color to black when removed from wishlist
         } else {
           wishlist.push(cake);
           element.querySelector("i").classList.replace("far", "fas");
@@ -845,22 +834,22 @@
             (item) => item && item.id === cake.id
           );
           const heartClass = isWishlisted ? "fas" : "far";
-          const heartColor = isWishlisted ? "red" : "black";
+          const heartColor = isWishlisted ? "red" : "grey";
           const cakeCard = `
       <div class="card product-card mb-4 mt-4">
         <img src="${cake.image}" class="" alt="${cake.name}">
         <span class="wishlist-icon mx-3" onclick="toggleWishlist(${index}, this)">
-          <i class="${heartClass} fa-heart heart-icon" style="scale:1.8; color:${heartColor};"></i>
+          <i class="${heartClass} fa-heart heart-icon rounded-circle" style="scale:1.8; color:${heartColor};"></i>
         </span>
         <div class="d-flex justify-content-between">
           <div class="px-2">
-            <span><p class="card-text fs-5 fw-bold">${cake.name}</p></span>
+            <span><b class="card-text">${cake.name}</b></span>
             <span><p class="small card-text">${cake.weight}</p></span>
             <span><p class="small card-text">Rs. ${cake.price}</p></span>
             <p class="small card-text rating">${cake.rating} <span class="text-warning fa fa-star"></span></p>
           </div>
           <div class="align-self-end">
-            <button class="btn border qb-btn my-2 " onclick="quickBuy(${index})">Quick Buy</button>
+            <button class="btn border qb-btn my-4 me-1" onclick="quickBuy(${index})">Quick Buy</button>
           </div>
         </div>
       </div>
