@@ -22,7 +22,84 @@
     />
     <style>
       body {
-        font-family: "Gill Sans", sans-serif;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body.dark-mode {
+        background-color: rgb(60, 60, 60);
+        color: white;
+
+        .breadcrumb a {
+          color: white;
+        }
+        .sticky-filter{
+          background-color: rgb(60, 60, 60);
+        }
+        .sticky-filter a{
+          background-color: rgb(60, 60, 60);
+          color: white;
+        }
+        footer,
+        section {
+          color: white;
+        }
+        #rewardHistory, #rewardBalance {
+          color: black;
+        }
+
+  
+      }
+
+      .toggle-switch {
+        top: 20px;
+        right: 20px;
+      }
+
+      .toggle-switch input[type="checkbox"] {
+        display: none;
+      }
+
+      .toggle-switch label {
+        display: block;
+        width: 50px;
+        height: 25px;
+        background-color: gray;
+        border-radius: 25px;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .toggle-switch label .icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .toggle-switch label .sun {
+        left: 5px;
+        color: #f7df06;
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+
+      .toggle-switch label .moon {
+        right: 5px;
+        color: #ffff;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .toggle-switch input[type="checkbox"]:checked + label .sun {
+        opacity: 0;
+      }
+
+      .toggle-switch input[type="checkbox"]:checked + label .moon {
+        opacity: 1;
       }
       .breadcrumb {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -36,6 +113,13 @@
       .breadcrumb a:hover {
         scale: 1.05;
         color: black;
+      }
+      footer,
+      section {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      section a {
+        text-decoration: none;
       }
       .sticky-filter {
         position: sticky;
@@ -63,13 +147,7 @@
       .hidden {
         display: none;
       }
-      footer,
-      section {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-      section a {
-        text-decoration: none;
-      }
+      
     </style>
   </head>
   <body>
@@ -91,7 +169,16 @@
           aria-label="Search"
         />
       </div>
-      <div class="col text-end icons align-self-center mb-1">
+      <div
+        class="col d-flex justify-content-end text-end icons align-self-center mb-1"
+      >
+        <div class="toggle-switch">
+          <input type="checkbox" id="darkModeSwitch" />
+          <label for="darkModeSwitch">
+            <span class="icon sun"><i class="fas fa-sun"></i></span>
+            <span class="icon moon"><i class="fas fa-moon"></i></span>
+          </label>
+        </div>
         <a href="../Cart Page/cart.html"
           ><i
             class="fas fa-cart-shopping px-4"
@@ -116,11 +203,11 @@
     </div>
 
     <div
-      class="col-12 col-sm-12 col-md-12 justify-content-center breadcrumb mb-0 mt-2"
+      class="col-12 col-sm-12 col-md-12 justify-content-center border-bottom border-top breadcrumb mb-0 mt-2"
     >
       <div class="row">
         <div class="pt-3 px-2 pb-3 col-2 col-sm-3 col-md-3">
-          <a class="nav-link active" href="../Home page/home.html">Home</a>
+          <a class="nav-link active" href="../index.html">Home</a>
         </div>
         <div class="pt-3 px-2 pb-3 col-2 col-sm-3 col-md-3">
           <a class="nav-link" href="../Category Page/cake_list.html"
@@ -175,7 +262,7 @@
 
     <footer class="text-center text-lg-start bg-body-tertiary mt-0">
       <section
-        class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom"
+        class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom border-top"
       >
         <div class="me-3 d-none d-lg-block">
           <span>Get connected with us on social networks :</span>
@@ -294,6 +381,33 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleSwitch = document.getElementById("darkModeSwitch");
+
+        function applyDarkModePreference() {
+          if (localStorage.getItem("darkMode") === "enabled") {
+            document.body.classList.add("dark-mode");
+            toggleSwitch.checked = true;
+          } else {
+            document.body.classList.remove("dark-mode");
+            toggleSwitch.checked = false;
+          }
+        }
+
+        function toggleDarkMode() {
+          if (toggleSwitch.checked) {
+            document.body.classList.add("dark-mode");
+            localStorage.setItem("darkMode", "enabled");
+          } else {
+            document.body.classList.remove("dark-mode");
+            localStorage.setItem("darkMode", "disabled");
+          }
+        }
+
+        toggleSwitch.addEventListener("change", toggleDarkMode);
+        applyDarkModePreference();
+      });
+
       document.addEventListener("DOMContentLoaded", function () {
         var currentLocation = window.location.pathname;
         var navLinks = document.querySelectorAll(".navbar-nav .nav-link");

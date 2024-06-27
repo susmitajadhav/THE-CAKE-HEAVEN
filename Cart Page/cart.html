@@ -41,7 +41,16 @@
           aria-label="Search"
         />
       </div>
-      <div class="col text-end icons align-self-center px-1 mb-1">
+      <div
+        class="col d-flex justify-content-end text-end icons align-self-center mb-1"
+      >
+        <div class="toggle-switch px-4">
+          <input type="checkbox" id="darkModeSwitch" />
+          <label for="darkModeSwitch">
+            <span class="icon sun"><i class="fas fa-sun"></i></span>
+            <span class="icon moon"><i class="fas fa-moon"></i></span>
+          </label>
+        </div>
         <a href="../index.html"
           ><i
             class="fas fa-home"
@@ -71,7 +80,7 @@
       </div>
     </div>
 
-    <div class="d-flex breadcrumb mb-0">
+    <div class="d-flex breadcrumb mb-0 border-top border-bottom">
       <div class="mt-1 mb-1">
         <a class="nav-link active" href="../Cart Page/cart.html">Cart /</a>
       </div>
@@ -117,7 +126,7 @@
 
     <footer class="text-center text-lg-start bg-body-tertiary mt-0">
       <section
-        class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom"
+        class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom border-top"
       >
         <div class="me-3 d-none d-lg-block">
           <span>Get connected with us on social networks :</span>

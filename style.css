@@ -7,6 +7,25 @@ body {
 
 body.dark-mode {
   background-color: rgb(60, 60, 60);
+  color: white;
+  .breadcrumb a {
+    color: black;
+  }
+  .marquee{
+    color: black;
+  }
+  .user-satisfaction{
+    color: black;
+  }
+  footer, section{
+    color: black;
+  }
+  .fa-cart-shopping{
+    color: white;
+  }
+  #dropdownMenuButton1{
+    color: black;
+  }
 }
 
 .toggle-switch {

@@ -21,7 +21,82 @@
     />
     <style>
       body {
-        font-family: "Gill Sans", sans-serif;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body.dark-mode {
+        background-color: rgb(60, 60, 60);
+        color: white;
+
+        .breadcrumb a {
+          color: white;
+        }
+
+        #Order-Summary {
+          background-color: rgb(60, 60, 60);
+          color: white;
+          border: 1px solid white;
+        }
+        footer,
+        section {
+          color: white;
+        }
+        #rewardHistory,
+        #rewardBalance {
+          color: black;
+        }
+      }
+
+      .toggle-switch {
+        top: 20px;
+        right: 20px;
+      }
+
+      .toggle-switch input[type="checkbox"] {
+        display: none;
+      }
+
+      .toggle-switch label {
+        display: block;
+        width: 50px;
+        height: 25px;
+        background-color: gray;
+        border-radius: 25px;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .toggle-switch label .icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .toggle-switch label .sun {
+        left: 5px;
+        color: #f7df06;
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+
+      .toggle-switch label .moon {
+        right: 5px;
+        color: #ffff;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .toggle-switch input[type="checkbox"]:checked + label .sun {
+        opacity: 0;
+      }
+
+      .toggle-switch input[type="checkbox"]:checked + label .moon {
+        opacity: 1;
       }
 
       .breadcrumb {
@@ -90,7 +165,12 @@
         mix-blend-mode: multiply;
       }
       .promobox {
-        padding: 0px 10px 10px 0px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      #promoCodeSection {
+        width: 20vw;
       }
     </style>
   </head>
@@ -115,7 +195,16 @@
           <h5><i class="fas fa-certificate mx-2"></i>fssai Certified</h5>
         </div>
       </div>
-      <div class="col-2 text-end icons align-self-center px-1 mb-1">
+      <div
+        class="col d-flex justify-content-end text-end icons align-self-center mb-1"
+      >
+        <div class="toggle-switch px-3">
+          <input type="checkbox" id="darkModeSwitch" />
+          <label for="darkModeSwitch">
+            <span class="icon sun"><i class="fas fa-sun"></i></span>
+            <span class="icon moon"><i class="fas fa-moon"></i></span>
+          </label>
+        </div>
         <a href="../index.html"
           ><i
             class="fas fa-home"
@@ -145,9 +234,9 @@
       </div>
     </div>
 
-    <div class="breadcrumb mb-0">
+    <div class="breadcrumb mb-0 border-top border-bottom">
       <div class="mt-1 mb-1">
-        <a class="nav-link " href="../Cart Page/cart.html">Cart /</a>
+        <a class="nav-link" href="../Cart Page/cart.html">Cart /</a>
       </div>
       <div class="mt-1 mb-1">
         <a class="nav-link" href="../Address Page/address.html"
@@ -155,7 +244,9 @@
         >
       </div>
       <div class="mt-1 mb-1">
-        <a class="nav-link active" href="../Cart Page/review.html">Review Order</a>
+        <a class="nav-link active" href="../Cart Page/review.html"
+          >Review Order</a
+        >
       </div>
     </div>
 
@@ -279,7 +370,7 @@
                 <p>Items Price: <span id="itemsPrice">₹0</span></p>
                 <p>Shipping Charge: <span id="shippingCharge">₹40</span></p>
                 <h5>Total Price: <span id="totalPrice">₹40</span></h5>
-                <div id="promoCodeSection" class="">
+                <div id="promoCodeSection" class="promobox">
                   <p
                     id="applyPromoText"
                     class="text-primary pt-2"
@@ -329,7 +420,7 @@
                     </button>
                   </div>
                 </div>
-                <div class="" id="proceed-btn">
+                <div class="mt-5" id="proceed-btn">
                   <button
                     class="btn btn-success btn-lg btn-block"
                     onclick="proceedToPay()"
@@ -346,7 +437,7 @@
 
     <footer class="text-center text-lg-start bg-body-tertiary mt-0">
       <section
-        class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom"
+        class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom border-top"
       >
         <div class="me-3 d-none d-lg-block">
           <span>Get connected with us on social networks :</span>
@@ -466,6 +557,32 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
 
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleSwitch = document.getElementById("darkModeSwitch");
+
+        function applyDarkModePreference() {
+          if (localStorage.getItem("darkMode") === "enabled") {
+            document.body.classList.add("dark-mode");
+            toggleSwitch.checked = true;
+          } else {
+            document.body.classList.remove("dark-mode");
+            toggleSwitch.checked = false;
+          }
+        }
+
+        function toggleDarkMode() {
+          if (toggleSwitch.checked) {
+            document.body.classList.add("dark-mode");
+            localStorage.setItem("darkMode", "enabled");
+          } else {
+            document.body.classList.remove("dark-mode");
+            localStorage.setItem("darkMode", "disabled");
+          }
+        }
+
+        toggleSwitch.addEventListener("change", toggleDarkMode);
+        applyDarkModePreference();
+      });
       document.addEventListener("DOMContentLoaded", function () {
         var currentLocation = window.location.pathname;
         var navLinks = document.querySelectorAll(".navbar-nav .nav-link");

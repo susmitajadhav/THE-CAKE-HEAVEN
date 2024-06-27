@@ -40,7 +40,16 @@
           aria-label="Search"
         />
       </div>
-      <div class="col text-end icons align-self-center mb-1">
+      <div
+        class="col d-flex justify-content-end text-end icons align-self-center mb-1"
+      >
+        <div class="toggle-switch">
+          <input type="checkbox" id="darkModeSwitch" />
+          <label for="darkModeSwitch">
+            <span class="icon sun"><i class="fas fa-sun"></i></span>
+            <span class="icon moon"><i class="fas fa-moon"></i></span>
+          </label>
+        </div>
         <a href="../Cart Page/cart.html"
           ><i
             class="fas fa-cart-shopping px-4"
@@ -65,14 +74,16 @@
     </div>
 
     <div
-      class="col-12 col-sm-12 col-md-12 justify-content-center breadcrumb mb-0 mt-2"
+      class="col-12 col-sm-12 col-md-12 justify-content-center border-bottom border-top breadcrumb mb-0 mt-2"
     >
       <div class="row">
         <div class="pt-3 px-2 pb-3 col-2 col-sm-3 col-md-3">
-          <a class="nav-link active" href="">Home</a>
+          <a class="nav-link active" href="../index.html">Home</a>
         </div>
         <div class="pt-3 px-2 pb-3 col-2 col-sm-3 col-md-3">
-          <a class="nav-link" href="">Catalogue</a>
+          <a class="nav-link" href="../Category Page/cake_list.html"
+            >Catalogue</a
+          >
         </div>
         <div class="pt-3 px-5 pb-3 col-2 col-sm-3 col-md-3">
           <a class="nav-link" href="">About</a>
@@ -230,7 +241,7 @@
 
     <footer class="text-center text-lg-start bg-body-tertiary mt-0">
       <section
-        class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom"
+        class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom border-top"
       >
         <div class="me-3 d-none d-lg-block">
           <span>Get connected with us on social networks :</span>
