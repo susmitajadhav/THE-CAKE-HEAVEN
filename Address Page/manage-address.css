@@ -6,9 +6,6 @@ body.dark-mode {
   background-color: rgb(60, 60, 60);
   color: white;
 
-  .breadcrumb a {
-    color: white;
-  }
   .sticky-filter{
     background-color: rgb(60, 60, 60);
   }
@@ -18,7 +15,7 @@ body.dark-mode {
   }
   footer,
   section {
-    color: white;
+    color: black;
   }
   .fa-cart-shopping:hover {
     color: white;
@@ -79,6 +76,7 @@ body.dark-mode {
 }
 .breadcrumb {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffabc7;
 }
 .breadcrumb a {
   color: black;
@@ -137,6 +135,7 @@ body.dark-mode {
 footer,
 section {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffabc7;
 }
 section a {
   text-decoration: none;

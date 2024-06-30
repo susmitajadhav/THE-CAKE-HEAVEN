@@ -1,0 +1,388 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+body.dark-mode {
+  background-color: rgb(60, 60, 60);
+  color: white;
+
+  .breadcrumb a {
+    color: black;
+  }
+  .main-page {
+    background-color: rgb(60, 60, 60);
+  }
+  #dropdownMenuButton1 {
+    color: black;
+  }
+  footer,
+  section {
+    color: black;
+  }
+}
+
+.toggle-switch {
+  top: 20px;
+  right: 20px;
+}
+
+.toggle-switch input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-switch label {
+  display: block;
+  width: 50px;
+  height: 25px;
+  background-color: gray;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-switch label .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-switch label .sun {
+  left: 5px;
+  color: #f7df06;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.toggle-switch label .moon {
+  right: 5px;
+  color: #ffff;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.toggle-switch input[type="checkbox"]:checked + label .sun {
+  opacity: 0;
+}
+
+.toggle-switch input[type="checkbox"]:checked + label .moon {
+  opacity: 1;
+}
+footer,
+section {
+  background-color: #ffabc7;
+}
+section a {
+  text-decoration: none;
+}
+
+.a {
+  /* background-color: #f8f6f4; */
+  /* padding-left: 3rem;
+  padding-right: 3rem; */
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
+
+.breadcrumb {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffabc7;
+  height: 50px;
+}
+
+.dropdown-toggle {
+  margin-top: 12px;
+}
+
+.dropdown-toggle a {
+  text-decoration: none;
+}
+
+.dropdowns li a {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.breadcrumb a {
+  color: black;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+footer,
+section {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section a {
+  text-decoration: none;
+}
+
+.container img {
+  height: 55vh;
+  width: 32vw;
+}
+
+.about-img {
+  height: 100vh;
+}
+.col-md-6 {
+  height: 85vh;
+  margin-top: 5rem;
+}
+
+.contain h1 {
+  /* margin-top: 2rem; */
+  color: brown;
+  /* height: 5rem; */
+  /* padding-top: 12px; */
+}
+
+.contact h1 {
+  height: 5rem;
+  padding-top: 12px;
+}
+
+.address-card,
+.contact-card,
+.cart-item {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.row1 {
+  height: 205px;
+  width: 205px;
+}
+.outer-container {
+  width: 500px; /* Width of the outer container */
+  height: 500px; /* Height of the outer container */
+  overflow: hidden;
+  background-color: white; /* White background for the outer container */
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.1); Optional: adds a shadow effect  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.8rem;
+  /* border-style: groove; */
+}
+.circle {
+  width: 500px; /* Ensures circle fills the outer container */
+  height: 500px; /* Ensures circle fills the outer container */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; /* White background to hide the corners */
+  border: 5px solid white; /* White border around the circle */
+  box-sizing: border-box; /* Ensure border is included in width and height */
+  /* animation: rotate 6s linear infinite;  Rotate animation  */
+}
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire circle*/
+  border-radius: 50%; /*Keeps it circular */
+  box-sizing: border-box; /*Ensure border is included in width and height */
+}
+section2 .row1,
+.about-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  animation: rotate-animation 10s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section1 {
+  width: 50vw;
+}
+
+.contact {
+  padding-left: 4rem;
+  margin-bottom: 5rem;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+#contact {
+  background-color: #f8f6f4;
+}
+
+.containe {
+  background-color: #ffffff;
+  width: 40rem;
+  padding: 30px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h1 {
+  color: #343a40;
+}
+
+.btn-primary {
+  background-color: #ffabc7;
+  border-color: #ffabc7;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #ffabc7;
+  border-color: #ffabc7;
+}
+
+.form-control {
+  border-color: #ced4da;
+}
+
+.form-control:focus {
+  border-color: #ffabc7;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+#id11111 .row {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+#id11111 .row img {
+  height: 20rem;
+  width: 50rem;
+}
+
+.col-md-12 img {
+  height: 20vh;
+}
+
+#contact {
+  height: 120vh;
+  margin-right: 26rem;
+  background-color: white;
+}
+
+.image-container {
+  position: relative;
+  overflow: none;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.image-container img {
+  width: 140%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+}
+
+.contact-form {
+  position: absolute;
+  top: 60%;
+  right: -70%;
+  background-color: #ffabc7(255, 255, 255, 0.8);
+  padding: 20px;
+  width: 550px;
+  max-width: calc(100% - 40px);
+  text-align: center;
+  box-shadow: 0 0 10px #ffabc7(0, 0, 0, 0.1);
+  z-index: 2;
+  border-color: black;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.contact-form label {
+  margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  background-color: rgb(247, 35, 35);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  /* background-color:rgb(173, 169, 151); */
+  background-color: white;
+  color: black;
+  border-color: black;
+  border-width: thin;
+  border-style: groove;
+}
+
+.fs-5 {
+  font-family: poppins, sans-serif;
+}
+
+body {
+  font-family: poppins, sans-serif;
+}
+
+.form-control {
+  height: 2rem;
+}
+
+.form-group input::placeholder {
+  color: rgb(234, 226, 226);
+}
+
+.form-group textarea::placeholder {
+  color: rgb(234, 226, 226);
+}
+
+.form1 {
+  font-size: 20px;
+}

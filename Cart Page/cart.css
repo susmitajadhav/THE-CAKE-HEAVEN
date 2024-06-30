@@ -4,23 +4,17 @@ body {
 
 body.dark-mode {
   background-color: rgb(60, 60, 60);
-  color: white;
 
-  .breadcrumb a {
-    color: white;
-  }
   .cake-card{
     border: 1px solid white;  
+    color: white;
   }
   .order-summary{
     background-color: rgb(60, 60, 60);
     border: 1px solid white;
     color: white;
   }
-  footer,
-  section {
-    color: white;
-  }
+
 }
 
 .toggle-switch {
@@ -79,6 +73,8 @@ body.dark-mode {
   }
   .breadcrumb {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffabc7;
+    color: black;
   }
   .breadcrumb a {
     color: black;
@@ -95,6 +91,10 @@ body.dark-mode {
   footer,
   section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffabc7;
+  }
+  section a {
+    text-decoration: none;
   }
   .cake-img {
     width: 150px;

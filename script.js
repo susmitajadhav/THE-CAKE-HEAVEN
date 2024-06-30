@@ -107,7 +107,7 @@ $(document).ready(function () {
     if (user) {
       const dropdownContent = `
             <a class="dropdown-toggle" href="#" role="button" id="profileDropdownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                ${user.fullName}
+                Welcome, ${user.fullName}
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdownLink">
                 <a class="dropdown-item" href="../Profile Page/profile.html">Profile</a>

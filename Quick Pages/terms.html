@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+    body.dark-mode {
+      background-color: rgb(60, 60, 60);
+      color: white;
+
+      .breadcrumb a {
+        color: black;
+      }
+      .main-page {
+        background-color: rgb(60, 60, 60);
+      }
+      #dropdownMenuButton1 {
+        color: black;
+      }
+      footer,
+      section {
+        color: black;
+      }
+    }
+
+    .toggle-switch {
+      top: 20px;
+      right: 20px;
+    }
+
+    .toggle-switch input[type="checkbox"] {
+      display: none;
+    }
+
+    .toggle-switch label {
+      display: block;
+      width: 50px;
+      height: 25px;
+      background-color: gray;
+      border-radius: 25px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .toggle-switch label .icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .toggle-switch label .sun {
+      left: 5px;
+      color: #f7df06;
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+
+    .toggle-switch label .moon {
+      right: 5px;
+      color: #ffff;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .toggle-switch input[type="checkbox"]:checked + label .sun {
+      opacity: 0;
+    }
+
+    .toggle-switch input[type="checkbox"]:checked + label .moon {
+      opacity: 1;
+    }
+    footer,
+    section {
+      background-color: #ffabc7;
+    }
+    section a {
+      text-decoration: none;
+    }
+
+    .breadcrumb {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #ffabc7;
+      height: 50px;
+    }
+    .dropdown-toggle {
+      margin-top: 12px;
+    }
+    .dropdown-toggle a {
+      text-decoration: none;
+    }
+    .dropdowns li a {
+      font-size: 15px;
+      font-weight: normal;
+    }
+    .breadcrumb a {
+      color: black;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    footer,
+    section {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    section a {
+      text-decoration: none;
+    }
+    .condition {
+      font-family: Poppins;
+      padding: 50px;
+    }
+    .condition p {
+      color: rgba(128, 128, 128, 0.836);
+    }
+    .terms1 h4 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    .terms1 p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+    .terms2 h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .terms2 p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+    .terms3 h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .terms3 p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+    .terms4 h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .terms4 p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+    .terms5 h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .terms5 p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+    .terms6 h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .terms6 p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+    .terms7 h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .terms7 p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+    .terms8 h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .terms8 p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+    .terms9 h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .terms9 p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+    .terms10 h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .terms10 p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+    .terms11 h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .terms11 p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+  </style>
+  <body>
+    <div class="d-flex header justify-content-between pb-2">
+      <div class="col pt-2 px-2">
+        <a href="../index.html">
+          <img
+            src="../Media/logo.jpg"
+            class="border-end border-dark rounded-circle"
+            width="80px"
+            height="80px"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="col mt-2 align-self-center">
+        <input
+          class="form-control rounded-pill"
+          type="search"
+          placeholder="Search for cakes, desserts, and more"
+          aria-label="Search"
+        />
+      </div>
+      <div
+        class="col d-flex justify-content-end text-end icons align-self-center mb-2"
+      >
+        <div class="toggle-switch">
+          <input type="checkbox" id="darkModeSwitch" />
+          <label for="darkModeSwitch">
+            <span class="icon sun"><i class="fas fa-sun"></i></span>
+            <span class="icon moon"><i class="fas fa-moon"></i></span>
+          </label>
+        </div>
+        <a href="../Cart Page/cart.html"
+          ><i
+            class="fas fa-cart-shopping px-4"
+            style="font-size: 22px; cursor: pointer; color: black"
+          ></i
+        ></a>
+
+        <a href="../Cart Page/wishlist.html"
+          ><i
+            class="fas fa-heart"
+            style="font-size: 22px; cursor: pointer; color: black"
+          ></i
+        ></a>
+        <a href="../Profile Page/profile.html"
+          ><i
+            class="fa fa-user px-4"
+            aria-hidden="true"
+            style="font-size: 22px; cursor: pointer; color: black"
+          ></i
+        ></a>
+      </div>
+    </div>
+    <div
+      class="d-flex breadcrumb justify-content-center border-bottom border-top gap-5 mb-0 pt-0 px-5"
+    >
+      <div class="dropdown mx-3">
+        <label
+          class="dropdown-toggle"
+          id="dropdownMenuButton1"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <a class="" href="">Cakes</a>
+        </label>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <div class="d-flex m-0">
+            <div class="dropdowns">
+              <li>
+                <a class="dropdown-item" href="#"><b>Layers</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">One</a></li>
+              <li><a class="dropdown-item" href="#">Two</a></li>
+              <li><a class="dropdown-item" href="#">Three</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>By Shapes</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Square</a></li>
+              <li><a class="dropdown-item" href="#">Circle</a></li>
+              <li><a class="dropdown-item" href="#">Heart</a></li>
+              <li><a class="dropdown-item" href="#">Tall</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>By Flavour</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Choclate</a></li>
+              <li><a class="dropdown-item" href="#">Blueberry</a></li>
+              <li><a class="dropdown-item" href="#">Pineapple</a></li>
+              <li><a class="dropdown-item" href="#">Fresh Fruit</a></li>
+              <li><a class="dropdown-item" href="#">Red Velvet</a></li>
+              <li><a class="dropdown-item" href="#">Vanilla</a></li>
+              <li><a class="dropdown-item" href="#">Butterscotch</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>By Occasion</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Birthday</a></li>
+              <li><a class="dropdown-item" href="#">Anniversary</a></li>
+              <li><a class="dropdown-item" href="#">Wedding</a></li>
+              <li><a class="dropdown-item" href="#">Baby Shower</a></li>
+              <li><a class="dropdown-item" href="#">Engagement</a></li>
+              <li><a class="dropdown-item" href="#">Mother's Day</a></li>
+              <li><a class="dropdown-item" href="#">Father's Day</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>By Occasion</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Valentines Day</a></li>
+              <li><a class="dropdown-item" href="#">Classic Cakes</a></li>
+              <li><a class="dropdown-item" href="#">Friendships Day</a></li>
+              <li><a class="dropdown-item" href="#">New Year</a></li>
+              <li><a class="dropdown-item" href="#">Christmas</a></li>
+              <li><a class="dropdown-item" href="#">Teacher's Day</a></li>
+              <li><a class="dropdown-item" href="#">Fairwell Cakes</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>Trending Cakes</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Pull Me Up Cake</a></li>
+              <li><a class="dropdown-item" href="#">Pinata Cake</a></li>
+              <li><a class="dropdown-item" href="#">Half Cake</a></li>
+              <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
+              <li><a class="dropdown-item" href="#">Bento Cake</a></li>
+              <li><a class="dropdown-item" href="#">Surprise Cake Box</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Photo Pulling Cake</a>
+              </li>
+            </div>
+            <div class="dropdowns d-flex flex-column h-25">
+              <li>
+                <a class="dropdown-item" href="#"><b>Unique Cakes</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Moose Cake</a></li>
+              <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column h-25">
+              <li>
+                <a class="dropdown-item" href="#"><b>Premium Cakes</b></a>
+              </li>
+            </div>
+          </div>
+        </ul>
+      </div>
+
+      <div class="mt-1 mx mb-3">
+        <a class="nav-link" href="../Category Page/cake_list.html">Cup-Cakes</a>
+      </div>
+      <div class="mt-1 mx-3 mb-3">
+        <a class="nav-link" href="../Category Page/cake_list.html">Pastrey</a>
+      </div>
+      <div class="mt-1 mx-3 mb-3">
+        <a class="nav-link" href="../Category Page/cake_list.html">Desserts</a>
+      </div>
+      <div class="mt-1 mx-3 mb-3">
+        <a class="nav-link" href="../Category Page/cake_list.html"
+          >Trending Cakes</a
+        >
+      </div>
+      <div class="mt-1 mb-3">
+        <a class="nav-link" href="../Category Page/cake_list.html"
+          >Unique Cakes</a
+        >
+      </div>
+    </div>
+
+    <div class="condition">
+      <div class="terms">
+        <h1 class="text-center">Terms & Conditions</h1>
+      </div>
+
+      <div class="terms1">
+        <h4>BAKINGO: TERMS OF USE</h4>
+        <p>
+          Please read the terms and conditions (“Terms and Conditions”) set out
+          below carefully before ordering any Goods or Services from this
+          Website. By ordering any Goods or Services from this Website, by
+          phone, or by our mobile applications, you agree to be bound by these
+          Terms and Conditions.
+        </p>
+      </div>
+
+      <div class="terms2">
+        <h4>Section 1: Introduction:</h4>
+        <p>
+          The domain name www.bakingo.com (hereinafter referred to as "Website")
+          is owned by Bake wish Private Limited a company incorporated under the
+          Companies Act, 1956 with its registered office at H.No. 702,
+          AbhinandanSociety, Sector-51 Gurgaon 122001, India (hereinafter
+          referred to as "Bakingo").
+        </p>
+      </div>
+
+      <div class="terms3">
+        <h4>Section 2: Definitions:</h4>
+        <p>
+          2.1. “Agreement” is a reference to these Terms and Conditions, any
+          order, form and payment instructions provided to you;
+        </p>
+        <p>
+          2.2. “Privacy Policy” means the policy displayed on our Website which
+          details how we collect and store your personal data;
+        </p>
+        <p>
+          2.3. “you”, “your” and “yours” are references to you, the person
+          accessing this Website and ordering any Goods or Services from the
+          Website or from any other channel provided by Bakingo
+        </p>
+        <p>
+          2.4. “we”, “us”, “our”, and ” Bakingo ” are references to the Bakingo;
+        </p>
+        <p>
+          2.5. “Goods”, “Items” is a reference to any goods which we may offer
+          for sale from our Website from time to time;
+        </p>
+        <p>
+          2.6. “Service” or “Services” is a reference to any service which we
+          may supply and which you may request via our Website;
+        </p>
+        <p>
+          2.7. “Participating supplier” is a third party, which has agreed to
+          co-operate with us to prepare and/or deliver the Goods or Services.
+        </p>
+        <p>
+          2.8. “Food Delivery” is a reference to perishable goods and to any
+          form of delivery service, which both are provided by our partners and
+          for both of which our partners take full responsibility.
+        </p>
+        <p>
+          2.9. “Website” is a reference to our Website www.bakingo.com or our
+          mobile applications on which we offer our Goods or Services.
+        </p>
+      </div>
+
+      <div class="terms4">
+        <h4>Section 3: Ordering</h4>
+        <p>
+          3.1. Any contract for the supply of Food Delivery from this Website is
+          between you and our Participating Suppliers; for the supply of Goods
+          or Services from this website contact is between you and Bakingo. You
+          agree to take particular care when providing us with your details and
+          warrant that these details are accurate and complete at the time of
+          ordering. You also warrant that the credit or debit card details that
+          you provide are for your own credit or debit card and that you have
+          sufficient funds to make the payment.
+        </p>
+        <p>
+          3.2. Food Delivery, Goods and Services purchased from this Website are
+          intended for your use only and you warrant that any Goods purchased by
+          you are not for resale and that you are acting as principal only and
+          not as agent for another party when receiving the Services.
+        </p>
+        <p>
+          3.3. Please note that some of our Goods may be suitable for certain
+          age ranges only. You should check that the product you are ordering is
+          suitable for the intended recipient.
+        </p>
+        <p>
+          3.4. When ordering from this Website you may be required to provide
+          aphone number, e-mail address and password. You must ensure that you
+          keep the combination of these details secure and do not provide this
+          information to a third party.
+        </p>
+        <p>
+          3.5. We will take all reasonable care, in so far as it is in our power
+          to do so, to keep the details of your order and payment secure, but in
+          the absence of negligence on our part we cannot be held liable for any
+          loss you may suffer if a third party procures unauthorized access to
+          any data you provide when accessing or ordering from the Website.
+        </p>
+        <p>
+          3.6.Any order that you place with us is subject to product
+          availability, delivery capacity and acceptance by us and the
+          Participating Suppliers.When you place your order online, we will send
+          you an email to confirm that we have received it.This email
+          confirmation will be produced automatically so that you have
+          confirmation of your order details.You must inform us immediately if
+          any details are incorrect.The fact that you receive an automatic
+          confirmation does not necessarily mean that either we or the
+          Participating Suppliers will be able to fill your order.Once we have
+          sent the confirmation email we will check availability and delivery
+          capacity.
+        </p>
+        <p>
+          3.7.If the ordered Food and delivery capacity is available, the
+          Participating Supplier will accept the contract and confirm it to
+          Bakingo.If the details of the order are correct, the contract for the
+          Food Delivery, Goods or Services will be confirmed by email or text
+          message(SMS).
+        </p>
+        <p>
+          3.8.The confirmation message/ email will specify items ordered along
+          with a receipt of payment.
+        </p>
+        <p>
+          3.9.If the Food Delivery and / or Goods are not available or if there
+          is no delivery capacity, we will also let you know by email or text
+          message (SMS) or phone call.
+        </p>
+      </div>
+      <div class="terms5">
+        <h4>Section 4: Prices and Payment</h4>
+        <p>
+          4.1. You agree to take particular care when providing us with your
+          details and warrant that these details are accurate and complete at
+          the time of ordering. You also warrant that the credit or debit card
+          details that you provide are for your own credit or debit card and
+          that you have sufficient funds to make the payment.
+        </p>
+        <p>
+          4.2. All prices listed on the Website are correct at the time of
+          publication and have been based on input received from the supplier;
+          While we give great care to keep them up to date, the final price
+          charged to you can change at the time of delivery based on the latest
+          menu and prices. We also reserve the right to alter the Goods or
+          Services available for sale on the Website.
+        </p>
+        <p>
+          4.3. All prices for delivery by Bakingo or a third party provider
+          assigned by Bakingo are correct at the time of publication. However,
+          we reserve the right to alter these in the future
+        </p>
+        <p>
+          4.4. The total price for Food Delivery, Goods or Services ordered,
+          delivery charges and other charges will be displayed on the Website
+          when you place your order. Full payment must be made for all Goods
+          dispatched and Services provided. Payment has to be made online, e.g.
+          via UPI, Net Banking, Credit or Debit card.
+        </p>
+        <p>
+          4.5.In case of online payment, you must pay for your order before it
+          is delivered.Our website is integrated with 3rd party payment
+          gateways.We do not store any card or banking details on our
+          website.For privacy policies and terms and condition, please refer to
+          the relevant payment gateway’s website.
+        </p>
+        <p>
+          4.6.Bakingo never asks for any of your personal bank details. Please
+          do not share your personal bank details like Card
+          Number/Pin/CVV/OTP/Card Expiry Date/UPI Pin, over Phone/Mail/SMS to
+          anyone.
+        </p>
+      </div>
+      <div class="terms6">
+        <h4>Section 5: Delivery</h4>
+        <p>
+          5.1. Delivery periods quoted at the time of ordering are approximate
+          only and may vary. Goods will be delivered to the address designated
+          by you at the time of ordering.
+        </p>
+        <p>
+          5.2. If delivery is done by its delivery partners, it is the
+          Participating supplier sole responsibility to provide Food Delivery in
+          a timely manner.
+        </p>
+        <p>
+          5.3. In the case delivery is done by Bakingo or a third party delivery
+          partner assigned by Bakingo, we will give great care to deliver in a
+          timely manner. No responsibility is taken for late delivery by Bakingo
+          in either case.
+        </p>
+        <p>
+          5.4. All orders are delivered by a reputable courier. We and the
+          delivery will make every effort to deliver within the time stated.
+          However, we will not be liable for any loss caused to you by ordering
+          late.
+        </p>
+        <p>
+          5.5. In case of a late delivery, the delivery charge will neither be
+          voided nor refunded by Bakingo.
+        </p>
+        <p>
+          5.6. All risk in the Goods and the Food Delivery shall pass to you
+          upon delivery.
+        </p>
+        <p>
+          5.7. If you fail to accept delivery of Goods at the time they are
+          ready for delivery, or we are unable to deliver at the nominated time
+          due to your failure to provide appropriate instructions, then such
+          goods shall be deemed to have been delivered to you and all risk and
+          responsibility in relation to such goods shall pass to you.
+        </p>
+        <p>
+          5.8. Participating Suppliers, who will prepare your order, aim to
+          deliver the product to you at the place and time of delivery requested
+          by you in your order. However, we shall not be liable to you for any
+          losses, liabilities, costs, damages, charges or expenses arising out
+          of late delivery;
+        </p>
+        <p>
+          5.9. Please note that it might not be possible for us to deliver to
+          some locations. If this is the case we or our partner supplier will
+          inform you using the contact details that you provide to us when you
+          make your order and arrange for cancellation of the order or delivery
+          to an alternative delivery address;
+        </p>
+        <p>
+          5.10. The delivery of the items ordered will be attempted only ONCE at
+          the address as provided. In the event the delivery is not executed due
+          to any reason whatsoever, the order shall be considered complete, and
+          re-delivery or a refund will not be an option. The order will be
+          deemed executed and delivered in the following events:
+        </p>
+        <p>Wrong address</p>
+        <p>Recipient not available at premises</p>
+        <p>Premises locked</p>
+        <p>Unreachable or incorrect phone number of recipient</p>
+        <p>Recipient refused the products.</p>
+        <p>
+          Delivered the product at the gate / reception / neighborhood of the
+          premises Restricted entry of premises
+        </p>
+        <p>
+          5.11. Deliveries shall not be made on National Holidays. Orders
+          scheduled for National holidays will be delivered on the next working
+          day.
+        </p>
+        <p>
+          5.12 In case of floods/ Heavy Rains/ natural calamity/ National
+          Bandh/election dates/ curfews/traffic jams/festival times/regulated
+          traffic movements/ or any other impediments that may restrict the
+          delivery of the order. Bakingo reserves the right to reschedule the
+          delivery for another date.
+        </p>
+        <p>
+          5.13. No instructions will be entertained for any request to change
+          the date of delivery.
+        </p>
+      </div>
+      <div class="terms7">
+        <h4>Section 6: Cancellation:</h4>
+        <p>Please refer to cancellation policy on our website.</p>
+      </div>
+      <div class="terms8">
+        <h4>Section 7: Linked Sites:</h4>
+        <p>
+          There may be a number of links on our Website to third party Websites
+          which may be of interest to you. We do not represent the quality of
+          the Goods or Services provided by such third parties nor do we have
+          any control over the content or availability of such sites. We cannot
+          accept any responsibility for the content of third party Websites or
+          the Services or Goods that they may provide to you.
+        </p>
+      </div>
+      <div class="terms9">
+        <h4>Section 8: Complaints</h4>
+        <p>
+          We take complaints very seriously and aim to respond within 12
+          business hours. All complaints should be addressed to
+          care@bakingo.com, and we assure to assist if reported within 24 hours
+          of delivery. Kindly note that the images displayed on the website are
+          indicative in nature. Actual product may vary in shape or design as
+          per the availability.
+        </p>
+      </div>
+      <div class="terms10">
+        <h4>Section 9: Limitation of Liability</h4>
+        <p>
+          9.1. Great care has been taken to ensure that the information
+          available on this Website is correct and error free. We apologize for
+          any errors or omissions that may have occurred. Therefore, we do not
+          make any warranty whatsoever, whether express or implied, relating to
+          its accuracy.
+        </p>
+        <p>
+          9.2. By accepting these terms of use, you agree to relieve us from any
+          liability whatsoever arising from your use of information from any
+          third party, or your use of any third party website, or your
+          consumption of any food or beverages from a Participating Supplier.
+        </p>
+        <p>
+          9.3. We disclaim any and all liability to you for the supply of the
+          Food Delivery, Goods and Services to the fullest extent permissible
+          under applicable law. This does not affect your statutory rights as a
+          consumer. If we are found liable for any loss or damage to you such
+          liability is limited to the amount you have paid for the relevant
+          Goods or Services. We cannot accept any liability for any loss, damage
+          or expense, including any direct or indirect loss.
+        </p>
+        <p>
+          9.4. We do not accept any liability for any delays, failures, errors
+          or omissions or loss of information, viruses or other contamination or
+          destructive properties transmitted to you or your computer system via
+          our Website.
+        </p>
+        <p>
+          9.5. We shall not be held liable for any failure or delay in
+          performing Services or delivering Goods arising owing to reasons
+          beyond our control.
+        </p>
+        <p>
+          9.6. The products sold by us are provided for private domestic and
+          consumer use only. Accordingly, we do not accept liability for any
+          indirect loss, consequential loss, loss of data, loss of income or
+          profit, loss of damage to property and/or loss from claims of third
+          parties arising out of the use of the Website or for any products or
+          services purchased from us.
+        </p>
+        <p>
+          9.7. We have taken all reasonable steps to prevent Internet fraud and
+          ensure any data collected from you is stored as securely and safely as
+          possible. However, we cannot be held liable in the extremely unlikely
+          event of a breach in our secure computer servers or those of third
+          parties.
+        </p>
+        <p>
+          9.8. Offers are subject to Bakingo discretion and may be withdrawn at
+          any time and without notice.
+        </p>
+      </div>
+      <div class="terms11">
+        <h4>Section 10: General</h4>
+        <p>
+          10.1. All prices are in Indian Rupees and can be converted to your
+          local currency at the time of payment, depending on the payment
+          gateway provider.
+        </p>
+        <p>
+          10.2. We may subcontract any part or parts of the Services or Goods
+          that we provide to you from time to time without your consent or any
+          requirement to notify you.
+        </p>
+        <p>
+          10.3. We may alter or vary the Terms and Conditions at any time
+          without notice to you.
+        </p>
+        <p>
+          10.4. Payment must be made at the time of placing order by bank
+          transfer, credit / debit card or at the time of delivery by cash (if
+          available). Failure to pay on time will result in the cancellation of
+          your order.
+        </p>
+        <p>
+          10.5. Please do not use or launch any automated system or program in
+          connection with our website or its online ordering functionality;
+        </p>
+        <p>
+          10.6. Please do not collect or harvest any personally identifiable
+          information from the website, use communication systems provided by
+          the website for any commercial solicitation purposes, solicit for any
+          reason whatsoever any users of the website with respect to their
+          submissions to the website, or publish or distribute any vouchers or
+          codes in connection with the website, or scrape or hack the website.
+        </p>
+        <p>
+          10.7. The Terms and Conditions together with the Privacy Policy, any
+          order form and payment instructions constitute the entire agreement
+          between you and us. No other terms whether expressed or implied shall
+          form part of this Agreement. In the event of any conflict between
+          these Terms and Conditions and any other term or provision on the
+          Website, these Terms and Conditions shall prevail.
+        </p>
+        <p>
+          10.8. If any term or condition of our Agreement shall be deemed
+          invalid, illegal or unenforceable, the parties hereby agree that such
+          term or condition shall be deemed to be deleted and the remainder of
+          the Agreement shall continue in force without such term or condition.
+        </p>
+        <p>
+          10.9.These Terms and Conditions and our Agreement shall be governed by
+          and construed in accordance with the laws of India.The parties hereto
+          submit to the exclusive jurisdiction of the courts of India.The place
+          of jurisdiction shall be exclusively in Gurgaon.
+        </p>
+        <p>
+          10.10.No delay or failure on our part to enforce our rights or
+          remedies under the Agreement shall constitute a waiver on our part of
+          such rights or remedies unless such waiver is confirmed in writing.
+        </p>
+        <p>
+          10.11.These Terms and Conditions and a contract(and all non-
+          contractual obligations arising out of or connected to them) shall be
+          governed and construed in accordance with Indian Laws.Both we and you
+          hereby submit to the non - exclusive jurisdiction of the Indian
+          Courts.All dealings, correspondence and contacts between us shall be
+          made or conducted in the English language.
+        </p>
+        <p>
+          10.12 While sharing my Phone no., Email and Name during the
+          registration or payment process, I understand that Bakingo can send
+          transactional and promotional SMS messages on my registered phone
+          number. I also understand that Bakingo can send transactional and
+          promotional Email messages on my registered email as well.
+        </p>
+        <p>
+          10.13 As we will be processing the order post your confirmation, it
+          won't be possible to modify or cancel the order once the telephonic
+          confirmation is done.
+        </p>
+        <p>
+          10.14 I understand that Bakingo can send transactional and promotional
+          SMS, Call, Whatsapp, RCS & Emails on my registered email id & number.
+        </p>
+        <p>
+          10.15 In any case, if the order is placed by any individual
+          unethically from Bakingo.com. This will be considered as part of a
+          fraud. The company has the right to cooperate with competent law
+          enforcement agencies and to ask them to take appropriate action
+          whenever such phenomena occur. Additionally, the company will notify
+          the police or other competent authority.
+        </p>
+      </div>
+    </div>
+
+    <footer class="text-center text-lg-start bg-body-tertiary">
+      <section
+        class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom border-top"
+      >
+        <div class="me-3 d-none d-lg-block">
+          <span>Get connected with us on social networks :</span>
+        </div>
+
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="border-bottom">
+        <div class="container text-center text-md-start pt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>THE CAKE HEAVEN
+              </h6>
+              <p>
+                "Experience the divine taste of our handcrafted delights at The
+                Cake Heaven where every bite is a slice of paradise. Join us in
+                celebrating life's sweetest moments!"
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">COLLECTIONS</h6>
+              <p>
+                <a href="../Category Page/cake_list.html" class="text-reset"
+                  >Same Day Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category Page/cake_list.html" class="text-reset"
+                  >Classic Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category Page/cake_list.html" class="text-reset"
+                  >Custom Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category Page/cake_list.html" class="text-reset"
+                  >Cup Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category Page/cake_list.html" class="text-reset"
+                  >Desserts</a
+                >
+              </p>
+              <p>
+                <a href="../Category Page/cake_list.html" class="text-reset"
+                  >Flowers</a
+                >
+              </p>
+              <p>
+                <a href="../Category Page/cake_list.html" class="text-reset"
+                  >Anniversary Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category Page/cake_list.html" class="text-reset"
+                  >Birthday Cakes</a
+                >
+              </p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">QUICK LINKS</h6>
+              <p>
+                <a href="about.html" class="text-reset">Contact Us</a>
+              </p>
+              <p>
+                <a href="about.html" class="text-reset">About us</a>
+              </p>
+              <p>
+                <a href="privacy-policy.html" class="text-reset"
+                  >Privacy Policy</a
+                >
+              </p>
+              <p>
+                <a href="terms.html" class="text-reset">Terms & Conditions</a>
+              </p>
+              <p>
+                <a href="shipping.html" class="text-reset">Shipping Policy</a>
+              </p>
+              <p>
+                <a href="cancellation.html" class="text-reset"
+                  >Return & Refund Policy</a
+                >
+              </p>
+              <p>
+                <a href="FAQ.html" class="text-reset">FAQs</a>
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-4 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3"></i> Kupwad, Sangli Maharashtra</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                contact@thecakeheaven.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center pb-3 pt-3">
+        © 2024 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
+          >TheCakeHeaven.com</a
+        >
+      </section>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleSwitch = document.getElementById("darkModeSwitch");
+
+        function applyDarkModePreference() {
+          if (localStorage.getItem("darkMode") === "enabled") {
+            document.body.classList.add("dark-mode");
+            toggleSwitch.checked = true;
+          } else {
+            document.body.classList.remove("dark-mode");
+            toggleSwitch.checked = false;
+          }
+        }
+
+        function toggleDarkMode() {
+          if (toggleSwitch.checked) {
+            document.body.classList.add("dark-mode");
+            localStorage.setItem("darkMode", "enabled");
+          } else {
+            document.body.classList.remove("dark-mode");
+            localStorage.setItem("darkMode", "disabled");
+          }
+        }
+
+        toggleSwitch.addEventListener("change", toggleDarkMode);
+        applyDarkModePreference();
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        var currentLocation = window.location.pathname;
+        var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+        navLinks.forEach(function (link) {
+          if (link.getAttribute("href") === currentLocation) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
