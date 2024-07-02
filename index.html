@@ -10,6 +10,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet" />
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
     <link
@@ -333,7 +334,7 @@
       <div class="shorts col-md-12 col-lg-12">
         <div class="story-container gap-5">
           <div
-            class="story"
+            class="story" data-aos="zoom-in"
             data-toggle="modal"
             data-target="#shortModal"
             data-video="https://www.youtube.com/embed/j6hv7Jcm5XQ?autoplay=1&mute=1"
@@ -346,7 +347,7 @@
             <div class="play-text">Play Now</div>
           </div>
           <div
-            class="story"
+            class="story" data-aos="zoom-in"
             data-toggle="modal"
             data-target="#shortModal"
             data-video="https://www.youtube.com/embed/j6hv7Jcm5XQ?autoplay=1&mute=1"
@@ -359,7 +360,7 @@
             <div class="play-text">Play Now</div>
           </div>
           <div
-            class="story"
+            class="story" data-aos="zoom-in"
             data-toggle="modal"
             data-target="#shortModal"
             data-video="https://www.youtube.com/embed/j6hv7Jcm5XQ?autoplay=1&mute=1"
@@ -372,7 +373,7 @@
             <div class="play-text">Play Now</div>
           </div>
           <div
-            class="story"
+            class="story" data-aos="zoom-in"
             data-toggle="modal"
             data-target="#shortModal"
             data-video="https://www.youtube.com/embed/j6hv7Jcm5XQ?autoplay=1&mute=1"
@@ -385,7 +386,7 @@
             <div class="play-text">Play Now</div>
           </div>
           <div
-            class="story"
+            class="story" data-aos="zoom-in"
             data-toggle="modal"
             data-target="#shortModal"
             data-video="https://www.youtube.com/embed/j6hv7Jcm5XQ?autoplay=1&mute=1"
@@ -466,7 +467,7 @@
         </div>
       </div>
 
-      <div class="col-md-12 col-lg-12 p-5 mt-5">
+      <div class="col-md-12 col-lg-12 p-5 mt-5 wow fadeInUp">
         <h1 class="text-center text-danger mb-4">WHAT WE DO</h1>
 
         <div class="d-flex gap-4 ms-4">
@@ -514,7 +515,7 @@
         </div>
       </div>
 
-      <div class="col-md-12 col-lg-12 p-5 mt-5">
+      <div class="col-md-12 col-lg-12 p-5 mt-5 wow fadeInUp">
         <h1 class="text-center text-danger mb-4">TRENDING CAKES</h1>
 
         <div class="d-flex gap-4 ms-4">
@@ -562,7 +563,7 @@
         </div>
       </div>
 
-      <div class="col-md-12 col-lg-12 p-5 mt-5">
+      <div class="col-md-12 col-lg-12 p-5 mt-5 wow fadeInUp">
         <h1 class="text-center text-danger mb-4">UNIQUE CAKES</h1>
 
         <div class="d-flex gap-4 ms-4">
@@ -610,7 +611,7 @@
         </div>
       </div>
 
-      <div class="col-md-12 col-lg-12 p-5 mt-5">
+      <div class="col-md-12 col-lg-12 p-5 mt-5 wow fadeInUp">
         <h1 class="text-center text-danger mb-4">BY TYPE</h1>
 
         <div class="carousel-container mt-5" id="carousel3">
@@ -695,7 +696,7 @@
         </div>
       </div>
 
-      <div class="col-md-12 col-lg-12 mt-5 p-5">
+      <div class="col-md-12 col-lg-12 mt-5 p-5 wow fadeInUp">
         <h1 class="text-center text-danger mb-4">BY OCCASION</h1>
 
         <div class="carousel-container mt-5" id="carousel1">
@@ -900,7 +901,7 @@
         </div>
       </div>
 
-      <div class="col-md-12 col-lg-12 p-5 my-5">
+      <div class="col-md-12 col-lg-12 p-5 my-5 wow fadeInUp">
         <h1 class="text-center text-danger mb-4">BY FLAVOR</h1>
 
         <div class="carousel-container mt-5" id="carousel2">
@@ -985,9 +986,9 @@
         </div>
       </div>
 
-      <div class="col-md-12 col-lg-12 my-5">
+      <div class="col-md-12 col-lg-12 my-5 wow fadeInUp">
         <!-- Testimonial Start -->
-        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container-xxl py-5">
           <div class="container">
             <div class="text-center">
               <h1 class="mb-5">Our Clients Say!!!</h1>
@@ -1229,7 +1230,11 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -33,6 +33,14 @@
           color: white;
           border: 1px solid white;
         }
+        #order-details-card {
+          background-color: rgb(60, 60, 60);
+          color: white;
+          border: 1px solid white;
+        }
+        .form-text {
+          color: white;
+        }
         .empty-cart-image {
           mix-blend-mode: color-dodge;
           border-radius: 20px;
@@ -111,8 +119,9 @@
       .delivery-details-card,
       .delivery-form,
       .Cart-Items,
-      .order-container {
-        max-width: 600px;
+      .order-container,
+      #order-details-card {
+        max-width: 800px;
         margin: 20px auto;
         padding: 20px;
         border: 1px solid #ddd;
@@ -176,6 +185,9 @@
       }
       #promoCodeSection {
         width: 20vw;
+      }
+      .form-text {
+        color: black;
       }
     </style>
   </head>
@@ -261,7 +273,7 @@
         <h1>There are no items for Review.</h1>
       </div>
       <div class="row">
-        <div class="col-lg-6 text-center">
+        <div class="col-lg-8 text-center">
           <div class="order-container" id="cart-Container">
             <h3 class="text-center" id="page-title">Order Items</h3>
             <div id="cartItems" class="">
@@ -358,7 +370,37 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6 text-center" id="Order-Summary-Card">
+        <div class="col-lg-4 text-center" id="Order-Summary-Card">
+          <div class="card mb-4" id="order-details-card">
+            <div class="card-body">
+              <h4>Order Details</h4>
+              <div class="form-group">
+                <label for="orderForReview">Order for whom:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="orderForReview"
+                  placeholder="Enter name"
+                />
+              </div>
+              <div class="form-group mt-2">
+                <label for="birthDateReview">Birthdate:</label>
+                <input type="date" class="form-control" id="birthDateReview" />
+              </div>
+              <div class="form-group mt-2">
+                <small class="form-text"
+                  >This will help us for next birthday reminder</small
+                >
+              </div>
+              <button
+                class="btn btn-secondary mt-3"
+                onclick="saveOrderDetailsReview()"
+              >
+                Save Details
+              </button>
+            </div>
+          </div>
+
           <div class="sticky-filter my-4" id="sticky-filter">
             <div class="col-md-12 text-center py-4" id="Order-Summary">
               <div
@@ -876,6 +918,36 @@
         cart.splice(index, 1);
         localStorage.setItem("cart", JSON.stringify(cart));
         updateCartPage();
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const orderDetails =
+          JSON.parse(localStorage.getItem("orderDetails")) || {};
+
+        if (orderDetails.orderFor && orderDetails.birthDate) {
+          document.getElementById("order-details-card").style.display = "none";
+        } else {
+          document.getElementById("order-details-card").style.display = "block";
+        }
+      });
+
+      function saveOrderDetailsReview() {
+        const orderFor = document.getElementById("orderForReview").value;
+        const birthDate = document.getElementById("birthDateReview").value;
+
+        if (orderFor && birthDate) {
+          const orderDetails = { orderFor, birthDate };
+          localStorage.setItem("orderDetails", JSON.stringify(orderDetails));
+          alert("Order details saved!");
+          document.getElementById("order-details-card").style.display = "none";
+        } else {
+          alert("Please fill out both fields.");
+        }
+      }
+
+      function confirmOrder() {
+        // Logic to confirm the order
+        alert("Order confirmed!");
       }
 
       function updateOrderSummary() {
