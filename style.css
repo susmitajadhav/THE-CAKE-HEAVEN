@@ -41,7 +41,7 @@ body.dark-mode {
   display: block;
   width: 50px;
   height: 25px;
-  background-color: gray;
+  background-color: black;
   border-radius: 25px;
   position: relative;
   cursor: pointer;
