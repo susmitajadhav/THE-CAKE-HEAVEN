@@ -208,7 +208,7 @@
   <body>
     <div class="d-flex header justify-content-between pb-2">
       <div class="col pt-2 px-2">
-          <a href="../index.html">
+        <a href="../index.html">
           <img
             src="../Media/logo.jpg"
             class="border-end border-dark rounded-circle"
@@ -217,7 +217,7 @@
             alt=""
           />
         </a>
-        </div>
+      </div>
       <div class="col mt-2 align-self-center">
         <input
           class="form-control rounded-pill"
@@ -709,9 +709,7 @@
                 >
               </p>
               <p>
-                <a href="../Quick Pages/FAQ.html" class="text-reset"
-                  >FAQs</a
-                >
+                <a href="../Quick Pages/FAQ.html" class="text-reset">FAQs</a>
               </p>
             </div>
             <div class="col-md-4 col-lg-3 col-xl-4 mx-auto mb-md-0 mb-4">
@@ -745,6 +743,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="cakes.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const toggleSwitch = document.getElementById("darkModeSwitch");
@@ -784,110 +783,6 @@
           }
         });
       });
-
-      const cakes = [
-        {
-          id: 1,
-          name: "Chocolate Cake",
-          weight: "1 kg",
-          eggOrEggless: "Eggless",
-          availability: "In Stock",
-          price: 500,
-          rating: 4.7,
-          image: "DC.jpg",
-          description: "Delicious chocolate cake",
-        },
-        {
-          id: 2,
-          name: "Vanilla Cake",
-          weight: "1.5 kg",
-          eggOrEggless: "With Egg",
-          availability: "In Stock",
-          price: 600,
-          rating: 4.5,
-          image: "VCC.webp",
-          description: "Delicious vanilla cake",
-        },
-        {
-          id: 3,
-          name: "Black-Forest Cake",
-          weight: "0.5 kg",
-          eggOrEggless: "With Egg",
-          availability: "In Stock",
-          price: 350,
-          rating: 4.5,
-          image: "HCC.jpg",
-          description: "Delicious Black-Forest cake",
-        },
-        {
-          id: 4,
-          name: "Red Velvet Cake",
-          weight: "5 kg",
-          eggOrEggless: "Eggless",
-          availability: "In Stock",
-          price: 4000,
-          rating: 4.5,
-          image: "CH.jpg ",
-          description: "Delicious Red Velvet cake",
-        },
-        {
-          id: 5,
-          name: "Chocolate Caremal Cake",
-          weight: "4 kg",
-          eggOrEggless: "With Egg",
-          availability: "OIn Stock",
-          price: 3200,
-          rating: 4.5,
-          image: "CC1.jpg",
-          description: "Delicious Chocolate Caremal cake",
-        },
-        {
-          id: 6,
-          name: "Black Current Cake",
-          weight: "3 kg",
-          eggOrEggless: "Eggless",
-          availability: "Out of Stock",
-          price: 2700,
-          rating: 4.5,
-          image: "CC2.jpg",
-          description: "Delicious Black Current cake",
-        },
-        {
-          id: 7,
-          name: "Butter Cake",
-          weight: "2.5 kg",
-          eggOrEggless: "With Egg",
-          availability: "Out of Stock",
-          price: 2200,
-          rating: 4.5,
-          image: "BCC.jpg",
-          description: "Delicious Butter cake",
-        },
-        {
-          id: 8,
-          name: "Jelly Ice Cake",
-          weight: "2 kg",
-          eggOrEggless: "With Egg",
-          availability: "In Stock",
-          price: 1600,
-          rating: 4.5,
-          image: "BB.webp",
-          description: "Delicious Ice cake",
-        },
-        {
-          id: 9,
-          name: "Fruit Cake",
-          weight: "2 kg",
-          eggOrEggless: "With Egg",
-          availability: "In Stock",
-          price: 1600,
-          rating: 4.5,
-          image: "fresh fruit.webp",
-          description: "Delicious Ice cake",
-        },
-
-        // Add more cakes as needed
-      ];
 
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
