@@ -13,6 +13,15 @@ body.dark-mode {
     background-color: rgb(60, 60, 60);
     color: white;
   }
+  .fa-cart-shopping {
+    color: pink;
+  }
+  .fa-heart {
+    color: red;
+  }
+  .fa-user {
+    color: skyblue;
+  }
   footer,
   section {
     color: black;
@@ -20,7 +29,6 @@ body.dark-mode {
   .fa-cart-shopping:hover {
     color: white;
   }
-
 }
 
 .toggle-switch {
@@ -36,7 +44,7 @@ body.dark-mode {
   display: block;
   width: 50px;
   height: 25px;
-  background-color: gray;
+  background-color: black;
   border-radius: 25px;
   position: relative;
   cursor: pointer;
@@ -86,6 +94,11 @@ body.dark-mode {
 }
 .breadcrumb a:hover {
   scale: 1.05;
+  color: black;
+}
+.icon-s {
+  font-size: 22px;
+  cursor: pointer;
   color: black;
 }
 .sticky-filter {

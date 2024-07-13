@@ -54,6 +54,15 @@
         section {
           color: black;
         }
+        .fa-cart-shopping {
+          color: pink;
+        }
+        .fa-heart {
+          color: red;
+        }
+        .fa-user {
+          color: skyblue;
+        }
         #dropdownMenuButton1 {
           color: black;
         }
@@ -83,7 +92,7 @@
         display: block;
         width: 50px;
         height: 25px;
-        background-color: gray;
+        background-color: black;
         border-radius: 25px;
         position: relative;
         cursor: pointer;
@@ -121,7 +130,11 @@
       .toggle-switch input[type="checkbox"]:checked + label .moon {
         opacity: 1;
       }
-
+      .icon-s {
+        font-size: 22px;
+        cursor: pointer;
+        color: black;
+      }
       .main-page {
         min-height: 100vh;
       }
@@ -170,6 +183,12 @@
       }
       .product-card {
         cursor: pointer;
+      }
+
+      .icon-s {
+        font-size: 22px;
+        cursor: pointer;
+        color: black;
       }
 
       footer,
@@ -237,24 +256,14 @@
           </label>
         </div>
         <a href="../Cart Page/cart.html"
-          ><i
-            class="fas fa-cart-shopping px-4"
-            style="font-size: 22px; cursor: pointer; color: black"
-          ></i
+          ><i class="fas fa-cart-shopping icon-s px-4"></i
         ></a>
 
         <a href="../Cart Page/wishlist.html"
-          ><i
-            class="fas fa-heart"
-            style="font-size: 22px; cursor: pointer; color: black"
-          ></i
+          ><i class="fas fa-heart icon-s"></i
         ></a>
         <a href="../Profile Page/profile.html"
-          ><i
-            class="fa fa-user px-4"
-            aria-hidden="true"
-            style="font-size: 22px; cursor: pointer; color: black"
-          ></i
+          ><i class="fa fa-user icon-s px-4" aria-hidden="true"></i
         ></a>
       </div>
     </div>
@@ -594,6 +603,24 @@
       </div>
     </div>
 
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item mx-2"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item mx-2"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
     <footer class="text-center text-lg-start bg-body-tertiary">
       <section
         class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom border-top"
@@ -710,6 +737,11 @@
               </p>
               <p>
                 <a href="../Quick Pages/FAQ.html" class="text-reset">FAQs</a>
+              </p>
+              <p>
+                <a href="../Quick Pages/career.html" class="text-reset"
+                  >Career</a
+                >
               </p>
             </div>
             <div class="col-md-4 col-lg-3 col-xl-4 mx-auto mb-md-0 mb-4">

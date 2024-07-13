@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      body.dark-mode {
+        background-color: rgb(60, 60, 60);
+        color: white;
+
+        .breadcrumb a {
+          color: black;
+        }
+
+        .main-page {
+          background-color: rgb(60, 60, 60);
+        }
+
+        #dropdownMenuButton1 {
+          color: black;
+        }
+        .fa-cart-shopping {
+          color: pink;
+        }
+        .fa-heart {
+          color: red;
+        }
+        .fa-user {
+          color: skyblue;
+        }
+        .card-body {
+          color: black;
+        }
+
+        .modal-header {
+          background-color: rgb(60, 60, 60);
+          color: black;
+        }
+
+        .modal-body {
+          background-color: rgb(60, 60, 60);
+          color: black;
+        }
+
+        .close-btn {
+          color: white;
+        }
+
+        footer,
+        section {
+          color: black;
+        }
+      }
+
+      .toggle-switch {
+        top: 20px;
+        right: 20px;
+      }
+
+      .toggle-switch input[type="checkbox"] {
+        display: none;
+      }
+
+      .toggle-switch label {
+        display: block;
+        width: 50px;
+        height: 25px;
+        background-color: black;
+        border-radius: 25px;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .toggle-switch label .icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .toggle-switch label .sun {
+        left: 5px;
+        color: #f7df06;
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+
+      .toggle-switch label .moon {
+        right: 5px;
+        color: #ffff;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .toggle-switch input[type="checkbox"]:checked + label .sun {
+        opacity: 0;
+      }
+
+      .toggle-switch input[type="checkbox"]:checked + label .moon {
+        opacity: 1;
+      }
+
+      footer,
+      section {
+        background-color: #ffabc7;
+      }
+
+      section a {
+        text-decoration: none;
+      }
+
+      .breadcrumb {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #ffabc7;
+        height: 50px;
+      }
+
+      .breadcrumb a {
+        color: black;
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+
+      .dropdown-toggle {
+        margin-top: 12px;
+      }
+
+      .dropdown-toggle a {
+        text-decoration: none;
+      }
+
+      .dropdowns li a {
+        font-size: 15px;
+        font-weight: normal;
+      }
+
+      .icon-s {
+        font-size: 22px;
+        cursor: pointer;
+        color: black;
+      }
+
+      .FAQ h1 {
+        font-size: 30px;
+        font-family: Poppins;
+        text-align: center;
+        padding-top: 2rem;
+      }
+
+      .main-page {
+        background-color: #fcfbfb;
+        padding-top: 1rem;
+        min-height: 200vh;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .header1 {
+        height: 10rem;
+      }
+
+      #flavour {
+        display: flex;
+      }
+
+      #flavour .flavour2 {
+        width: 50%;
+      }
+
+      .flavour2 img {
+        height: 30rem;
+        width: 38rem;
+        border-radius: 0.8rem;
+      }
+
+      #flavour .flavour3 {
+        width: 50%;
+      }
+
+      #full-stars-example-two {
+        .rating-group {
+          display: inline-flex;
+        }
+
+        .rating__icon {
+          pointer-events: none;
+        }
+
+        .rating__input {
+          position: absolute !important;
+          left: -9999px !important;
+        }
+
+        .rating__input--none {
+          display: none;
+        }
+
+        .rating__label {
+          cursor: pointer;
+          padding: 0 0.1em;
+          font-size: 2rem;
+        }
+
+        .rating__icon--star {
+          color: orange;
+        }
+
+        .rating__input:checked ~ .rating__label .rating__icon--star {
+          color: #ddd;
+        }
+
+        .rating-group:hover .rating__label .rating__icon--star {
+          color: orange;
+        }
+
+        .rating__input:hover ~ .rating__label .rating__icon--star {
+          color: #ddd;
+        }
+      }
+
+      .star3 {
+        color: palevioletred;
+        margin-left: 5rem;
+      }
+
+      .msg input {
+        width: 40rem;
+        height: 4rem;
+        margin-top: 1rem;
+        border-radius: 0.8rem;
+      }
+
+      .msg1 input {
+        width: 40rem;
+        height: 4rem;
+        margin-top: 1rem;
+      }
+
+      .flavor1 {
+        margin-top: 1rem;
+      }
+
+      .h-80 {
+        height: 35vh;
+        border-radius: 0.8rem;
+      }
+
+      .star4 h6 {
+        margin-left: 5rem;
+      }
+
+      .star6 h6 {
+        margin-left: 5rem;
+      }
+
+      .star {
+        width: 60rem;
+        margin-left: 12rem;
+        margin-bottom: 1rem;
+      }
+
+      .star p {
+        margin-left: 5rem;
+      }
+
+      .star1 {
+        width: 60rem;
+        margin-left: 12rem;
+        margin-bottom: 2rem;
+      }
+
+      .star1 p {
+        margin-left: 5rem;
+      }
+
+      .msg1 button {
+        width: 100%;
+        height: 50px;
+      }
+
+      .review img {
+        height: 2rem;
+        width: 2rem;
+      }
+
+      .card {
+        margin-bottom: 10px;
+      }
+
+      .card-body {
+        padding: 10px 20px;
+      }
+
+      .modal-slide {
+        position: fixed;
+        top: 0;
+        right: -50%;
+        width: 50%;
+        height: 100%;
+        background-color: white;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+        transition: right 0.5s ease-in-out;
+        overflow-y: auto;
+        z-index: 1050;
+      }
+
+      .modal-slide.show {
+        right: 0;
+      }
+
+      .modal-header {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem;
+        border-bottom: none;
+      }
+
+      .modal-body {
+        padding: 2rem;
+      }
+
+      #modal-cake-container .card {
+        width: 48%;
+        margin: 1%;
+      }
+
+      @media (max-width: 768px) {
+        #modal-cake-container .card {
+          width: 100%;
+          margin: 0.5rem 0;
+        }
+      }
+
+      .close-btn {
+        cursor: pointer;
+        font-size: 1.5rem;
+        transition: all ease 0.3s;
+      }
+
+      .close-btn:hover {
+        scale: 1.1;
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="d-flex header justify-content-between pb-2">
+      <div class="col pt-2 px-2">
+        <a href="../index.html">
+          <img
+            src="../Media/logo.jpg"
+            class="border-end border-dark rounded-circle"
+            width="80px"
+            height="80px"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="col mt-2 align-self-center">
+        <input
+          class="form-control rounded-pill p-2 text-center"
+          type="search"
+          placeholder="Search for cakes, desserts, and more"
+          aria-label="Search"
+        />
+      </div>
+      <div
+        class="col d-flex justify-content-end text-end icons align-self-center mt-4 mb-2"
+      >
+        <div class="toggle-switch">
+          <input type="checkbox" id="darkModeSwitch" />
+          <label for="darkModeSwitch">
+            <span class="icon sun"><i class="fas fa-sun"></i></span>
+            <span class="icon moon"><i class="fas fa-moon"></i></span>
+          </label>
+        </div>
+        <a href="../Cart Page/cart.html"
+          ><i class="fas fa-cart-shopping icon-s px-4"></i
+        ></a>
+
+        <a href="../Cart Page/wishlist.html"
+          ><i class="fas fa-heart icon-s"></i
+        ></a>
+        <a href="../Profile Page/profile.html"
+          ><i class="fa fa-user icon-s px-4" aria-hidden="true"></i
+        ></a>
+      </div>
+    </div>
+    <div
+      class="d-flex breadcrumb justify-content-center border-bottom border-top gap-5 mb-0 pt-0 px-5"
+    >
+      <div class="dropdown mx-3">
+        <label
+          class="dropdown-toggle"
+          id="dropdownMenuButton1"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <a class="" href="">Cakes</a>
+        </label>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <div class="d-flex m-0">
+            <div class="dropdowns">
+              <li>
+                <a class="dropdown-item" href="#"><b>Layers</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">One</a></li>
+              <li><a class="dropdown-item" href="#">Two</a></li>
+              <li><a class="dropdown-item" href="#">Three</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>By Shapes</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Square</a></li>
+              <li><a class="dropdown-item" href="#">Circle</a></li>
+              <li><a class="dropdown-item" href="#">Heart</a></li>
+              <li><a class="dropdown-item" href="#">Tall</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>By Flavour</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Choclate</a></li>
+              <li><a class="dropdown-item" href="#">Blueberry</a></li>
+              <li><a class="dropdown-item" href="#">Pineapple</a></li>
+              <li><a class="dropdown-item" href="#">Fresh Fruit</a></li>
+              <li><a class="dropdown-item" href="#">Red Velvet</a></li>
+              <li><a class="dropdown-item" href="#">Vanilla</a></li>
+              <li><a class="dropdown-item" href="#">Butterscotch</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>By Occasion</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Birthday</a></li>
+              <li><a class="dropdown-item" href="#">Anniversary</a></li>
+              <li><a class="dropdown-item" href="#">Wedding</a></li>
+              <li><a class="dropdown-item" href="#">Baby Shower</a></li>
+              <li><a class="dropdown-item" href="#">Engagement</a></li>
+              <li><a class="dropdown-item" href="#">Mother's Day</a></li>
+              <li><a class="dropdown-item" href="#">Father's Day</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>By Occasion</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Valentines Day</a></li>
+              <li><a class="dropdown-item" href="#">Classic Cakes</a></li>
+              <li><a class="dropdown-item" href="#">Friendships Day</a></li>
+              <li><a class="dropdown-item" href="#">New Year</a></li>
+              <li><a class="dropdown-item" href="#">Christmas</a></li>
+              <li><a class="dropdown-item" href="#">Teacher's Day</a></li>
+              <li><a class="dropdown-item" href="#">Fairwell Cakes</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>Trending Cakes</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Pull Me Up Cake</a></li>
+              <li><a class="dropdown-item" href="#">Pinata Cake</a></li>
+              <li><a class="dropdown-item" href="#">Half Cake</a></li>
+              <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
+              <li><a class="dropdown-item" href="#">Bento Cake</a></li>
+              <li><a class="dropdown-item" href="#">Surprise Cake Box</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Photo Pulling Cake</a>
+              </li>
+            </div>
+            <div class="dropdowns d-flex flex-column h-25">
+              <li>
+                <a class="dropdown-item" href="#"><b>Unique Cakes</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Moose Cake</a></li>
+              <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column h-25">
+              <li>
+                <a class="dropdown-item" href="#"><b>Premium Cakes</b></a>
+              </li>
+            </div>
+          </div>
+        </ul>
+      </div>
+
+      <div class="mt-1 mx mb-3">
+        <a class="nav-link" href="../Category Page/cake_list.html">Cup-Cakes</a>
+      </div>
+      <div class="mt-1 mx-3 mb-3">
+        <a class="nav-link" href="../Category Page/cake_list.html">Pastrey</a>
+      </div>
+      <div class="mt-1 mx-3 mb-3">
+        <a class="nav-link" href="../Category Page/cake_list.html">Desserts</a>
+      </div>
+      <div class="mt-1 mx-3 mb-3">
+        <a class="nav-link" href="../Category Page/cake_list.html"
+          >Trending Cakes</a
+        >
+      </div>
+      <div class="mt-1 mb-3">
+        <a class="nav-link" href="../Category Page/cake_list.html"
+          >Unique Cakes</a
+        >
+      </div>
+    </div>
+
+    <div id="flavour" class="flavour1 container mt-5">
+      <div class="flavour2">
+        <img src="../Media/black forest.webp" alt="" />
+        <h4 class="text-center mt-4">NEED HELP?</h4>
+        <h6 class="text-center">
+          For design modification or any query <br />
+          please feel free to reach us out.
+        </h6>
+      </div>
+
+      <div class="flavour3">
+        <h1>vanilla cake</h1>
+        A vanilla cake is a tender delight, its golden crumb infused with the
+        sweet essence of vanilla, offering a classic and comforting indulgence
+        with every bite.
+
+        <div id="full-stars-example-two">
+          <div class="rating-group">
+            <input
+              disabled
+              checked
+              class="rating__input rating__input--none"
+              name="rating3"
+              id="rating3-none"
+              value="0"
+              type="radio"
+            />
+            <label aria-label="1 star" class="rating__label" for="rating3-1"
+              ><i class="rating__icon rating__icon--star fa fa-star"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating3"
+              id="rating3-1"
+              value="1"
+              type="radio"
+            />
+            <label aria-label="2 stars" class="rating__label" for="rating3-2"
+              ><i class="rating__icon rating__icon--star fa fa-star"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating3"
+              id="rating3-2"
+              value="2"
+              type="radio"
+            />
+            <label aria-label="3 stars" class="rating__label" for="rating3-3"
+              ><i class="rating__icon rating__icon--star fa fa-star"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating3"
+              id="rating3-3"
+              value="3"
+              type="radio"
+            />
+            <label aria-label="4 stars" class="rating__label" for="rating3-4"
+              ><i class="rating__icon rating__icon--star fa fa-star"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating3"
+              id="rating3-4"
+              value="4"
+              type="radio"
+            />
+            <label aria-label="5 stars" class="rating__label" for="rating3-5"
+              ><i class="rating__icon rating__icon--star fa fa-star"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating3"
+              id="rating3-5"
+              value="5"
+              type="radio"
+            />
+          </div>
+          <p class="desc" style="font-family: sans-serif; font-size: 0.9rem">
+            Full stars<br />
+            Must select a star value
+          </p>
+        </div>
+        <div class="flavor">
+          <h3>flavors*</h3>
+          <button type="button" class="btn mt-2 mx-1 border-dark">
+            strawberry
+          </button>
+          <button type="button" class="btn mt-2 mx-1 border-dark">
+            pinapple
+          </button>
+          <button type="button" class="btn mt-2 mx-1 border-dark">
+            blueberry
+          </button>
+        </div>
+
+        <h3 class="mt-3">egg option</h3>
+        <button type="button" class="btn mt-2 mx-1 border-dark">egg</button>
+        <button type="button" class="btn mt-2 mx-1 border-dark">eggless</button>
+
+        <h3 class="mt-3">weight</h3>
+        <button type="button" class="btn mt-2 mx-1 border-dark">1kg</button>
+        <button type="button" class="btn mt-2 mx-1 border-dark">1.5kg</button>
+        <button type="button" class="btn mt-2 mx-1 border-dark">2kg</button>
+
+        <div class="flavor1">
+          <form action="">
+            <div class="form-group">
+              <label for="city">Choose your city:</label>
+              <select class="form-control" name="city" id="city">
+                <option disabled selected>Select</option>
+                <option value="sangli">Sangli</option>
+                <option value="kolhapur">Kolhapur</option>
+                <option value="ichalkarnji">Ichalkarnji</option>
+              </select>
+            </div>
+          </form>
+        </div>
+
+        <div class="msg">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Message on cake (Optional)"
+          />
+        </div>
+
+        <div class="msg1">
+          <button type="button" class="btn btn-dark btn-lg btn-block mt-3">
+            ADD TO CART
+          </button>
+        </div>
+
+        <div class="review-ratings mt-3">
+          <h3>Customer Reviews</h3>
+          <div class="review">
+            <img src="./CC1.jpg" alt="Reviewer 1" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+              cursus lacinia sem, sit amet maximus turpis.
+            </p>
+          </div>
+          <div class="review">
+            <img src="reviewer2.jpg" alt="Reviewer 2" />
+            <p>
+              Nullam eleifend libero vel ipsum convallis, vel hendrerit nisi
+              varius. Donec consectetur venenatis nunc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="products container mt-5">
+      <h4 class="text-center">Recently Viewed</h4>
+      <div class="va-btn text-end">
+        <button class="btn btn-outline-danger" id="viewAllBtn">View All</button>
+      </div>
+      <div class="mt-4">
+        <div class="row" id="cake-container">
+          <!-- Cake cards will be dynamically added here -->
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-slide" id="cakeModal">
+      <div class="modal-header">
+        <span
+          class="close-btn me-3 border border-2 border-dark rounded-3 px-2"
+          id="closeModal"
+          >&times;</span
+        >
+      </div>
+      <div class="modal-body py-0">
+        <div class="row" id="modal-cake-container">
+          <!-- Cakes for the modal will be dynamically added here -->
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center text-lg-start bg-body-tertiary">
+      <section
+        class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom border-top"
+      >
+        <div class="me-3 d-none d-lg-block">
+          <span>Get connected with us on social networks :</span>
+        </div>
+
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="border-bottom">
+        <div class="container text-center text-md-start pt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>THE CAKE HEAVEN
+              </h6>
+              <p>
+                "Experience the divine taste of our handcrafted delights at The
+                Cake Heaven where every bite is a slice of paradise. Join us in
+                celebrating life's sweetest moments!"
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">COLLECTIONS</h6>
+              <p>
+                <a href="../Category Page/cake_list.html" class="text-reset"
+                  >Same Day Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category Page/cake_list.html" class="text-reset"
+                  >Classic Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category Page/cake_list.html" class="text-reset"
+                  >Custom Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category Page/cake_list.html" class="text-reset"
+                  >Cup Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category Page/cake_list.html" class="text-reset"
+                  >Desserts</a
+                >
+              </p>
+              <p>
+                <a href="../Category Page/cake_list.html" class="text-reset"
+                  >Flowers</a
+                >
+              </p>
+              <p>
+                <a href="../Category Page/cake_list.html" class="text-reset"
+                  >Anniversary Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category Page/cake_list.html" class="text-reset"
+                  >Birthday Cakes</a
+                >
+              </p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">QUICK LINKS</h6>
+              <p>
+                <a href="about.html" class="text-reset">Contact Us</a>
+              </p>
+              <p>
+                <a href="about.html" class="text-reset">About us</a>
+              </p>
+              <p>
+                <a href="privacy-policy.html" class="text-reset"
+                  >Privacy Policy</a
+                >
+              </p>
+              <p>
+                <a href="terms.html" class="text-reset">Terms & Conditions</a>
+              </p>
+              <p>
+                <a href="shipping.html" class="text-reset">Shipping Policy</a>
+              </p>
+              <p>
+                <a href="cancellation.html" class="text-reset"
+                  >Return & Refund Policy</a
+                >
+              </p>
+              <p>
+                <a href="FAQ.html" class="text-reset">FAQs</a>
+              </p>
+              <p>
+                <a href="career.html" class="text-reset">Career</a>
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-4 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3"></i> Kupwad, Sangli Maharashtra</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                contact@thecakeheaven.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center pb-3 pt-3">
+        © 2024 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
+          >TheCakeHeaven.com</a
+        >
+      </section>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../Category Page/cakes.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleSwitch = document.getElementById("darkModeSwitch");
+
+        function applyDarkModePreference() {
+          if (localStorage.getItem("darkMode") === "enabled") {
+            document.body.classList.add("dark-mode");
+            toggleSwitch.checked = true;
+          } else {
+            document.body.classList.remove("dark-mode");
+            toggleSwitch.checked = false;
+          }
+        }
+
+        function toggleDarkMode() {
+          if (toggleSwitch.checked) {
+            document.body.classList.add("dark-mode");
+            localStorage.setItem("darkMode", "enabled");
+          } else {
+            document.body.classList.remove("dark-mode");
+            localStorage.setItem("darkMode", "disabled");
+          }
+        }
+
+        toggleSwitch.addEventListener("change", toggleDarkMode);
+        applyDarkModePreference();
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        var currentLocation = window.location.pathname;
+        var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+        navLinks.forEach(function (link) {
+          if (link.getAttribute("href") === currentLocation) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add event listener for flavor buttons
+        const flavorButtons = document.querySelectorAll(".flavor button");
+        flavorButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Redirect to cake page (replace 'cake.html' with actual URL)
+            window.location.href = "cake.html";
+          });
+        });
+
+        // Add event listener for Add to Cart button
+        const addToCartButton = document.querySelector(
+          '.msg1 input[type="text"]'
+        );
+        addToCartButton.addEventListener("click", function () {
+          // Redirect to cart page (replace 'cart.html' with actual URL)
+          window.location.href = "cart.html";
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add event listener for Add to Cart button
+        const addToCartButton = document.querySelector(".msg1 button");
+        addToCartButton.addEventListener("click", function () {
+          // Redirect to cart page (replace 'cart.html' with actual URL)
+          window.location.href = "cart.html";
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const cakeContainer = document.getElementById("cake-container");
+        const modalCakeContainer = document.getElementById(
+          "modal-cake-container"
+        );
+        const viewAllBtn = document.getElementById("viewAllBtn");
+        const cakeModal = document.getElementById("cakeModal");
+        const closeModal = document.getElementById("closeModal");
+
+        // Function to create cake cards
+        function createCakeCard(cake, isModal = false) {
+          const card = document.createElement("div");
+          card.classList.add("col-md-3", "mb-4");
+
+          const cardBody = document.createElement("div");
+          cardBody.classList.add("card", "h-100", "w-100");
+          cardBody.style.boxShadow = "0px 4px 8px rgba(0, 0, 0, 0.1)";
+
+          const img = document.createElement("img");
+          img.classList.add("card-img-top");
+          img.src = cake.image;
+          img.alt = cake.name;
+
+          const cardContent = document.createElement("div");
+          cardContent.classList.add("card-body");
+
+          const title = document.createElement("h5");
+          title.classList.add("card-title");
+          title.textContent = cake.name;
+
+          const details = document.createElement("p");
+          details.classList.add("card-text");
+          details.innerHTML = `<strong>Price:</strong> $${
+            cake.price
+          }<br><strong>Rating:</strong> ${cake.rating.toFixed(1)} ${
+            cake.rating >= 4.7 ? "★" : ""
+          }`;
+
+          cardContent.appendChild(title);
+          cardContent.appendChild(details);
+          cardBody.appendChild(img);
+          cardBody.appendChild(cardContent);
+          card.appendChild(cardBody);
+
+          if (isModal) {
+            card.classList.replace("col-md-3", "col-md-6");
+          }
+
+          return card;
+        }
+
+        // Initial display of the first 4 cakes
+        cakes.slice(0, 4).forEach(function (cake) {
+          const card = createCakeCard(cake);
+          cakeContainer.appendChild(card);
+        });
+
+        // Event listener for "View All" button
+        viewAllBtn.addEventListener("click", function () {
+          // Clear the modal cake container
+          modalCakeContainer.innerHTML = "";
+
+          // Add all cakes to the modal
+          cakes.forEach(function (cake) {
+            const card = createCakeCard(cake, true);
+            modalCakeContainer.appendChild(card);
+          });
+
+          // Show the modal by adding the 'show' class
+          cakeModal.classList.add("show");
+        });
+
+        // Event listener for closing the modal
+        closeModal.addEventListener("click", function () {
+          // Hide the modal by removing the 'show' class
+          cakeModal.classList.remove("show");
+        });
+      });
+    </script>
+  </body>
+</html>

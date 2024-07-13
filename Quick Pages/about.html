@@ -1,286 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Delights Bakery - About Us</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sweet Delights Bakery - About Us</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./style.css">
-</head>
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
 
-<body>
-  <div class="d-flex header justify-content-between pb-2">
-    <div class="col pt-2 px-2">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link
+      href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="d-flex header justify-content-between pb-2">
+      <div class="col pt-2 px-2">
         <a href="../index.html">
-        <img
-          src="../Media/logo.jpg"
-          class="border-end border-dark rounded-circle"
-          width="80px"
-          height="80px"
-          alt=""
-        />
-      </a>
+          <img
+            src="../Media/logo.jpg"
+            class="border-end border-dark rounded-circle"
+            width="80px"
+            height="80px"
+            alt=""
+          />
+        </a>
       </div>
-    <div class="col mt-2 align-self-center">
-      <input
-        class="form-control rounded-pill"
-        type="search"
-        placeholder="Search for cakes, desserts, and more"
-        aria-label="Search"
-      />
+      <div class="col mt-2 align-self-center">
+        <input
+          class="form-control rounded-pill"
+          type="search"
+          placeholder="Search for cakes, desserts, and more"
+          aria-label="Search"
+        />
+      </div>
+      <div
+        class="col d-flex justify-content-end text-end icons align-self-center mb-2 mt-4"
+      >
+        <div class="toggle-switch">
+          <input type="checkbox" id="darkModeSwitch" />
+          <label for="darkModeSwitch">
+            <span class="icon sun"><i class="fas fa-sun"></i></span>
+            <span class="icon moon"><i class="fas fa-moon"></i></span>
+          </label>
+        </div>
+        <a href="../Cart Page/cart.html"
+          ><i class="fas fa-cart-shopping icon-s px-4"></i
+        ></a>
+        <a href="../Cart Page/wishlist.html"
+          ><i class="fas fa-heart icon-s"></i
+        ></a>
+        <a href="../Profile Page/profile.html"
+          ><i class="fa fa-user icon-s px-4" aria-hidden="true"></i
+        ></a>
+      </div>
     </div>
     <div
-      class="col d-flex justify-content-end text-end icons align-self-center mb-2"
+      class="d-flex breadcrumb justify-content-center border-bottom border-top gap-5 mb-0 pt-0 px-5"
     >
-      <div class="toggle-switch">
-        <input type="checkbox" id="darkModeSwitch" />
-        <label for="darkModeSwitch">
-          <span class="icon sun"><i class="fas fa-sun"></i></span>
-          <span class="icon moon"><i class="fas fa-moon"></i></span>
+      <div class="dropdown mx-3">
+        <label
+          class="dropdown-toggle"
+          id="dropdownMenuButton1"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <a class="" href="">Cakes</a>
         </label>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <div class="d-flex m-0">
+            <div class="dropdowns">
+              <li>
+                <a class="dropdown-item" href="#"><b>Layers</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">One</a></li>
+              <li><a class="dropdown-item" href="#">Two</a></li>
+              <li><a class="dropdown-item" href="#">Three</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>By Shapes</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Square</a></li>
+              <li><a class="dropdown-item" href="#">Circle</a></li>
+              <li><a class="dropdown-item" href="#">Heart</a></li>
+              <li><a class="dropdown-item" href="#">Tall</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>By Flavour</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Choclate</a></li>
+              <li><a class="dropdown-item" href="#">Blueberry</a></li>
+              <li><a class="dropdown-item" href="#">Pineapple</a></li>
+              <li><a class="dropdown-item" href="#">Fresh Fruit</a></li>
+              <li><a class="dropdown-item" href="#">Red Velvet</a></li>
+              <li><a class="dropdown-item" href="#">Vanilla</a></li>
+              <li><a class="dropdown-item" href="#">Butterscotch</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>By Occasion</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Birthday</a></li>
+              <li><a class="dropdown-item" href="#">Anniversary</a></li>
+              <li><a class="dropdown-item" href="#">Wedding</a></li>
+              <li><a class="dropdown-item" href="#">Baby Shower</a></li>
+              <li><a class="dropdown-item" href="#">Engagement</a></li>
+              <li><a class="dropdown-item" href="#">Mother's Day</a></li>
+              <li><a class="dropdown-item" href="#">Father's Day</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>By Occasion</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Valentines Day</a></li>
+              <li><a class="dropdown-item" href="#">Classic Cakes</a></li>
+              <li><a class="dropdown-item" href="#">Friendships Day</a></li>
+              <li><a class="dropdown-item" href="#">New Year</a></li>
+              <li><a class="dropdown-item" href="#">Christmas</a></li>
+              <li><a class="dropdown-item" href="#">Teacher's Day</a></li>
+              <li><a class="dropdown-item" href="#">Fairwell Cakes</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>Trending Cakes</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Pull Me Up Cake</a></li>
+              <li><a class="dropdown-item" href="#">Pinata Cake</a></li>
+              <li><a class="dropdown-item" href="#">Half Cake</a></li>
+              <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
+              <li><a class="dropdown-item" href="#">Bento Cake</a></li>
+              <li><a class="dropdown-item" href="#">Surprise Cake Box</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Photo Pulling Cake</a>
+              </li>
+            </div>
+            <div class="dropdowns d-flex flex-column h-25">
+              <li>
+                <a class="dropdown-item" href="#"><b>Unique Cakes</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Moose Cake</a></li>
+              <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column h-25">
+              <li>
+                <a class="dropdown-item" href="#"><b>Premium Cakes</b></a>
+              </li>
+            </div>
+          </div>
+        </ul>
       </div>
-      <a href="../Cart Page/cart.html"
-        ><i
-          class="fas fa-cart-shopping px-4"
-          style="font-size: 22px; cursor: pointer; color: black"
-        ></i
-      ></a>
 
-      <a href="../Cart Page/wishlist.html"
-        ><i
-          class="fas fa-heart"
-          style="font-size: 22px; cursor: pointer; color: black"
-        ></i
-      ></a>
-      <a href="../Profile Page/profile.html"
-        ><i
-          class="fa fa-user px-4"
-          aria-hidden="true"
-          style="font-size: 22px; cursor: pointer; color: black"
-        ></i
-      ></a>
+      <div class="mt-1 mx mb-3">
+        <a class="nav-link" href="../Category Page/cake_list.html">Cup-Cakes</a>
+      </div>
+      <div class="mt-1 mx-3 mb-3">
+        <a class="nav-link" href="../Category Page/cake_list.html">Pastrey</a>
+      </div>
+      <div class="mt-1 mx-3 mb-3">
+        <a class="nav-link" href="../Category Page/cake_list.html">Desserts</a>
+      </div>
+      <div class="mt-1 mx-3 mb-3">
+        <a class="nav-link" href="../Category Page/cake_list.html"
+          >Trending Cakes</a
+        >
+      </div>
+      <div class="mt-1 mb-3">
+        <a class="nav-link" href="../Category Page/cake_list.html"
+          >Unique Cakes</a
+        >
+      </div>
     </div>
-  </div>
-  <div
-  class="d-flex breadcrumb justify-content-center border-bottom border-top gap-5 mb-0 pt-0 px-5"
->
-  <div class="dropdown mx-3">
-    <label
-      class="dropdown-toggle"
-      id="dropdownMenuButton1"
-      data-bs-toggle="dropdown"
-      aria-expanded="false"
-    >
-      <a class="" href="">Cakes</a>
-    </label>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      <div class="d-flex m-0">
-        <div class="dropdowns">
-          <li>
-            <a class="dropdown-item" href="#"><b>Layers</b></a>
-          </li>
-          <li><a class="dropdown-item" href="#">One</a></li>
-          <li><a class="dropdown-item" href="#">Two</a></li>
-          <li><a class="dropdown-item" href="#">Three</a></li>
-        </div>
-        <div class="dropdowns d-flex flex-column">
-          <li>
-            <a class="dropdown-item" href="#"><b>By Shapes</b></a>
-          </li>
-          <li><a class="dropdown-item" href="#">Square</a></li>
-          <li><a class="dropdown-item" href="#">Circle</a></li>
-          <li><a class="dropdown-item" href="#">Heart</a></li>
-          <li><a class="dropdown-item" href="#">Tall</a></li>
-        </div>
-        <div class="dropdowns d-flex flex-column">
-          <li>
-            <a class="dropdown-item" href="#"><b>By Flavour</b></a>
-          </li>
-          <li><a class="dropdown-item" href="#">Choclate</a></li>
-          <li><a class="dropdown-item" href="#">Blueberry</a></li>
-          <li><a class="dropdown-item" href="#">Pineapple</a></li>
-          <li><a class="dropdown-item" href="#">Fresh Fruit</a></li>
-          <li><a class="dropdown-item" href="#">Red Velvet</a></li>
-          <li><a class="dropdown-item" href="#">Vanilla</a></li>
-          <li><a class="dropdown-item" href="#">Butterscotch</a></li>
-        </div>
-        <div class="dropdowns d-flex flex-column">
-          <li>
-            <a class="dropdown-item" href="#"><b>By Occasion</b></a>
-          </li>
-          <li><a class="dropdown-item" href="#">Birthday</a></li>
-          <li><a class="dropdown-item" href="#">Anniversary</a></li>
-          <li><a class="dropdown-item" href="#">Wedding</a></li>
-          <li><a class="dropdown-item" href="#">Baby Shower</a></li>
-          <li><a class="dropdown-item" href="#">Engagement</a></li>
-          <li><a class="dropdown-item" href="#">Mother's Day</a></li>
-          <li><a class="dropdown-item" href="#">Father's Day</a></li>
-        </div>
-        <div class="dropdowns d-flex flex-column">
-          <li>
-            <a class="dropdown-item" href="#"><b>By Occasion</b></a>
-          </li>
-          <li><a class="dropdown-item" href="#">Valentines Day</a></li>
-          <li><a class="dropdown-item" href="#">Classic Cakes</a></li>
-          <li><a class="dropdown-item" href="#">Friendships Day</a></li>
-          <li><a class="dropdown-item" href="#">New Year</a></li>
-          <li><a class="dropdown-item" href="#">Christmas</a></li>
-          <li><a class="dropdown-item" href="#">Teacher's Day</a></li>
-          <li><a class="dropdown-item" href="#">Fairwell Cakes</a></li>
-        </div>
-        <div class="dropdowns d-flex flex-column">
-          <li>
-            <a class="dropdown-item" href="#"><b>Trending Cakes</b></a>
-          </li>
-          <li><a class="dropdown-item" href="#">Pull Me Up Cake</a></li>
-          <li><a class="dropdown-item" href="#">Pinata Cake</a></li>
-          <li><a class="dropdown-item" href="#">Half Cake</a></li>
-          <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
-          <li><a class="dropdown-item" href="#">Bento Cake</a></li>
-          <li><a class="dropdown-item" href="#">Surprise Cake Box</a></li>
-          <li>
-            <a class="dropdown-item" href="#">Photo Pulling Cake</a>
-          </li>
-        </div>
-        <div class="dropdowns d-flex flex-column h-25">
-          <li>
-            <a class="dropdown-item" href="#"><b>Unique Cakes</b></a>
-          </li>
-          <li><a class="dropdown-item" href="#">Moose Cake</a></li>
-          <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
-        </div>
-        <div class="dropdowns d-flex flex-column h-25">
-          <li>
-            <a class="dropdown-item" href="#"><b>Premium Cakes</b></a>
-          </li>
-        </div>
-      </div>
-    </ul>
-  </div>
 
-  <div class="mt-1 mx mb-3">
-    <a class="nav-link" href="../Category Page/cake_list.html">Cup-Cakes</a>
-  </div>
-  <div class="mt-1 mx-3 mb-3">
-    <a class="nav-link" href="../Category Page/cake_list.html">Pastrey</a>
-  </div>
-  <div class="mt-1 mx-3 mb-3">
-    <a class="nav-link" href="../Category Page/cake_list.html">Desserts</a>
-  </div>
-  <div class="mt-1 mx-3 mb-3">
-    <a class="nav-link" href="../Category Page/cake_list.html"
-      >Trending Cakes</a
-    >
-  </div>
-  <div class="mt-1 mb-3">
-    <a class="nav-link" href="../Category Page/cake_list.html"
-      >Unique Cakes</a
-    >
-  </div>
-</div>
+    <!-- <div class="contain"> -->
+    <h1 class="text-center text-danger mt-4 mb-4"><b>About Us</b></h1>
+    <!-- </div> -->
+    <div class="col-md-12">
+      <img class="w-100 h-75" src="../Media/about-bakery.jpg" alt="" />
+    </div>
 
-
-  <!-- <div class="contain"> -->
-    <h1 class="text-center text-danger">About Us</h1>
-  <!-- </div> -->
-  <div class="col-md-12">
-    <img class="w-100 h-75" src="./about-bakery.jpg" alt="">
-  </div>
-
-  <!-- <div class="col-md-12 mt-5 d-flex">
-  <div class="col-md-6">
-   <img src="./cake.jpeg" alt="" class="w-100 h-75">
-  </div>
-  <div class="col-md-6">
-    <p>Welcome to Cake Heaven, where we specialize in delivering delicious, fresh cakes straight to your door. Our cakes are made with the finest ingredients to ensure they taste as good as they look. Whether it's a birthday, anniversary, or any special occasion, we're here to make your celebrations sweeter.</p>
-  </div>
-</div> -->
-
-
-  <div class="a">
-    <section2 class="row  w-100">
-      <div class="col-lg-6 col-md-6 mt-5 px-5 p-0 align-self-center" data-aos="flip-left">
+    <section2 class="row gx-0 mt-5">
+      <div
+        class="col-lg-6 col-md-6 px-5 p-0 align-self-center"
+        data-aos="flip-left"
+      >
         <p class="fs-5">
-          
-           Welcome to Cake Heaven, where we specialize in delivering freshly baked, delicious cakes right to your door. Our wide range includes classic flavors like chocolate and vanilla, as well as specialty options such as red velvet and cheesecake, all made with the finest ingredients for exceptional taste.</p> 
-           <p class="fs-5"> Whether it's a birthday, anniversary, or any special occasion, we offer customization options to personalize your cake, ensuring it arrives fresh and beautifully decorated, ready to make your celebrations sweeter.
-           </p>
+          Welcome to The Cake Heaven, where we specialize in delivering freshly
+          baked, delicious cakes right to your door. Our wide range includes
+          classic flavors like chocolate and vanilla, as well as specialty
+          options such as red velvet all made with the finest ingredients for
+          exceptional taste.
+        </p>
+        <p class="fs-5">
+          Whether it's a birthday, anniversary, or any special occasion, we
+          offer customization options to personalize your cake, ensuring it
+          arrives fresh and beautifully decorated, ready to make your
+          celebrations sweeter.
+        </p>
       </div>
-      <div class="row1">
-      <div class="col-lg-6 col-md-6  p-0">
-        <div class="outer-container">
-          <div class="circle">
-        <img class="about-img" src="./cake.jpeg"  class="img-fluid" alt="img" />
-      </div>
-      </div>
-      </div>
-    </section2>
-
-    <section2 class="row w-100">
-      <div class="row1">
-      <div class="col-lg-6 col-md-6 p-0">
-        <img class="img-fluid  about-img" src="./fssai.jpeg" alt="img" />
-      </div>
-      </div>
-      <div class="col-lg-6 col-md-6 px-5 p-0 align-self-center mt-5" data-aos="flip-left">
-        <p class="fs-5">What makes us unique is our quick delivery service without compromising on quality. You can
-          count on us to get your cake to you promptly and reliably, all at an affordable price. Plus, as a FSSI
-          certified company, we prioritize food safety and hygiene in every cake we bake.</p>
+      <div class="col-lg-6 col-md-6 pr-5 p-0" data-aos="flip-left">
+        <img
+          class="img-fluid w-100 about-img"
+          src="../Media/cake.jpeg"
+          alt=""
+        />
       </div>
     </section2>
 
-    <!-- <section2 class="row">
-    <div class="col-lg-6 col-md-6 px-5 p-0 align-self-center" data-aos="flip-right">
-    <p>Join us at Cake Heaven and let us add a touch of sweetness to your special moments. Discover why our cakes are loved by everyone who tries them!</p>
-    </div>
-    <div class="col-lg-6 col-md-6 pr-5 p-0" data-aos="flip-left">
-      <img class="w-100 about-img" src="./delivery.jpeg" alt="" class="img-fluid">
-    </div>
-  </section2> -->
+    <section2 class="row gx-0">
+      <div class="col-lg-6 col-md-6 pl-5 p-0" data-aos="flip-right">
+        <img
+          class="img-fluid w-100 about-img"
+          src="../Media/fssai.jpeg"
+          alt=""
+        />
+      </div>
+      <div
+        class="col-lg-6 col-md-6 px-5 p-0 align-self-center"
+        data-aos="flip-left"
+      >
+        <p class="fs-5">
+          What makes us unique is our quick delivery service without
+          compromising on quality. You can count on us to get your cake to you
+          promptly and reliably, all at an affordable price. Plus, as a FSSI
+          certified company, we prioritize food safety and hygiene in every cake
+          we bake.
+        </p>
+      </div>
+    </section2>
 
-    <div class="col-md-12 mt-5 p-0">
-      <video width="100%" height="500" controls>
-        <source src="./3992584-uhd_4096_2160_25fps.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
+    <div class="col-md-12 mt-5 p-0 border border-4">
+      <video width="100%" height="500" controls autoplay loop>
+        <source src="../Media/V1.mp4" type="video/mp4" />
+        <source src="../Media/cake_video.mp4" type="video/ogg" />
       </video>
     </div>
 
-    <div id="contact">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <div class="image-container">
-              <img src="./red velvet.jpg" alt="Your Image">
-              <div class="contact-form">
-                <h2 class="mb-3  text-start"><b>Contact Form</b></h2>
+    <!-- contact Start -->
+    <div class="contact" id="contact1Div">
+      <div class="container bg-dark p-0">
+        <!-- Contact Start -->
+        <div class="container-xxl px-0 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="row gx-0">
+            <div class="col-md-6">
+              <video width="100%" height="500" controls autoplay loop>
+                <source src="../Media/cake_video.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div
+              class="col-md-6 bg-dark d-flex align-items-center contact-forms"
+            >
+              <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+                <h1 class="text-white mb-4">Contact Us For Any Queries</h1>
                 <form>
-                  <div class="form-group">
-                    <class="form"><div class="form1">Name:</div>
-                      <input type="text" placeholder="Enter Your Name" class="form-control mb-0 p-1" id="name" required>
+                  <div class="row gx-0 g-3">
+                    <div class="col-md-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Your Name"
+                        />
+                        <label for="name">Your Name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-floating">
+                        <input
+                          type="tel"
+                          class="form-control"
+                          id="number"
+                          placeholder="Mobile No"
+                        />
+                        <label for="number">Your Phone No</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-floating">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          placeholder="Your Email"
+                        />
+                        <label for="email">Your Email</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div
+                        class="form-floating date"
+                        id="date3"
+                        data-target-input="nearest"
+                      >
+                        <input
+                          type="text"
+                          class="form-control datetimepicker-input"
+                          id="datetime"
+                          placeholder="Date & Time"
+                          data-target="#date3"
+                          data-toggle="datetimepicker"
+                        />
+                        <label for="datetime">Date & Time</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <textarea
+                          class="form-control"
+                          placeholder="Special Request"
+                          id="message"
+                          style="height: 100px"
+                        ></textarea>
+                        <label for="message">Special Request</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button
+                        class="btn btn-primary w-100 py-3"
+                        type="submit"
+                        style="background-color: #d90166"
+                      >
+                        Submit
+                      </button>
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <class=""><div class="form1">Phone Number:</div>
-                      <input type="text" placeholder="Enter Your Mobile No" class="form-control mb-0 p-1" id="number"
-                        required>
-                  </div>
-                  <div class="form-group">
-                    <class=""><div class="form1">Email:</div>
-                      <input type="email" placeholder="Enter Your Email ID" class="form-control mb-0" id="email"
-                        required>
-                  </div>
-                  <div class="form-group">
-                    <class=""><div class="form1">Message:</div>
-                      <textarea class="form-control mb-0" placeholder="Enter Your Message" id="message" rows="2"
-                        required></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-primary btn-block fs-5">Submit</button>
                 </form>
               </div>
             </div>
@@ -289,6 +378,57 @@
       </div>
     </div>
 
+    <div
+      class="modal fade"
+      id="videoModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
+            <button
+              type="button"
+              class=""
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- 16:9 aspect ratio -->
+            <div class="ratio ratio-16x9">
+              <iframe
+                class="embed-responsive-item"
+                src=""
+                id="video"
+                allowfullscreen
+                allowscriptaccess="always"
+                allow="autoplay"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button to trigger modal -->
+    <div class="contact2">
+      <div class="contact3">
+        <h4><b>Contact Us For Frenchies</b></h4>
+      </div>
+      <div class="contact4">
+        <button
+          type="button"
+          class="btn btn-danger mb-2 bg-danger fs-5"
+          onclick="redirectToFrenchies()"
+        >
+          <b> Click Here </b>
+        </button>
+      </div>
+    </div>
 
     <footer class="text-center text-lg-start bg-body-tertiary">
       <section
@@ -316,7 +456,7 @@
 
       <section class="border-bottom">
         <div class="container text-center text-md-start pt-5">
-          <div class="row mt-3">
+          <div class="row gx-0 mt-3">
             <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
               <h6 class="text-uppercase fw-bold mb-4">
                 <i class="fas fa-gem me-3"></i>THE CAKE HEAVEN
@@ -375,14 +515,10 @@
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 class="text-uppercase fw-bold mb-4">QUICK LINKS</h6>
               <p>
-                <a href="about.html" class="text-reset"
-                  >Contact Us</a
-                >
+                <a href="about.html" class="text-reset">Contact Us</a>
               </p>
               <p>
-                <a href="about.html" class="text-reset"
-                  >About us</a
-                >
+                <a href="about.html" class="text-reset">About us</a>
               </p>
               <p>
                 <a href="privacy-policy.html" class="text-reset"
@@ -390,14 +526,10 @@
                 >
               </p>
               <p>
-                <a href="terms.html" class="text-reset"
-                  >Terms & Conditions</a
-                >
+                <a href="terms.html" class="text-reset">Terms & Conditions</a>
               </p>
               <p>
-                <a href="shipping.html" class="text-reset"
-                  >Shipping Policy</a
-                >
+                <a href="shipping.html" class="text-reset">Shipping Policy</a>
               </p>
               <p>
                 <a href="cancellation.html" class="text-reset"
@@ -405,10 +537,9 @@
                 >
               </p>
               <p>
-                <a href="FAQ.html" class="text-reset"
-                  >FAQs</a
-                >
+                <a href="FAQ.html" class="text-reset">FAQs</a>
               </p>
+              <p><a href="career.html" class="text-reset">Career</a></p>
             </div>
             <div class="col-md-4 col-lg-3 col-xl-4 mx-auto mb-md-0 mb-4">
               <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
@@ -432,18 +563,30 @@
       </section>
     </footer>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script>
+      AOS.init();
 
-AOS.init();
-
-document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", function () {
         const toggleSwitch = document.getElementById("darkModeSwitch");
 
         function applyDarkModePreference() {
@@ -481,26 +624,75 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       });
-      document.getElementById('contact-form').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent default form submission
-  
-        // You can add form validation logic here
-        let name = document.getElementById('name').value;
-        let email = document.getElementById('email').value;
-        let message = document.getElementById('message').value;
-  
-        // Example of form validation
-        if (name === '' || email === '' || number === '' || message === '') {
-          alert('Please fill out all fields.');
-          return;
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission
+
+          // You can add form validation logic here
+          let name = document.getElementById("name").value;
+          let email = document.getElementById("email").value;
+          let message = document.getElementById("message").value;
+
+          // Example of form validation
+          if (name === "" || email === "" || number === "" || message === "") {
+            alert("Please fill out all fields.");
+            return;
+          }
+
+          // Example of submitting form data via AJAX
+          // Replace with your own backend integration or email sending logic
+          alert(`Thank you, ${name}! Your message has been submitted.`);
+          document.getElementById("contact-form").reset(); // Reset the form
+        });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the contact form
+        var contactForm = document.getElementById("contactForm");
+
+        // Add submit event listener on the form
+        contactForm.addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          // Validate the form
+          if (contactForm.checkValidity()) {
+            // Form is valid, submit your data here
+            submitForm();
+          } else {
+            // Form is invalid, handle validation errors
+            // You can add your own validation feedback here
+            // For example, showing error messages or styling form fields
+            // This example just logs an error message
+            console.log("Form validation failed");
+          }
+        });
+
+        // Function to handle form submission (replace with your own logic)
+        function submitForm() {
+          // Example: You can collect form data and perform further actions here
+          var formData = new FormData(contactForm);
+          console.log("Form submitted successfully with data:", formData);
+
+          // Show alert message
+          alert("Form submitted successfully!");
+
+          // Optionally, close the modal after form submission
+          var contactModal = new bootstrap.Modal(
+            document.getElementById("contactModal")
+          );
+          contactModal.hide();
+
+          // Reset the form after submission (optional)
+          contactForm.reset();
         }
-  
-        // Example of submitting form data via AJAX
-        // Replace with your own backend integration or email sending logic
-        alert(`Thank you, ${name}! Your message has been submitted.`);
-        document.getElementById('contact-form').reset(); // Reset the form
       });
     </script>
-</body>
 
+    <script>
+      // Function to redirect to frenchies.html
+      function redirectToFrenchies() {
+        window.location.href = "frenchies.html";
+      }
+    </script>
+  </body>
 </html>

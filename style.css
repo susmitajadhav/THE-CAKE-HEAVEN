@@ -14,15 +14,20 @@ body.dark-mode {
   .marquee{
     color: black;
   }
+
+  .icon-s{ 
+    color: pink;
+  }
+  .fa-heart{ 
+    color: red;
+  }
   .user-satisfaction{
     color: black;
   }
   footer, section{
     color: black;
   }
-  .fa-cart-shopping{
-    color: white;
-  }
+
   #dropdownMenuButton1{
     color: black;
   }
@@ -78,6 +83,12 @@ body.dark-mode {
 
 .toggle-switch input[type="checkbox"]:checked + label .moon {
   opacity: 1;
+}
+
+.icon-s{
+  font-size: 22px; 
+  cursor: pointer; 
+  color: black
 }
 
 .profile-icon {

@@ -18,6 +18,15 @@ body {
     #dropdownMenuButton1{
       color: black;
     }
+    .fa-cart-shopping {
+      color: pink;
+    }
+    .fa-heart {
+      color: red;
+    }
+    .fa-user {
+      color: skyblue;
+    }
     footer,
     section {
       color: black;
@@ -37,7 +46,7 @@ body {
     display: block;
     width: 50px;
     height: 25px;
-    background-color: gray;
+    background-color: black;
     border-radius: 25px;
     position: relative;
     cursor: pointer;
@@ -74,6 +83,11 @@ body {
 
   .toggle-switch input[type="checkbox"]:checked + label .moon {
     opacity: 1;
+  }
+  .icon-s {
+    font-size: 22px;
+    cursor: pointer;
+    color: black;
   }
   footer,
   section {
