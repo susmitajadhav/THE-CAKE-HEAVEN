@@ -124,28 +124,35 @@
       background-color: #ffabc7;
       height: 50px;
     }
+
     .dropdown-toggle {
       margin-top: 12px;
     }
+
     .dropdown-toggle a {
       text-decoration: none;
     }
+
     .dropdowns li a {
       font-size: 15px;
       font-weight: normal;
     }
+
     .breadcrumb a {
       color: black;
       font-size: 1.1rem;
       font-weight: bold;
     }
+
     footer,
     section {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+
     section a {
       text-decoration: none;
     }
+    
     .career2{
         padding: 50px;
     }
@@ -324,7 +331,7 @@
         <h1 class="text-center">Career</h1>
       </div>
       <div class="career1">
-        <img src="hiring-desk.jpg" class="w-100" alt="">
+        <img src="../Media/hiring-desk.jpg" class="w-100" alt="">
       </div>
       <div class="career2">
         <p>We represent a fast-growing company that is inhabited by a group of highly talented and selective people who determine,design, and drive this very growth. We have worked hard to build our brand thathas now become synonymous with our commitment – ‘to create the best possible experience”</p>
@@ -335,16 +342,13 @@
      <div class="container mt-5">
         <div class="row condition">
             <div class="col-md-12 career">
-                <!-- <h1 class="text-center">Career</h1> -->
             </div>
         </div>
     
         <!-- Assistant Manager - SEO -->
         <div class="row mt-5">
             <div class="col-md-12 career3">
-                <!-- <div class="card"> -->
-                    <!-- <div class="card-header" id="heading2"> -->
-                <h3 id="positionHeading1" class="positionHeading">Position: Assistant Manager - SEO</h1>
+              <h3 id="positionHeading1" class="positionHeading">Position: Assistant Manager - SEO</h1>
                 <div id="skillsList1" class="skillsList">
                     <h5>Experience: 3 to 5 years</h5>
                     <p>Job Summary:</p>
@@ -388,9 +392,7 @@
                 </div>
             </div>
         </div>
-        <!-- </div> -->
-        <!-- </div> -->
-    
+      
         <!-- SEM Executive -->
         <div class="row mt-5">
             <div class="col-md-12 career4">
@@ -472,32 +474,9 @@
             </div>
         </div>
     </div>
-    
-      </div>
+    </div>
       
-
-   
-
-      <script>
-        // JavaScript code to toggle skills list visibility
-        document.addEventListener('DOMContentLoaded', function() {
-            const positionHeadings = document.querySelectorAll('.positionHeading');
-            const skillsLists = document.querySelectorAll('.skillsList');
-    
-            positionHeadings.forEach((heading, index) => {
-                heading.addEventListener('click', function() {
-                    if (skillsLists[index].style.display === 'none') {
-                        skillsLists.forEach(list => list.style.display = 'none');
-                        skillsLists[index].style.display = 'block';
-                    } else {
-                        skillsLists[index].style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
-
-    <footer class="text-center text-lg-start bg-body-tertiary">
+      <footer class="text-center text-lg-start bg-body-tertiary">
       <section
         class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom border-top"
       >
@@ -631,11 +610,15 @@
         >
       </section>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!-- Font Awesome -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script> -->
+    <script 
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+    </script>
+    <script 
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js">
+    </script>
+    <script 
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -680,6 +663,23 @@
           }
         });
       });
+
+        // JavaScript code to toggle skills list visibility
+        document.addEventListener('DOMContentLoaded', function() {
+            const positionHeadings = document.querySelectorAll('.positionHeading');
+            const skillsLists = document.querySelectorAll('.skillsList');
+    
+            positionHeadings.forEach((heading, index) => {
+                heading.addEventListener('click', function() {
+                    if (skillsLists[index].style.display === 'none') {
+                        skillsLists.forEach(list => list.style.display = 'none');
+                        skillsLists[index].style.display = 'block';
+                    } else {
+                        skillsLists[index].style.display = 'none';
+                    }
+                });
+            });
+        });
     </script>
     
   </body>

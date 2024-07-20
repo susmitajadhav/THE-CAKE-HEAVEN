@@ -221,6 +221,14 @@
       height: 2rem;
     }
 
+    .discount-text {
+    margin-right: 10px; /* Adjust the spacing as needed */
+    }
+
+    .price-info p {
+    margin-right: 10px; /* Optional: Adjust other spacing if needed */
+    }
+
     .vegetarian-info {
       display: flex;
       align-items: center;
@@ -301,8 +309,17 @@
       width: 15rem;
     }
 
-    .form-control {
+    .msg .form-control {
       width: 15rem;
+    }
+
+   .msg .form-control{
+      width: 40rem;
+    }
+
+    #city.form-control{
+      width: 15rem;
+      color: grey;
     }
 
     .custom-select {
@@ -318,8 +335,25 @@
     }
 
     .flavor1 {
-      margin-top: 1rem;
+      margin-top: 2.5rem;
     }
+
+    .cake{
+      margin-top: 2.5rem;
+    }
+
+    .cake1{
+      margin-top: 2.5rem;
+    }
+
+    .form-select{
+      color: grey;
+    }
+
+    .no-wrap {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+   }
 
     .h-80 {
       height: 35vh;
@@ -409,6 +443,40 @@
       background-color: red;
       color: white;
     }
+
+    .card {
+  min-width: calc(25% - 1rem); /* 4 items per view with spacing */
+  /* text-align: center; */
+  height: 23rem;
+  transition: all ease 0.3s;
+  margin: 0.5rem; /* Add some spacing between cards */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  transition: all ease 0.6s;
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-title {
+  cursor: pointer;
+}
+
+.card-body {
+  transition: all ease 0.6s;
+}
+
+    /* .review-ratings{
+      background-color: #ffabc7;
+    } */
 
     *:after,
     *:before {
@@ -729,7 +797,7 @@
         <div class="vegetarian-info">
           <img src="../Media/veg-icon.png" alt="Vegetarian Symbol" class="vegetarian-symbol" />
         </div>
-        <h5 class="mt-4">Our Classic Choclate Truffle Cake</h5>
+        <h5 class="mt-4 no-wrap">Our Classic Choclate Truffle Cake</h5>
         <div class="icon2">
           <i class="fa fa-heart ml-2 mt-4 fs-2" aria-hidden="true"></i>
         </div>
@@ -750,9 +818,7 @@
       </div>
         </div>
 
-       
-
-        <div class="flavour3">
+       <div class="flavour3">
           <div class="price-info mt-3 d-flex align-items-center">
             <p class="mr-3 mb-0 discount-text">₹ 549</p>
             <p class="mr-3 mb-0 price-text"> ₹ 500</p>
@@ -760,7 +826,7 @@
             <p class="mb-0 inclusive-gst">(Inclusive of GST)</p>
           </div>
 
-          <h6 class="mt-4">Select Weight</h6>
+          <h6 class="cake">Select Weight</h6>
           <select class="form-select mt-2" aria-label="Default select example">
             <option selected>Select Weight</option>
             <option value="1">0.5kg</option>
@@ -775,12 +841,12 @@
             <option value="10">5kg</option>
           </select>
 
-          <h6 class="mt-4">Cake Message</h6>
+          <h6 class="cake1">Cake Message</h6>
           <div class="msg">
             <input type="text" class="form-control mt-2" placeholder="Message on cake (Optional)" />
           </div>
 
-          <div class="flavor1 mt-4">
+          <div class="flavor1">
             <form action="">
               <div class="form-group">
                 <label for="city">Delivery Location <i class="fa-solid fa-location-dot"></i></label>
@@ -795,7 +861,7 @@
           </div>
           <hr class="my-4">
 
-          <h6 class="mt-4">Product Description</h6>
+          <h6 class="mt-5">Product Description</h6>
           <p>The classic chocolate truffle cake layered with chocolate ganache frosting & adorned with dark chocolate
             truffle glaze. The cake is further topped with chocolate shards & toppings.</p>
 
@@ -806,8 +872,8 @@
         </div>
       </div>
     
-        <div class="review-ratings mt-4">
-        <h3 class="text-center"><b>Customer Reviews</b></h3>
+        <div class="review-ratings mt-5">
+        <h3 class="text-center mt-5"><b>Customer Reviews</b></h3>
         <section1 id="testim" class="testim">
             <div class="wrap">
                 <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
@@ -894,12 +960,10 @@
       </h3>
     </div>
 
-
     <div class="fresh-info mt-2">
       <i class="fa-solid fa-cake-candles mx-2 fa-1x"></i>
       <p>100%Fresh & Hygienic</p>
     </div>
-
 
     <div class="fssai-info mt-2">
       <i class="fas fa-certificate mx-2 fa-1x"></i>
