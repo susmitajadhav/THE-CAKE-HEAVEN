@@ -9,8 +9,8 @@
           rating: 4.7,
           image: "../Media/DC.jpg",
           description: "Delicious chocolate cake",
-        },
-        {
+          },
+         {
           id: 2,
           name: "Vanilla Cake",
           weight: "1.5 kg",

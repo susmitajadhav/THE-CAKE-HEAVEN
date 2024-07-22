@@ -1046,42 +1046,6 @@
 
       // Initial display of cakes
       displayCakes();
-
-      function renderCakes(cakes) {
-    const productList = document.getElementById('productList');
-    productList.innerHTML = '';
-
-    cakes.forEach((cake, index) => {
-        const heartClass = cake.isInWishlist ? 'fas' : 'far';
-        const heartColor = cake.isInWishlist ? 'red' : 'grey';
-
-        const cakeCard = `
-          <div class="card product-card mb-4 mt-4" onclick="redirectToProductPage(${cake.id})">
-            <img src="${cake.image}" class="card-img-top" alt="${cake.name}">
-            <span class="wishlist-icon mx-3" onclick="event.stopPropagation(); toggleWishlist(${index}, this)">
-              <i class="${heartClass} fa-heart heart-icon rounded-circle" style="scale:1.8; color:${heartColor};"></i>
-            </span>
-            <span class="ps-3 pt-2"><h6 class="card-text">${cake.name}</h6></span>
-            <div class="d-flex justify-content-between p-2">
-              <div class="ps-2">
-                <span><p class="small card-text">${cake.weight}</p></span>
-                <span><p class="small card-text">Rs. ${cake.price}</p></span>
-                <p class="small card-text rating">${cake.rating} <span class="text-warning fa fa-star"></span></p>
-              </div>
-              <div class="align-self-end">
-                <button class="btn border qb-btn me-1" onclick="event.stopPropagation(); quickBuy(${index})">Quick Buy</button>
-              </div>
-            </div>
-          </div>
-        `;
-        productList.innerHTML += cakeCard;
-    });
-
-
-function redirectToProductPage(productId) {
-    window.location.href = `product.html?id=${productId}`;
-}
-}
     </script>
   </body>
 </html>

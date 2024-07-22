@@ -142,6 +142,10 @@ $(document).ready(function () {
   updateProfileDisplay(loggedInUser);
 });
 
+$('.close').click(function() {
+  $('#authModal').modal('hide');
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   var currentLocation = window.location.pathname;
   var navLinks = document.querySelectorAll(".navbar-nav .nav-link");

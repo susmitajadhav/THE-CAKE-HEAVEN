@@ -239,7 +239,7 @@
       </div>
       <div class="col mt-2 align-self-center">
         <input
-          class="form-control rounded-pill"
+          class="form-control rounded-pill p-2 text-center"
           type="search"
           placeholder="Search for cakes, desserts, and more"
           aria-label="Search"
@@ -505,7 +505,13 @@
           </div>
         </div>
         <div class="col-md-9 product-list">
-          <div class="row gx-0" id="productList"></div>
+          <div class="row gx-0" id="productList">
+            <div class="product-card" cake-id="2">
+              <img src="cake2.jpg" alt="Cake Image" style="width:100px; height:100px;">
+              <h2>Vanilla Cake</h2>
+              <p>Price: ₹25</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -928,6 +934,7 @@
           const heartColor = isWishlisted ? "red" : "grey";
           const cakeCard = `
       <div class="card product-card mb-4 mt-4">
+            <div class="card product-card" onclick="redirectToProductPage(${index})">
         <img src="${cake.image}" class="" alt="${cake.name}">
         <span class="wishlist-icon mx-3" onclick="toggleWishlist(${index}, this)">
           <i class="${heartClass} fa-heart heart-icon rounded-circle" style="scale:1.8; color:${heartColor};"></i>
@@ -948,6 +955,11 @@
           productList.innerHTML += cakeCard;
         });
       }
+
+      function redirectToProductPage(index) {
+      localStorage.setItem("selectedCake", JSON.stringify(cakes[index]));
+      window.location.href = "sproduct.html";
+    }
 
       function addToCart(cakeId) {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -1046,6 +1058,25 @@
 
       // Initial display of cakes
       displayCakes();
+      
+   
+   
+      
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.addEventListener('click', function () {
+        const cakeId = this.getAttribute('cake-id');
+        window.location.href = `sproduct.html?cakeId=${cakeId}`;
+      });
+    });
+
+ 
+
+   
+ 
+
+
+
+    
     </script>
   </body>
 </html>
