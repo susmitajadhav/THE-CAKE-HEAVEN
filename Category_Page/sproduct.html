@@ -663,21 +663,21 @@
         </label>
       </div>
       <div class="icon-container">
-      <a href="../Cart Page/cart.html">
+      <a href="../Cart_Page/cart.html">
         <i class="bi bi-cart3 icon-s px-4"></i>
         <span class="icon-name">Cart</span>
       </a>
       </div>
 
        <div class="icon-container">
-        <a href="../Cart Page/wishlist.html">
+        <a href="../Cart_Page/wishlist.html">
           <i class="bi bi-suit-heart px-2 icon-s"></i>
           <span class="icon-name">Wishlist</span>
        </a>
       </div>
 
         <div class="icon-container">
-          <a href="../Profile Page/profile.html">
+          <a href="../Profile_Page/profile.html">
           <i class="bi bi-person-circle icon-s px-4" aria-hidden="true"></i>
           <span class="icon-name">Profile</span>
          </a>
@@ -775,29 +775,30 @@
     </div>
 
     <div class="mt-1 mx mb-3">
-      <a class="nav-link" href="../Category Page/cake_list.html">Cup-Cakes</a>
+      <a class="nav-link" href="../Category_Page/cake_list.html">Cup-Cakes</a>
     </div>
     <div class="mt-1 mx-3 mb-3">
-      <a class="nav-link" href="../Category Page/cake_list.html">Pastrey</a>
+      <a class="nav-link" href="../Category_Page/cake_list.html">Pastrey</a>
     </div>
     <div class="mt-1 mx-3 mb-3">
-      <a class="nav-link" href="../Category Page/cake_list.html">Desserts</a>
+      <a class="nav-link" href="../Category_Page/cake_list.html">Desserts</a>
     </div>
     <div class="mt-1 mx-3 mb-3">
-      <a class="nav-link" href="../Category Page/cake_list.html">Trending Cakes</a>
+      <a class="nav-link" href="../Category_Page/cake_list.html">Trending Cakes</a>
     </div>
     <div class="mt-1 mb-3">
-      <a class="nav-link" href="../Category Page/cake_list.html">Unique Cakes</a>
+      <a class="nav-link" href="../Category_Page/cake_list.html">Unique Cakes</a>
     </div>
   </div>
 
-  <div class="main-page">
+<div class="main-page">
     <div class="product1">
       <div class="ico d-flex mx-4">
         <div class="vegetarian-info">
           <img src="../Media/veg-icon.png" alt="Vegetarian Symbol" class="vegetarian-symbol" />
         </div>
-        <h5 class="mt-4 no-wrap">Our Classic Choclate Truffle Cake</h5>
+        
+        <h5 id="cake-name" class="mt-4 no-wrap">Our Classic Choclate Truffle Cake</h5>
         <div class="icon2">
           <i class="fa fa-heart ml-2 mt-4 fs-2" aria-hidden="true"></i>
         </div>
@@ -809,7 +810,8 @@
 
       <div id="flavour" class="flavour1 container mt-5 p-0">
         <div class="flavour2">
-          <img src="../Media/black forest.webp" alt="Black Forest Cake"  />
+          <img id="cake-image" src="../Media/black forest.webp" alt="Cake Image">
+          <!-- <img src="../Media/black forest.webp" alt="Black Forest Cake"  /> -->
       <div class="additional-images mt-3 text-center d-flex">
           <img src="../Media/AC.webp" alt="Additional Image 1" class="additional-image img-thumbnail"/>
           <img src="../Media/cake.jpeg" alt="Additional Image 2" class="additional-image img-thumbnail"/>
@@ -827,7 +829,7 @@
           </div>
 
           <h6 class="cake">Select Weight</h6>
-          <select class="form-select mt-2" aria-label="Default select example">
+          <select id="cake-weight" class="form-select mt-2" aria-label="Default select example">
             <option selected>Select Weight</option>
             <option value="1">0.5kg</option>
             <option value="2">1kg</option>
@@ -927,8 +929,7 @@
     </div>
       
 
-
-      <div class="products container mt-5">
+    <div class="products container mt-5">
         <h3 class="text-center"><b>Recently Viewed</b></h3>
         <div class="va-btn text-end">
           <button class="btn btn-outline-danger" id="viewAllBtn">View All</button>
@@ -1011,56 +1012,61 @@
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <h6 class="text-uppercase fw-bold mb-4">COLLECTIONS</h6>
             <p>
-              <a href="../Category Page/cake_list.html" class="text-reset">Same Day Cakes</a>
+              <a href="../Category_Page/cake_list.html" class="text-reset">Same Day Cakes</a>
             </p>
             <p>
-              <a href="../Category Page/cake_list.html" class="text-reset">Classic Cakes</a>
+              <a href="../Category_Page/cake_list.html" class="text-reset">Classic Cakes</a>
             </p>
             <p>
-              <a href="../Category Page/cake_list.html" class="text-reset">Custom Cakes</a>
+              <a href="../Category_Page/cake_list.html" class="text-reset">Custom Cakes</a>
             </p>
             <p>
-              <a href="../Category Page/cake_list.html" class="text-reset">Cup Cakes</a>
+              <a href="../Category_Page/cake_list.html" class="text-reset">Cup Cakes</a>
             </p>
             <p>
-              <a href="../Category Page/cake_list.html" class="text-reset">Desserts</a>
+              <a href="../Category_Page/cake_list.html" class="text-reset">Desserts</a>
             </p>
             <p>
-              <a href="../Category Page/cake_list.html" class="text-reset">Flowers</a>
+              <a href="../Category_Page/cake_list.html" class="text-reset">Flowers</a>
             </p>
             <p>
-              <a href="../Category Page/cake_list.html" class="text-reset">Anniversary Cakes</a>
+              <a href="../Category_Page/cake_list.html" class="text-reset">Anniversary Cakes</a>
             </p>
             <p>
-              <a href="../Category Page/cake_list.html" class="text-reset">Birthday Cakes</a>
+              <a href="../Category_Page/cake_list.html" class="text-reset">Birthday Cakes</a>
             </p>
           </div>
 
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
             <h6 class="text-uppercase fw-bold mb-4">QUICK LINKS</h6>
             <p>
-              <a href="../Quick Pages/about.html" class="text-reset">Contact Us</a>
+              <a href="../Quick_Pages/about.html" class="text-reset">Contact Us</a>
             </p>
             <p>
-              <a href="../Quick Pages/about.html" class="text-reset">About us</a>
+              <a href="../Quick_Pages/about.html" class="text-reset">About us</a>
             </p>
             <p>
-              <a href="../Quick Pages/privacy-policy.html" class="text-reset">Privacy Policy</a>
+              <a href="../Quick_Pages/privacy-policy.html" class="text-reset">Privacy Policy</a>
             </p>
             <p>
-              <a href="../Quick Pages/terms.html" class="text-reset">Terms & Conditions</a>
+              <a href="../Quick_Pages/terms.html" class="text-reset">Terms & Conditions</a>
             </p>
             <p>
-              <a href="../Quick Pages/shipping.html" class="text-reset">Shipping Policy</a>
+              <a href="../Quick_Pages/shipping.html" class="text-reset">Shipping Policy</a>
             </p>
             <p>
-              <a href="../Quick Pages/cancellation.html" class="text-reset">Return & Refund Policy</a>
+              <a href="../Quick_Pages/cancellation.html" class="text-reset">Return & Refund Policy</a>
             </p>
             <p>
-              <a href="../Quick Pages/FAQ.html" class="text-reset">FAQs</a>
+              <a href="../Quick_Pages/FAQ.html" class="text-reset">FAQs</a>
             </p>
             <p>
-              <a href="../Quick Pages/career.html" class="text-reset">Career</a>
+              <a href="../Quick_Pages/career.html" class="text-reset">Career</a>
+            </p>
+            <p>
+              <a href="../Quick_Pages/frenchies.html" class="text-reset"
+                >Frenchies</a
+              >
             </p>
           </div>
           <div class="col-md-4 col-lg-3 col-xl-4 mx-auto mb-md-0 mb-4">
@@ -1087,22 +1093,8 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 
-  <script src="../Category Page/cakes.js"></script>
-  <script>
-    // Function to get query parameter
-    function getQueryParam(param) {
-      const urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get(param);
-    }
-
-    // Get the cakeId from the URL
-    const cakeId = getQueryParam('cakeId');
-    
-    // Display the cakeId on the page (for demonstration purposes)
-    document.getElementById('product-info').innerText = `Cake ID: ${cakeId}`;
-    
-    // Use cakeId to fetch and display more product details (if available)
-  </script>
+  <script src="../Category_Page/cakes.js"></script>
+ 
 </body>
 
 </html>

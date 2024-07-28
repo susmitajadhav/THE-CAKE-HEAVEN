@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+  
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -23,6 +24,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    
     <style>
       body {
         font-family: "Poppins", sans-serif;
@@ -213,14 +215,71 @@
         transition: all ease 0.5s;
       }
       .card:hover {
-        background-color: #f3adc1;
+        background-color: rgb(216, 50, 50);
+        color: white;
       }
-      .qb-btn {
-        border: 2px solid black;
-      }
-      .qb-btn:hover {
-        background-color: white;
-      }
+    
+       .qb-btn{
+      border: 2px solid black; 
+      background-color: white; 
+      color: black; 
+      transition: background-color 0.3s ease, color 0.3s ease; 
+       }
+      .custom-select {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .custom-select button {
+      width: 100%;
+    }
+
+    .custom-select-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      width: 100%;
+      bottom: 100%;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .custom-select-content a {
+      color: black;
+      padding: 8px 12px;
+      text-decoration: none;
+      display: block;
+      font-size: 14px;
+    }
+
+    .custom-select-content .nested-menu {
+      display: none;
+      padding-left: 20px;
+    }
+
+    .nested-dropdown:hover .nested-menu {
+      display: block;
+    }
+
+    .custom-select-content a:hover {
+      background-color:#3B71CA;
+    }
+
+    .custom-select:hover .custom-select-content {
+      display: block;
+    }
+
+    .product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
     </style>
   </head>
 
@@ -255,14 +314,14 @@
             <span class="icon moon"><i class="fas fa-moon"></i></span>
           </label>
         </div>
-        <a href="../Cart Page/cart.html"
+        <a href="../Cart_Page/cart.html"
           ><i class="fas fa-cart-shopping icon-s px-4"></i
         ></a>
 
-        <a href="../Cart Page/wishlist.html"
+        <a href="../Cart_Page/wishlist.html"
           ><i class="fas fa-heart icon-s"></i
         ></a>
-        <a href="../Profile Page/profile.html"
+        <a href="../Profile_Page/profile.html"
           ><i class="fa fa-user icon-s px-4" aria-hidden="true"></i
         ></a>
       </div>
@@ -285,10 +344,11 @@
             <div class="dropdowns">
               <li>
                 <a class="dropdown-item" href="#"><b>Layers</b></a>
-              </li>
+              
               <li><a class="dropdown-item" href="#">One</a></li>
               <li><a class="dropdown-item" href="#">Two</a></li>
               <li><a class="dropdown-item" href="#">Three</a></li>
+              </li>
             </div>
             <div class="dropdowns d-flex flex-column">
               <li>
@@ -435,69 +495,98 @@
                 <option value="eggless">Eggless</option>
               </select>
             </div>
+
             <div class="form-group mt-3">
-              <label for="cakeTypeFilter"><b>Cake Type</b></label>
-              <select id="caketypeFilter" class="form-control">
-                <optgroup label="Layers">
-                  <option value="One">One</option>
-                  <option value="Two">Two</option>
-                  <option value="Three">Three</option>
-                </optgroup>
-                <optgroup label="By Shapes">
-                  <option value="Square">Square</option>
-                  <option value="Circle">Circle</option>
-                  <option value="Heart">Heart</option>
-                  <option value="Tall">Tall</option>
-                </optgroup>
-                <optgroup label="By Flavour">
-                  <option value="Choclate">Choclate</option>
-                  <option value="Blueberry">Blueberry</option>
-                  <option value="Pineapple">Pineapple</option>
-                  <option value="Fresh Fruit">Fresh Fruit</option>
-                  <option value="Red Velvet">Red Velvet</option>
-                  <option value="Vanilla">Vanilla</option>
-                  <option value="Butterscotch">Butterscotch</option>
-                </optgroup>
-                <optgroup label="By Occasion">
-                  <option value="Birthday">Birthday</option>
-                  <option value="Anniversary">Anniversary</option>
-                  <option value="Wedding">Wedding</option>
-                  <option value="Baby Shower">Baby Shower</option>
-                  <option value="Engagement">Engagement</option>
-                  <option value="Mother's Day">Mother's Day</option>
-                  <option value="Father's Day">Father's Day</option>
-                </optgroup>
-                <optgroup label="By Occasion">
-                  <option value="Valentines Day">Valentines Day</option>
-                  <option value="Classic Cakes">Classic Cakes</option>
-                  <option value="Friendships Day">Friendships Day</option>
-                  <option value="New Year">New Year</option>
-                  <option value="Christmas">Christmas</option>
-                  <option value="Teacher's Day">Teacher's Day</option>
-                  <option value="Fairwell Cakes">Fairwell Cakes</option>
-                </optgroup>
-                <optgroup label="Trending Cakes">
-                  <option value="Pull Me Up Cake">Pull Me Up Cake</option>
-                  <option value="Pinata Cake">Pinata Cake</option>
-                  <option value="Half Cake">Half Cake</option>
-                  <option value="Bomb Cake">Bomb Cake</option>
-                  <option value="Bento Cake">Bento Cake</option>
-                  <option value="Surprise Cake Box">Surprise Cake Box</option>
-                  <option value="Photo Pulling Cake">Photo Pulling Cake</option>
-                </optgroup>
-                <optgroup label="Unique Cakes">
-                  <option value="Moose Cake">Moose Cake</option>
-                  <option value="Bomb Cake">Bomb Cake</option>
-                  <option value="Banana cake">Banana cake</option>
-                </optgroup>
-                <optgroup label="Premium Cakes">
-                  <option value="Spiced Carrot">Spiced Carrot</option>
-                  <option value="Pumpkin Spice">Pumpkin Spice</option>
-                  <option value="Almond Poppyseed">Almond Poppyseed</option>
-                </optgroup>
-              </select>
-            </div>
-            <div class="apply-btn mt-3 d-flex justify-content-end">
+              <div class="form-group">
+                <label for="caketypeFilter"><b><div class="text-align-start">Select Cake Type</div></b></label>
+                <div class="custom-select">
+                  <button class="form-control" type="button" id="caketypeFilter">
+                    Select Cake Type
+                  </button>
+                  <div class="custom-select-content" id="caketypeOptions">
+                    <div class="nested-dropdown">
+                      <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Layers', 'Layers')">Layers</a>
+                      <div class="nested-menu">
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Layers', 'One')">One</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Layers', 'Two')">Two</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Layers', 'Three')">Three</a>
+                      </div>
+                    </div>
+                    <div class="nested-dropdown">
+                      <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Shapes', 'Shapes')">By Shapes</a>
+                      <div class="nested-menu">
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Shapes', 'Square')">Square</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Shapes', 'Circle')">Circle</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Shapes', 'Heart')">Heart</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Shapes', 'Tall')">Tall</a>
+                      </div>
+                    </div>
+                    <div class="nested-dropdown">
+                      <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Flavour', 'Flavour')">By Flavour</a>
+                      <div class="nested-menu">
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Flavour', 'Chocolate')">Chocolate</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Flavour', 'Blueberry')">Blueberry</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Flavour', 'Pineapple')">Pineapple</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Flavour', 'Fresh Fruit')">Fresh Fruit</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Flavour', 'Red Velvet')">Red Velvet</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Flavour', 'Vanilla')">Vanilla</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Flavour', 'Butterscotch')">Butterscotch</a>
+                      </div>
+                    </div>
+                    <div class="nested-dropdown">
+                      <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Occasion')">By Occasion</a>
+                      <div class="nested-menu">
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Birthday')">Birthday</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Anniversary')">Anniversary</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Wedding')">Wedding</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Baby Shower')">Baby Shower</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Engagement')">Engagement</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Mothers Day')">Mother's Day</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Fathers Day')">Father's Day</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Valentines Day')">Valentine's Day</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Classic Cakes')">Classic Cakes</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Friendships Day')">Friendship's Day</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'New Year')">New Year</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Christmas')">Christmas</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Teachers Day')">Teacher's Day</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Farewell Cakes')">Farewell Cakes</a>
+                      </div>
+                    </div>
+                    <div class="nested-dropdown">
+                      <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Trending Cakes', 'Trending')">Trending Cakes</a>
+                      <div class="nested-menu">
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Trending Cakes', 'Pull Me Up Cake')">Pull Me Up Cake</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Trending Cakes', 'Pinata Cake')">Pinata Cake</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Trending Cakes', 'Half Cake')">Half Cake</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Trending Cakes', 'Bomb Cake')">Bomb Cake</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Trending Cakes', 'Bento Cake')">Bento Cake</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Trending Cakes', 'Surprise Cake Box')">Surprise Cake Box</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Trending Cakes', 'Photo Pulling Cake')">Photo Pulling Cake</a>
+                      </div>
+                    </div>
+
+                    <div class="nested-dropdown">
+                      <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Unique Cakes', 'Unique')">Unique Cakes</a>
+                      <div class="nested-menu">
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Unique Cakes', 'Moose Cake')">Moose Cake</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Unique Cakes', 'Bomb Cake')">Bomb Cake</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Unique Cakes', 'Banana Cake')">Banana Cake</a>
+                      </div>
+                    
+                    <div class="nested-dropdown">
+                      <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Premium Cakes', 'Premium')">Premium Cakes</a>
+                      <div class="nested-menu">
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Premium Cakes', 'Spiced Carrot')">Spiced Carrot</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Premium Cakes', 'Pumpkin Spice')">Pumpkin Spice</a>
+                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Premium Cakes', 'Almond Poppyseed')">Almond Poppyseed</a>
+                      </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          <div class="apply-btn mt-3 d-flex justify-content-end">
               <button class="btn btn-danger" onclick="applyFilters()">
                 Apply Filters
               </button>
@@ -506,10 +595,11 @@
         </div>
         <div class="col-md-9 product-list">
           <div class="row gx-0" id="productList">
-            <div class="product-card" cake-id="2">
-              <img src="cake2.jpg" alt="Cake Image" style="width:100px; height:100px;">
-              <h2>Vanilla Cake</h2>
-              <p>Price: ₹25</p>
+            <div class="product-card" cake-id="1">
+              <!-- <img src="cake2.jpg" alt="Cake Image" style="width:100px; height:100px;"> -->
+              <!-- <h2>Vanilla Cake</h2> -->
+              <!-- <p>Price: ₹25</p> -->
+              <a href="sproduct.html?cakeId=1" class="btn btn-primary">View Details</a>
             </div>
           </div>
         </div>
@@ -528,13 +618,12 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="quickBuyModalLabel">Product Details</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
+            <button type="button" 
+            class="close" 
+            data-dismiss="modal" 
+            aria-label="Close">
+              <span aria-hidden="true">&times;
+              </span>
             </button>
           </div>
           <div class="modal-body">
@@ -668,42 +757,42 @@
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 class="text-uppercase fw-bold mb-4">COLLECTIONS</h6>
               <p>
-                <a href="../Category Page/cake_list.html" class="text-reset"
+                <a href="../Category_Page/cake_list.html" class="text-reset"
                   >Same Day Cakes</a
                 >
               </p>
               <p>
-                <a href="../Category Page/cake_list.html" class="text-reset"
+                <a href="../Category_Page/cake_list.html" class="text-reset"
                   >Classic Cakes</a
                 >
               </p>
               <p>
-                <a href="../Category Page/cake_list.html" class="text-reset"
+                <a href="../Category_Page/cake_list.html" class="text-reset"
                   >Custom Cakes</a
                 >
               </p>
               <p>
-                <a href="../Category Page/cake_list.html" class="text-reset"
+                <a href="../Category_Page/cake_list.html" class="text-reset"
                   >Cup Cakes</a
                 >
               </p>
               <p>
-                <a href="../Category Page/cake_list.html" class="text-reset"
+                <a href="../Category_Page/cake_list.html" class="text-reset"
                   >Desserts</a
                 >
               </p>
               <p>
-                <a href="../Category Page/cake_list.html" class="text-reset"
+                <a href="../Category_Page/cake_list.html" class="text-reset"
                   >Flowers</a
                 >
               </p>
               <p>
-                <a href="../Category Page/cake_list.html" class="text-reset"
+                <a href="../Category_Page/cake_list.html" class="text-reset"
                   >Anniversary Cakes</a
                 >
               </p>
               <p>
-                <a href="../Category Page/cake_list.html" class="text-reset"
+                <a href="../Category_Page/cake_list.html" class="text-reset"
                   >Birthday Cakes</a
                 >
               </p>
@@ -712,41 +801,46 @@
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 class="text-uppercase fw-bold mb-4">QUICK LINKS</h6>
               <p>
-                <a href="../Quick Pages/about.html" class="text-reset"
+                <a href="../Quick_Pages/about.html" class="text-reset"
                   >Contact Us</a
                 >
               </p>
               <p>
-                <a href="../Quick Pages/about.html" class="text-reset"
+                <a href="../Quick_Pages/about.html" class="text-reset"
                   >About us</a
                 >
               </p>
               <p>
-                <a href="../Quick Pages/privacy-policy.html" class="text-reset"
+                <a href="../Quick_Pages/privacy-policy.html" class="text-reset"
                   >Privacy Policy</a
                 >
               </p>
               <p>
-                <a href="../Quick Pages/terms.html" class="text-reset"
+                <a href="../Quick_Pages/terms.html" class="text-reset"
                   >Terms & Conditions</a
                 >
               </p>
               <p>
-                <a href="../Quick Pages/shipping.html" class="text-reset"
+                <a href="../Quick_Pages/shipping.html" class="text-reset"
                   >Shipping Policy</a
                 >
               </p>
               <p>
-                <a href="../Quick Pages/cancellation.html" class="text-reset"
+                <a href="../Quick_Pages/cancellation.html" class="text-reset"
                   >Return & Refund Policy</a
                 >
               </p>
               <p>
-                <a href="../Quick Pages/FAQ.html" class="text-reset">FAQs</a>
+                <a href="../Quick_Pages/FAQ.html" class="text-reset">FAQs</a>
               </p>
               <p>
-                <a href="../Quick Pages/career.html" class="text-reset"
+                <a href="../Quick_Pages/career.html" class="text-reset"
                   >Career</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/frenchies.html" class="text-reset"
+                  >Frenchies</a
                 >
               </p>
             </div>
@@ -772,16 +866,19 @@
       </section>
     </footer>
 
-    <script
+    <!-- <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
-    <script src="cakes.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+     <script src="cakes1.js"></script>
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const toggleSwitch = document.getElementById("darkModeSwitch");
@@ -923,23 +1020,21 @@
         ).textContent = `Rs. 200 - Rs. ${priceRangeValue}`;
       }
 
-      function displayFilteredCakes(cakes) {
-        const productList = document.getElementById("productList");
-        productList.innerHTML = "";
-        cakes.forEach((cake, index) => {
-          const isWishlisted = wishlist.some(
-            (item) => item && item.id === cake.id
-          );
-          const heartClass = isWishlisted ? "fas" : "far";
-          const heartColor = isWishlisted ? "red" : "grey";
-          const cakeCard = `
-      <div class="card product-card mb-4 mt-4">
-            <div class="card product-card" onclick="redirectToProductPage(${index})">
+      function displayCakes() {
+  const productList = document.getElementById("productList");
+  productList.innerHTML = "";
+  cakes.forEach((cake, index) => {
+    const isWishlisted = wishlist.some(item => item && item.id === cake.id);
+    const heartClass = isWishlisted ? "fas" : "far";
+    const heartColor = isWishlisted ? "red" : "grey";
+
+    const cakeCard = `
+      <div class="card product-card mb-4 mt-4" onclick="redirectToProductPage(${index})">
         <img src="${cake.image}" class="" alt="${cake.name}">
-        <span class="wishlist-icon mx-3" onclick="toggleWishlist(${index}, this)">
+        <span class="wishlist-icon mx-3" onclick="toggleWishlist(${index}, this); event.stopPropagation();">
           <i class="${heartClass} fa-heart heart-icon rounded-circle" style="scale:1.8; color:${heartColor};"></i>
         </span>
-        <span class=" ps-3 pt-2"><h6 class="card-text">${cake.name}</h6></span>
+        <span class="ps-3 pt-2"><h6 class="card-text">${cake.name}</h6></span>
         <div class="d-flex justify-content-between p-2">
           <div class="ps-2">
             <span><p class="small card-text">${cake.weight}</p></span>
@@ -947,19 +1042,25 @@
             <p class="small card-text rating">${cake.rating} <span class="text-warning fa fa-star"></span></p>
           </div>
           <div class="align-self-end">
-            <button class="btn border qb-btn me-1" onclick="quickBuy(${index})">Quick Buy</button>
+            <button class="btn border qb-btn me-1" onclick="quickBuy(${index}); event.stopPropagation();">Quick Buy</button>
           </div>
         </div>
       </div>
     `;
-          productList.innerHTML += cakeCard;
-        });
-      }
+    productList.innerHTML += cakeCard;
+  });
+}
 
-      function redirectToProductPage(index) {
-      localStorage.setItem("selectedCake", JSON.stringify(cakes[index]));
-      window.location.href = "sproduct.html";
-    }
+function redirectToProductPage(index) {
+  localStorage.setItem("selectedCake", JSON.stringify(cakes[index]));
+  window.location.href = "sproduct.html"; // Replace with the actual path if needed
+}
+        
+
+    //   function redirectToProductPage(index) {
+    //   localStorage.setItem("selectedCake", JSON.stringify(cakes[index]));
+    //   window.location.href = "sproduct.html";
+    // }
 
       function addToCart(cakeId) {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -974,7 +1075,7 @@
         }
 
         localStorage.setItem("cart", JSON.stringify(cart));
-        window.location.href = "../Cart Page/cart.html";
+        window.location.href = "../Cart_Page/cart.html";
       }
 
       let selectedCake = {};
@@ -1025,7 +1126,7 @@
         }
 
         localStorage.setItem("cart", JSON.stringify(cart));
-        window.location.href = "../Cart Page/cart.html"; // Replace with the actual URL of your cart page
+        window.location.href = "../Cart_Page/cart.html"; // Replace with the actual URL of your cart page
       }
 
       function buyNow() {
@@ -1062,19 +1163,69 @@
    
    
       
-    document.querySelectorAll('.product-card').forEach(card => {
-      card.addEventListener('click', function () {
-        const cakeId = this.getAttribute('cake-id');
-        window.location.href = `sproduct.html?cakeId=${cakeId}`;
-      });
-    });
+    // document.querySelectorAll('.product-card').forEach(card => {
+    //   card.addEventListener('click', function () {
+    //     const cakeId = this.getAttribute('cake-id');
+    //     window.location.href = `sproduct.html?cakeId=${cakeId}`;
+    //   });
+    // });
 
- 
+    var selectedOptions = {
+        'Layers': '',
+        'By Shapes': '',
+        'By Flavour': '',
+        'By Occasion': '',
+        'Trending Cakes': '',
+        'Unique Cakes': '',
+        'Premium Cakes': ''
+      };
 
-   
- 
+      function handleSelection(event, category, value) {
+        event.preventDefault();
+        selectedOptions[category] = value;
+        updateDisplay();
+      }
+
+      function updateDisplay() {
+        var displayText = Object.values(selectedOptions).filter(Boolean).join(' - ') || 'Select Cake Type';
+        var selectButton = document.getElementById('caketypeFilter');
+        selectButton.innerHTML = displayText;
+      }
 
 
+      function redirectToProductPage(index) {
+  // Store the selected cake in localStorage
+  localStorage.setItem("selectedCake", JSON.stringify(cakes[index]));
+  // Redirect to the single product page
+  window.location.href = "sproduct.html";
+}
+
+// In the card generation part of the displayCakes function:
+const cakeCard = `
+  <div class="card product-card mb-4 mt-4" onclick="redirectToProductPage(${index})">
+    <img src="${cake.image}" class="" alt="${cake.name}">
+    <!-- Rest of the card content -->
+  </div>
+`;
+productList.innerHTML += cakeCard;
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Retrieve the selected cake from localStorage
+  const selectedCake = JSON.parse(localStorage.getItem("selectedCake"));
+
+  if (selectedCake) {
+    // Populate the product page with selected cake details
+    document.getElementById("productImage").src = selectedCake.image;
+    document.getElementById("productName").innerText = selectedCake.name;
+    document.getElementById("productDescription").innerText = selectedCake.description || "No description available.";
+    document.getElementById("productPrice").innerText = `Rs. ${selectedCake.price}`;
+    document.getElementById("productWeight").innerText = selectedCake.weight;
+    // Add more elements as needed
+  } else {
+    // Handle the case where no cake data is found
+    console.error("No cake data found");
+  }
+});
 
     
     </script>

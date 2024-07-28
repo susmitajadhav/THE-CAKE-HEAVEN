@@ -101,3 +101,21 @@
 
         // Add more cakes as needed
       ];
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const cakeId = parseInt(new URLSearchParams(window.location.search).get('cakeId'));
+        const cake = cakes.find(c => c.id === cakeId);
+        
+        if (cake) {
+          document.getElementById('cake-name').innerText = cake.name;
+          document.getElementById('cake-weight').innerText = cake.weight;
+          document.getElementById('cake-eggOrEggless').innerText = cake.eggOrEggless;
+          document.getElementById('cake-availability').innerText = cake.availability;
+          document.getElementById('cake-price').innerText = `₹ ${cake.price}`;
+          document.getElementById('cake-rating').innerText = `Rating: ${cake.rating}`;
+          document.getElementById('cake-image').src = cake.image;
+          document.getElementById('cake-description').innerText = cake.description;
+        } else {
+          document.getElementById('product-info').innerText = "Cake not found!";
+        }
+      });
