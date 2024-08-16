@@ -20,92 +20,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
       body {
         font-family: "Poppins", sans-serif;
       }
-
-      body.dark-mode {
-        background-color: rgb(60, 60, 60);
-        color: white;
-
-        #reviewOrderButton {
-          border: 1px solid white;
-        }
-
-        .fa-cart-shopping {
-          color: pink;
-        }
-        .fa-heart {
-          color: red;
-        }
-        .fa-user {
-          color: skyblue;
-        }
-
-        section{
-          color: black;
-        }
-      }
-
-      .toggle-switch {
-        top: 20px;
-        right: 20px;
-      }
-
-      .toggle-switch input[type="checkbox"] {
-        display: none;
-      }
-
-      .toggle-switch label {
-        display: block;
-        width: 50px;
-        height: 25px;
-        background-color: black;
-        border-radius: 25px;
-        position: relative;
-        cursor: pointer;
-      }
-
-      .toggle-switch label .icon {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .toggle-switch label .sun {
-        left: 5px;
-        color: #f7df06;
-        opacity: 1;
-        transition: opacity 0.3s;
-      }
-
-      .toggle-switch label .moon {
-        right: 5px;
-        color: #ffff;
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
-
-      .toggle-switch input[type="checkbox"]:checked + label .sun {
-        opacity: 0;
-      }
-
-      .toggle-switch input[type="checkbox"]:checked + label .moon {
-        opacity: 1;
-      }
-      .breadcrumb {
+      /* .breadcrumb {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         background-color: #ffabc7;
       }
       .breadcrumb a {
         color: black;
-      }
+      } */
       .icon-s {
         font-size: 22px;
         cursor: pointer;
@@ -159,71 +85,149 @@
       section a{
         text-decoration: none;
       }
-    </style>
+      .breadcrumb {
+      background-color: #ffabc7;
+      border-bottom: 1px solid #ddd;
+      border-top: 1px solid #ddd;
+    }
+
+    .navbar-nav {
+      text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+      padding: 10px 0;
+      display: block;
+      color: black;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #ffabc7;
+        z-index: 1000;
+        overflow-y: auto;
+      }
+
+      .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        background-color: #ffabc7;
+      }
+
+      .navbar-nav .nav-link {
+        font-size: 20px;
+        margin: 10px 0;
+      }
+    }
+</style>
   </head>
   <body>
-    <div class="d-flex header justify-content-between pb-2">
-      <div class="col-2 pt-2 px-2">
-        <a href="../index.html"
-          ><img
-            src="../Media/logo.jpg"
-            class="border-end border-dark rounded-pill"
-            width="80px"
-            height="80px"
-            alt=""
-        /></a>
-      </div>
-      <div class="col-8 mt-4 align-self-center">
-        <div class="d-flex justify-content-evenly align-items-center">
-          <h5><i class="fa-solid fa-truck mx-2"></i>100% On Time Delivery</h5>
-          <h5>
-            <i class="fa-solid fa-cake-candles mx-2"></i>100%Fresh And Hygienic
-          </h5>
-          <h5><i class="fas fa-certificate mx-2"></i>fssai Certified</h5>
+    <div class="container">
+      <div class="header pb-2">
+        <div class="row">
+          <!-- Logo and Icons Row for Mobile View -->
+          <div class="col-12 d-flex d-md-none justify-content-between align-items-center">
+            <div class="col-2 pt-2 px-2">
+              <a href="../index.html">
+                <img
+                  src="../Media/logo.jpg"
+                  class="border-end border-dark rounded-pill"
+                  width="60px"
+                  height="60px"
+                  alt="Logo"
+                />
+              </a>
+            </div>
+            <div class="d-flex justify-content-end text-end icons">
+              <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-2"></i></a>
+              <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s px-2"></i></a>
+              <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-2"></i></a>
+            </div>
+          </div>
+    
+          <!-- Middle Content for Mobile View -->
+          <div class="col-12 d-md-none mt-3 align-self-center text-center">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <div class="d-flex align-items-center">
+                <i class="fa-solid fa-truck mx-2"></i>
+                <h6 class="mb-0">100% On Time Delivery</h6>
+              </div>
+              <div class="d-flex align-items-center mt-2">
+                <i class="fa-solid fa-cake-candles mx-2"></i>
+                <h6 class="mb-0">100% Fresh And Hygienic</h6>
+              </div>
+              <div class="d-flex align-items-center mt-2">
+                <i class="fas fa-certificate mx-2"></i>
+                <h6 class="mb-0">FSSAI Certified</h6>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Logo for Laptop View -->
+          <div class="col-md-2 d-none d-md-flex align-items-center pt-2 px-2">
+            <a href="../index.html">
+              <img
+                src="../Media/logo.jpg"
+                class="border-end border-dark rounded-pill"
+                width="80px"
+                height="80px"
+                alt="Logo"
+              />
+            </a>
+          </div>
+    
+          <!-- Middle Content for Laptop View -->
+          <div class="col-md-8 d-none d-md-flex mt-4 align-self-center">
+            <div class="d-flex justify-content-evenly align-items-center">
+              <h5><i class="fa-solid fa-truck mx-2"></i>100% On Time Delivery</h5>
+              <h5><i class="fa-solid fa-cake-candles mx-2"></i>100% Fresh And Hygienic</h5>
+              <h5><i class="fas fa-certificate mx-2"></i>FSSAI Certified</h5>
+            </div>
+          </div>
+    
+          <!-- Icons for Laptop View -->
+          <div class="col-md-2 d-none d-md-flex justify-content-end text-end icons align-self-center mb-1">
+            <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-3 mt-3"></i></a>
+            <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s px-3 mt-3"></i></a>
+            <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-3 mt-3"></i></a>
+          </div>
         </div>
-      </div>
-      <div
-        class="col d-flex justify-content-end text-end icons align-self-center mb-1"
-      >
-        <div class="toggle-switch">
-          <input type="checkbox" id="darkModeSwitch" />
-          <label for="darkModeSwitch">
-            <span class="icon sun"><i class="fas fa-sun"></i></span>
-            <span class="icon moon"><i class="fas fa-moon"></i></span>
-          </label>
-        </div>
-        <a href="../Cart_Page/cart.html"
-          ><i
-            class="fas fa-cart-shopping icon-s px-3"
-          ></i
-        ></a>
-        <a href="../Cart_Page/wishlist.html"
-          ><i
-            class="fas fa-heart icon-s"
-          ></i
-        ></a>
-        <a href="../Profile_Page/profile.html"
-          ><i
-            class="fa fa-user icon-s px-3"
-            aria-hidden="true"
-          ></i
-        ></a>
       </div>
     </div>
 
-    <div class="d-flex breadcrumb mb-0 border-top border-bottom">
-      <div class="mt-1 mb-1">
-        <a class="nav-link active" href="../Cart_Page/cart.html">Cart /</a>
+    <nav class="navbar navbar-expand-lg breadcrumb">
+      <!-- Navbar Toggler for Mobile View -->
+      <button
+        class="navbar-toggler d-md-none"
+        type="button"
+        data-toggle="collapse"
+        data-target="#breadcrumbMenu"
+        aria-controls="breadcrumbMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <!-- Breadcrumb Menu -->
+      <div class="collapse navbar-collapse" id="breadcrumbMenu">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="../Cart_Page/cart.html">Cart /</a>
+          <a class="nav-item nav-link" href="../Address_Page/address.html">Delivery Address /</a>
+          <a class="nav-item nav-link" href="../Cart_Page/review.html">Review Order</a>
+        </div>
       </div>
-      <div class="mt-1 mb-1">
-        <a class="nav-link" href="../Address_Page/address.html"
-          >Delivery Address /</a
-        >
-      </div>
-      <div class="mt-1 mb-1">
-        <a class="nav-link" href="../Cart_Page/review.html">Review Order</a>
-      </div>
-    </div>
+    </nav>
+
     <div class="container main-page col-lg-12">
       <div class="row">
         <h2 class="my-4 text-center fw-bold">Shipping Address</h2>
@@ -500,32 +504,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const toggleSwitch = document.getElementById("darkModeSwitch");
-
-        function applyDarkModePreference() {
-          if (localStorage.getItem("darkMode") === "enabled") {
-            document.body.classList.add("dark-mode");
-            toggleSwitch.checked = true;
-          } else {
-            document.body.classList.remove("dark-mode");
-            toggleSwitch.checked = false;
-          }
-        }
-
-        function toggleDarkMode() {
-          if (toggleSwitch.checked) {
-            document.body.classList.add("dark-mode");
-            localStorage.setItem("darkMode", "enabled");
-          } else {
-            document.body.classList.remove("dark-mode");
-            localStorage.setItem("darkMode", "disabled");
-          }
-        }
-
-        toggleSwitch.addEventListener("change", toggleDarkMode);
-        applyDarkModePreference();
-      });
+  
       function showAddressForm() {
         document.getElementById("addressForm").style.display = "block";
         document.getElementById("savedAddressesList").style.display = "none";
@@ -548,7 +527,6 @@
           JSON.parse(localStorage.getItem("savedAddresses")) || [];
         addresses.push(address);
         localStorage.setItem("savedAddresses", JSON.stringify(addresses));
-
         displaySavedAddresses();
       }
 
