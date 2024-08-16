@@ -28,6 +28,11 @@
     <style>
       body {
         font-family: "Poppins", sans-serif;
+        /* background-color: #d0f0c0; */
+        background-color: #f5f5dc;
+      }
+      .header{
+        background-color: #ff6f61;
       }
       body.dark-mode {
         background-color: rgb(60, 60, 60);
@@ -139,10 +144,15 @@
       }
       .main-page {
         min-height: 100vh;
+        /* background-color: #f4dfc8; */
+        /* background-color: #b6dacc; */
       }
       .breadcrumb {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        background-color: #ffabc7;
+        /* background-color: #ffabc7; */
+        /* background-color: #f1a2a4; */
+        /* background-color: #ffc0cb; */
+        background-color: #ff6f61;
         height: 50px;
       }
       .dropdown-toggle {
@@ -152,7 +162,9 @@
         text-decoration: none;
       }
       .breadcrumb a {
-        color: black;
+        /* color: black; */
+        /* color: #3e2723; */
+        color: #ffffff;
         font-size: 1.1rem;
         font-weight: bold;
       }
@@ -164,7 +176,11 @@
         position: sticky;
         top: 20px;
         padding: 10px;
-        background-color: white;
+        /* background-color: white; */
+        /* background-color: #f5f5dc; */
+        background-color: #d3d3d3;
+        /* color: #3e2723; */
+        color: #333333;
         border: 1px solid #ddd;
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -196,7 +212,9 @@
       footer,
       section {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        background-color: #ffabc7;
+        /* background-color: #ffabc7; */
+        /* background-color: #ffc0cb; */
+        background-color: #ff6f61;
       }
       section a {
         text-decoration: none;
@@ -210,19 +228,27 @@
         width: 21rem;
         margin: auto;
         border: 1px solid #ddd;
+        background-color: #ffffff;
+        color: #333333;
         border-radius: 5px;
         overflow: hidden;
         transition: all ease 0.5s;
       }
       .card:hover {
         background-color: rgb(216, 50, 50);
+        /* background-color: #f1a2a4; */
         color: white;
       }
     
        .qb-btn{
       border: 2px solid black; 
-      background-color: white; 
-      color: black; 
+      /* background-color: white;  */
+      /* background-color: #f1a2a4; */
+      /* background-color: #98ff98; */
+      background-color: #ff8c69;
+      /* color: black;  */
+      /* color: #2e7d32; */
+      color: #ffffff;
       transition: background-color 0.3s ease, color 0.3s ease; 
        }
       .custom-select {
@@ -929,8 +955,8 @@
           const isWishlisted = wishlist.some(
             (item) => item && item.id === cake.id
           );
-          const heartClass = isWishlisted ? "fas" : "far";
-          const heartColor = isWishlisted ? "red" : "grey";
+          const heartClass = isWishlisted ? "fas" : "fas";
+          const heartColor = isWishlisted ? "red" : "white";
           const cakeCard = `
       <div class="card product-card mb-4 mt-4">
         <img src="${cake.image}" class="" alt="${cake.name}">
