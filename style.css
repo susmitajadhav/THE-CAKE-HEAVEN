@@ -4,40 +4,10 @@ body {
   color: black;
   transition: background-color 0.3s, color 0.3s;
 }
-
-body.dark-mode {
-  background-color: rgb(60, 60, 60);
-  color: white;
-  .breadcrumb a {
-    color: black;
-  }
-  .marquee{
-    color: black;
-  }
-
-  .icon-s{ 
-    color: pink;
-  }
-  .fa-heart{ 
-    color: red;
-  }
-  .user-satisfaction{
-    color: black;
-  }
-  footer, section{
-    color: black;
-  }
-
-  #dropdownMenuButton1{
-    color: black;
-  }
-}
-
 .toggle-switch {
   top: 20px;
   right: 20px;
 }
-
 .toggle-switch input[type="checkbox"] {
   display: none;
 }
@@ -85,10 +55,10 @@ body.dark-mode {
   opacity: 1;
 }
 
-.icon-s{
-  font-size: 22px; 
-  cursor: pointer; 
-  color: black
+.icon-s {
+  font-size: 22px;
+  cursor: pointer;
+  color: black;
 }
 
 .profile-icon {
@@ -98,7 +68,7 @@ body.dark-mode {
 }
 .dropdown-menu {
   min-width: 150px;
-}
+} 
 .error-message {
   color: red;
   display: none;
@@ -149,10 +119,12 @@ body.dark-mode {
 .breadcrumb {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #ffabc7;
-  height: 50px;
+  height: 4rem;
 }
+
 .dropdown-toggle {
-  margin-top: 12px;
+  margin-top: 4px;
+  min-height: 10px;
 }
 .dropdown-toggle a {
   text-decoration: none;
@@ -169,7 +141,7 @@ body.dark-mode {
 
 footer,
 section {
-  background-color: #ffabc7; 
+  background-color: #ffabc7;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 section a {
@@ -178,7 +150,7 @@ section a {
 
 .story-container {
   display: flex;
-  gap: 10px;
+  gap: 4rem;
   padding: 20px;
   justify-content: center;
 }
@@ -343,8 +315,7 @@ input[type="radio"]:checked + .radios-buttons label[for="radio3"] {
 
 .item-img img {
   transition: all ease 0.6s;
-  width: 318px;
-  height: 318px;
+  max-height: 318px;
 }
 
 .item-img img:hover {
@@ -426,7 +397,7 @@ input[type="radio"]:checked + .radios-buttons label[for="radio3"] {
 .custom-slide-img img {
   width: 160px;
   height: 160px;
-  border-radius: 100%;  
+  border-radius: 100%;
 }
 
 .custom-card-title {
@@ -462,4 +433,137 @@ input[type="radio"]:checked + .radios-buttons label[for="radio3"] {
 
 .custom-slider-control-next {
   right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .breadcrumb {
+    justify-content: space-around;
+  }
+  .navbar-nav {
+    background-color: grey;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    z-index: 1000;
+  }
+  .dropdown-menu {
+    display: none;
+  }
+  .breadcrumb a {
+    font-size: 1rem;
+  }
+  .dropdowns li a {
+    font-size: 14px;
+  }
+  .dropdown-menu.show {
+    display: block;
+    position: static;
+    float: none;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    margin-top: 0;
+  }
+  input.form-control {
+    padding: 6px 10px;
+    font-size: 12px;
+    width: 100%;
+  }
+  .header .row > div {
+    margin-bottom: 10px;
+  }
+  .header .row > div:last-child {
+    margin-bottom: 0;
+  }
+  .header input.form-control {
+    width: 80%; 
+    padding: 8px 15px; 
+    font-size: 12px; 
+    margin: 0 auto;
+  }
+  .story-container {
+    gap: 0.6rem;
+  }
+  .story {
+    width: 60px;
+    height: 60px;
+  }
+  .story .play-text {
+    position: relative;
+    left: -9.5rem; 
+    width: 100%;
+    top: -0rem;
+    font-size: 0.8rem;
+  }
+  
+  #shortModal {
+    width: 30rem;
+    left: -26.5rem;
+    top: -5rem;
+  }
+  .modal-dialog {
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  
+  .modal-content {
+    background-color: transparent;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+  }
+  
+  .modal-body {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-body iframe {
+    width: 300px;
+    height: 400px;
+  }
+  
+  .close-button {
+    position: absolute;
+    scale: 1.5;
+    top: 14rem;
+    right: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    border-radius: 500%;
+    cursor: pointer;
+  }
+  .slides img {
+    width: 100%;
+    height: 10%;
+    margin: auto;
+  }
+  .user-satisfaction {
+    font-size: 1rem;
+  }
+
+  .item {
+    min-width: calc(100%);
+    text-align: center;
+    height: 23rem;
+    transition: all ease 0.3s;
+  }
+  .carousel-control-prev {
+    left: 0px;
+    font-size: 2rem;
+  }
+  
+  .carousel-control-next {
+    right: 0px;
+    font-size: 2rem;
+  }
+  
 }

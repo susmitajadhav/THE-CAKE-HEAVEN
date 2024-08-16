@@ -2,10 +2,10 @@
   padding: 0;
   margin: 0;
 }
-.col .form-control::placeholder {
+.text::placeholder {
   text-align: center;
 }
-.col .form-control {
+ .text {
   padding: 1.2rem;
 }
 
@@ -183,44 +183,6 @@ section a {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-.col{
-  padding: 0.5rem;
-}
-
-/* .ro1 {
-  height: 205px;
-  width: 205px;
-}
-.circle {
-  width: 500px; 
-  height: 500px; 
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white; 
-  border: 5px solid white;
-  box-sizing: border-box; 
-  animation: rotate 6s linear infinite; 
-}
-section2 .circle,
-.about-img {
-  width: 500px; 
-  height: 100%; 
-  object-fit: cover; 
-  border-radius: 50%; 
-  box-sizing: border-box; 
-}
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
 .contact-form {
   max-width: 600px;
   margin: 20px auto;
@@ -229,11 +191,9 @@ section2 .circle,
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 section1 {
   width: 50vw;
 }
-
 .contact {
   padding-left: 4rem;
   margin-bottom: 5rem;
@@ -276,8 +236,7 @@ h1 {
   border-color: #ffabc7;
   box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
 }
-
-#id11111 .row {
+ section2 .content {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -287,12 +246,12 @@ h1 {
   padding-right: 0 !important;
 }
 
-#id11111 .row img {
+.content img {
   height: 20rem;
   width: 50rem;
 }
 
-.col-md-12 img {
+.banner img {
   height: 20vh;
 }
 
@@ -377,7 +336,7 @@ body {
   font-family: poppins, sans-serif;
 }
 
-.form-control {
+.text {
   height: 2rem;
 }
 
@@ -613,4 +572,64 @@ section a {
 }
 .btn btn-primary w-100 py-3 {
   background-color: var(--primary);
+}
+
+
+@media (max-width: 600px) {
+  .breadcrumb {
+    justify-content: space-around;
+  }
+  .navbar-nav {
+    background-color: grey;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    z-index: 1000;
+  }
+  .dropdown-menu {
+    display: none;
+  }
+  .breadcrumb a {
+    font-size: 1rem;
+  }
+  .dropdowns li a {
+    font-size: 14px;
+  }
+  .dropdown-menu.show {
+    display: block;
+    position: static;
+    float: none;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    margin-top: 0;
+  }
+  .contact2 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+  }
+ .contact3 h4 {
+    font-size: 1.5rem;
+    margin-left: 0;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .contact4 .btn-danger {
+    margin-top: 1rem;
+    margin-left: 0;
+    width: 10rem;
+    height: 3rem;
+  }
+  .about-img{
+    height: 10rem!important;
+    width: 10rem!important;
+    margin-bottom: 4px;
+    margin-left: 50px;
+  }
 }

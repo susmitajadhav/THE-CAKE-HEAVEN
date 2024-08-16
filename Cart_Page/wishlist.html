@@ -20,87 +20,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <style>
+     <style>
       body {
         font-family: "Poppins", sans-serif;
-      }
-
-      body.dark-mode {
-        background-color: rgb(60, 60, 60);
-        color: white;
-
-        .sticky-filter{
-          background-color: rgb(60, 60, 60);
-        }
-        .sticky-filter a{
-          background-color: rgb(60, 60, 60);
-          color: white;
-        }
-        footer,
-        section {
-          color: black;
-        }
-        .fa-cart-shopping {
-          color: pink;
-        }
-        .fa-heart {
-          color: red;
-        }
-        .fa-user {
-          color: skyblue;
-        }
-      }
-
-      .toggle-switch {
-        top: 20px;
-        right: 20px;
-      }
-
-      .toggle-switch input[type="checkbox"] {
-        display: none;
-      }
-
-      .toggle-switch label {
-        display: block;
-        width: 50px;
-        height: 25px;
-        background-color: black;
-        border-radius: 25px;
-        position: relative;
-        cursor: pointer;
-      }
-
-      .toggle-switch label .icon {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .toggle-switch label .sun {
-        left: 5px;
-        color: #f7df06;
-        opacity: 1;
-        transition: opacity 0.3s;
-      }
-
-      .toggle-switch label .moon {
-        right: 5px;
-        color: #ffff;
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
-
-      .toggle-switch input[type="checkbox"]:checked + label .sun {
-        opacity: 0;
-      }
-
-      .toggle-switch input[type="checkbox"]:checked + label .moon {
-        opacity: 1;
       }
       .breadcrumb {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -173,80 +95,135 @@
         height: 120px;
         border-radius: 10px 0px 0px 10px;
       }
-    </style>
+      .navbar-nav {
+        text-align: center;
+      }
+      .navbar-nav .nav-link {
+       padding: 10px 0;
+       display: block;
+       color: black; 
+      }
+      @media (max-width: 600px) {
+        .header .row > div {
+          margin-bottom: 10px;
+        }
+        .header .row > div:last-child {
+          margin-bottom: 0;
+        }
+        .header input.form-control {
+          width: 80%; 
+          padding: 8px 15px; 
+          font-size: 12px; 
+          margin: 0 auto;
+        }
+        .navbar-nav {
+          text-align: center;
+        }
+        .navbar-nav .nav-link {
+         padding: 10px 0;
+         display: inline-block;
+         width: 100%; 
+        }
+        .navbar-collapse {
+         position: absolute;
+         top: 56px; 
+         width: 100%; 
+         z-index: 1000; 
+         background-color: #ffabc7; 
+        }
+        .navbar-nav {
+         background-color: #ffabc7; 
+        }
+        .navbar-toggler {
+         position: relative;
+         z-index: 1100; 
+        }
+      }
+     </style>
   </head>
   <body>
-    <div class="d-flex header justify-content-between pb-2">
-      <div class="col pt-2 px-2">
-        <a href="../index.html"
-          ><img
-            src="../Media/logo.jpg"
-            class="border-end border-dark rounded-pill"
-            width="80px"
-            height="80px"
-            alt=""
-        /></a>
+    <div class="container">
+      <div class="header pb-2">
+        <div class="row">
+          <!-- Logo and Icons Row for Mobile View -->
+          <div class="col-12 d-flex d-md-none justify-content-between align-items-center">
+            <div class="pt-2">
+              <a href="../index.html">
+                <img
+                  src="../Media/logo.jpg"
+                  class="border-end border-dark rounded-circle"
+                  width="60px"
+                  height="60px"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="d-flex justify-content-end text-end icons">
+              <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-2"></i></a>
+              <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s px-2"></i></a>
+              <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-2"></i></a>
+            </div>
+          </div>
+    
+          <!-- Logo for Laptop View -->
+          <div class="col-md-4 d-none d-md-flex align-items-center pt-2 px-2">
+            <a href="../index.html">
+              <img
+                src="../Media/logo.jpg"
+                class="border-end border-dark rounded-circle"
+                width="80px"
+                height="80px"
+                alt=""
+              />
+            </a>
+          </div>
+    
+          <!-- Search Bar -->
+          <div class="col-12 col-md-4 mt-2 align-self-center">
+            <input
+              class="form-control rounded-pill p-2 text-center"
+              type="search"
+              placeholder="Search for cakes, desserts, and more"
+              aria-label="Search"
+            />
+          </div>
+    
+          <!-- Icons for Laptop View -->
+          <div class="col-md-4 d-none d-md-flex justify-content-end text-end icons align-self-center mb-2">
+            <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-4"></i></a>
+            <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s"></i></a>
+            <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-4" aria-hidden="true"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="col mt-2 align-self-center">
-        <input
-          class="form-control rounded-pill"
-          type="search"
-          placeholder="Search for cakes, desserts, and more"
-          aria-label="Search"
-        />
-      </div>
-      <div
-        class="col d-flex justify-content-end text-end icons align-self-center mb-1"
+    </div>
+    
+    <nav class="navbar navbar-expand-lg breadcrumb navbar-light border-bottom border-top">
+      <!-- Navbar Toggler for Mobile View -->
+      <button
+        class="navbar-toggler d-md-none"
+        type="button"
+        data-toggle="collapse"
+        data-target="#breadcrumbMenu"
+        aria-controls="breadcrumbMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
       >
-        <div class="toggle-switch">
-          <input type="checkbox" id="darkModeSwitch" />
-          <label for="darkModeSwitch">
-            <span class="icon sun"><i class="fas fa-sun"></i></span>
-            <span class="icon moon"><i class="fas fa-moon"></i></span>
-          </label>
-        </div>
-        <a href="../Cart_Page/cart.html"
-          ><i
-            class="fas fa-cart-shopping icon-s px-3"
-          ></i
-        ></a>
-
-        <a href="../Cart_Page/wishlist.html"
-          ><i
-            class="fas fa-heart icon-s"
-          ></i
-        ></a>
-        <a href="../Profile_Page/profile.html"
-          ><i
-            class="fa fa-user icon-s px-3"
-            aria-hidden="true"
-          ></i
-        ></a>
-      </div>
-    </div>
-
-    <div
-      class="col-12 col-sm-12 col-md-12 justify-content-center border-bottom border-top breadcrumb mb-0 mt-2"
-    >
-      <div class="row">
-        <div class="pt-3 px-2 pb-3 col-2 col-sm-3 col-md-3">
-          <a class="nav-link active" href="../index.html">Home</a>
-        </div>
-        <div class="pt-3 px-2 pb-3 col-2 col-sm-3 col-md-3">
-          <a class="nav-link" href="../Category_Page/cake_list.html"
-            >Catalogue</a
-          >
-        </div>
-        <div class="pt-3 px-5 pb-3 col-2 col-sm-3 col-md-3">
-          <a class="nav-link" href="../Quick_Pages/about.html">About</a>
-        </div>
-        <div class="pt-3 px-5 pb-3 col-2 col-sm-3 col-md-3">
-          <a class="nav-link" href="../Quick_Pages/about.html">Contact</a>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <!-- Breadcrumb Menu -->
+      <div class="collapse navbar-collapse" id="breadcrumbMenu">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="../index.html">Home</a>
+          <a class="nav-item nav-link" href="../Category_Page/cake_list.html">Catalogue</a>
+          <a class="nav-item nav-link" href="../Quick_Pages/about.html">About</a>
+          <a class="nav-item nav-link" href="../Quick_Pages/about.html">Contact</a>
         </div>
       </div>
-    </div>
+    </nav>
 
-    <div class="pb-5 pt-2 col-lg-12">
+    <div class="pb-5 pt-2 col-lg-12 px-3">
       <div class="row">
         <div class="col-lg-2 mt-5 side-card text-center align-self-top">
           <div class="sticky-filter mt-4">
@@ -438,10 +415,19 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
     <script>
+  document.addEventListener("DOMContentLoaded", function () {
+  var toggler = document.querySelector('.navbar-toggler');
+  var menu = document.querySelector('#breadcrumbMenu');
+
+  toggler.addEventListener('click', function () {
+    menu.classList.toggle('show');
+  });
+});
       document.addEventListener("DOMContentLoaded", function () {
         const toggleSwitch = document.getElementById("darkModeSwitch");
 
         function applyDarkModePreference() {
+
           if (localStorage.getItem("darkMode") === "enabled") {
             document.body.classList.add("dark-mode");
             toggleSwitch.checked = true;
@@ -545,6 +531,7 @@
 
       // Initial display of wishlist items
       displayWishlist();
+
     </script>
   </body>
 </html>

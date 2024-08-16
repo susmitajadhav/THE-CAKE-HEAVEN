@@ -106,14 +106,14 @@ $(document).ready(function () {
 
     if (user) {
       const dropdownContent = `
-            <a class="dropdown-toggle" href="#" role="button" id="profileDropdownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Welcome, ${user.fullName}
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdownLink">
-                <a class="dropdown-item" href="../Profile Page/profile.html">Profile</a>
-                <a class="dropdown-item logout-btn" href="#">Logout</a>
-            </div>
-        `;
+              <a class="dropdown-toggle" href="#" role="button" id="profileDropdownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Welcome, ${user.fullName}
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdownLink">
+                  <a class="dropdown-item" href="../Profile Page/profile.html">Profile</a>
+                  <a class="dropdown-item logout-btn" href="#">Logout</a>
+              </div>
+          `;
       profileDropdown.html(dropdownContent);
     } else {
       const iconContent = `<i class="fa fa-user profile-icon" id="profileIcon"></i>`;
@@ -142,10 +142,6 @@ $(document).ready(function () {
   updateProfileDisplay(loggedInUser);
 });
 
-$('.close').click(function() {
-  $('#authModal').modal('hide');
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   var currentLocation = window.location.pathname;
   var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
@@ -158,6 +154,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+function toggleNavbar() {
+  const navbar = document.getElementById("navbarNavDropdown");
+  navbar.classList.toggle("show");
+}
+
+function toggleDropdown(event) {
+  event.preventDefault();
+  const dropdown = event.target.nextElementSibling;
+  dropdown.classList.toggle("show");
+}
 
 $(document).ready(function () {
   $(".story").on("click", function () {
@@ -204,13 +211,13 @@ document.querySelectorAll(".carousel-container").forEach((container, index) => {
     currentIndex: 0,
     items: container.querySelectorAll(".carousel .item"),
     totalItems: container.querySelectorAll(".carousel .item").length,
-    visibleItems: 4,
+    visibleItems: 4, // default for desktop view
   };
 });
 
 function updateCarousel(id) {
   const carousel = carousels[id];
-  const offset = carousel.currentIndex * -25; // 25% for each item since we show 4 items
+  const offset = carousel.currentIndex * -(100 / carousel.visibleItems);
   document.querySelector(
     `#${id} .carousel`
   ).style.transform = `translateX(${offset}%)`;
@@ -237,6 +244,19 @@ function prevSlide(id) {
   }
   updateCarousel(id);
 }
+
+// Function to update visible items based on screen width
+function updateVisibleItems() {
+  const isMobile = window.innerWidth <= 600;
+  Object.keys(carousels).forEach((id) => {
+    carousels[id].visibleItems = isMobile ? 1 : 4;
+    updateCarousel(id);
+  });
+}
+
+// Call updateVisibleItems on load and resize
+window.addEventListener("resize", updateVisibleItems);
+window.addEventListener("load", updateVisibleItems);
 
 // Optional: Automatic sliding for all carousels
 setInterval(() => {

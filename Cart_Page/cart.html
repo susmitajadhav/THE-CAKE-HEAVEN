@@ -191,88 +191,202 @@
       .form-text {
         color: black;
       }
-    </style>
+
+      @media (max-width: 600px) {
+    .empty-cart-image {
+      width: 50%; 
+    }
+
+    #recommendationItems {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    #recommendationItems .row > div {
+      flex: 1 0 100%; 
+    }
+
+    .orderFor {
+      margin-bottom: 20px; 
+    }
+
+    .order-summary {
+      margin-top: 20px; 
+    }
+
+    #carts-items, .order-summary, .orderFor {
+      margin-left: 0;
+      margin-right: 0;
+    }
+      /* Cart Item Styles */
+  .cake-card {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+  
+  .cake-card img.cake-img {
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 10px; 
+  }
+  
+  .cake-card > div {
+    width: 100%; 
+    margin-bottom: 10px;
+  }
+
+  .cake-card .d-flex.align-items-center {
+    justify-content: space-between;
+    width: 100%; 
+    margin-bottom: 10px; 
+  }
+  
+  .cake-card .px-4 {
+    width: 100%;
+    text-align: center; 
+    margin-bottom: 10px;
+  }
+
+  /* Order Summary Styles */
+  .order-summary h4, .order-summary p, .order-summary h5, .order-summary button {
+    font-size: 1.1rem; 
+    margin-bottom: 10px; 
+  }
+  .header .row > div {
+          margin-bottom: 10px;
+        }
+        .header .row > div:last-child {
+          margin-bottom: 0;
+        }
+        .header input.form-control {
+          width: 80%; 
+          padding: 8px 15px; 
+          font-size: 12px; 
+          margin: 0 auto;
+        }
+}
+ </style>
   </head>
 
   <body>
-    <div class="d-flex header justify-content-between pb-2">
-      <div class="col pt-2 px-2">
-        <a href="../index.html"
-          ><img
-            src="../Media/logo.jpg"
-            class="border-end border-dark rounded-pill"
-            width="80px"
-            height="80px"
-            alt=""
-        /></a>
-      </div>
-      <div class="col mt-2 align-self-center">
-        <input
-          class="form-control rounded-pill"
-          type="search"
-          placeholder="Search for cakes, desserts, and more"
-          aria-label="Search"
-        />
-      </div>
-      <div
-        class="col d-flex justify-content-end text-end icons align-self-center mb-1"
-      >
-        <div class="toggle-switch">
-          <input type="checkbox" id="darkModeSwitch" />
-          <label for="darkModeSwitch">
-            <span class="icon sun"><i class="fas fa-sun"></i></span>
-            <span class="icon moon"><i class="fas fa-moon"></i></span>
-          </label>
+    <div class="container">
+      <div class="header pb-2">
+        <div class="row">
+          <!-- Logo and Icons Row for Mobile View -->
+          <div class="col-12 d-flex d-md-none justify-content-between align-items-center">
+            <div class="pt-2">
+              <a href="../index.html">
+                <img
+                  src="../Media/logo.jpg"
+                  class="border-end border-dark rounded-circle"
+                  width="60px"
+                  height="60px"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="d-flex justify-content-end text-end icons">
+              <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-2"></i></a>
+              <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s px-2"></i></a>
+              <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-2"></i></a>
+            </div>
+          </div>
+    
+          <!-- Logo for Laptop View -->
+          <div class="col-md-4 d-none d-md-flex align-items-center pt-2 px-2">
+            <a href="../index.html">
+              <img
+                src="../Media/logo.jpg"
+                class="border-end border-dark rounded-circle"
+                width="80px"
+                height="80px"
+                alt=""
+              />
+            </a>
+          </div>
+    
+          <!-- Search Bar -->
+          <div class="col-12 col-md-4 mt-2 align-self-center">
+            <input
+              class="form-control rounded-pill p-2 text-center"
+              type="search"
+              placeholder="Search for cakes, desserts, and more"
+              aria-label="Search"
+            />
+          </div>
+    
+          <!-- Icons for Laptop View -->
+          <div class="col-md-4 d-none d-md-flex justify-content-end text-end icons align-self-center mb-2">
+            <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-4"></i></a>
+            <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s"></i></a>
+            <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-4" aria-hidden="true"></i></a>
+          </div>
         </div>
-        <a href="../Cart_Page/cart.html"
-        ><i
-          class="fas fa-cart-shopping icon-s px-3"
-        ></i
-      ></a>
-
-      <a href="../Cart_Page/wishlist.html"
-        ><i
-          class="fas fa-heart icon-s"
-        ></i
-      ></a>
-      <a href="../Profile_Page/profile.html"
-        ><i
-          class="fa fa-user icon-s px-3"
-          aria-hidden="true"
-        ></i
-      ></a>
       </div>
     </div>
 
-    <div class="d-flex breadcrumb mb-0 border-top border-bottom">
-      <div class="mt-1 mb-1">
-        <a class="nav-link active" href="../Cart_Page/cart.html">Cart /</a>
-      </div>
-      <div class="mt-1 mb-1">
-        <a class="nav-link" href="../Address_Page/address.html"
-          >Delivery Address /</a
+    <div class="position-relative">
+
+      <!-- Toggle Button Row with Pink Background (Mobile View Only) -->
+      <div class="d-md-none d-flex justify-content-between align-items-center border-top border-bottom" style="background-color: #ffabc7;">
+        <button
+          class="navbar-toggler mt-1 mb-1"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#breadcrumbNavbar"
+          aria-controls="breadcrumbNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
+          <!-- Font Awesome Bars Icon for Toggle -->
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
-      <div class="mt-1 mb-1">
-        <a class="nav-link" href="../Cart_Page/review.html">Review Order</a>
+    <!-- Breadcrumb Navbar -->
+    <div class="collapse d-md-flex breadcrumb mb-0 border-top border-bottom" id="breadcrumbNavbar">
+      <!-- Mobile View: Display in Column Layout -->
+      <div class="d-md-none d-flex flex-column align-items-start position-absolute w-100 bg-white" style="top: 100%; left: 0; z-index: 1000;">
+        <div class="mt-1 mb-1">
+          <a class="nav-link active" href="../Cart_Page/cart.html">Cart /</a>
+        </div>
+        <div class="mt-1 mb-1">
+          <a class="nav-link" href="../Address_Page/address.html">Delivery Address /</a>
+        </div>
+        <div class="mt-1 mb-1">
+          <a class="nav-link" href="../Cart_Page/review.html">Review Order</a>
+        </div>
+      </div>
+  
+      <!-- Laptop View: Display in Row Layout -->
+      <div class="d-none d-md-flex">
+        <div class="mt-1 mb-1">
+          <a class="nav-link active" href="../Cart_Page/cart.html">Cart /</a>
+        </div>
+        <div class="mt-1 mb-1">
+          <a class="nav-link" href="../Address_Page/address.html">Delivery Address /</a>
+        </div>
+        <div class="mt-1 mb-1">
+          <a class="nav-link" href="../Cart_Page/review.html">Review Order</a>
+        </div>
       </div>
     </div>
+  </div>
 
-    <div class="container main-page col-md-12 col-lg-12 pt-4">
+    <div class="container main-page col-12 col-md-12 col-lg-12 pt-4">
       <h1 class="text-center mb-4" id="page-title">Your Cart</h1>
+      
       <div class="empty-message text-center" id="empty-message">
-        <img
-          src="../Media/preview.png"
-          class="empty-cart-image img-fluid"
-          alt="Empty Cart"
-        />
+        <img src="../Media/preview.png" class="empty-cart-image img-fluid" alt="Empty Cart" />
         <h1 class="empty-msg pt-4">There are no items in the cart.</h1>
       </div>
+    
       <div class="row">
-        <div class="col-md-8 col-xl-8 col-lg-8" id="carts-items">
+        <!-- Cart Items Section -->
+        <div class="col-12 col-md-8 col-lg-8" id="carts-items">
           <div id="cartItems" class="mx-2">
             <!-- Cart items will be dynamically inserted here -->
           </div>
+    
           <div id="recommendations" class="mt-5">
             <h4 class="px-2 text-center">Recommended Items</h4>
             <div id="recommendationItems" class="row justify-content-evenly gx-0 gap-4 my-4">
@@ -280,49 +394,38 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 col-xl-4 col-lg-4">
+    
+        <!-- Order Details and Summary Section -->
+        <div class="col-12 col-md-4 col-lg-4 mt-4 mt-md-0">
           <div class="mb-3 p-3 orderFor">
             <h5 class="text-center">Order Details</h5>
             <div class="form-group">
               <label for="orderFor">Order for whom:</label>
-              <input
-                type="text"
-                class="form-control"
-                id="orderFor"
-                placeholder="Enter name"
-              />
+              <input type="text" class="form-control" id="orderFor" placeholder="Enter name" />
             </div>
             <div class="form-group mt-2">
               <label for="birthDate">Birthdate / Birthday date:</label>
               <input type="date" class="form-control" id="birthDate" />
             </div>
             <div class="form-group mt-2">
-              <small class="form-text"
-                >This will help us for next birthday reminder</small
-              >
+              <small class="form-text">This will help us for next birthday reminder</small>
             </div>
             <div class="text-center">
-              <button
-                class="btn btn-secondary mt-3"
-                onclick="saveOrderDetails()"
-              >
-                Save Details
-              </button>
+              <button class="btn btn-secondary mt-3" onclick="saveOrderDetails()">Save Details</button>
             </div>
           </div>
+    
           <div class="card order-summary text-center" id="order-summary">
             <h4>Order Summary</h4>
             <p>Items Price: <span id="itemsPrice">₹0</span></p>
             <p>Shipping Charge: <span id="shippingCharge">₹40</span></p>
             <h5>Total Price: <span id="totalPrice">₹40</span></h5>
-            <button class="btn btn-primary" onclick="proceedToReview()">
-              Proceed to Checkout
-            </button>
+            <button class="btn btn-primary" onclick="proceedToReview()">Proceed to Checkout</button>
           </div>
         </div>
       </div>
     </div>
-
+   
   <footer class="text-center text-lg-start bg-body-tertiary">
       <section
         class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom border-top"
@@ -474,32 +577,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const toggleSwitch = document.getElementById("darkModeSwitch");
-
-        function applyDarkModePreference() {
-          if (localStorage.getItem("darkMode") === "enabled") {
-            document.body.classList.add("dark-mode");
-            toggleSwitch.checked = true;
-          } else {
-            document.body.classList.remove("dark-mode");
-            toggleSwitch.checked = false;
-          }
-        }
-
-        function toggleDarkMode() {
-          if (toggleSwitch.checked) {
-            document.body.classList.add("dark-mode");
-            localStorage.setItem("darkMode", "enabled");
-          } else {
-            document.body.classList.remove("dark-mode");
-            localStorage.setItem("darkMode", "disabled");
-          }
-        }
-
-        toggleSwitch.addEventListener("change", toggleDarkMode);
-        applyDarkModePreference();
-      });
-      document.addEventListener("DOMContentLoaded", function () {
         var currentLocation = window.location.pathname;
         var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
@@ -549,8 +626,8 @@
         recommendationItems.innerHTML = "";
         recommendations.forEach((item, index) => {
           const recommendationItem = `
-      <div class="col-3 text-center rec-card">
-        <img src="${item.image}" class="cake-img" alt="${item.name}">
+      <div class="col-8 col-md-3 text-center rec-card mb-3">
+        <img src="${item.image}" class="cake-img img-fluid" alt="${item.name}">
         <div class="pt-2">
           <h5>${item.name}</h5>
           <p>Rs. ${item.price}</p>
