@@ -1305,6 +1305,7 @@
         toggleSwitch.addEventListener("change", toggleDarkMode);
         applyDarkModePreference();
       });
+
       document.addEventListener("DOMContentLoaded", function () {
         var currentLocation = window.location.pathname;
         var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
@@ -1614,7 +1615,7 @@
         }
 
         localStorage.setItem("cart", JSON.stringify(cart));
-        window.location.href = "../Cart Page/cart.html"; // Replace with the actual URL of your cart page
+        window.location.href = "../Cart_Page/cart.html"; // Replace with the actual URL of your cart page
       }
 
       function buyNow() {
@@ -1646,7 +1647,7 @@
       }
 
       // Initial display of cakes
-      displayCakes();
+      displayCakes()
     </script>
   </body>
 </html>

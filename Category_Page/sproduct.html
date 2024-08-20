@@ -1053,7 +1053,6 @@
         });
       });
 
-      let selectedCake = {};
 
 document.addEventListener("DOMContentLoaded", function () {
   const urlParams = new URLSearchParams(window.location.search);
@@ -1135,7 +1134,7 @@ function updatePrice() {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
         cart.push(cartItem);
         localStorage.setItem("cart", JSON.stringify(cart));
-        window.location.href = "../Cart Page/cart.html";
+        window.location.href = "../Cart_Page/cart.html";
       }
 
       document.addEventListener("DOMContentLoaded", function () {
