@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -523,3 +524,530 @@
     </script>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+     <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .breadcrumb {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #ffabc7;
+      }
+      .breadcrumb a {
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+        transition: all ease 0.3s;
+      }
+      .breadcrumb a:hover {
+        scale: 1.05;
+        color: black;
+      }
+      .icon-s {
+        font-size: 22px;
+        cursor: pointer;
+        color: black;
+      }
+      .sticky-filter {
+        position: sticky;
+        top: 20px;
+        padding: 10px;
+        /* margin-left: 2rem; */
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .side-card a {
+        font-size: 20px;
+        font-weight: bold;
+        background-color: white;
+        color: black;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: all ease 0.3s;
+      }
+      .side-card a:hover {
+        scale: 1.05;
+        color: black;
+      }
+      .hidden {
+        display: none;
+      }
+      footer,
+      section {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #ffabc7;
+      }
+      section a {
+        text-decoration: none;
+      }
+      .empty-message {
+        text-align: center;
+        font-size: 18px;
+      }
+      .empty-cart-image {
+        width: 30rem;
+        mix-blend-mode: multiply;
+      }
+      .wishlist-card {
+        width: 60vw;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .cake-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 10px 0px 0px 10px;
+      }
+      .navbar-nav {
+        text-align: center;
+      }
+      .navbar-nav .nav-link {
+       padding: 10px 0;
+       display: block;
+       color: black!important; 
+      }
+      .navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+    .navbar-nav .nav-item {
+     text-align: center;
+     margin-left: 1.2rem;
+  }
+     @media (max-width: 600px) {
+        .header .row > div {
+          margin-bottom: 10px;
+        }
+        .header .row > div:last-child {
+          margin-bottom: 0;
+        }
+        .header input.form-control {
+          width: 80%; 
+          padding: 8px 15px; 
+          font-size: 12px; 
+          margin: 0 auto;
+        }
+        .navbar-nav {
+          text-align: center;
+        }
+       .navbar-nav .nav-link {
+         padding: 10px 0;
+         display: inline-block;
+         width: 100%; 
+        }
+        .navbar-collapse {
+         position: absolute;
+         top: 56px; 
+         width: 100%; 
+         z-index: 1000; 
+         background-color: #ffabc7; 
+        }
+        .navbar-nav {
+         background-color: #ffabc7; 
+        }
+        .navbar-nav a{
+         color: black !important;
+         font-weight: bold !important;
+        font-size: 20px !important;
+        transition: all ease 0.3s !important;
+        }
+        .navbar-toggler {
+         position: relative;
+         z-index: 1100; 
+        }
+      }
+     </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header pb-2">
+        <div class="row">
+          <!-- Logo and Icons Row for Mobile View -->
+          <div class="col-12 d-flex d-md-none justify-content-between align-items-center">
+            <div class="pt-2">
+              <a href="../index.html">
+                <img
+                  src="../Media/logo.jpg"
+                  class="border-end border-dark rounded-circle"
+                  width="60px"
+                  height="60px"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="d-flex justify-content-end text-end icons">
+              <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-2"></i></a>
+              <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s px-2"></i></a>
+              <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-2"></i></a>
+            </div>
+          </div>
+    
+          <!-- Logo for Laptop View -->
+          <div class="col-md-4 d-none d-md-flex align-items-center pt-2 px-2">
+            <a href="../index.html">
+              <img
+                src="../Media/logo.jpg"
+                class="border-end border-dark rounded-circle"
+                width="80px"
+                height="80px"
+                alt=""
+              />
+            </a>
+          </div>
+    
+          <!-- Search Bar -->
+          <div class="col-12 col-md-4 mt-2 align-self-center">
+            <input
+              class="form-control rounded-pill p-2 text-center"
+              type="search"
+              placeholder="Search for cakes, desserts, and more"
+              aria-label="Search"
+            />
+          </div>
+    
+          <!-- Icons for Laptop View -->
+          <div class="col-md-4 d-none d-md-flex justify-content-end text-end icons align-self-center mb-2">
+            <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-4"></i></a>
+            <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s"></i></a>
+            <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-4" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <nav class="navbar navbar-expand-lg breadcrumb navbar-light border-bottom border-top">
+      <!-- Navbar Toggler for Mobile View -->
+      <button
+        class="navbar-toggler d-md-none"
+        type="button"
+        data-toggle="collapse"
+        data-target="#breadcrumbMenu"
+        aria-controls="breadcrumbMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <!-- Breadcrumb Menu -->
+      <div class="collapse navbar-collapse" id="breadcrumbMenu">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="../index.html">Home</a>
+          <a class="nav-item nav-link" href="../Category_Page/cake_list.html">Catalogue</a>
+          <a class="nav-item nav-link" href="../Quick_Pages/about.html">About</a>
+          <a class="nav-item nav-link" href="../Quick_Pages/about.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pb-5 pt-2 col-lg-12 px-3">
+      <div class="row">
+        <div class="col-lg-2 mt-5 side-card text-center align-self-top">
+          <div class="sticky-filter mt-4 ">
+            <a
+              class="nav-link active mt-4 mx-2 mb-3"
+              href="../Profile_Page/profile.html"
+              >My Account</a
+            >
+            <a class="nav-link mt-3 mx-2 mb-3" href="../Cart_Page/orders.html"
+              >My Orders</a
+            >
+            <a class="nav-link mt-3 mx-2 mb-3" href="../Cart_Page/wishlist.html"
+              >My Wishlist</a
+            >
+            <a class="nav-link mt-3 mx-2 mb-3" href="../Wallet_Page/wallet.html"
+              >My Wallet</a
+            >
+            <a class="nav-link mt-3 mx-2 mb-4" href="../Address_Page/manage-address.html"
+              >Manage Address</a
+            >
+          </div>
+        </div>
+        <div class="container col-lg-6 text-center">
+          <h1 class="fw-bold">My Wishlist</h1>
+          <div class="empty-message text-center" id="empty-message">
+            <img
+              src="../Media/preview.png"
+              class="empty-cart-image img-fluid"
+              alt="Empty Cart"
+            />
+            <h3>There are no items in your wishlist.</h3>
+          </div>
+          <div
+            id="wishlistItems"
+            class="container row gx-0 justify-content-center my-4"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center text-lg-start bg-body-tertiary">
+      <section
+        class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom border-top"
+      >
+        <div class="me-3 d-none d-lg-block">
+          <span>Get connected with us on social networks :</span>
+        </div>
+
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="border-bottom">
+        <div class="container text-center text-md-start pt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>THE CAKE HEAVEN
+              </h6>
+              <p>
+                "Experience the divine taste of our handcrafted delights at The
+                Cake Heaven where every bite is a slice of paradise. Join us in
+                celebrating life's sweetest moments!"
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">COLLECTIONS</h6>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Same Day Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Classic Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Custom Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Cup Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Desserts</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Flowers</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Anniversary Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Birthday Cakes</a
+                >
+              </p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">QUICK LINKS</h6>
+              <p>
+                <a href="../Quick_Pages/about.html" class="text-reset"
+                  >Contact Us</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/about.html" class="text-reset"
+                  >About us</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/privacy-policy.html" class="text-reset"
+                  >Privacy Policy</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/terms.html" class="text-reset"
+                  >Terms & Conditions</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/shipping.html" class="text-reset"
+                  >Shipping Policy</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/cancellation.html" class="text-reset"
+                  >Return & Refund Policy</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/FAQ.html" class="text-reset"
+                  >FAQs</a
+                >
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-4 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3"></i> Kupwad, Sangli Maharashtra</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                contact@thecakeheaven.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center pb-3 pt-3">
+        © 2024 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
+          >TheCakeHeaven.com</a
+        >
+      </section>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+  var toggler = document.querySelector('.navbar-toggler');
+  var menu = document.querySelector('#breadcrumbMenu');
+
+  toggler.addEventListener('click', function () {
+    menu.classList.toggle('show');
+  });
+});
+     document.addEventListener("DOMContentLoaded", function () {
+        var currentLocation = window.location.pathname;
+        var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+        navLinks.forEach(function (link) {
+          if (link.getAttribute("href") === currentLocation) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      });
+
+      let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      function displayWishlist() {
+        const emptyMessage = document.getElementById("empty-message");
+        const wishlistItems = document.getElementById("wishlistItems");
+
+        if (wishlist.length === 0) {
+          emptyMessage.style.display = "block";
+          wishlistItems.style.display = "none";
+        } else {
+          emptyMessage.style.display = "none";
+          wishlistItems.innerHTML = "";
+          wishlist.forEach((cake, index) => {
+            if (cake) {
+              // Ensure cake is not null
+              const wishlistCard = ` 
+      <div class="d-flex border m-1 justify-content-between wishlist-card">
+          <img src="${cake.image}" class="cake-img border" alt="${cake.name}">
+
+          <div class="p-1">
+            <p class="card-text fs-5 fw-bold mb-2 pt-2">${cake.name}</p>
+            <p class="card-text mb-1">${cake.weight}, ${cake.eggOrEggless},</p>
+            <p class="card-text mb-0">Rs. ${cake.price}, ${cake.rating} <span class="text-warning fa fa-star"></span></p>
+          </div>
+            
+          <div class="px-4">
+            <div class="pt-4">
+              <button class="btn btn-sm btn-primary" onclick="addFromWishlistToCart(${index})">Add to Cart</button>
+            </div>
+            <div class="pt-2">
+              <button class="btn btn-sm btn-danger" onclick="removeFromWishlist(${index})">Remove</button>
+            </div>
+          </div>
+      </div>
+    `;
+              wishlistItems.innerHTML += wishlistCard;
+            }
+          });
+        }
+      }
+
+      function removeFromWishlist(index) {
+        wishlist.splice(index, 1);
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        displayWishlist();
+      }
+
+      function addFromWishlistToCart(index) {
+        const cake = wishlist[index];
+        const existingItemIndex = cart.findIndex((c) => c && c.id === cake.id); // Ensure cart item is not null
+
+        if (existingItemIndex > -1) {
+          cart[existingItemIndex].quantity += 1;
+        } else {
+          cake.quantity = 1; // Initialize quantity
+          cart.push({ ...cake }); // Ensure all details are transferred
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        wishlist.splice(index, 1); // Remove from wishlist after adding to cart
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        displayWishlist();
+      }
+
+      // Initial display of wishlist items
+      displayWishlist();
+
+    </script>
+  </body>
+</html>
+>>>>>>> 2ce412a5931f38caa696b5619616d0dc25a47f83

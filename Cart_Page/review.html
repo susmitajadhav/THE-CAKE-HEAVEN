@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -1442,3 +1443,1449 @@ document.addEventListener("DOMContentLoaded", () => {
     </script>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .breadcrumb {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #ffabc7;
+      }
+      .breadcrumb a {
+        color: black;
+      }
+
+      .address-card,
+      .delivery-details-card,
+      .delivery-form,
+      .Cart-Items,
+      .order-container,
+      #order-details-card {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .cake-card {
+        max-width: 600px;
+        margin: 20px auto;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .shipping-address,
+      .order-items {
+        margin-bottom: 20px;
+      }
+      .cake-img {
+        width: 120px;
+      }
+
+      footer,
+      section {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #ffabc7;
+      }
+      section a {
+        text-decoration: none;
+      }
+
+      .icon-s {
+        font-size: 22px;
+        cursor: pointer;
+        color: black;
+      }
+      .main-page {
+        min-height: 80vh;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .sticky-filter {
+        position: sticky;
+        top: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .empty-message {
+        text-align: center;
+        font-size: 18px;
+        display: none;
+      }
+      .empty-cart-image {
+        width: 30rem;
+        mix-blend-mode: multiply;
+      }
+      .promobox {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      #promoCodeSection {
+        width: 20vw;
+      }
+      .form-text {
+        color: black;
+      }
+      @media (max-width: 600px) {
+       .main-page {
+        padding: 15px 0;
+       }
+
+      .order-container {
+        margin: 0 auto;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+       }
+
+       #cartItems .cake-card {
+        flex-direction: column;
+        text-align: center;
+       }
+
+       #cartItems .cake-card img.cake-img {
+         width: 100%;
+         height: auto;
+         margin-bottom: 10px;
+        }
+
+        #cartItems .cake-card div {
+          width: 100%;
+        }
+
+        #cartItems .cake-card .d-flex {
+          justify-content: center;
+          margin-top: 10px;
+        }
+
+        #cartItems .cake-card .btn {
+         padding: 5px 10px;
+         font-size: 0.9rem;
+        }
+
+        .form-check-label {
+          font-size: 1rem;
+        }
+
+       .form-check-input {
+         margin-right: 10px;
+        }
+
+       .form-label {
+         font-size: 1rem;
+        }
+
+       .form-select, .form-control, .btn {
+         width: 100%;
+         font-size: 1rem;
+        }
+
+       .empty-cart-image {
+         width: 80%;
+         margin: 20px auto;
+        }
+
+       .address-card {
+         padding: 10px;
+        }
+
+       .btn-sm {
+         padding: 5px 10px;
+         font-size: 0.9rem;
+        }
+
+        #deliveryCard {
+          padding: 10px;
+        }
+
+        #Order-Summary-Card, #Address-box, #cart-Container {
+          width: 100%;
+          margin-top: 20px;
+        }
+
+        #proceed-btn {
+          width: 100%;
+        }
+        .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #ffabc7;
+        z-index: 1000;
+        overflow-y: auto;
+      }
+
+      .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        background-color: #ffabc7;
+      }
+
+      .navbar-nav .nav-link { 
+        font-size: 20px;
+        margin: 10px 0;
+      }
+      }
+    </style>
+  </head>
+<body>
+  <div class="container">
+    <div class="header pb-2">
+      <div class="row">
+        <!-- Logo and Icons Row for Mobile View -->
+        <div class="col-12 d-flex d-md-none justify-content-between align-items-center">
+          <div class="col-2 pt-2 px-2">
+            <a href="../index.html">
+              <img
+                src="../Media/logo.jpg"
+                class="border-end border-dark rounded-pill"
+                width="60px"
+                height="60px"
+                alt="Logo"
+              />
+            </a>
+          </div>
+          <div class="d-flex justify-content-end text-end icons">
+            <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-2"></i></a>
+            <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s px-2"></i></a>
+            <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-2"></i></a>
+          </div>
+        </div>
+  
+        <!-- Middle Content for Mobile View -->
+        <!-- <div class="col-12 d-md-none mt-3 align-self-center text-center">
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex align-items-center">
+              <i class="fa-solid fa-truck mx-2"></i>
+              <h6 class="mb-0">100% On Time Delivery</h6>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+              <i class="fa-solid fa-cake-candles mx-2"></i>
+              <h6 class="mb-0">100% Fresh And Hygienic</h6>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+              <i class="fas fa-certificate mx-2"></i>
+              <h6 class="mb-0">FSSAI Certified</h6>
+            </div>
+          </div>
+        </div> -->
+  
+        <!-- Logo for Laptop View -->
+        <div class="col-md-2 d-none d-md-flex align-items-center pt-2 px-2">
+          <a href="../index.html">
+            <img
+              src="../Media/logo.jpg"
+              class="border-end border-dark rounded-pill"
+              width="80px"
+              height="80px"
+              alt="Logo"
+            />
+          </a>
+        </div>
+  
+        <!-- Middle Content for Laptop View -->
+        <div class="col-md-8 d-none d-md-flex mt-4 align-self-center">
+          <div class="d-flex justify-content-evenly align-items-center">
+            <h5><i class="fa-solid fa-truck mx-2"></i>100% On Time Delivery</h5>
+            <h5><i class="fa-solid fa-cake-candles mx-2"></i>100% Fresh And Hygienic</h5>
+            <h5><i class="fas fa-certificate mx-2"></i>FSSAI Certified</h5>
+          </div>
+        </div>
+  
+        <!-- Icons for Laptop View -->
+        <div class="col-md-2 d-none d-md-flex justify-content-end text-end icons align-self-center mb-1">
+          <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-3 mt-3"></i></a>
+          <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s px-3 mt-3"></i></a>
+          <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-3 mt-3"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <nav class="navbar navbar-expand-lg breadcrumb">
+    <!-- Navbar Toggler for Mobile View -->
+    <button
+      class="navbar-toggler d-md-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#breadcrumbMenu"
+      aria-controls="breadcrumbMenu"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Breadcrumb Menu -->
+    <div class="collapse navbar-collapse" id="breadcrumbMenu">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="../Cart_Page/cart.html">Cart /</a>
+        <a class="nav-item nav-link" href="../Address_Page/address.html">Delivery Address /</a>
+        <a class="nav-item nav-link" href="../Cart_Page/review.html">Review Order</a>
+      </div>
+    </div>
+  </nav>
+    <div class="container col-lg-12 main-page text-center my-4 py-4">
+      <h2 class="fw-bold">Review Your Order</h2>
+      <div class="empty-message text-center" id="empty-message">
+        <img
+          src="../Media/preview.png"
+          class="empty-cart-image img-fluid"
+          alt="Empty Cart"
+        />
+        <h1>There are no items for Review.</h1>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 text-center">
+          <div class="order-container" id="cart-Container">
+            <h3 class="text-center" id="page-title">Order Items</h3>
+            <div id="cartItems" class="">
+              <!-- Cart items will be dynamically inserted here -->
+            </div>
+          </div>
+          <!-- Delivery Details Form -->
+          <div class="" id="deliveryCard">
+            <form class="delivery-form" id="deliveryForm">
+              <h5>Delivery Options</h5>
+              <div class="form-check mb-3">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="deliveryOption"
+                  id="delivery2Hours"
+                  value="Order will be delivered within 2 hours"
+                  onclick="handleDeliveryOptionChange()"
+                />
+                <label class="form-check-label" for="delivery2Hours">
+                  Delivery in 2 hours
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="deliveryOption"
+                  id="deliveryDateTime"
+                  value="dateTime"
+                  onclick="handleDeliveryOptionChange()"
+                />
+                <label class="form-check-label" for="deliveryDateTime">
+                  Schedule Delivery
+                </label>
+              </div>
+
+              <div id="dateTimeSlabs" style="display: none">
+                <label for="deliveryDate" class="form-label">Select Date</label>
+                <input
+                  type="date"
+                  class="form-control mb-3"
+                  id="deliveryDate"
+                />
+
+                <label for="deliveryTime" class="form-label"
+                  >Select Time Slot</label
+                >
+                <select class="form-select" id="deliveryTime">
+                  <option value="10:00 AM - 12:00 PM">
+                    10:00 AM - 12:00 PM
+                  </option>
+                  <option value="12:00 PM - 02:00 PM">
+                    12:00 PM - 02:00 PM
+                  </option>
+                  <option value="02:00 PM - 04:00 PM">
+                    02:00 PM - 04:00 PM
+                  </option>
+                  <option value="04:00 PM - 06:00 PM">
+                    04:00 PM - 06:00 PM
+                  </option>
+                  <option value="06:00 PM - 08:00 PM">
+                    06:00 PM - 08:00 PM
+                  </option>
+                  <option value="08:00 PM - 10:00 PM">
+                    08:00 PM - 10:00 PM
+                  </option>
+                </select>
+              </div>
+
+              <button
+                type="button"
+                class="btn btn-primary btn-block mt-3"
+                onclick="saveDeliveryDetails()"
+              >
+                Save Delivery Details
+              </button>
+            </form>
+            <!-- Delivery Details Card -->
+            <div
+              id="deliveryDetails"
+              class="delivery-details-card text-center"
+            ></div>
+          </div>
+          <div id="Address-box">
+            <div id="shippingAddressCard" class="address-card">
+              <h3>Shipping Address</h3>
+              <p id="shippingAddressContent"></p>
+              <a href="../Address_Page/address.html"
+                ><button class="btn btn-secondary btn-sm">
+                  Change Address
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" id="Order-Summary-Card">
+          <div class="card mb-4" id="order-details-card">
+            <div class="card-body">
+              <h4>Order Details</h4>
+              <div class="form-group">
+                <label for="orderForReview">Order for whom:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="orderForReview"
+                  placeholder="Enter name"
+                />
+              </div>
+              <div class="form-group mt-2">
+                <label for="birthDateReview">Birthdate:</label>
+                <input type="date" class="form-control" id="birthDateReview" />
+              </div>
+              <div class="form-group mt-2">
+                <small class="form-text"
+                  >This will help us for next birthday reminder</small
+                >
+              </div>
+              <button
+                class="btn btn-secondary mt-3"
+                onclick="saveOrderDetailsReview()"
+              >
+                Save Details
+              </button>
+            </div>
+          </div>
+
+          <div class="sticky-filter my-4" id="sticky-filter">
+            <div class="col-md-12 text-center py-4" id="Order-Summary">
+              <div class="order-summary" id="order-summary" style="display: none">
+                <h4>Order Summary</h4>
+                <p>Items Price: <span id="itemsPrice">₹0</span></p>
+                <p>Shipping Charge: <span id="shippingCharge">₹40</span></p>
+                <div class="form-check mb-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="useRewardPoints"
+                    onclick="toggleRewardPointsUsage()"
+                  />
+                  <label class="form-check-label" for="useRewardPoints">
+                    Use Reward Points (You have <span id="availablePoints">100</span> points)
+                  </label>
+                </div>
+                <div id="pointsDeduction" style="display: none;">
+                  <p>Points Used: <span id="pointsUsed">0</span></p>
+                  <p>Points Deduction: -₹<span id="pointsDeductionAmount">0</span></p>
+                </div>
+                <h5>Total Price: ₹<span id="totalPrice">40</span></h5>
+                <div id="promoCodeSection" class="promobox">
+                  <p
+                    id="applyPromoText"
+                    class="text-primary pt-2"
+                    style="cursor: pointer"
+                    onclick="showPromoInput()"
+                  >
+                    Have a promo code? Apply
+                  </p>
+                  <div
+                    class="input-group mb-3"
+                    id="promoInputSection"
+                    style="display: none"
+                  >
+                    <input
+                      type="text"
+                      id="promoCodeInput"
+                      class="form-control"
+                      placeholder="Enter Promo Code"
+                    />
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      id="applyPromoButton"
+                      onclick="applyPromoCode()"
+                    >
+                      Apply
+                    </button>
+                  </div>
+                  <div
+                    id="appliedPromoCodeSection"
+                    class="input-group mb-3"
+                    style="display: none"
+                  >
+                    <input
+                      type="text"
+                      id="appliedPromoCode"
+                      class="form-control"
+                      readonly
+                    />
+                    <button
+                      class="btn btn-outline-danger"
+                      type="button"
+                      id="removePromoButton"
+                      onclick="removePromoCode()"
+                    >
+                      &#x2715;
+                    </button>
+                  </div>
+                </div>
+                <div class="mt-5" id="proceed-btn">
+                  <button
+                    class="btn btn-success btn-lg btn-block"
+                    onclick="proceedToPay()"
+                  >
+                    Proceed to Pay
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+
+    <footer class="text-center text-lg-start bg-body-tertiary">
+      <section
+        class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom border-top"
+      >
+        <div class="me-3 d-none d-lg-block">
+          <span>Get connected with us on social networks :</span>
+        </div>
+
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="border-bottom">
+        <div class="container text-center text-md-start pt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>THE CAKE HEAVEN
+              </h6>
+              <p>
+                "Experience the divine taste of our handcrafted delights at The
+                Cake Heaven where every bite is a slice of paradise. Join us in
+                celebrating life's sweetest moments!"
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">COLLECTIONS</h6>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Same Day Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Classic Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Custom Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Cup Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Desserts</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Flowers</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Anniversary Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Birthday Cakes</a
+                >
+              </p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">QUICK LINKS</h6>
+              <p>
+                <a href="../Quick_Pages/about.html" class="text-reset"
+                  >Contact Us</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/about.html" class="text-reset"
+                  >About us</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/privacy-policy.html" class="text-reset"
+                  >Privacy Policy</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/terms.html" class="text-reset"
+                  >Terms & Conditions</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/shipping.html" class="text-reset"
+                  >Shipping Policy</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/cancellation.html" class="text-reset"
+                  >Return & Refund Policy</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/FAQ.html" class="text-reset">FAQs</a>
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-4 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3"></i> Kupwad, Sangli Maharashtra</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                contact@thecakeheaven.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center pb-3 pt-3">
+        © 2024 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
+          >TheCakeHeaven.com</a
+        >
+      </section>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleSwitch = document.getElementById("darkModeSwitch");
+
+    function applyDarkModePreference() {
+        if (localStorage.getItem("darkMode") === "enabled") {
+            document.body.classList.add("dark-mode");
+            toggleSwitch.checked = true;
+        } else {
+            document.body.classList.remove("dark-mode");
+            toggleSwitch.checked = false;
+        }
+    }
+
+    function toggleDarkMode() {
+        if (toggleSwitch.checked) {
+            document.body.classList.add("dark-mode");
+            localStorage.setItem("darkMode", "enabled");
+        } else {
+            document.body.classList.remove("dark-mode");
+            localStorage.setItem("darkMode", "disabled");
+        }
+    }
+
+    toggleSwitch.addEventListener("change", toggleDarkMode);
+    applyDarkModePreference();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    var currentLocation = window.location.pathname;
+    var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+    navLinks.forEach(function (link) {
+        if (link.getAttribute("href") === currentLocation) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+});
+
+function displayShippingAddress() {
+    const savedAddress = JSON.parse(localStorage.getItem("selectedShippingAddress"));
+    if (savedAddress) {
+        document.getElementById("shippingAddressContent").innerText = `
+            ${savedAddress.fullName}, ${savedAddress.mobileNumber}
+            ${savedAddress.address}, ${savedAddress.city}, ${savedAddress.state}, ${savedAddress.zip}
+            ${savedAddress.country}
+        `;
+        document.getElementById("shippingAddressCard").style.display = "block";
+    } else {
+        document.getElementById("shippingAddressCard").style.display = "none";
+    }
+}
+
+function handleDeliveryOptionChange() {
+    const dateTimeSlabs = document.getElementById("dateTimeSlabs");
+    if (document.getElementById("deliveryDateTime").checked) {
+        dateTimeSlabs.style.display = "block";
+    } else {
+        dateTimeSlabs.style.display = "none";
+    }
+}
+
+function saveDeliveryDetails() {
+    const deliveryDetails = {
+        option: document.querySelector('input[name="deliveryOption"]:checked').value,
+        date: document.getElementById("deliveryDate").value,
+        time: document.getElementById("deliveryTime").value,
+    };
+    localStorage.setItem("deliveryDetails", JSON.stringify(deliveryDetails));
+    displayDeliveryDetails();
+}
+
+function displayDeliveryDetails() {
+    const deliveryDetails = JSON.parse(localStorage.getItem("deliveryDetails"));
+    if (deliveryDetails) {
+        const deliveryCard = document.getElementById("deliveryDetails");
+        deliveryCard.innerHTML = `
+            <h3 class="py-1">Delivery Details</h3>
+            <p>Option: ${deliveryDetails.option}</p>
+            ${deliveryDetails.option === "dateTime" ? `<p>Date: ${deliveryDetails.date}</p><p>Time Slot: ${deliveryDetails.time}</p>` : ""}
+            <button class="btn btn-secondary btn-sm" onclick="editDeliveryDetails()">Edit</button>
+        `;
+        deliveryCard.style.display = "block";
+        document.getElementById("deliveryForm").style.display = "none";
+    } else {
+        document.getElementById("deliveryForm").style.display = "block";
+    }
+}
+
+function editDeliveryDetails() {
+    const deliveryDetails = JSON.parse(localStorage.getItem("deliveryDetails"));
+    if (deliveryDetails.option === "dateTime") {
+        document.getElementById("deliveryDateTime").checked = true;
+        document.getElementById("deliveryDate").value = deliveryDetails.date;
+        document.getElementById("deliveryTime").value = deliveryDetails.time;
+        document.getElementById("dateTimeSlabs").style.display = "block";
+    } else {
+        document.getElementById("delivery2Hours").checked = true;
+        document.getElementById("dateTimeSlabs").style.display = "none";
+    }
+    document.getElementById("deliveryForm").style.display = "block";
+    document.getElementById("deliveryDetails").style.display = "none";
+}
+
+let appliedPromoCode = null;
+let discount = 0;
+
+function showPromoInput() {
+    document.getElementById("applyPromoText").style.display = "none";
+    document.getElementById("promoInputSection").style.display = "flex";
+}
+
+function applyPromoCode() {
+    const promoCode = document.getElementById("promoCodeInput").value.trim();
+    const itemsPrice = parseFloat(document.getElementById("itemsPrice").textContent.replace("₹", ""));
+    let totalPrice = itemsPrice;
+
+    if (appliedPromoCode) {
+        alert("Only one promo code can be applied at a time.");
+        return;
+    }
+
+    if (promoCode === "FREEDEL") {
+        document.getElementById("shippingCharge").textContent = "₹0";
+        appliedPromoCode = "FREEDEL";
+        discount = 0;
+    } else if (promoCode === "FLAT15") {
+        discount = itemsPrice * 0.15;
+        appliedPromoCode = "FLAT15";
+    } else if (promoCode === "FLAT20") {
+        discount = itemsPrice * 0.2;
+        appliedPromoCode = "FLAT20";
+    } else if (promoCode === "DISCOUNT10") {
+        discount = itemsPrice * 0.1;
+        appliedPromoCode = "DISCOUNT10";
+    } else {
+        alert("Invalid Promo Code");
+        return;
+    }
+
+    totalPrice -= discount;
+    const shippingCharge = parseFloat(document.getElementById("shippingCharge").textContent.replace("₹", ""));
+    document.getElementById("totalPrice").textContent = `₹${totalPrice + shippingCharge}`;
+
+    document.getElementById("promoCodeInput").value = "";
+    document.getElementById("promoInputSection").style.display = "none";
+    document.getElementById("appliedPromoCode").value = appliedPromoCode;
+    document.getElementById("appliedPromoCodeSection").style.display = "flex";
+}
+
+function removePromoCode() {
+    const itemsPrice = parseFloat(document.getElementById("itemsPrice").textContent.replace("₹", ""));
+    const shippingCharge = appliedPromoCode === "FREEDEL" ? 0 : parseFloat(document.getElementById("shippingCharge").textContent.replace("₹", ""));
+
+    appliedPromoCode = null;
+    discount = 0;
+    document.getElementById("shippingCharge").textContent = `₹${shippingCharge}`;
+    document.getElementById("totalPrice").textContent = `₹${itemsPrice + shippingCharge}`;
+    document.getElementById("applyPromoText").style.display = "block";
+    document.getElementById("appliedPromoCodeSection").style.display = "none";
+}
+
+function updateOrderSummary() {
+    const itemsPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    const shippingCharge = 40;
+    const totalPrice = itemsPrice + shippingCharge - discount;
+
+    document.getElementById("itemsPrice").textContent = `₹${itemsPrice}`;
+    document.getElementById("shippingCharge").textContent = `₹${shippingCharge}`;
+    document.getElementById("totalPrice").textContent = `₹${totalPrice}`;
+}
+
+// Initial cart update on page load
+document.addEventListener("DOMContentLoaded", () => {
+    displayShippingAddress();
+    displayDeliveryDetails();
+});
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function updateCartPage() {
+    const cartItems = document.getElementById("cartItems");
+    const orderSummary = document.getElementById("order-summary");
+    const OrderSummaryCard = document.getElementById("Order-Summary-Card");
+    const addressBox = document.getElementById("Address-box");
+    const deliveryDetails = document.getElementById("deliveryCard");
+    const emptyMessage = document.getElementById("empty-message");
+    const cartContainer = document.getElementById("cart-Container");
+    const proceedBtn = document.getElementById("proceed-btn");
+
+    if (cart.length === 0) {
+        orderSummary.style.display = "none";
+        OrderSummaryCard.style.display = "none";
+        addressBox.style.display = "none";
+        deliveryDetails.style.display = "none";
+        cartContainer.style.display = "none";
+        proceedBtn.style.display = "none";
+        emptyMessage.style.display = "block";
+    } else {
+        orderSummary.style.display = "block";
+        OrderSummaryCard.style.display = "block";
+        addressBox.style.display = "block";
+        cartContainer.style.display = "block";
+        proceedBtn.style.display = "block";
+        deliveryDetails.style.display = "block";
+        cartItems.innerHTML = "";
+        cart.forEach((item, index) => {
+            const cartItem = `
+                <div class="cake-card d-flex justify-content-between align-items-center mb-3">
+                    <img src="${item.image}" class="cake-img" alt="${item.name}">
+                    <div class="">
+                        <h5 class="mt-1 fs-6">${item.name}</h5>
+                        <p class="">${item.weight}, ${item.eggOrEggless}</p>
+                        <p class="">Rs. ${item.price}</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <button class="btn btn-outline-secondary" onclick="decreaseQuantity(${index})">-</button>
+                        <input type="text" value="${item.quantity}" class="form-control mx-1 text-center" style="width: 45px;" readonly>
+                        <button class="btn btn-outline-secondary" onclick="increaseQuantity(${index})">+</button>
+                    </div>
+                    <div class="px-2">
+                        <button class="btn btn-danger" onclick="removeFromCart(${index})">Remove</button>
+                    </div>
+                </div>
+            `;
+            cartItems.innerHTML += cartItem;
+        });
+    }
+    updateOrderSummary();
+}
+
+function increaseQuantity(index) {
+    cart[index].quantity += 1;
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartPage();
+}
+
+function decreaseQuantity(index) {
+    if (cart[index].quantity > 1) {
+        cart[index].quantity -= 1;
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartPage();
+    }
+}
+
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartPage();
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const orderDetails = JSON.parse(localStorage.getItem("orderDetails")) || {};
+
+    if (orderDetails.orderFor && orderDetails.birthDate) {
+        document.getElementById("order-details-card").style.display = "none";
+    } else {
+        document.getElementById("order-details-card").style.display = "block";
+    }
+});
+
+function saveOrderDetailsReview() {
+    const orderFor = document.getElementById("orderForReview").value;
+    const birthDate = document.getElementById("birthDateReview").value;
+
+    if (orderFor && birthDate) {
+        const orderDetails = { orderFor, birthDate };
+        localStorage.setItem("orderDetails", JSON.stringify(orderDetails));
+        alert("Order details saved!");
+        document.getElementById("order-details-card").style.display = "none";
+    } else {
+        alert("Please fill out both fields.");
+    }
+}
+
+function confirmOrder() {
+    // Logic to confirm the order
+    alert("Order confirmed!");
+}
+
+function proceedToPay() {
+    const orderId = "ORD" + Math.floor(Math.random() * 1000000); // Generate a random order ID
+    const deliveryDetails = JSON.parse(localStorage.getItem("deliveryDetails"));
+    const shippingAddress = JSON.parse(localStorage.getItem("selectedShippingAddress"));
+
+    const itemsPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    const shippingCharge = 40;
+    let totalPrice = itemsPrice + shippingCharge - discount;
+
+    const usePointsCheckbox = document.getElementById("useRewardPoints");
+    const pointsDeductionAmountElement = document.getElementById("pointsDeductionAmount");
+
+    if (usePointsCheckbox.checked) {
+        let pointsToUse = Math.min(availablePoints, totalPrice);
+        let pointsDeduction = pointsToUse * pointsValue;
+        totalPrice -= pointsDeduction;
+        pointsDeductionAmountElement.innerText = pointsDeduction;
+    } else {
+        pointsDeductionAmountElement.innerText = 0;
+    }
+
+    const orderDetails = {
+        orderId,
+        cart,
+        deliveryDetails,
+        shippingAddress,
+        totalPrice,
+    };
+
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    orders.push(orderDetails);
+    localStorage.setItem("orders", JSON.stringify(orders));
+    localStorage.removeItem("cart");
+
+    // Navigate to the order success page or show a confirmation
+    window.location.href = "./order-success.html";
+}
+
+// Initial cart update on page load
+document.addEventListener("DOMContentLoaded", () => {
+    displayShippingAddress();
+    displayDeliveryDetails();
+    updateCartPage();
+});
+
+let availablePoints = 100; // Example points, replace with user's actual points
+let pointsValue = 1; // 1 point equals 1 currency unit
+let itemsPrice = 0; // Replace with actual items price
+let shippingCharge = 40;
+let totalPrice = itemsPrice + shippingCharge;
+
+function toggleRewardPointsUsage() {
+    const usePointsCheckbox = document.getElementById("useRewardPoints");
+    const pointsDeductionSection = document.getElementById("pointsDeduction");
+    const pointsUsedElement = document.getElementById("pointsUsed");
+    const pointsDeductionAmountElement = document.getElementById("pointsDeductionAmount");
+    const totalPriceElement = document.getElementById("totalPrice");
+
+    if (usePointsCheckbox.checked) {
+        let pointsToUse = Math.min(availablePoints, totalPrice);
+        let pointsDeduction = pointsToUse * pointsValue;
+
+        pointsDeductionSection.style.display = "block";
+        pointsUsedElement.innerText = pointsToUse;
+        pointsDeductionAmountElement.innerText = pointsDeduction;
+        totalPrice -= pointsDeduction;
+    } else {
+        pointsDeductionSection.style.display = "none";
+        totalPrice += parseFloat(pointsDeductionAmountElement.innerText);
+    }
+
+    totalPriceElement.innerText = `₹${totalPrice}`;
+}
+
+function proceedToPay() {
+    const orderId = "ORD" + Math.floor(Math.random() * 1000000); // Generate a random order ID
+    const deliveryDetails = JSON.parse(localStorage.getItem("deliveryDetails"));
+    const shippingAddress = JSON.parse(localStorage.getItem("selectedShippingAddress"));
+
+    const itemsPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    const shippingCharge = 40;
+    let totalPrice = itemsPrice;
+
+    const usePointsCheckbox = document.getElementById("useRewardPoints");
+    const pointsDeductionAmountElement = document.getElementById("pointsDeductionAmount");
+
+    if (usePointsCheckbox.checked) {
+        let pointsToUse = Math.min(availablePoints, totalPrice);
+        let pointsDeduction = pointsToUse * pointsValue;
+        totalPrice -= pointsDeduction;
+        pointsDeductionAmountElement.innerText = pointsDeduction;
+    } else {
+        pointsDeductionAmountElement.innerText = 0;
+    }
+
+    totalPrice += shippingCharge; // Add shipping charge after applying points deduction
+
+    const orderDetails = {
+        orderId,
+        cart,
+        deliveryDetails,
+        shippingAddress,
+        totalPrice,
+    };
+
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    orders.push(orderDetails);
+    localStorage.setItem("orders", JSON.stringify(orders));
+    localStorage.removeItem("cart");
+
+    // Navigate to the order success page or show a confirmation
+    window.location.href = "./order-success.html";
+}
+
+function proceedToPay() {
+    const orderId = "ORD" + Math.floor(Math.random() * 1000000); // Generate a random order ID
+    const deliveryDetails = JSON.parse(localStorage.getItem("deliveryDetails"));
+    const shippingAddress = JSON.parse(localStorage.getItem("selectedShippingAddress"));
+
+    const itemsPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    let totalPrice = itemsPrice;
+
+    const usePointsCheckbox = document.getElementById("useRewardPoints");
+    let pointsDeduction = 0;
+
+    if (usePointsCheckbox.checked) {
+        let pointsToUse = Math.min(availablePoints, totalPrice);
+        pointsDeduction = pointsToUse * pointsValue;
+        totalPrice -= pointsDeduction; // Deduct reward points from total price
+    }
+
+    const shippingCharge = 40;
+    totalPrice += shippingCharge; // Add shipping charge to the price after points deduction
+
+    const orderDetails = {
+        orderId,
+        cart,
+        deliveryDetails,
+        shippingAddress,
+        totalPrice,
+        pointsDeduction, // Including the points deduction in the order details
+        shippingCharge, // Including the shipping charge in the order details
+    };
+
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    orders.push(orderDetails);
+    localStorage.setItem("orders", JSON.stringify(orders));
+    localStorage.removeItem("cart");
+
+    // Navigate to the order success page or show a confirmation
+    window.location.href = "./order-success.html";
+}
+
+function toggleRewardPointsUsage() {
+  const usePointsCheckbox = document.getElementById("useRewardPoints");
+  const pointsDeductionSection = document.getElementById("pointsDeduction");
+  const pointsUsedElement = document.getElementById("pointsUsed");
+  const pointsDeductionAmountElement = document.getElementById("pointsDeductionAmount");
+  const totalPriceElement = document.getElementById("totalPrice");
+
+  const itemsPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  let totalPrice = itemsPrice;
+
+  if (usePointsCheckbox.checked) {
+    let pointsToUse = Math.min(availablePoints, totalPrice);
+    let pointsDeduction = pointsToUse * pointsValue;
+
+    pointsDeductionSection.style.display = "block";
+    pointsUsedElement.innerText = pointsToUse;
+    pointsDeductionAmountElement.innerText = pointsDeduction;
+    totalPrice -= pointsDeduction; // Deduct reward points from total price
+  } else {
+    pointsDeductionSection.style.display = "none";
+    pointsDeductionAmountElement.innerText = 0;
+  }
+
+  // Add shipping charge
+  const shippingCharge = 40;
+  totalPrice += shippingCharge;
+  
+  totalPriceElement.innerText = `₹${totalPrice.toFixed(2)}`;
+}
+
+function proceedToPay() {
+  const orderId = "ORD" + Math.floor(Math.random() * 1000000); // Generate a random order ID
+  const deliveryDetails = JSON.parse(localStorage.getItem("deliveryDetails"));
+  const shippingAddress = JSON.parse(localStorage.getItem("selectedShippingAddress"));
+
+  // Calculate the initial total price based on item prices
+  const itemsPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  let totalPrice = itemsPrice;
+
+  // Calculate reward points deduction if applicable
+  const usePointsCheckbox = document.getElementById("useRewardPoints");
+  let pointsDeduction = 0;
+
+  if (usePointsCheckbox.checked) {
+    let pointsToUse = Math.min(availablePoints, itemsPrice);
+    pointsDeduction = pointsToUse * pointsValue;
+    totalPrice -= pointsDeduction; // Deduct reward points from total price
+  }
+
+  // Add shipping charge
+  const shippingCharge = 40;
+  totalPrice += shippingCharge;
+
+  // Save order details
+  const orderDetails = {
+    orderId,
+    cart,
+    deliveryDetails,
+    shippingAddress,
+    totalPrice,
+    pointsDeduction,
+    shippingCharge
+  };
+
+  let orders = JSON.parse(localStorage.getItem("orders")) || [];
+  orders.push(orderDetails);
+  localStorage.setItem("orders", JSON.stringify(orders));
+  localStorage.removeItem("cart");
+
+  // Redirect to order success page
+  window.location.href = "./order-success.html";
+}
+
+function toggleRewardPointsUsage() {
+  const usePointsCheckbox = document.getElementById("useRewardPoints");
+  const pointsDeductionSection = document.getElementById("pointsDeduction");
+  const pointsUsedElement = document.getElementById("pointsUsed");
+  const pointsDeductionAmountElement = document.getElementById("pointsDeductionAmount");
+  const totalPriceElement = document.getElementById("totalPrice");
+
+  const itemsPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  let totalPrice = itemsPrice;
+
+  if (usePointsCheckbox.checked) {
+    let pointsToUse = Math.min(availablePoints, totalPrice);
+    let pointsDeduction = pointsToUse * pointsValue;
+
+    pointsDeductionSection.style.display = "block";
+    pointsUsedElement.innerText = pointsToUse;
+    pointsDeductionAmountElement.innerText = pointsDeduction;
+    totalPrice -= pointsDeduction; // Deduct reward points from total price
+  } else {
+    pointsDeductionSection.style.display = "none";
+    pointsDeductionAmountElement.innerText = 0;
+  }
+
+  // Add shipping charge
+  const shippingCharge = 40;
+  totalPrice += shippingCharge;
+
+  totalPriceElement.innerText = `₹${totalPrice.toFixed(2)}`;
+}
+
+function proceedToPay() {
+  const orderId = "ORD" + Math.floor(Math.random() * 1000000); // Generate a random order ID
+  const deliveryDetails = JSON.parse(localStorage.getItem("deliveryDetails"));
+  const shippingAddress = JSON.parse(localStorage.getItem("selectedShippingAddress"));
+
+  // Calculate the initial total price based on item prices
+  const itemsPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  let totalPrice = itemsPrice;
+
+  // Calculate reward points deduction if applicable
+  const usePointsCheckbox = document.getElementById("useRewardPoints");
+  let pointsDeduction = 0;
+
+  if (usePointsCheckbox.checked) {
+    let pointsToUse = Math.min(availablePoints, itemsPrice);
+    pointsDeduction = pointsToUse * pointsValue;
+    totalPrice -= pointsDeduction; // Deduct reward points from total price
+  }
+
+  // Add shipping charge after applying discounts
+  const shippingCharge = 40;
+  totalPrice += shippingCharge;
+
+  // Save order details
+  const orderDetails = {
+    orderId,
+    cart,
+    deliveryDetails,
+    shippingAddress,
+    totalPrice,
+    pointsDeduction,
+    shippingCharge
+  };
+
+  let orders = JSON.parse(localStorage.getItem("orders")) || [];
+  orders.push(orderDetails);
+  localStorage.setItem("orders", JSON.stringify(orders));
+  localStorage.removeItem("cart");
+
+  // Redirect to order success page
+  window.location.href = "./order-success.html";
+}
+
+
+// Function to update order summary
+function updateOrderSummary() {
+    const itemsPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    let totalPrice = itemsPrice - discount + shippingCharge;
+    document.getElementById("itemsPrice").textContent = `₹${itemsPrice}`;
+    document.getElementById("shippingCharge").textContent = `₹${shippingCharge}`;
+    document.getElementById("totalPrice").textContent = `₹${totalPrice}`;
+}
+
+// Function to toggle the use of reward points
+function toggleRewardPointsUsage() {
+    const usePointsCheckbox = document.getElementById("useRewardPoints");
+    const pointsDeductionSection = document.getElementById("pointsDeduction");
+    const pointsUsedElement = document.getElementById("pointsUsed");
+    const pointsDeductionAmountElement = document.getElementById("pointsDeductionAmount");
+    const totalPriceElement = document.getElementById("totalPrice");
+
+    const itemsPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    let totalPrice = itemsPrice;
+
+    if (usePointsCheckbox.checked) {
+        let pointsToUse = Math.min(availablePoints, totalPrice);
+        let pointsDeduction = pointsToUse * pointsValue;
+        pointsDeductionSection.style.display = "block";
+        pointsUsedElement.innerText = pointsToUse;
+        pointsDeductionAmountElement.innerText = pointsDeduction;
+        totalPrice -= pointsDeduction;
+    } else {
+        pointsDeductionSection.style.display = "none";
+        pointsDeductionAmountElement.innerText = 0;
+    }
+
+    totalPrice += shippingCharge;
+    totalPriceElement.innerText = `₹${totalPrice.toFixed(2)}`;
+}
+
+// Function to proceed to payment
+function proceedToPay() {
+    const orderId = "ORD" + Math.floor(Math.random() * 1000000);
+    const deliveryDetails = JSON.parse(localStorage.getItem("deliveryDetails"));
+    const shippingAddress = JSON.parse(localStorage.getItem("selectedShippingAddress"));
+
+    const itemsPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    let totalPrice = itemsPrice;
+
+    const usePointsCheckbox = document.getElementById("useRewardPoints");
+    let pointsDeduction = 0;
+
+    if (usePointsCheckbox.checked) {
+        let pointsToUse = Math.min(availablePoints, totalPrice);
+        pointsDeduction = pointsToUse * pointsValue;
+        totalPrice -= pointsDeduction;
+    }
+
+    totalPrice += shippingCharge;
+
+    const orderDetails = {
+        orderId,
+        cart,
+        deliveryDetails,
+        shippingAddress,
+        totalPrice,
+        pointsDeduction,
+        shippingCharge,
+    };
+
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    orders.push(orderDetails);
+    localStorage.setItem("orders", JSON.stringify(orders));
+    localStorage.removeItem("cart");
+
+    window.location.href = "./order-success.html";
+}
+
+// Initial setup on page load
+document.addEventListener("DOMContentLoaded", () => {
+    displayShippingAddress();
+    displayDeliveryDetails();
+    updateCartPage();
+});
+
+let activePromoCode = null; // Ensure this is declared only once in the script
+let appliedDiscount = 0;
+let availableRewardPoints = 100; // Example points, replace with user's actual points
+let pointsValueCurrency = 1; // 1 point equals 1 currency unit
+let shippingFee = 40;
+let currentCart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// Function to update order summary
+function updateOrderSummary() {
+    const itemsPrice = currentCart.reduce((total, item) => total + item.price * item.quantity, 0);
+    let totalPrice = itemsPrice - appliedDiscount + shippingFee;
+    document.getElementById("itemsPrice").textContent = `₹${itemsPrice}`;
+    document.getElementById("shippingCharge").textContent = `₹${shippingFee}`;
+    document.getElementById("totalPrice").textContent = `₹${totalPrice}`;
+}
+
+// Function to toggle the use of reward points
+function toggleRewardPointsUsage() {
+    const pointsUsageCheckbox = document.getElementById("useRewardPoints");
+    const pointsUsageSection = document.getElementById("pointsDeduction");
+    const pointsUsedDisplay = document.getElementById("pointsUsed");
+    const pointsDeductionDisplay = document.getElementById("pointsDeductionAmount");
+    const finalPriceDisplay = document.getElementById("totalPrice");
+
+    const itemsPrice = currentCart.reduce((total, item) => total + item.price * item.quantity, 0);
+    let totalPrice = itemsPrice;
+
+    if (pointsUsageCheckbox.checked) {
+        let pointsToUse = Math.min(availableRewardPoints, totalPrice);
+        let pointsDeduction = pointsToUse * pointsValueCurrency;
+        pointsUsageSection.style.display = "block";
+        pointsUsedDisplay.innerText = pointsToUse;
+        pointsDeductionDisplay.innerText = pointsDeduction;
+        totalPrice -= pointsDeduction;
+    } else {
+        pointsUsageSection.style.display = "none";
+        pointsDeductionDisplay.innerText = 0;
+    }
+
+    totalPrice += shippingFee;
+    finalPriceDisplay.innerText = `₹${totalPrice.toFixed(2)}`;
+}
+
+// Function to proceed to payment
+function proceedToPay() {
+    const orderId = "ORD" + Math.floor(Math.random() * 1000000);
+    const deliveryDetails = JSON.parse(localStorage.getItem("deliveryDetails"));
+    const shippingAddress = JSON.parse(localStorage.getItem("selectedShippingAddress"));
+
+    const itemsPrice = currentCart.reduce((total, item) => total + item.price * item.quantity, 0);
+    let totalPrice = itemsPrice;
+
+    const pointsUsageCheckbox = document.getElementById("useRewardPoints");
+    let pointsDeduction = 0;
+
+    if (pointsUsageCheckbox.checked) {
+        let pointsToUse = Math.min(availableRewardPoints, totalPrice);
+        pointsDeduction = pointsToUse * pointsValueCurrency;
+        totalPrice -= pointsDeduction;
+    }
+
+    totalPrice += shippingFee;
+
+    const orderDetails = {
+        orderId,
+        currentCart,
+        deliveryDetails,
+        shippingAddress,
+        totalPrice,
+        pointsDeduction,
+        shippingFee,
+    };
+
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    orders.push(orderDetails);
+    localStorage.setItem("orders", JSON.stringify(orders));
+    localStorage.removeItem("cart");
+
+    window.location.href = "./order-success.html";
+}
+
+// Initial setup on page load
+document.addEventListener("DOMContentLoaded", () => {
+    displayShippingAddress();
+    displayDeliveryDetails();
+    updateCartPage();
+});
+    </script>
+  </body>
+</html>
+>>>>>>> 2ce412a5931f38caa696b5619616d0dc25a47f83

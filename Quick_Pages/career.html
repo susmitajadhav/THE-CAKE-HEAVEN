@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -605,3 +606,691 @@
     
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Custom CSS -->
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+    body.dark-mode {
+      background-color: rgb(60, 60, 60);
+      color: white;
+
+      .breadcrumb a {
+        color: black;
+      }
+      .main-page {
+        background-color: rgb(60, 60, 60);
+      }
+      #dropdownMenuButton1 {
+        color: black;
+      }
+      footer,
+      section {
+        color: black;
+      }
+      .fa-cart-shopping {
+          color: pink;
+        }
+        .fa-heart {
+          color: red;
+        }
+        .fa-user {
+          color: skyblue;
+        }
+    }
+
+    .toggle-switch {
+      top: 20px;
+      right: 20px;
+    }
+
+    .toggle-switch input[type="checkbox"] {
+      display: none;
+    }
+
+    .toggle-switch label {
+      display: block;
+      width: 50px;
+      height: 25px;
+      background-color: black;
+      border-radius: 25px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .toggle-switch label .icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .toggle-switch label .sun {
+      left: 5px;
+      color: #f7df06;
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+
+    .toggle-switch label .moon {
+      right: 5px;
+      color: #ffff;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .toggle-switch input[type="checkbox"]:checked + label .sun {
+      opacity: 0;
+    }
+
+    .toggle-switch input[type="checkbox"]:checked + label .moon {
+      opacity: 1;
+    }
+    .icon-s {
+        font-size: 22px;
+        cursor: pointer;
+        color: black;
+      }
+    footer,
+    section {
+      background-color: #ffabc7;
+    }
+    section a {
+      text-decoration: none;
+    }
+
+    .breadcrumb {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #ffabc7;
+      height: 50px;
+    }
+
+    .dropdown-toggle {
+      margin-top: 12px;
+    }
+
+    .dropdown-toggle a {
+      text-decoration: none;
+    }
+
+    .dropdowns li a {
+      font-size: 15px;
+      font-weight: normal;
+    }
+
+    .breadcrumb a {
+      color: black;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    footer,
+    section {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section a {
+      text-decoration: none;
+    }
+    
+    .career2{
+        padding: 50px;
+    }
+</style>
+
+
+  <body>
+    <div class="d-flex header justify-content-between pb-2">
+      <div class="col pt-2 px-2">
+        <a href="../index.html">
+          <img
+            src="../Media/logo.jpg"
+            class="border-end border-dark rounded-circle"
+            width="80px"
+            height="80px"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="col mt-2 align-self-center">
+        <input
+          class="form-control rounded-pill p-2 text-center"
+          type="search"
+          placeholder="Search for cakes, desserts, and more"
+          aria-label="Search"
+        />
+      </div>
+      <div
+        class="col d-flex justify-content-end text-end icons align-self-center mt-4 mb-2"
+      >
+        <div class="toggle-switch">
+          <input type="checkbox" id="darkModeSwitch" />
+          <label for="darkModeSwitch">
+            <span class="icon sun"><i class="fas fa-sun"></i></span>
+            <span class="icon moon"><i class="fas fa-moon"></i></span>
+          </label>
+        </div>
+        <a href="../Cart_Page/cart.html"
+        ><i
+          class="fas fa-cart-shopping icon-s px-3"
+        ></i
+      ></a>
+      <a href="../Cart_Page/wishlist.html"
+        ><i
+          class="fas fa-heart icon-s"
+        ></i
+      ></a>
+      <a href="../Profile_Page/profile.html"
+        ><i
+          class="fa fa-user icon-s px-3"
+          aria-hidden="true"
+        ></i
+      ></a>
+      </div>
+    </div>
+    <div
+      class="d-flex breadcrumb justify-content-center border-bottom border-top gap-5 mb-0 pt-0 px-5"
+    >
+      <div class="dropdown mx-3">
+        <label
+          class="dropdown-toggle"
+          id="dropdownMenuButton1"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <a class="" href="">Cakes</a>
+        </label>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <div class="d-flex m-0">
+            <div class="dropdowns">
+              <li>
+                <a class="dropdown-item" href="#"><b>Layers</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">One</a></li>
+              <li><a class="dropdown-item" href="#">Two</a></li>
+              <li><a class="dropdown-item" href="#">Three</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>By Shapes</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Square</a></li>
+              <li><a class="dropdown-item" href="#">Circle</a></li>
+              <li><a class="dropdown-item" href="#">Heart</a></li>
+              <li><a class="dropdown-item" href="#">Tall</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>By Flavour</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Choclate</a></li>
+              <li><a class="dropdown-item" href="#">Blueberry</a></li>
+              <li><a class="dropdown-item" href="#">Pineapple</a></li>
+              <li><a class="dropdown-item" href="#">Fresh Fruit</a></li>
+              <li><a class="dropdown-item" href="#">Red Velvet</a></li>
+              <li><a class="dropdown-item" href="#">Vanilla</a></li>
+              <li><a class="dropdown-item" href="#">Butterscotch</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>By Occasion</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Birthday</a></li>
+              <li><a class="dropdown-item" href="#">Anniversary</a></li>
+              <li><a class="dropdown-item" href="#">Wedding</a></li>
+              <li><a class="dropdown-item" href="#">Baby Shower</a></li>
+              <li><a class="dropdown-item" href="#">Engagement</a></li>
+              <li><a class="dropdown-item" href="#">Mother's Day</a></li>
+              <li><a class="dropdown-item" href="#">Father's Day</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>By Occasion</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Valentines Day</a></li>
+              <li><a class="dropdown-item" href="#">Classic Cakes</a></li>
+              <li><a class="dropdown-item" href="#">Friendships Day</a></li>
+              <li><a class="dropdown-item" href="#">New Year</a></li>
+              <li><a class="dropdown-item" href="#">Christmas</a></li>
+              <li><a class="dropdown-item" href="#">Teacher's Day</a></li>
+              <li><a class="dropdown-item" href="#">Fairwell Cakes</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column">
+              <li>
+                <a class="dropdown-item" href="#"><b>Trending Cakes</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Pull Me Up Cake</a></li>
+              <li><a class="dropdown-item" href="#">Pinata Cake</a></li>
+              <li><a class="dropdown-item" href="#">Half Cake</a></li>
+              <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
+              <li><a class="dropdown-item" href="#">Bento Cake</a></li>
+              <li><a class="dropdown-item" href="#">Surprise Cake Box</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Photo Pulling Cake</a>
+              </li>
+            </div>
+            <div class="dropdowns d-flex flex-column h-25">
+              <li>
+                <a class="dropdown-item" href="#"><b>Unique Cakes</b></a>
+              </li>
+              <li><a class="dropdown-item" href="#">Moose Cake</a></li>
+              <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
+            </div>
+            <div class="dropdowns d-flex flex-column h-25">
+              <li>
+                <a class="dropdown-item" href="#"><b>Premium Cakes</b></a>
+              </li>
+            </div>
+          </div>
+        </ul>
+      </div>
+
+      <div class="mt-1 mx mb-3">
+        <a class="nav-link" href="../Category_Page/cake_list.html">Cup-Cakes</a>
+      </div>
+      <div class="mt-1 mx-3 mb-3">
+        <a class="nav-link" href="../Category_Page/cake_list.html">Pastrey</a>
+      </div>
+      <div class="mt-1 mx-3 mb-3">
+        <a class="nav-link" href="../Category_Page/cake_list.html">Desserts</a>
+      </div>
+      <div class="mt-1 mx-3 mb-3">
+        <a class="nav-link" href="../Category_Page/cake_list.html"
+          >Trending Cakes</a
+        >
+      </div>
+      <div class="mt-1 mb-3">
+        <a class="nav-link" href="../Category_Page/cake_list.html"
+          >Unique Cakes</a
+        >
+      </div>
+    </div>
+
+    <div class="condition">
+      <div class="career">
+        <h1 class="text-center">Career</h1>
+      </div>
+      <div class="career1">
+        <img src="../Media/hiring-desk.jpg" class="w-100" alt="">
+      </div>
+      <div class="career2">
+        <p>We represent a fast-growing company that is inhabited by a group of highly talented and selective people who determine,design, and drive this very growth. We have worked hard to build our brand thathas now become synonymous with our commitment – ‘to create the best possible experience”</p>
+        <p>At FlowerAura, we're constantly looking for people who want to join us in our pursuit and be part of a team that creates campaigns that deliver on it. You will be an active member of the team from the first day, for we don’t believe in passiveness. You are here to pull off the master piece -Your Life’s Work, something for which you will be remembered for. You can do this kind of work at FlowerAura. A place where we firmly believe – Imagination is above the knowledge!</p>
+        Interested candidates may send your resume to career@floweraura.com
+     </div>
+     </div>
+     <div class="container mt-5">
+        <div class="row condition">
+            <div class="col-md-12 career">
+            </div>
+        </div>
+    
+        <!-- Assistant Manager - SEO -->
+        <div class="row mt-5">
+            <div class="col-md-12 career3">
+              <h3 id="positionHeading1" class="positionHeading">Position: Assistant Manager - SEO</h1>
+                <div id="skillsList1" class="skillsList">
+                    <h5>Experience: 3 to 5 years</h5>
+                    <p>Job Summary:</p>
+                    <ul>
+                        <li>Familiarization with Google Analytics & Webmasters</li>
+                        <li>Administering Google Webmaster to diagnose issues on the website.</li>
+                        <li>Keeping updated on both white hat and black hat SEO strategies to avoid penalties from search engines.</li>
+                        <li>Knowledge of major Google updates like Mobile First Index, Hummingbird, Panda, Penguin, etc.</li>
+                        <li>Implementing canonical tags.</li>
+                        <li>Using Schema Tags.</li>
+                        <li>Robots.txt optimization.</li>
+                        <li>HTML and XML Sitemap Management.</li>
+                        <li>W3C Validation.</li>
+                        <li>Providing solutions to improve webpage speed.</li>
+                        <li>Redirection Management.</li>
+                        <li>Monitoring and administering web analytics dashboards, reports, and key reporting tools, and pointing out key areas of importance in accordance with our website goals.</li>
+                        <li>Competitors' Website Analysis to find areas of our website that need improvement.</li>
+                        <li>Keyword research and analysis to optimize existing content and uncover new categories.</li>
+                        <li>Effective Meta Tags Writing.</li>
+                        <li>Heading Tags Optimization.</li>
+                        <li>Alt Tag Image Optimization.</li>
+                        <li>Internal Linking Strategy.</li>
+                        <li>On-page Content Optimization with proper keyword density.</li>
+                        <li>URL Mapping.</li>
+                        <li>Avoiding Doorway Pages.</li>
+                        <li>Domain Analysis.</li>
+                        <li>Implementing link building campaigns in coordination with project SEO goals.</li>
+                        <li>Guest post submissions and promotions on social media platforms.</li>
+                        <li>Business Listings creation to improve local SEO.</li>
+                        <li>Participation in QA sites like Quora.</li>
+                        <li>Press Release Submissions.</li>
+                        <li>Skills:</li>
+                        <li>Proficiency in MS Excel and Word.</li>
+                        <li>Desired: Knowledge of HTML/CSS and website administration.</li>
+                        <li>Good written and verbal English.</li>
+                        <li>The candidate must be highly energetic, self-motivated, solution-oriented, and self-instructed towards business goals with good written and verbal communication skills.</li>
+                        <li>Education:</li>
+                        <li>Preferably from MCA/BE/BTech background (understands technology)</li>
+                    </ul>
+                    <p>Interested candidates may send your resume to <a href="mailto:career@floweraura.com">career@floweraura.com</a> with Subjectline: Assistant Manager - SEO</p>
+                </div>
+            </div>
+        </div>
+      
+        <!-- SEM Executive -->
+        <div class="row mt-5">
+            <div class="col-md-12 career4">
+                <h3 id="positionHeading2" class="positionHeading">Position: SEM Executive</h3>
+                <div id="skillsList2" class="skillsList">
+                    <h5>Experience: 2 to 3 years</h5>
+                    <p>Job Summary:</p>
+                    <ul>
+                        <li>Perform daily account management of pay per click accounts on Google Ads, Bing Ads, and Facebook.</li>
+                        <li>Monitor SEM (Search Engine Marketing) KPIs, analyze performance, and create reports.</li>
+                        <li>Devise strategies to increase Conversions, ROI, and Traffic goals - such as A/B testing, Remarketing, etc.</li>
+                        <li>Work closely with the product team to reach the conversion goals.</li>
+                        <li>Keep pace with search engine and PPC industry trends and developments.</li>
+                        <li>Skills:</li>
+                        <li>Ability to think creatively and identify and resolve problems.</li>
+                        <li>Proficiency in MS Excel.</li>
+                        <li>Self-motivated with high levels of integrity.</li>
+                        <li>Education:</li>
+                        <li>Any Graduate, Engineering will be a plus</li>
+                    </ul>
+                    <p>Interested candidates may send your resume to <a href="mailto:career@floweraura.com">career@floweraura.com</a> with Subjectline: SEM Executive</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Retention Executive -->
+        <div class="row mt-5">
+            <div class="col-md-12 career5">
+                <h3 id="positionHeading3" class="positionHeading">Position: Retention Executive</h3>
+                <div id="skillsList3" class="skillsList">
+                    <h5>Experience: 1 to 3 years</h5>
+                    <p>Job Summary:</p>
+                    <ul>
+                        <li>Interact with the core team for planning and executing daily campaigns for Email, SMS, WhatsApp, and AppPush.</li>
+                        <li>Create comprehensive campaigns for user retention based on user behavior, user segmentation, and journey.</li>
+                        <li>Proactively manage campaigns and consistently monitor performance metrics such as CTR, Open rate, Delivery Rate, Conversion, etc.</li>
+                        <li>Maintain a high level of accuracy while executing campaigns.</li>
+                        <li>Skills:</li>
+                        <li>Understanding of Marketing Channels such as: SMS, Email, push notifications, and Retargeting.</li>
+                        <li>Hands-on experience with Microsoft Excel for building reports.</li>
+                        <li>Good quantitative aptitude and ability to perform analysis.</li>
+                        <li>Retention marketing experience.</li>
+                        <li>Excellent communication skills.</li>
+                        <li>Education:</li>
+                        <li>Graduate (any specialization)</li>
+                    </ul>
+                    <p>Interested candidates may send your resume to <a href="mailto:career@floweraura.com">career@floweraura.com</a> with Subjectline: Retention Executive</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Engineering Manager -->
+        <div class="row mt-5">
+            <div class="col-md-12 career6">
+                <h3 id="positionHeading4" class="positionHeading">Position: Engineering Manager</h3>
+                <div id="skillsList4" class="skillsList">
+                    <h5>Experience: 7+ years</h5>
+                    <p>Responsibilities:</p>
+                    <ul>
+                        <li>Own the technical roadmap of one of the key components of product and delivery responsibility.</li>
+                        <li>Act as an architect in the team and mentor team members to come up with the technical solution that scale, follow SOA principles and prioritize the right set of features.</li>
+                        <li>Manage the day-to-day activities of the engineering team within an Agile/Scrum environment.</li>
+                        <li>Work closely with product counterparts and help in technical solutioning, design and interactions with other services.</li>
+                        <li>Excellent verbal and written communication skills.</li>
+                        <li>Knowledge of software engineering practices and best practices like coding standards, code reviews, source control management, build processes, testing, and operations.</li>
+                        <li>Ability to handle multiple competing priorities in a fast-paced environment.</li>
+                        <li>Requirements:</li>
+                        <li>7+ years of server-side application development experience with PHP, Reactjs and Laravel, Microservices and at least 3 years on one of the leading cloud like AWS.</li>
+                        <li>Entrepreneurial spirit combined with strong program and product management skills.</li>
+                        <li>Proven success in building, motivating and retaining teams.</li>
+                        <li>Excellent written and verbal communication skills with the ability to present complex plans and designs.</li>
+                        <li>Excellent judgement, organizational, and problem-solving skills.</li>
+                        <li>Excellent design and architecture knowledge.</li>
+                        <li>On-page Content Optimization with proper keyword density.</li>
+                        <li>Data-driven decision making.</li>
+                    </ul>
+                    <p>Interested candidates may send your resume to <a href="mailto:career@floweraura.com">career@floweraura.com</a> with Subjectline: Engineering Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+      
+      <footer class="text-center text-lg-start bg-body-tertiary">
+      <section
+        class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom border-top"
+      >
+        <div class="me-3 d-none d-lg-block">
+          <span>Get connected with us on social networks :</span>
+        </div>
+
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="border-bottom">
+        <div class="container text-center text-md-start pt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>THE CAKE HEAVEN
+              </h6>
+              <p>
+                "Experience the divine taste of our handcrafted delights at The
+                Cake Heaven where every bite is a slice of paradise. Join us in
+                celebrating life's sweetest moments!"
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">COLLECTIONS</h6>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Same Day Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Classic Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Custom Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Cup Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Desserts</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Flowers</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Anniversary Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Birthday Cakes</a
+                >
+              </p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">QUICK LINKS</h6>
+              <p>
+                <a href="about.html" class="text-reset">Contact Us</a>
+              </p>
+              <p>
+                <a href="about.html" class="text-reset">About us</a>
+              </p>
+              <p>
+                <a href="privacy-policy.html" class="text-reset"
+                  >Privacy Policy</a
+                >
+              </p>
+              <p>
+                <a href="terms.html" class="text-reset">Terms & Conditions</a>
+              </p>
+              <p>
+                <a href="shipping.html" class="text-reset">Shipping Policy</a>
+              </p>
+              <p>
+                <a href="cancellation.html" class="text-reset"
+                  >Return & Refund Policy</a
+                >
+              </p>
+              <p>
+                <a href="FAQ.html" class="text-reset">FAQs</a>
+              </p>
+              <p>
+                <a href="career.html" class="text-reset">Career</a>
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-4 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3"></i> Kupwad, Sangli Maharashtra</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                contact@thecakeheaven.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center pb-3 pt-3">
+        © 2024 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
+          >TheCakeHeaven.com</a
+        >
+      </section>
+    </footer>
+    <script 
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+    </script>
+    <script 
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js">
+    </script>
+    <script 
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleSwitch = document.getElementById("darkModeSwitch");
+
+        function applyDarkModePreference() {
+          if (localStorage.getItem("darkMode") === "enabled") {
+            document.body.classList.add("dark-mode");
+            toggleSwitch.checked = true;
+          } else {
+            document.body.classList.remove("dark-mode");
+            toggleSwitch.checked = false;
+          }
+        }
+
+        function toggleDarkMode() {
+          if (toggleSwitch.checked) {
+            document.body.classList.add("dark-mode");
+            localStorage.setItem("darkMode", "enabled");
+          } else {
+            document.body.classList.remove("dark-mode");
+            localStorage.setItem("darkMode", "disabled");
+          }
+        }
+
+        toggleSwitch.addEventListener("change", toggleDarkMode);
+        applyDarkModePreference();
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        var currentLocation = window.location.pathname;
+        var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+        navLinks.forEach(function (link) {
+          if (link.getAttribute("href") === currentLocation) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      });
+
+        // JavaScript code to toggle skills list visibility
+        document.addEventListener('DOMContentLoaded', function() {
+            const positionHeadings = document.querySelectorAll('.positionHeading');
+            const skillsLists = document.querySelectorAll('.skillsList');
+    
+            positionHeadings.forEach((heading, index) => {
+                heading.addEventListener('click', function() {
+                    if (skillsLists[index].style.display === 'none') {
+                        skillsLists.forEach(list => list.style.display = 'none');
+                        skillsLists[index].style.display = 'block';
+                    } else {
+                        skillsLists[index].style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+    
+  </body>
+</html>
+>>>>>>> 2ce412a5931f38caa696b5619616d0dc25a47f83

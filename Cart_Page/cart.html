@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -764,3 +765,771 @@
     </script>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      body.dark-mode {
+        background-color: rgb(60, 60, 60);
+
+        .cake-card {
+          border: 1px solid white;
+          color: white;
+        }
+        .rec-card {
+          border: 1px solid white;
+          color: white;
+        }
+        
+        #recommendations h4{
+          color: white;
+        }
+        .fa-cart-shopping {
+          color: pink;
+        }
+        .fa-heart {
+          color: red;
+        }
+        .fa-user {
+          color: skyblue;
+        }
+        .order-summary {
+          background-color: rgb(60, 60, 60);
+          border: 1px solid white;
+          color: white;
+        }
+        .orderFor {
+          background-color: rgb(60, 60, 60);
+          border: 1px solid white;
+          color: white;
+        }
+        .form-text {
+          color: white;
+        }
+
+        #page-title {
+          color: white;
+        }
+        .empty-cart-image {
+          mix-blend-mode: color-dodge;
+          border-radius: 20px;
+        }
+        .empty-msg {
+          color: white;
+        }
+      }
+
+      .toggle-switch {
+        top: 20px;
+        right: 20px;
+      }
+
+      .toggle-switch input[type="checkbox"] {
+        display: none;
+      }
+
+      .toggle-switch label {
+        display: block;
+        width: 50px;
+        height: 25px;
+        background-color: black;
+        border-radius: 25px;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .toggle-switch label .icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .toggle-switch label .sun {
+        left: 5px;
+        color: #f7df06;
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+
+      .toggle-switch label .moon {
+        right: 5px;
+        color: #ffff;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .toggle-switch input[type="checkbox"]:checked + label .sun {
+        opacity: 0;
+      }
+
+      .toggle-switch input[type="checkbox"]:checked + label .moon {
+        opacity: 1;
+      }
+      .main-page {
+        min-height: 100vh;
+      }
+      .breadcrumb {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #ffabc7;
+        color: black;
+      }
+      .breadcrumb a {
+        color: black;
+      }
+      .icon-s {
+        font-size: 22px;
+        cursor: pointer;
+        color: black;
+      }
+      .empty-message {
+        text-align: center;
+        font-size: 18px;
+        display: none;
+      }
+      .empty-cart-image {
+        width: 30rem;
+        mix-blend-mode: multiply;
+      }
+      footer,
+      section {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #ffabc7;
+      }
+      section a {
+        text-decoration: none;
+      }
+      .cake-img {
+        width: 150px;
+        border-radius: 10px 0px 0px 10px;
+      }
+      .cake-card {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+      .rec-card {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+      .rec-card img{
+        width: 213px;
+        border-radius: 8px 8px 0px 0px;
+      }
+      
+      .order-summary {
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+        display: none;
+      }
+      .orderFor {
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+        display: none;
+      }
+
+      .form-text {
+        color: black;
+      }
+
+      @media (max-width: 600px) {
+    .empty-cart-image {
+      width: 50%; 
+    }
+
+    #recommendationItems {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    #recommendationItems .row > div {
+      flex: 1 0 100%; 
+    }
+
+    .orderFor {
+      margin-bottom: 20px; 
+    }
+
+    .order-summary {
+      margin-top: 20px; 
+    }
+
+    #carts-items, .order-summary, .orderFor {
+      margin-left: 0;
+      margin-right: 0;
+    }
+      /* Cart Item Styles */
+  .cake-card {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+  
+  .cake-card img.cake-img {
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 10px; 
+  }
+  
+  .cake-card > div {
+    width: 100%; 
+    margin-bottom: 10px;
+  }
+
+  .cake-card .d-flex.align-items-center {
+    justify-content: space-between;
+    width: 100%; 
+    margin-bottom: 10px; 
+  }
+  
+  .cake-card .px-4 {
+    width: 100%;
+    text-align: center; 
+    margin-bottom: 10px;
+  }
+
+  /* Order Summary Styles */
+  .order-summary h4, .order-summary p, .order-summary h5, .order-summary button {
+    font-size: 1.1rem; 
+    margin-bottom: 10px; 
+  }
+  .header .row > div {
+          margin-bottom: 10px;
+        }
+        .header .row > div:last-child {
+          margin-bottom: 0;
+        }
+        .header input.form-control {
+          width: 80%; 
+          padding: 8px 15px; 
+          font-size: 12px; 
+          margin: 0 auto;
+        }
+}
+ </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header pb-2">
+        <div class="row">
+          <!-- Logo and Icons Row for Mobile View -->
+          <div class="col-12 d-flex d-md-none justify-content-between align-items-center">
+            <div class="pt-2">
+              <a href="../index.html">
+                <img
+                  src="../Media/logo.jpg"
+                  class="border-end border-dark rounded-circle"
+                  width="60px"
+                  height="60px"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="d-flex justify-content-end text-end icons">
+              <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-2"></i></a>
+              <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s px-2"></i></a>
+              <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-2"></i></a>
+            </div>
+          </div>
+    
+          <!-- Logo for Laptop View -->
+          <div class="col-md-4 d-none d-md-flex align-items-center pt-2 px-2">
+            <a href="../index.html">
+              <img
+                src="../Media/logo.jpg"
+                class="border-end border-dark rounded-circle"
+                width="80px"
+                height="80px"
+                alt=""
+              />
+            </a>
+          </div>
+    
+          <!-- Search Bar -->
+          <div class="col-12 col-md-4 mt-2 align-self-center">
+            <input
+              class="form-control rounded-pill p-2 text-center"
+              type="search"
+              placeholder="Search for cakes, desserts, and more"
+              aria-label="Search"
+            />
+          </div>
+    
+          <!-- Icons for Laptop View -->
+          <div class="col-md-4 d-none d-md-flex justify-content-end text-end icons align-self-center mb-2">
+            <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-4"></i></a>
+            <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s"></i></a>
+            <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-4" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="position-relative">
+
+      <!-- Toggle Button Row with Pink Background (Mobile View Only) -->
+      <div class="d-md-none d-flex justify-content-between align-items-center border-top border-bottom" style="background-color: #ffabc7;">
+        <button
+          class="navbar-toggler mt-1 mb-1"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#breadcrumbNavbar"
+          aria-controls="breadcrumbNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- Font Awesome Bars Icon for Toggle -->
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    <!-- Breadcrumb Navbar -->
+    <div class="collapse d-md-flex breadcrumb mb-0 border-top border-bottom" id="breadcrumbNavbar">
+      <!-- Mobile View: Display in Column Layout -->
+      <div class="d-md-none d-flex flex-column align-items-start position-absolute w-100 bg-white" style="top: 100%; left: 0; z-index: 1000;">
+        <div class="mt-1 mb-1">
+          <a class="nav-link active" href="../Cart_Page/cart.html">Cart /</a>
+        </div>
+        <div class="mt-1 mb-1">
+          <a class="nav-link" href="../Address_Page/address.html">Delivery Address /</a>
+        </div>
+        <div class="mt-1 mb-1">
+          <a class="nav-link" href="../Cart_Page/review.html">Review Order</a>
+        </div>
+      </div>
+  
+      <!-- Laptop View: Display in Row Layout -->
+      <div class="d-none d-md-flex">
+        <div class="mt-1 mb-1">
+          <a class="nav-link active" href="../Cart_Page/cart.html">Cart /</a>
+        </div>
+        <div class="mt-1 mb-1">
+          <a class="nav-link" href="../Address_Page/address.html">Delivery Address /</a>
+        </div>
+        <div class="mt-1 mb-1">
+          <a class="nav-link" href="../Cart_Page/review.html">Review Order</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container main-page col-12 col-md-12 col-lg-12 pt-4">
+      <h1 class="text-center mb-4" id="page-title">Your Cart</h1>
+      
+      <div class="empty-message text-center" id="empty-message">
+        <img src="../Media/preview.png" class="empty-cart-image img-fluid" alt="Empty Cart" />
+        <h1 class="empty-msg pt-4">There are no items in the cart.</h1>
+      </div>
+    
+      <div class="row">
+        <!-- Cart Items Section -->
+        <div class="col-12 col-md-8 col-lg-8" id="carts-items">
+          <div id="cartItems" class="mx-2">
+            <!-- Cart items will be dynamically inserted here -->
+          </div>
+    
+          <div id="recommendations" class="mt-5">
+            <h4 class="px-2 text-center">Recommended Items</h4>
+            <div id="recommendationItems" class="row justify-content-evenly gx-0 gap-4 my-4">
+              <!-- Recommendation items will be dynamically inserted here -->
+            </div>
+          </div>
+        </div>
+    
+        <!-- Order Details and Summary Section -->
+        <div class="col-12 col-md-4 col-lg-4 mt-4 mt-md-0">
+          <div class="mb-3 p-3 orderFor">
+            <h5 class="text-center">Order Details</h5>
+            <div class="form-group">
+              <label for="orderFor">Order for whom:</label>
+              <input type="text" class="form-control" id="orderFor" placeholder="Enter name" />
+            </div>
+            <div class="form-group mt-2">
+              <label for="birthDate">Birthdate / Birthday date:</label>
+              <input type="date" class="form-control" id="birthDate" />
+            </div>
+            <div class="form-group mt-2">
+              <small class="form-text">This will help us for next birthday reminder</small>
+            </div>
+            <div class="text-center">
+              <button class="btn btn-secondary mt-3" onclick="saveOrderDetails()">Save Details</button>
+            </div>
+          </div>
+    
+          <div class="card order-summary text-center" id="order-summary">
+            <h4>Order Summary</h4>
+            <p>Items Price: <span id="itemsPrice">₹0</span></p>
+            <p>Shipping Charge: <span id="shippingCharge">₹40</span></p>
+            <h5>Total Price: <span id="totalPrice">₹40</span></h5>
+            <button class="btn btn-primary" onclick="proceedToReview()">Proceed to Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  <footer class="text-center text-lg-start bg-body-tertiary">
+      <section
+        class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom border-top"
+      >
+        <div class="me-3 d-none d-lg-block">
+          <span>Get connected with us on social networks :</span>
+        </div>
+
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="border-bottom">
+        <div class="container text-center text-md-start pt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>THE CAKE HEAVEN
+              </h6>
+              <p>
+                "Experience the divine taste of our handcrafted delights at The
+                Cake Heaven where every bite is a slice of paradise. Join us in
+                celebrating life's sweetest moments!"
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">COLLECTIONS</h6>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Same Day Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Classic Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Custom Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Cup Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Desserts</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Flowers</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Anniversary Cakes</a
+                >
+              </p>
+              <p>
+                <a href="../Category_Page/cake_list.html" class="text-reset"
+                  >Birthday Cakes</a
+                >
+              </p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">QUICK LINKS</h6>
+              <p>
+                <a href="../Quick_Pages/about.html" class="text-reset"
+                  >Contact Us</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/about.html" class="text-reset"
+                  >About us</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/privacy-policy.html" class="text-reset"
+                  >Privacy Policy</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/terms.html" class="text-reset"
+                  >Terms & Conditions</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/shipping.html" class="text-reset"
+                  >Shipping Policy</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/cancellation.html" class="text-reset"
+                  >Return & Refund Policy</a
+                >
+              </p>
+              <p>
+                <a href="../Quick_Pages/FAQ.html" class="text-reset">FAQs</a>
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3"></i> Kupwad, Sangli Maharashtra</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                contact@thecakeheaven.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center pb-3 pt-3">
+        © 2024 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
+          >TheCakeHeaven.com</a
+        >
+      </section>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var currentLocation = window.location.pathname;
+        var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+        navLinks.forEach(function (link) {
+          if (link.getAttribute("href") === currentLocation) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      });
+
+      const recommendations = [
+        {
+          name: "Birthday Firecracker",
+          price: 50,
+          image: "../Media/HCC.jpg",
+        },
+        {
+          name: "Candles",
+          price: 20,
+          image: "../Media/CC1.jpg",
+        },
+        {
+          name: "Birthday Firecracker",
+          price: 50,
+          image: "../Media/choclate.webp",
+        },
+        
+      ];
+
+      function addRecommendationToCart(index) {
+        const item = recommendations[index];
+        const cartItem = {
+          ...item,
+          quantity: 1,
+        };
+        cart.push(cartItem);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartPage();
+      }
+
+      function displayRecommendations() {
+        const recommendationItems = document.getElementById(
+          "recommendationItems"
+        );
+        recommendationItems.innerHTML = "";
+        recommendations.forEach((item, index) => {
+          const recommendationItem = `
+      <div class="col-8 col-md-3 text-center rec-card mb-3">
+        <img src="${item.image}" class="cake-img img-fluid" alt="${item.name}">
+        <div class="pt-2">
+          <h5>${item.name}</h5>
+          <p>Rs. ${item.price}</p>
+        </div>
+        <button class="btn btn-primary mb-2" onclick="addRecommendationToCart(${index})">Add to Cart</button>
+      </div>
+    `;
+          recommendationItems.innerHTML += recommendationItem;
+        });
+      }
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      function updateCartPage() {
+        const cartItems = document.getElementById("cartItems");
+        const recommendations = document.getElementById("recommendations");
+        const orderSummary = document.getElementById("order-summary");
+        const orderFor = document.querySelector(".orderFor");
+        const emptyMessage = document.getElementById("empty-message");
+        const emptyCart = document.getElementById("carts-items");
+
+        if (cart.length === 0) {
+          orderSummary.style.display = "none";
+          recommendations.style.display = "none";
+          orderFor.style.display = "none";
+          emptyCart.style.display = "none";
+          emptyMessage.style.display = "block";
+        } else {
+          orderSummary.style.display = "block";
+          recommendations.style.display = "block";
+          orderFor.style.display = "block";
+          emptyCart.style.display = "block";
+          cartItems.innerHTML = "";
+          cart.forEach((item, index) => {
+            const cartItem = `
+            <div class="cake-card d-flex justify-content-between align-items-center mb-3">
+                <img src="${item.image}" class="cake-img" alt="${item.name}">
+                <div>
+                    <h5>${item.name}</h5>
+                    <p>${item.weight}, ${item.flavor || ""}, ${
+              item.eggOrEggless || ""
+            }</p>
+                    <p>Rs. ${item.price}</p>
+                </div>
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-outline-secondary" onclick="decreaseQuantity(${index})">-</button>
+                    <input type="text" value="${
+                      item.quantity
+                    }" class="form-control mx-2 text-center" style="width: 50px;" readonly>
+                    <button class="btn btn-outline-secondary" onclick="increaseQuantity(${index})">+</button>
+                </div>
+                <div class="px-4">
+                <button class="btn btn-danger" onclick="removeFromCart(${index})">Remove</button>
+            </div>
+            </div>
+        `;
+            cartItems.innerHTML += cartItem;
+          });
+        }
+        updateOrderSummary();
+      }
+
+      function increaseQuantity(index) {
+        cart[index].quantity += 1;
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartPage();
+      }
+
+      function decreaseQuantity(index) {
+        if (cart[index].quantity > 1) {
+          cart[index].quantity -= 1;
+          localStorage.setItem("cart", JSON.stringify(cart));
+          updateCartPage();
+        }
+      }
+
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartPage();
+      }
+
+      function updateOrderSummary() {
+        const itemsPrice = cart.reduce(
+          (total, item) => total + item.price * item.quantity,
+          0
+        );
+        const shippingCharge = 40;
+        const totalPrice = itemsPrice + shippingCharge;
+
+        document.getElementById("itemsPrice").textContent = `₹${itemsPrice}`;
+        document.getElementById(
+          "shippingCharge"
+        ).textContent = `₹${shippingCharge}`;
+        document.getElementById("totalPrice").textContent = `₹${totalPrice}`;
+      }
+
+      function proceedToReview() {
+        window.location.href = "../Address_Page/address.html";
+      }
+
+      function checkOrderDetails() {
+        const orderDetails =
+          JSON.parse(localStorage.getItem("orderDetails")) || {};
+        if (orderDetails.orderFor && orderDetails.birthDate) {
+          displayOrderDetails(orderDetails);
+        } else {
+          document.getElementById("order-details-display").style.display =
+            "none";
+          document.getElementById("order-details-input").style.display =
+            "block";
+        }
+      }
+
+      function saveOrderDetails() {
+        const orderFor = document.getElementById("orderFor").value;
+        const birthDate = document.getElementById("birthDate").value;
+
+        if (orderFor && birthDate) {
+          const orderDetails = { orderFor, birthDate };
+          localStorage.setItem("orderDetails", JSON.stringify(orderDetails));
+          alert("Order details saved!");
+          checkOrderDetails();
+        } else {
+          alert("Please fill out both fields.");
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        displayRecommendations();
+      });
+
+      updateCartPage();
+    </script>
+  </body>
+</html>
+>>>>>>> 2ce412a5931f38caa696b5619616d0dc25a47f83
