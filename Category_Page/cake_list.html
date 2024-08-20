@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,15 +23,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    
     <style>
       body {
         font-family: "Poppins", sans-serif;
-        /* background-color: #d0f0c0; */
-        background-color: #f5f5dc;
-      }
-      .header{
-        background-color: #ff6f61;
       }
       body.dark-mode {
         background-color: rgb(60, 60, 60);
@@ -144,27 +137,22 @@
       }
       .main-page {
         min-height: 100vh;
-        /* background-color: #f4dfc8; */
-        /* background-color: #b6dacc; */
       }
       .breadcrumb {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        /* background-color: #ffabc7; */
-        /* background-color: #f1a2a4; */
-        /* background-color: #ffc0cb; */
-        background-color: #ff6f61;
-        height: 50px;
+        background-color: #ffabc7;
+        height: 4rem;
       }
+
       .dropdown-toggle {
-        margin-top: 12px;
+        margin-top: 4px;
+        min-height: 10px;
       }
       .dropdown-toggle a {
         text-decoration: none;
       }
       .breadcrumb a {
-        /* color: black; */
-        /* color: #3e2723; */
-        color: #ffffff;
+        color: black;
         font-size: 1.1rem;
         font-weight: bold;
       }
@@ -172,15 +160,25 @@
         font-size: 15px;
         font-weight: normal;
       }
+      .filter-section {
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      .close-filter-btn {
+        display: none; /* Hide by default */
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+      }
       .sticky-filter {
         position: sticky;
         top: 20px;
         padding: 10px;
-        /* background-color: white; */
-        /* background-color: #f5f5dc; */
-        background-color: #d3d3d3;
-        /* color: #3e2723; */
-        color: #333333;
+        background-color: white;
         border: 1px solid #ddd;
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -202,6 +200,9 @@
       .product-card {
         cursor: pointer;
       }
+      .product-card:hover {
+        scale: 1.05;
+      }
 
       .icon-s {
         font-size: 22px;
@@ -212,9 +213,7 @@
       footer,
       section {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        /* background-color: #ffabc7; */
-        /* background-color: #ffc0cb; */
-        background-color: #ff6f61;
+        background-color: #ffabc7;
       }
       section a {
         text-decoration: none;
@@ -228,84 +227,172 @@
         width: 21rem;
         margin: auto;
         border: 1px solid #ddd;
-        background-color: #ffffff;
-        color: #333333;
         border-radius: 5px;
         overflow: hidden;
         transition: all ease 0.5s;
       }
       .card:hover {
-        background-color: rgb(216, 50, 50);
-        /* background-color: #f1a2a4; */
-        color: white;
+        background-color: #f3adc1;
       }
-    
-       .qb-btn{
-      border: 2px solid black; 
-      /* background-color: white;  */
-      /* background-color: #f1a2a4; */
-      /* background-color: #98ff98; */
-      background-color: #ff8c69;
-      /* color: black;  */
-      /* color: #2e7d32; */
-      color: #ffffff;
-      transition: background-color 0.3s ease, color 0.3s ease; 
-       }
+      .qb-btn {
+        border: 2px solid black;
+      }
+      .qb-btn:hover {
+        background-color: white;
+      }
       .custom-select {
-      position: relative;
-      display: inline-block;
-      width: 100%;
-    }
+        position: relative;
+        display: inline-block;
+        width: 100%;
+      }
 
-    .custom-select button {
-      width: 100%;
-    }
+      .custom-select button {
+        width: 100%;
+      }
 
-    .custom-select-content {
-      display: none;
-      position: absolute;
-      background-color: white;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-      width: 100%;
-      bottom: 100%;
-      max-height: 200px;
-      overflow-y: auto;
-    }
+      .custom-select-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        width: 100%;
+        bottom: 100%;
+        max-height: 200px;
+        overflow-y: auto;
+      }
 
-    .custom-select-content a {
-      color: black;
-      padding: 8px 12px;
-      text-decoration: none;
-      display: block;
-      font-size: 14px;
-    }
+      .custom-select-content a {
+        color: black;
+        padding: 8px 12px;
+        text-decoration: none;
+        display: block;
+        font-size: 14px;
+      }
 
-    .custom-select-content .nested-menu {
-      display: none;
-      padding-left: 20px;
-    }
+      .custom-select-content .nested-menu {
+        display: none;
+        padding-left: 20px;
+      }
 
-    .nested-dropdown:hover .nested-menu {
-      display: block;
-    }
+      .nested-dropdown:hover .nested-menu {
+        display: block;
+      }
 
-    .custom-select-content a:hover {
-      background-color:#3B71CA;
-    }
+      .custom-select-content a:hover {
+        background-color: #3b71ca;
+      }
 
-    .custom-select:hover .custom-select-content {
-      display: block;
-    }
+      .custom-select:hover .custom-select-content {
+        display: block;
+      }
 
-    .product-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+      /* Filter Toggle Button for Mobile */
+      .filter-toggle {
+        cursor: pointer;
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
 
-.product-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+      @media (max-width: 768px) {
+        /* Hide filter content by default on mobile */
+
+        .breadcrumb {
+          justify-content: space-around;
+        }
+        .navbar-nav {
+          background-color: grey;
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 4rem;
+          left: 0;
+          z-index: 1000;
+        }
+        .dropdown-menu {
+          display: none;
+        }
+        .breadcrumb a {
+          font-size: 1rem;
+        }
+        .dropdowns li a {
+          font-size: 14px;
+        }
+        .dropdown-menu.show {
+          display: block;
+          position: static;
+          float: none;
+          background-color: white;
+          border: 1px solid rgba(0, 0, 0, 0.15);
+          margin-top: 0;
+        }
+        .filter-section {
+          margin-bottom: 0;
+          margin-top: 0;
+          padding: 0;
+          display: flex;
+          justify-content: end;
+        }
+
+        .close-filter-btn {
+          display: block; /* Show close button only on mobile view */
+        }
+        .filter-txt {
+          display: none;
+        }
+        .sticky-filter {
+          position: relative;
+          top: 20px;
+          padding: 0px;
+          background-color: transparent;
+          border: none;
+          box-shadow: none;
+        }
+        #filterContent {
+          display: none;
+          position: fixed;
+          top: 10rem;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background-color: white;
+          z-index: 9999;
+          padding: 20px;
+          overflow-y: auto;
+          box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Display the filter toggle button */
+        .filter-toggle {
+          display: block;
+          background-color: transparent;
+          box-shadow: none;
+          color: rgb(14, 14, 157);
+          justify-content: end;
+          border: 2px solid blue;
+        }
+
+        /* When the filter is open */
+        .filter-open #filterContent {
+          display: block;
+        }
+      }
+
+      @media (min-width: 768px) {
+        /* Keep the original style for larger screens */
+        #filterContent {
+          display: block;
+        }
+
+        .filter-toggle {
+          display: none;
+        }
+      }
     </style>
   </head>
 
@@ -324,7 +411,7 @@
       </div>
       <div class="col mt-2 align-self-center">
         <input
-          class="form-control rounded-pill p-2 text-center"
+          class="form-control rounded-pill"
           type="search"
           placeholder="Search for cakes, desserts, and more"
           aria-label="Search"
@@ -340,294 +427,587 @@
             <span class="icon moon"><i class="fas fa-moon"></i></span>
           </label>
         </div>
-        <a href="../Cart_Page/cart.html"
+        <a href="../Cart Page/cart.html"
           ><i class="fas fa-cart-shopping icon-s px-4"></i
         ></a>
 
-        <a href="../Cart_Page/wishlist.html"
+        <a href="../Cart Page/wishlist.html"
           ><i class="fas fa-heart icon-s"></i
         ></a>
-        <a href="../Profile_Page/profile.html"
+        <a href="../Profile Page/profile.html"
           ><i class="fa fa-user icon-s px-4" aria-hidden="true"></i
         ></a>
       </div>
     </div>
 
-    <div
-      class="d-flex breadcrumb justify-content-center border-top border-bottom gap-5 mb-0 pt-0 px-5"
+    <nav
+      class="navbar navbar-expand-lg breadcrumb navbar-light border-bottom border-top"
     >
-      <div class="dropdown mx-3">
-        <label
-          class="dropdown-toggle"
-          id="dropdownMenuButton1"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" onclick="toggleNavbar()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNavDropdown"
         >
-          <a class="" href="">Cakes</a>
-        </label>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <div class="d-flex m-0">
-            <div class="dropdowns">
-              <li>
-                <a class="dropdown-item" href="#"><b>Layers</b></a>
-              
-              <li><a class="dropdown-item" href="#">One</a></li>
-              <li><a class="dropdown-item" href="#">Two</a></li>
-              <li><a class="dropdown-item" href="#">Three</a></li>
-              </li>
-            </div>
-            <div class="dropdowns d-flex flex-column">
-              <li>
-                <a class="dropdown-item" href="#"><b>By Shapes</b></a>
-              </li>
-              <li><a class="dropdown-item" href="#">Square</a></li>
-              <li><a class="dropdown-item" href="#">Circle</a></li>
-              <li><a class="dropdown-item" href="#">Heart</a></li>
-              <li><a class="dropdown-item" href="#">Tall</a></li>
-            </div>
-            <div class="dropdowns d-flex flex-column">
-              <li>
-                <a class="dropdown-item" href="#"><b>By Flavour</b></a>
-              </li>
-              <li><a class="dropdown-item" href="#">Choclate</a></li>
-              <li><a class="dropdown-item" href="#">Blueberry</a></li>
-              <li><a class="dropdown-item" href="#">Pineapple</a></li>
-              <li><a class="dropdown-item" href="#">Fresh Fruit</a></li>
-              <li><a class="dropdown-item" href="#">Red Velvet</a></li>
-              <li><a class="dropdown-item" href="#">Vanilla</a></li>
-              <li><a class="dropdown-item" href="#">Butterscotch</a></li>
-            </div>
-            <div class="dropdowns d-flex flex-column">
-              <li>
-                <a class="dropdown-item" href="#"><b>By Occasion</b></a>
-              </li>
-              <li><a class="dropdown-item" href="#">Birthday</a></li>
-              <li><a class="dropdown-item" href="#">Anniversary</a></li>
-              <li><a class="dropdown-item" href="#">Wedding</a></li>
-              <li><a class="dropdown-item" href="#">Baby Shower</a></li>
-              <li><a class="dropdown-item" href="#">Engagement</a></li>
-              <li><a class="dropdown-item" href="#">Mother's Day</a></li>
-              <li><a class="dropdown-item" href="#">Father's Day</a></li>
-            </div>
-            <div class="dropdowns d-flex flex-column">
-              <li>
-                <a class="dropdown-item" href="#"><b>By Occasion</b></a>
-              </li>
-              <li><a class="dropdown-item" href="#">Valentines Day</a></li>
-              <li><a class="dropdown-item" href="#">Classic Cakes</a></li>
-              <li><a class="dropdown-item" href="#">Friendships Day</a></li>
-              <li><a class="dropdown-item" href="#">New Year</a></li>
-              <li><a class="dropdown-item" href="#">Christmas</a></li>
-              <li><a class="dropdown-item" href="#">Teacher's Day</a></li>
-              <li><a class="dropdown-item" href="#">Fairwell Cakes</a></li>
-            </div>
-            <div class="dropdowns d-flex flex-column">
-              <li>
-                <a class="dropdown-item" href="#"><b>Trending Cakes</b></a>
-              </li>
-              <li><a class="dropdown-item" href="#">Pull Me Up Cake</a></li>
-              <li><a class="dropdown-item" href="#">Pinata Cake</a></li>
-              <li><a class="dropdown-item" href="#">Half Cake</a></li>
-              <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
-              <li><a class="dropdown-item" href="#">Bento Cake</a></li>
-              <li><a class="dropdown-item" href="#">Surprise Cake Box</a></li>
-              <li>
-                <a class="dropdown-item" href="#">Photo Pulling Cake</a>
-              </li>
-            </div>
-            <div class="dropdowns d-flex flex-column h-25">
-              <li>
-                <a class="dropdown-item" href="#"><b>Unique Cakes</b></a>
-              </li>
-              <li><a class="dropdown-item" href="#">Moose Cake</a></li>
-              <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
-            </div>
-            <div class="dropdowns d-flex flex-column h-25">
-              <li>
-                <a class="dropdown-item" href="#"><b>Premium Cakes</b></a>
-              </li>
-            </div>
-          </div>
-        </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown mx-3">
+              <a
+                class="nav-link text-dark dropdown-toggle"
+                href="#"
+                id="dropdownMenuButton1"
+                onclick="toggleDropdown(event)"
+                >Cakes</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <div class="d-flex flex-wrap">
+                  <div class="dropdowns">
+                    <li>
+                      <a class="dropdown-item" href="#"><b>Layers</b></a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">One</a></li>
+                    <li><a class="dropdown-item" href="#">Two</a></li>
+                    <li><a class="dropdown-item" href="#">Three</a></li>
+                  </div>
+                  <div class="dropdowns">
+                    <li>
+                      <a class="dropdown-item" href="#"><b>By Shapes</b></a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Square</a></li>
+                    <li><a class="dropdown-item" href="#">Circle</a></li>
+                    <li><a class="dropdown-item" href="#">Heart</a></li>
+                    <li><a class="dropdown-item" href="#">Tall</a></li>
+                  </div>
+                  <div class="dropdowns">
+                    <li>
+                      <a class="dropdown-item" href="#"><b>By Flavour</b></a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Chocolate</a></li>
+                    <li><a class="dropdown-item" href="#">Blueberry</a></li>
+                    <li><a class="dropdown-item" href="#">Pineapple</a></li>
+                    <li><a class="dropdown-item" href="#">Fresh Fruit</a></li>
+                    <li><a class="dropdown-item" href="#">Red Velvet</a></li>
+                    <li><a class="dropdown-item" href="#">Vanilla</a></li>
+                    <li><a class="dropdown-item" href="#">Butterscotch</a></li>
+                  </div>
+                  <div class="dropdowns">
+                    <li>
+                      <a class="dropdown-item" href="#"><b>By Occasion</b></a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Birthday</a></li>
+                    <li><a class="dropdown-item" href="#">Anniversary</a></li>
+                    <li><a class="dropdown-item" href="#">Wedding</a></li>
+                    <li><a class="dropdown-item" href="#">Baby Shower</a></li>
+                    <li><a class="dropdown-item" href="#">Engagement</a></li>
+                    <li><a class="dropdown-item" href="#">Mother's Day</a></li>
+                    <li><a class="dropdown-item" href="#">Father's Day</a></li>
+                  </div>
+                  <div class="dropdowns">
+                    <li>
+                      <a class="dropdown-item" href="#"><b>By Occasion</b></a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Valentine's Day</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Classic Cakes</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Friendship's Day</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">New Year</a></li>
+                    <li><a class="dropdown-item" href="#">Christmas</a></li>
+                    <li><a class="dropdown-item" href="#">Teacher's Day</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Farewell Cakes</a>
+                    </li>
+                  </div>
+                  <div class="dropdowns">
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><b>Trending Cakes</b></a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Pull Me Up Cake</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Pinata Cake</a></li>
+                    <li><a class="dropdown-item" href="#">Half Cake</a></li>
+                    <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
+                    <li><a class="dropdown-item" href="#">Bento Cake</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Surprise Cake Box</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Photo Pulling Cake</a>
+                    </li>
+                  </div>
+                  <div class="dropdowns">
+                    <li>
+                      <a class="dropdown-item" href="#"><b>Unique Cakes</b></a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Mousse Cake</a></li>
+                    <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
+                  </div>
+                  <div class="dropdowns">
+                    <li>
+                      <a class="dropdown-item" href="#"><b>Premium Cakes</b></a>
+                    </li>
+                  </div>
+                </div>
+              </ul>
+            </li>
+            <li class="nav-item mt-1 mx-3 mb-3">
+              <a
+                class="nav-link text-dark"
+                href="../Category_Page/cake_list.html"
+                >Cup-Cakes</a
+              >
+            </li>
+            <li class="nav-item mt-1 mx-3 mb-3">
+              <a
+                class="nav-link text-dark"
+                href="../Category_Page/cake_list.html"
+                >Pastry</a
+              >
+            </li>
+            <li class="nav-item mt-1 mx-3 mb-3">
+              <a
+                class="nav-link text-dark"
+                href="../Category_Page/cake_list.html"
+                >Desserts</a
+              >
+            </li>
+            <li class="nav-item mt-1 mx-3 mb-3">
+              <a
+                class="nav-link text-dark"
+                href="../Category_Page/cake_list.html"
+                >Trending Cakes</a
+              >
+            </li>
+            <li class="nav-item mt-1 mx-3 mb-3">
+              <a
+                class="nav-link text-dark"
+                href="../Category_Page/cake_list.html"
+                >Unique Cakes</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <div class="mt-1 mx mb-3">
-        <a class="nav-link" href="">Cup-Cakes</a>
-      </div>
-      <div class="mt-1 mx-3 mb-3">
-        <a class="nav-link" href="">Pastrey</a>
-      </div>
-      <div class="mt-1 mx-3 mb-3">
-        <a class="nav-link" href="">Desserts</a>
-      </div>
-      <div class="mt-1 mx-3 mb-3">
-        <a class="nav-link" href="">Trending Cakes</a>
-      </div>
-      <div class="mt-1 mb-3">
-        <a class="nav-link" href="">Unique Cakes</a>
-      </div>
-    </div>
+    </nav>
 
     <div class="main-page px-5">
       <div class="text-center pt-4"><h1>Cakes</h1></div>
       <div class="row">
-        <div class="col-md-3 filter-section mt-4 mb-4">
+        <div class="col-md-3 filter-section">
           <div class="sticky-filter p-4">
-            <h4>Filters</h4>
-            <div class="form-group mt-2">
-              <label for="weightFilter"><b>Weight</b></label>
-              <select id="weightFilter" class="form-control">
-                <option value="any">All</option>
-                <option value="0.5_kg">0.5 kg</option>
-                <option value="1_kg">1 kg</option>
-                <option value="1.5_kg">1.5 kg</option>
-                <option value="2_kg">2 kg</option>
-                <option value="2.5_kg">2.5 kg</option>
-                <option value="3_kg">3 kg</option>
-                <option value="4_kg">4 kg</option>
-                <option value="5_kg">5 kg</option>
-              </select>
-            </div>
-            <div class="form-group mt-3">
-              <label for="availabilityFilter"><b>Availability</b></label>
-              <select id="availabilityFilter" class="form-control">
-                <option value="any">Any</option>
-                <option value="in_stock">In Stock</option>
-                <option value="out_of_stock">Out of Stock</option>
-              </select>
-            </div>
-            <div class="form-group mt-3">
-              <label for="priceRange"
-                ><b>Price Range: </b>
-                <span id="priceRangeValue" class="ms-3"
-                  >Rs. 200 - Rs. 5000</span
-                >
-              </label>
-              <input
-                type="range"
-                class="form-range border rounded py-3 px-2"
-                id="priceRange"
-                min="200"
-                max="5000"
-                value="5000"
-                oninput="updatePriceRange()"
-              />
-            </div>
-            <div class="form-group mt-3">
-              <label for="eggFilter"><b>Egg or Eggless</b></label>
-              <select id="eggFilter" class="form-control">
-                <option value="any">Any</option>
-                <option value="egg">With Egg</option>
-                <option value="eggless">Eggless</option>
-              </select>
-            </div>
+            <h3 class="text-center mb-2 filter-txt">Filter</h3>
+            <h4
+              class="filter-toggle d-md-none"
+              onclick="toggleFilterVisibility()"
+            >
+              Filters
+            </h4>
+            <div id="filterContent">
+              <button class="close-filter-btn">×</button>
+              <div class="form-group mt-2">
+                <label for="weightFilter"><b>Weight</b></label>
+                <select id="weightFilter" class="form-control">
+                  <option value="any">All</option>
+                  <option value="0.5_kg">0.5 kg</option>
+                  <option value="1_kg">1 kg</option>
+                  <option value="1.5_kg">1.5 kg</option>
+                  <option value="2_kg">2 kg</option>
+                  <option value="2.5_kg">2.5 kg</option>
+                  <option value="3_kg">3 kg</option>
+                  <option value="4_kg">4 kg</option>
+                  <option value="5_kg">5 kg</option>
+                </select>
+              </div>
+              <div class="form-group mt-3">
+                <label for="availabilityFilter"><b>Availability</b></label>
+                <select id="availabilityFilter" class="form-control">
+                  <option value="any">Any</option>
+                  <option value="in_stock">In Stock</option>
+                  <option value="out_of_stock">Out of Stock</option>
+                </select>
+              </div>
+              <div class="form-group mt-3">
+                <label for="priceRange">
+                  <b>Price Range: </b>
+                  <span id="priceRangeValue" class="ms-3"
+                    >Rs. 200 - Rs. 5000</span
+                  >
+                </label>
+                <input
+                  type="range"
+                  class="form-range border rounded py-3 px-2"
+                  id="priceRange"
+                  min="200"
+                  max="5000"
+                  value="5000"
+                  oninput="updatePriceRange()"
+                />
+              </div>
+              <div class="form-group mt-3">
+                <label for="eggFilter"><b>Egg or Eggless</b></label>
+                <select id="eggFilter" class="form-control">
+                  <option value="any">Any</option>
+                  <option value="egg">With Egg</option>
+                  <option value="eggless">Eggless</option>
+                </select>
+              </div>
+              <div class="form-group mt-3">
+                <div class="form-group">
+                  <label for="caketypeFilter"
+                    ><b
+                      ><div class="text-align-start">Select Cake Type</div></b
+                    ></label
+                  >
+                  <div class="custom-select">
+                    <button
+                      class="form-control"
+                      type="button"
+                      id="caketypeFilter"
+                    >
+                      Select Cake Type
+                    </button>
+                    <div class="custom-select-content" id="caketypeOptions">
+                      <div class="nested-dropdown">
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          onclick="handleSelection(event, 'Layers', 'Layers')"
+                          ><b>Layers</b></a
+                        >
+                        <div class="nested-menu">
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'Layers', 'One')"
+                            >One</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'Layers', 'Two')"
+                            >Two</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'Layers', 'Three')"
+                            >Three</a
+                          >
+                        </div>
+                      </div>
+                      <div class="nested-dropdown">
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          onclick="handleSelection(event, 'By Shapes', 'Shapes')"
+                          ><b>By Shapes</b></a
+                        >
+                        <div class="nested-menu">
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Shapes', 'Square')"
+                            >Square</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Shapes', 'Circle')"
+                            >Circle</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Shapes', 'Heart')"
+                            >Heart</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Shapes', 'Tall')"
+                            >Tall</a
+                          >
+                        </div>
+                      </div>
+                      <div class="nested-dropdown">
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          onclick="handleSelection(event, 'By Flavour', 'Flavour')"
+                          ><b>By Flavour</b></a
+                        >
+                        <div class="nested-menu">
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Flavour', 'Chocolate')"
+                            >Chocolate</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Flavour', 'Blueberry')"
+                            >Blueberry</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Flavour', 'Pineapple')"
+                            >Pineapple</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Flavour', 'Fresh Fruit')"
+                            >Fresh Fruit</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Flavour', 'Red Velvet')"
+                            >Red Velvet</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Flavour', 'Vanilla')"
+                            >Vanilla</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Flavour', 'Butterscotch')"
+                            >Butterscotch</a
+                          >
+                        </div>
+                      </div>
+                      <div class="nested-dropdown">
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          onclick="handleSelection(event, 'By Occasion', 'Occasion')"
+                          ><b>By Occasion</b></a
+                        >
+                        <div class="nested-menu">
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Occasion', 'Birthday')"
+                            >Birthday</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Occasion', 'Anniversary')"
+                            >Anniversary</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Occasion', 'Wedding')"
+                            >Wedding</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Occasion', 'Baby Shower')"
+                            >Baby Shower</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Occasion', 'Engagement')"
+                            >Engagement</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Occasion', 'Mothers Day')"
+                            >Mother's Day</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Occasion', 'Fathers Day')"
+                            >Father's Day</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Occasion', 'Valentines Day')"
+                            >Valentine's Day</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Occasion', 'Classic Cakes')"
+                            >Classic Cakes</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Occasion', 'Friendships Day')"
+                            >Friendship's Day</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Occasion', 'New Year')"
+                            >New Year</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Occasion', 'Christmas')"
+                            >Christmas</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Occasion', 'Teachers Day')"
+                            >Teacher's Day</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'By Occasion', 'Farewell Cakes')"
+                            >Farewell Cakes</a
+                          >
+                        </div>
+                      </div>
+                      <div class="nested-dropdown">
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          onclick="handleSelection(event, 'Trending Cakes', 'Trending')"
+                          ><b>Trending Cakes</b></a
+                        >
+                        <div class="nested-menu">
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'Trending Cakes', 'Pull Me Up Cake')"
+                            >Pull Me Up Cake</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'Trending Cakes', 'Pinata Cake')"
+                            >Pinata Cake</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'Trending Cakes', 'Half Cake')"
+                            >Half Cake</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'Trending Cakes', 'Bomb Cake')"
+                            >Bomb Cake</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'Trending Cakes', 'Bento Cake')"
+                            >Bento Cake</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'Trending Cakes', 'Surprise Cake Box')"
+                            >Surprise Cake Box</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'Trending Cakes', 'Photo Pulling Cake')"
+                            >Photo Pulling Cake</a
+                          >
+                        </div>
+                      </div>
 
-            <div class="form-group mt-3">
-              <div class="form-group">
-                <label for="caketypeFilter"><b><div class="text-align-start">Select Cake Type</div></b></label>
-                <div class="custom-select">
-                  <button class="form-control" type="button" id="caketypeFilter">
-                    Select Cake Type
-                  </button>
-                  <div class="custom-select-content" id="caketypeOptions">
-                    <div class="nested-dropdown">
-                      <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Layers', 'Layers')">Layers</a>
-                      <div class="nested-menu">
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Layers', 'One')">One</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Layers', 'Two')">Two</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Layers', 'Three')">Three</a>
-                      </div>
-                    </div>
-                    <div class="nested-dropdown">
-                      <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Shapes', 'Shapes')">By Shapes</a>
-                      <div class="nested-menu">
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Shapes', 'Square')">Square</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Shapes', 'Circle')">Circle</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Shapes', 'Heart')">Heart</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Shapes', 'Tall')">Tall</a>
-                      </div>
-                    </div>
-                    <div class="nested-dropdown">
-                      <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Flavour', 'Flavour')">By Flavour</a>
-                      <div class="nested-menu">
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Flavour', 'Chocolate')">Chocolate</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Flavour', 'Blueberry')">Blueberry</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Flavour', 'Pineapple')">Pineapple</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Flavour', 'Fresh Fruit')">Fresh Fruit</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Flavour', 'Red Velvet')">Red Velvet</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Flavour', 'Vanilla')">Vanilla</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Flavour', 'Butterscotch')">Butterscotch</a>
-                      </div>
-                    </div>
-                    <div class="nested-dropdown">
-                      <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Occasion')">By Occasion</a>
-                      <div class="nested-menu">
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Birthday')">Birthday</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Anniversary')">Anniversary</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Wedding')">Wedding</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Baby Shower')">Baby Shower</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Engagement')">Engagement</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Mothers Day')">Mother's Day</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Fathers Day')">Father's Day</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Valentines Day')">Valentine's Day</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Classic Cakes')">Classic Cakes</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Friendships Day')">Friendship's Day</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'New Year')">New Year</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Christmas')">Christmas</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Teachers Day')">Teacher's Day</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'By Occasion', 'Farewell Cakes')">Farewell Cakes</a>
-                      </div>
-                    </div>
-                    <div class="nested-dropdown">
-                      <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Trending Cakes', 'Trending')">Trending Cakes</a>
-                      <div class="nested-menu">
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Trending Cakes', 'Pull Me Up Cake')">Pull Me Up Cake</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Trending Cakes', 'Pinata Cake')">Pinata Cake</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Trending Cakes', 'Half Cake')">Half Cake</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Trending Cakes', 'Bomb Cake')">Bomb Cake</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Trending Cakes', 'Bento Cake')">Bento Cake</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Trending Cakes', 'Surprise Cake Box')">Surprise Cake Box</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Trending Cakes', 'Photo Pulling Cake')">Photo Pulling Cake</a>
-                      </div>
-                    </div>
+                      <div class="nested-dropdown">
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          onclick="handleSelection(event, 'Unique Cakes', 'Unique')"
+                          ><b>Unique Cakes</b></a
+                        >
+                        <div class="nested-menu">
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'Unique Cakes', 'Moose Cake')"
+                            >Moose Cake</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'Unique Cakes', 'Bomb Cake')"
+                            >Bomb Cake</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'Unique Cakes', 'Banana Cake')"
+                            >Banana Cake</a
+                          >
+                        </div>
 
-                    <div class="nested-dropdown">
-                      <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Unique Cakes', 'Unique')">Unique Cakes</a>
-                      <div class="nested-menu">
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Unique Cakes', 'Moose Cake')">Moose Cake</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Unique Cakes', 'Bomb Cake')">Bomb Cake</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Unique Cakes', 'Banana Cake')">Banana Cake</a>
-                      </div>
-                    
-                    <div class="nested-dropdown">
-                      <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Premium Cakes', 'Premium')">Premium Cakes</a>
-                      <div class="nested-menu">
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Premium Cakes', 'Spiced Carrot')">Spiced Carrot</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Premium Cakes', 'Pumpkin Spice')">Pumpkin Spice</a>
-                        <a class="dropdown-item" href="#" onclick="handleSelection(event, 'Premium Cakes', 'Almond Poppyseed')">Almond Poppyseed</a>
-                      </div>
-                      </div>
+                        <div class="nested-dropdown">
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="handleSelection(event, 'Premium Cakes', 'Premium')"
+                            ><b>Premium Cakes</b></a
+                          >
+                          <div class="nested-menu">
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              onclick="handleSelection(event, 'Premium Cakes', 'Spiced Carrot')"
+                              >Spiced Carrot</a
+                            >
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              onclick="handleSelection(event, 'Premium Cakes', 'Pumpkin Spice')"
+                              >Pumpkin Spice</a
+                            >
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              onclick="handleSelection(event, 'Premium Cakes', 'Almond Poppyseed')"
+                              >Almond Poppyseed</a
+                            >
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-          <div class="apply-btn mt-3 d-flex justify-content-end">
-              <button class="btn btn-danger" onclick="applyFilters()">
-                Apply Filters
-              </button>
+              <div class="apply-btn mt-3 d-flex justify-content-between">
+                <button class="btn btn-secondary" onclick="clearFilters()">
+                  Clear Filter
+                </button>
+                <button class="btn btn-danger" onclick="applyFilters()">
+                  Apply Filters
+                </button>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-md-9 product-list">
-          <div class="row gx-0" id="productList">
-            <div class="product-card" cake-id="1">
-              <!-- <img src="cake2.jpg" alt="Cake Image" style="width:100px; height:100px;"> -->
-              <!-- <h2>Vanilla Cake</h2> -->
-              <!-- <p>Price: ₹25</p> -->
-              <a href="sproduct.html?cakeId=1" class="btn btn-primary">View Details</a>
-            </div>
-          </div>
+          <div class="row gx-0" id="productList"></div>
         </div>
       </div>
     </div>
@@ -644,12 +1024,13 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="quickBuyModalLabel">Product Details</h5>
-            <button type="button" 
-            class="close" 
-            data-dismiss="modal" 
-            aria-label="Close">
-              <span aria-hidden="true">&times;
-              </span>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
@@ -783,42 +1164,42 @@
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 class="text-uppercase fw-bold mb-4">COLLECTIONS</h6>
               <p>
-                <a href="../Category_Page/cake_list.html" class="text-reset"
+                <a href="../Category Page/cake_list.html" class="text-reset"
                   >Same Day Cakes</a
                 >
               </p>
               <p>
-                <a href="../Category_Page/cake_list.html" class="text-reset"
+                <a href="../Category Page/cake_list.html" class="text-reset"
                   >Classic Cakes</a
                 >
               </p>
               <p>
-                <a href="../Category_Page/cake_list.html" class="text-reset"
+                <a href="../Category Page/cake_list.html" class="text-reset"
                   >Custom Cakes</a
                 >
               </p>
               <p>
-                <a href="../Category_Page/cake_list.html" class="text-reset"
+                <a href="../Category Page/cake_list.html" class="text-reset"
                   >Cup Cakes</a
                 >
               </p>
               <p>
-                <a href="../Category_Page/cake_list.html" class="text-reset"
+                <a href="../Category Page/cake_list.html" class="text-reset"
                   >Desserts</a
                 >
               </p>
               <p>
-                <a href="../Category_Page/cake_list.html" class="text-reset"
+                <a href="../Category Page/cake_list.html" class="text-reset"
                   >Flowers</a
                 >
               </p>
               <p>
-                <a href="../Category_Page/cake_list.html" class="text-reset"
+                <a href="../Category Page/cake_list.html" class="text-reset"
                   >Anniversary Cakes</a
                 >
               </p>
               <p>
-                <a href="../Category_Page/cake_list.html" class="text-reset"
+                <a href="../Category Page/cake_list.html" class="text-reset"
                   >Birthday Cakes</a
                 >
               </p>
@@ -827,46 +1208,41 @@
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 class="text-uppercase fw-bold mb-4">QUICK LINKS</h6>
               <p>
-                <a href="../Quick_Pages/about.html" class="text-reset"
+                <a href="../Quick Pages/about.html" class="text-reset"
                   >Contact Us</a
                 >
               </p>
               <p>
-                <a href="../Quick_Pages/about.html" class="text-reset"
+                <a href="../Quick Pages/about.html" class="text-reset"
                   >About us</a
                 >
               </p>
               <p>
-                <a href="../Quick_Pages/privacy-policy.html" class="text-reset"
+                <a href="../Quick Pages/privacy-policy.html" class="text-reset"
                   >Privacy Policy</a
                 >
               </p>
               <p>
-                <a href="../Quick_Pages/terms.html" class="text-reset"
+                <a href="../Quick Pages/terms.html" class="text-reset"
                   >Terms & Conditions</a
                 >
               </p>
               <p>
-                <a href="../Quick_Pages/shipping.html" class="text-reset"
+                <a href="../Quick Pages/shipping.html" class="text-reset"
                   >Shipping Policy</a
                 >
               </p>
               <p>
-                <a href="../Quick_Pages/cancellation.html" class="text-reset"
+                <a href="../Quick Pages/cancellation.html" class="text-reset"
                   >Return & Refund Policy</a
                 >
               </p>
               <p>
-                <a href="../Quick_Pages/FAQ.html" class="text-reset">FAQs</a>
+                <a href="../Quick Pages/FAQ.html" class="text-reset">FAQs</a>
               </p>
               <p>
-                <a href="../Quick_Pages/career.html" class="text-reset"
+                <a href="../Quick Pages/career.html" class="text-reset"
                   >Career</a
-                >
-              </p>
-              <p>
-                <a href="../Quick_Pages/frenchies.html" class="text-reset"
-                  >Frenchies</a
                 >
               </p>
             </div>
@@ -892,19 +1268,16 @@
       </section>
     </footer>
 
-    <!-- <script
+    <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
-    ></script> -->
+    ></script>
 
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
-     <script src="cakes1.js"></script>
-     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="cakes.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const toggleSwitch = document.getElementById("darkModeSwitch");
@@ -945,6 +1318,17 @@
         });
       });
 
+      function toggleNavbar() {
+        const navbar = document.getElementById("navbarNavDropdown");
+        navbar.classList.toggle("show");
+      }
+
+      function toggleDropdown(event) {
+        event.preventDefault();
+        const dropdown = event.target.nextElementSibling;
+        dropdown.classList.toggle("show");
+      }
+
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
@@ -955,29 +1339,33 @@
           const isWishlisted = wishlist.some(
             (item) => item && item.id === cake.id
           );
-          const heartClass = isWishlisted ? "fas" : "fas";
-          const heartColor = isWishlisted ? "red" : "white";
+          const heartClass = isWishlisted ? "fas" : "far";
+          const heartColor = isWishlisted ? "red" : "grey";
           const cakeCard = `
-      <div class="card product-card mb-4 mt-4">
-        <img src="${cake.image}" class="" alt="${cake.name}">
-        <span class="wishlist-icon mx-3" onclick="toggleWishlist(${index}, this)">
-          <i class="${heartClass} fa-heart heart-icon rounded-circle" style="scale:1.8; color:${heartColor};"></i>
-        </span>
-        <span class=" ps-3 pt-2"><h6 class="card-text">${cake.name}</h6></span>
-        <div class="d-flex justify-content-between p-2">
-          <div class="ps-2">
-            <span><p class="small card-text">${cake.weight}</p></span>
-            <span><p class="small card-text">Rs. ${cake.price}</p></span>
-            <p class="small card-text rating">${cake.rating} <span class="text-warning fa fa-star"></span></p>
-          </div>
-          <div class="align-self-end">
-            <button class="btn border qb-btn me-1" onclick="quickBuy(${index})">Quick Buy</button>
-          </div>
+        <div class="card product-card mb-4 mt-4" onclick="redirectToCakeDetails(${cake.id});">
+            <img src="${cake.image}" class="" alt="${cake.name}">
+            <span class="wishlist-icon mx-3" onclick="toggleWishlist(${index}, this); event.stopPropagation();">
+                <i class="${heartClass} fa-heart heart-icon rounded-circle" style="scale:1.8; color:${heartColor};"></i>
+            </span>
+            <span class="ps-3 pt-2"><h6 class="card-text">${cake.name}</h6></span>
+            <div class="d-flex justify-content-between p-2">
+                <div class="ps-2">
+                    <span><p class="small card-text">${cake.weight}</p></span>
+                    <span><p class="small card-text">Rs. ${cake.price}</p></span>
+                    <p class="small card-text rating">${cake.rating} <span class="text-warning fa fa-star"></span></p>
+                </div>
+                <div class="align-self-end">
+                    <button class="btn border qb-btn me-1" onclick="quickBuy(${index}); event.stopPropagation();">Quick Buy</button>                
+                </div>
+            </div>
         </div>
-      </div>
-    `;
+        `;
           productList.innerHTML += cakeCard;
         });
+      }
+
+      function redirectToCakeDetails(cakeId) {
+        window.location.href = `sproduct.html?cakeId=${cakeId}`;
       }
 
       function toggleWishlist(index, element) {
@@ -997,6 +1385,66 @@
         }
 
         localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      }
+
+      // Toggle Filter Visibility
+      function toggleFilterVisibility() {
+        const filterSection = document.querySelector(".filter-section");
+        filterSection.classList.toggle("filter-open");
+      }
+
+      // Close the filter when clicking outside
+      window.onclick = function (event) {
+        const filterSection = document.querySelector(".filter-section");
+        const filterContent = document.getElementById("filterContent");
+
+        if (event.target === filterContent) {
+          filterSection.classList.remove("filter-open");
+        }
+      };
+
+      // Close Filter on Mobile
+      document
+        .querySelector(".close-filter-btn")
+        .addEventListener("click", function () {
+          const filterSection = document.querySelector(".filter-section");
+          filterSection.classList.remove("filter-open");
+        });
+
+      // Clear Filters Function
+      function clearFilters() {
+        // Reset all checkboxes
+        const checkboxes = document.querySelectorAll(
+          '#filterContent input[type="checkbox"]'
+        );
+        checkboxes.forEach((checkbox) => {
+          checkbox.checked = false;
+        });
+
+        // Reset all radio buttons
+        const radioButtons = document.querySelectorAll(
+          '#filterContent input[type="radio"]'
+        );
+        radioButtons.forEach((radio) => {
+          radio.checked = false;
+        });
+
+        // Reset all dropdowns/selects
+        const selects = document.querySelectorAll("#filterContent select");
+        selects.forEach((select) => {
+          select.selectedIndex = 0; // Resets to the first option
+        });
+
+        // Reset all input fields
+        const inputs = document.querySelectorAll(
+          '#filterContent input[type="text"], #filterContent input[type="number"], #filterContent input[type="date"]'
+        );
+        inputs.forEach((input) => {
+          input.value = ""; // Clears the input field
+        });
+
+        console.log("Filters cleared!");
+        // You can add additional code here to re-fetch or update your product list after clearing filters
       }
 
       function applyFilters() {
@@ -1046,47 +1494,37 @@
         ).textContent = `Rs. 200 - Rs. ${priceRangeValue}`;
       }
 
-      function displayCakes() {
-  const productList = document.getElementById("productList");
-  productList.innerHTML = "";
-  cakes.forEach((cake, index) => {
-    const isWishlisted = wishlist.some(item => item && item.id === cake.id);
-    const heartClass = isWishlisted ? "fas" : "far";
-    const heartColor = isWishlisted ? "red" : "grey";
-
-    const cakeCard = `
-      <div class="card product-card mb-4 mt-4" onclick="redirectToProductPage(${index})">
-        <img src="${cake.image}" class="" alt="${cake.name}">
-        <span class="wishlist-icon mx-3" onclick="toggleWishlist(${index}, this); event.stopPropagation();">
-          <i class="${heartClass} fa-heart heart-icon rounded-circle" style="scale:1.8; color:${heartColor};"></i>
-        </span>
-        <span class="ps-3 pt-2"><h6 class="card-text">${cake.name}</h6></span>
-        <div class="d-flex justify-content-between p-2">
-          <div class="ps-2">
-            <span><p class="small card-text">${cake.weight}</p></span>
-            <span><p class="small card-text">Rs. ${cake.price}</p></span>
-            <p class="small card-text rating">${cake.rating} <span class="text-warning fa fa-star"></span></p>
-          </div>
-          <div class="align-self-end">
-            <button class="btn border qb-btn me-1" onclick="quickBuy(${index}); event.stopPropagation();">Quick Buy</button>
-          </div>
+      function displayFilteredCakes(cakes) {
+        const productList = document.getElementById("productList");
+        productList.innerHTML = "";
+        cakes.forEach((cake, index) => {
+          const isWishlisted = wishlist.some(
+            (item) => item && item.id === cake.id
+          );
+          const heartClass = isWishlisted ? "fas" : "far";
+          const heartColor = isWishlisted ? "red" : "grey";
+          const cakeCard = `
+        <div class="card product-card mb-4 mt-4" onclick="redirectToCakeDetails(${cake.id});">
+            <img src="${cake.image}" class="" alt="${cake.name}">
+            <span class="wishlist-icon mx-3" onclick="toggleWishlist(${index}, this); event.stopPropagation();">
+                <i class="${heartClass} fa-heart heart-icon rounded-circle" style="scale:1.8; color:${heartColor};"></i>
+            </span>
+            <span class="ps-3 pt-2"><h6 class="card-text">${cake.name}</h6></span>
+            <div class="d-flex justify-content-between p-2">
+                <div class="ps-2">
+                    <span><p class="small card-text">${cake.weight}</p></span>
+                    <span><p class="small card-text">Rs. ${cake.price}</p></span>
+                    <p class="small card-text rating">${cake.rating} <span class="text-warning fa fa-star"></span></p>
+                </div>
+                <div class="align-self-end">
+                    <button class="btn border qb-btn me-1" onclick="quickBuy(${index}); event.stopPropagation();">Quick Buy</button>                
+                </div>
+            </div>
         </div>
-      </div>
-    `;
-    productList.innerHTML += cakeCard;
-  });
-}
-
-function redirectToProductPage(index) {
-  localStorage.setItem("selectedCake", JSON.stringify(cakes[index]));
-  window.location.href = "sproduct.html"; // Replace with the actual path if needed
-}
-        
-
-    //   function redirectToProductPage(index) {
-    //   localStorage.setItem("selectedCake", JSON.stringify(cakes[index]));
-    //   window.location.href = "sproduct.html";
-    // }
+        `;
+          productList.innerHTML += cakeCard;
+        });
+      }
 
       function addToCart(cakeId) {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -1101,7 +1539,7 @@ function redirectToProductPage(index) {
         }
 
         localStorage.setItem("cart", JSON.stringify(cart));
-        window.location.href = "../Cart_Page/cart.html";
+        window.location.href = "../Cart Page/cart.html";
       }
 
       let selectedCake = {};
@@ -1134,6 +1572,30 @@ function redirectToProductPage(index) {
         document.getElementById("modalProductPrice").value = basePrice; // Store only the numeric value
       }
 
+      var selectedOptions = {
+        Layers: "",
+        "By Shapes": "",
+        "By Flavour": "",
+        "By Occasion": "",
+        "Trending Cakes": "",
+        "Unique Cakes": "",
+        "Premium Cakes": "",
+      };
+
+      function handleSelection(event, category, value) {
+        event.preventDefault();
+        selectedOptions[category] = value;
+        updateDisplay();
+      }
+
+      function updateDisplay() {
+        var displayText =
+          Object.values(selectedOptions).filter(Boolean).join(" - ") ||
+          "Select Cake Type";
+        var selectButton = document.getElementById("caketypeFilter");
+        selectButton.innerHTML = displayText;
+      }
+
       function addToCart(cartItem) {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
         const existingItemIndex = cart.findIndex(
@@ -1152,7 +1614,7 @@ function redirectToProductPage(index) {
         }
 
         localStorage.setItem("cart", JSON.stringify(cart));
-        window.location.href = "../Cart_Page/cart.html"; // Replace with the actual URL of your cart page
+        window.location.href = "../Cart Page/cart.html"; // Replace with the actual URL of your cart page
       }
 
       function buyNow() {
@@ -1185,75 +1647,6 @@ function redirectToProductPage(index) {
 
       // Initial display of cakes
       displayCakes();
-      
-   
-   
-      
-    // document.querySelectorAll('.product-card').forEach(card => {
-    //   card.addEventListener('click', function () {
-    //     const cakeId = this.getAttribute('cake-id');
-    //     window.location.href = `sproduct.html?cakeId=${cakeId}`;
-    //   });
-    // });
-
-    var selectedOptions = {
-        'Layers': '',
-        'By Shapes': '',
-        'By Flavour': '',
-        'By Occasion': '',
-        'Trending Cakes': '',
-        'Unique Cakes': '',
-        'Premium Cakes': ''
-      };
-
-      function handleSelection(event, category, value) {
-        event.preventDefault();
-        selectedOptions[category] = value;
-        updateDisplay();
-      }
-
-      function updateDisplay() {
-        var displayText = Object.values(selectedOptions).filter(Boolean).join(' - ') || 'Select Cake Type';
-        var selectButton = document.getElementById('caketypeFilter');
-        selectButton.innerHTML = displayText;
-      }
-
-
-      function redirectToProductPage(index) {
-  // Store the selected cake in localStorage
-  localStorage.setItem("selectedCake", JSON.stringify(cakes[index]));
-  // Redirect to the single product page
-  window.location.href = "sproduct.html";
-}
-
-// In the card generation part of the displayCakes function:
-const cakeCard = `
-  <div class="card product-card mb-4 mt-4" onclick="redirectToProductPage(${index})">
-    <img src="${cake.image}" class="" alt="${cake.name}">
-    <!-- Rest of the card content -->
-  </div>
-`;
-productList.innerHTML += cakeCard;
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Retrieve the selected cake from localStorage
-  const selectedCake = JSON.parse(localStorage.getItem("selectedCake"));
-
-  if (selectedCake) {
-    // Populate the product page with selected cake details
-    document.getElementById("productImage").src = selectedCake.image;
-    document.getElementById("productName").innerText = selectedCake.name;
-    document.getElementById("productDescription").innerText = selectedCake.description || "No description available.";
-    document.getElementById("productPrice").innerText = `Rs. ${selectedCake.price}`;
-    document.getElementById("productWeight").innerText = selectedCake.weight;
-    // Add more elements as needed
-  } else {
-    // Handle the case where no cake data is found
-    console.error("No cake data found");
-  }
-});
-
-    
     </script>
   </body>
 </html>

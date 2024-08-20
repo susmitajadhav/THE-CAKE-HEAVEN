@@ -8,6 +8,10 @@
           price: 500,
           rating: 4.7,
           image: "../Media/DC.jpg",
+          image1:"../Media/VCC.webp",
+          image2:"../Media/FC.webp",
+          image3:"../Media/choclate.webp",
+          image4:"../Media/choco-vanilla.webp",
           description: "Delicious chocolate cake",
           },
          {
@@ -18,7 +22,11 @@
           availability: "In Stock",
           price: 600,
           rating: 4.5,
-          image: "../Media/VCC.webp",
+          image: "../Media/DC.jpg",
+          image1:"../Media/VCC.webp",
+          image2:"../Media/HCC.jpg",
+          image3:"../Media/CH.jpg",
+          image4:"../Media/VCC.webp",
           description: "Delicious vanilla cake",
         },
         {
@@ -30,6 +38,10 @@
           price: 350,
           rating: 4.5,
           image: "../Media/HCC.jpg",
+          image1:"../Media/choco-vanilla.webp",
+          image2:"../Media/HCC.jpg",
+          image3:"../Media/VCC.webp",
+          image4:"../Media/CH.jpg",
           description: "Delicious Black-Forest cake",
         },
         {
@@ -40,7 +52,11 @@
           availability: "In Stock",
           price: 4000,
           rating: 4.5,
-          image: "../Media/CH.jpg ",
+          image: "../Media/CH.jpg",
+          image1:"../Media/choco-vanilla.webp",
+          image2:"../Media/HC.jpeg",
+          image3:"../Media/HCC.jpg",
+          image4:"../Media/choco-vanilla.webp",
           description: "Delicious Red Velvet cake",
         },
         {
@@ -52,6 +68,10 @@
           price: 3200,
           rating: 4.5,
           image: "../Media/CC1.jpg",
+          image1:"../Media/EC.jpg",
+          image2:"../Media/choclate.webp",
+          image3:"../Media/choco-vanilla.webp",
+          image4:"../Media/HCC.jpg",
           description: "Delicious Chocolate Caremal cake",
         },
         {
@@ -63,6 +83,10 @@
           price: 2700,
           rating: 4.5,
           image: "../Media/CC2.jpg",
+          image1:"../Media/choclate.webp",
+          image2:"../Media/HCC.jpg",
+          image3:"../Media/choclate.webp",
+          image4:"../Media/choco-vanilla.webp",
           description: "Delicious Black Current cake",
         },
         {
@@ -74,6 +98,10 @@
           price: 2200,
           rating: 4.5,
           image: "../Media/BCC.jpg",
+          image1:"../Media/choclate.webp",
+          image2:"../Media/choco-vanilla.webp",
+          image3:"../Media/CC2.jpg",
+          image4:"../Media/HCC.jpg",
           description: "Delicious Butter cake",
         },
         {
@@ -85,6 +113,10 @@
           price: 1600,
           rating: 4.5,
           image: "../Media/BB.webp",
+          image1:"../Media/BCC.jpg",
+          image2:"../Media/choclate.webp",
+          image3:"../Media/choco-vanilla.webp",
+          image4:"../Media/CH.jpg",
           description: "Delicious Ice cake",
         },
         {
@@ -96,26 +128,13 @@
           price: 1600,
           rating: 4.5,
           image: "../Media/fresh fruit.webp",
+          image1:"../Media/choco-vanilla.webp",
+          image2:"../Media/CH.jpg",
+          image3:"../Media/BCC.jpg",
+          image4:"../Media/BB.webp",
           description: "Delicious Ice cake",
         },
 
         // Add more cakes as needed
       ];
 
-      document.addEventListener('DOMContentLoaded', function() {
-        const cakeId = parseInt(new URLSearchParams(window.location.search).get('cakeId'));
-        const cake = cakes.find(c => c.id === cakeId);
-        
-        if (cake) {
-          document.getElementById('cake-name').innerText = cake.name;
-          document.getElementById('cake-weight').innerText = cake.weight;
-          document.getElementById('cake-eggOrEggless').innerText = cake.eggOrEggless;
-          document.getElementById('cake-availability').innerText = cake.availability;
-          document.getElementById('cake-price').innerText = `₹ ${cake.price}`;
-          document.getElementById('cake-rating').innerText = `Rating: ${cake.rating}`;
-          document.getElementById('cake-image').src = cake.image;
-          document.getElementById('cake-description').innerText = cake.description;
-        } else {
-          document.getElementById('product-info').innerText = "Cake not found!";
-        }
-      });

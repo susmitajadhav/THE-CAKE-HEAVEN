@@ -156,81 +156,157 @@
       section a {
         text-decoration: none;
       }
+      .navbar-nav {
+        text-align: center;
+      }
+      .navbar-nav .nav-link {
+       padding: 10px 0;
+       display: block;
+       color: black!important; 
+      }
+      .navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+    .navbar-nav .nav-item {
+     text-align: center;
+     margin-left: 1.2rem;
+  }
+      @media (max-width: 600px) {
+        .header .row > div {
+          margin-bottom: 10px;
+        }
+        .header .row > div:last-child {
+          margin-bottom: 0;
+        }
+        .navbar-nav a{
+         color: black !important;
+         font-weight: bold !important;
+        font-size: 20px !important;
+        transition: all ease 0.3s !important;
+        }
+        .header input.form-control {
+          width: 80%; 
+          padding: 8px 15px; 
+          font-size: 12px; 
+          margin: 0 auto;
+        }
+        .container.col-lg-4 {
+        width: 80%; 
+        margin: 0 auto; 
+        padding: 10px;
+    }
+       #profileForm .form-control, 
+       #profileForm .form-select {
+        font-size: 14px; 
+        padding: 10px; 
+    }
+       #profileForm .btn {
+        font-size: 14px; 
+        padding: 10px 15px; 
+        width: 100%; 
+        margin-top: 10px; 
+    }
+    #profileForm .form-label {
+        display: none;
+    }
+    #profileForm .form-control::placeholder,
+    #profileForm .form-select::placeholder {
+        font-size: 16px; 
+    }
+    .side-card {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the cards */
+  }
+  }
     </style>
   </head>
   <body>
-    <div class="d-flex header justify-content-between pb-2">
-      <div class="col pt-2 px-2">
-        <a href="../index.html"
-          ><img
-            src="../Media/logo.jpg"
-            class="border-end border-dark rounded-pill"
-            width="80px"
-            height="80px"
-            alt=""
-        /></a>
-      </div>
-      <div class="col mt-2 align-self-center">
-        <input
-          class="form-control rounded-pill p-2 text-center"
-          type="search"
-          placeholder="Search for cakes, desserts, and more"
-          aria-label="Search"
-        />
-      </div>
-      <div
-        class="col d-flex justify-content-end text-end icons align-self-center mb-1"
-      >
-        <div class="toggle-switch">
-          <input type="checkbox" id="darkModeSwitch" />
-          <label for="darkModeSwitch">
-            <span class="icon sun"><i class="fas fa-sun"></i></span>
-            <span class="icon moon"><i class="fas fa-moon"></i></span>
-          </label>
+    <div class="container">
+      <div class="header pb-2">
+        <div class="row">
+          <!-- Logo and Icons Row for Mobile View -->
+          <div class="col-12 d-flex d-md-none justify-content-between align-items-center">
+            <div class="pt-2">
+              <a href="../index.html">
+                <img
+                  src="../Media/logo.jpg"
+                  class="border-end border-dark rounded-circle"
+                  width="60px"
+                  height="60px"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="d-flex justify-content-end text-end icons">
+              <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-2"></i></a>
+              <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s px-2"></i></a>
+              <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-2"></i></a>
+            </div>
+          </div>
+    
+          <!-- Logo for Laptop View -->
+          <div class="col-md-4 d-none d-md-flex align-items-center pt-2 px-2">
+            <a href="../index.html">
+              <img
+                src="../Media/logo.jpg"
+                class="border-end border-dark rounded-circle"
+                width="80px"
+                height="80px"
+                alt=""
+              />
+            </a>
+          </div>
+    
+          <!-- Search Bar -->
+          <div class="col-12 col-md-4 mt-2 align-self-center">
+            <input
+              class="form-control rounded-pill p-2 text-center"
+              type="search"
+              placeholder="Search for cakes, desserts, and more"
+              aria-label="Search"
+            />
+          </div>
+    
+          <!-- Icons for Laptop View -->
+          <div class="col-md-4 d-none d-md-flex justify-content-end text-end icons align-self-center mb-2">
+            <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-4"></i></a>
+            <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s"></i></a>
+            <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-4" aria-hidden="true"></i></a>
+          </div>
         </div>
-        <a href="../Cart_Page/cart.html"
-          ><i
-            class="fas fa-cart-shopping icon-s px-3"
-          ></i
-        ></a>
-        <a href="../Cart_Page/wishlist.html"
-          ><i
-            class="fas fa-heart icon-s"
-          ></i
-        ></a>
-        <a href="../Profile_Page/profile.html"
-          ><i
-            class="fa fa-user icon-s px-3"
-            aria-hidden="true"
-          ></i
-        ></a>
       </div>
     </div>
 
-    <div
-      class="col-12 col-sm-12 col-md-12 justify-content-center border-bottom border-top breadcrumb mb-0 mt-2"
-    >
-      <div class="row">
-        <div class="pt-3 px-2 pb-3 col-2 col-sm-3 col-md-3">
-          <a class="nav-link active" href="../index.html">Home</a>
-        </div>
-        <div class="pt-3 px-2 pb-3 col-2 col-sm-3 col-md-3">
-          <a class="nav-link" href="../Category_Page/cake_list.html"
-            >Catalogue</a
-          >
-        </div>
-        <div class="pt-3 px-5 pb-3 col-2 col-sm-3 col-md-3">
-          <a class="nav-link" href="../Quick_Pages/about.html">About</a>
-        </div>
-        <div class="pt-3 px-5 pb-3 col-2 col-sm-3 col-md-3">
-          <a class="nav-link" href="../Quick_Pages/about.html">Contact</a>
+    <nav class="navbar navbar-expand-lg breadcrumb navbar-light border-bottom border-top">
+      <!-- Navbar Toggler for Mobile View -->
+      <button
+        class="navbar-toggler d-md-none"
+        type="button"
+        data-toggle="collapse"
+        data-target="#breadcrumbMenu"
+        aria-controls="breadcrumbMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <!-- Breadcrumb Menu -->
+      <div class="collapse navbar-collapse" id="breadcrumbMenu">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="../index.html">Home</a>
+          <a class="nav-item nav-link" href="../Category_Page/cake_list.html">Catalogue</a>
+          <a class="nav-item nav-link" href="../Quick_Pages/about.html">About</a>
+          <a class="nav-item nav-link" href="../Quick_Pages/about.html">Contact</a>
         </div>
       </div>
-    </div>
+    </nav>
 
     <div class="pb-5 pt-2 col-lg-12">
       <div class="row">
-        <div class="col-lg-2 mt-5 side-card text-center align-self-top">
+        <div class="col-lg-2 mt-5 side-card text-center align-self-top mx-4">
           <div class="sticky-filter mt-3">
             <a
               class="nav-link active mt-4 mx-2 mb-3"
@@ -481,34 +557,16 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const toggleSwitch = document.getElementById("darkModeSwitch");
+       document.addEventListener("DOMContentLoaded", function () {
+        var toggler = document.querySelector('.navbar-toggler');
+        var menu = document.querySelector('#breadcrumbMenu');
 
-        function applyDarkModePreference() {
-          if (localStorage.getItem("darkMode") === "enabled") {
-            document.body.classList.add("dark-mode");
-            toggleSwitch.checked = true;
-          } else {
-            document.body.classList.remove("dark-mode");
-            toggleSwitch.checked = false;
-          }
-        }
-
-        function toggleDarkMode() {
-          if (toggleSwitch.checked) {
-            document.body.classList.add("dark-mode");
-            localStorage.setItem("darkMode", "enabled");
-          } else {
-            document.body.classList.remove("dark-mode");
-            localStorage.setItem("darkMode", "disabled");
-          }
-        }
-
-        toggleSwitch.addEventListener("change", toggleDarkMode);
-        applyDarkModePreference();
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
+        toggler.addEventListener('click', function () {
+        menu.classList.toggle('show');
+       });
+     });
+      
+       document.addEventListener("DOMContentLoaded", function () {
         var currentLocation = window.location.pathname;
         var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 

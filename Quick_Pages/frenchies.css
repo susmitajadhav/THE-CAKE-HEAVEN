@@ -1,80 +1,7 @@
 body {
     font-family: "Poppins", sans-serif;
   }
-  body.dark-mode {
-    background-color: rgb(60, 60, 60);
-    color: white;
-    
-   
-    #dropdownMenuButton1{
-      color: black;
-    }
-    .fa-cart-shopping {
-      color: pink;
-    }
-    .fa-heart {
-      color: red;
-    }
-    .fa-user {
-      color: skyblue;
-    }
-    footer,
-    section {
-      color: black;
-    }
-  }
-  .toggle-switch {
-    top: 20px;
-    right: 20px;
-  }
-
-  .toggle-switch input[type="checkbox"] {
-    display: none;
-  }
-
-  .toggle-switch label {
-    display: block;
-    width: 50px;
-    height: 25px;
-    background-color: black;
-    border-radius: 25px;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .toggle-switch label .icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .toggle-switch label .sun {
-    left: 5px;
-    color: #f7df06;
-    opacity: 1;
-    transition: opacity 0.3s;
-  }
-
-  .toggle-switch label .moon {
-    right: 5px;
-    color: #ffff;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-
-  .toggle-switch input[type="checkbox"]:checked + label .sun {
-    opacity: 0;
-  }
-
-  .toggle-switch input[type="checkbox"]:checked + label .moon {
-    opacity: 1;
-  }
-  .icon-s {
+ .icon-s {
     font-size: 22px;
     cursor: pointer;
     color: black;
@@ -145,25 +72,9 @@ blockquote {
     border-radius: 0;
     width: 120%;
 }
-/* .french{
-    background-color: #ffabc7;
-} */
 .french1{
     background-color: #ffabc7;
 }
-/* .accordion-item{
-    background-color:white ;
-} */
-/* button.accordion-button{
-    background-color: #ffabc7;
-} */
-/* .accordion-body{
-  background-color: #ffabc7;
-} */
-/* .accordion{
-    
-} */
-
 .french3{
   background-color: white;
 }
@@ -175,4 +86,90 @@ blockquote {
 }
 .accordion-button{
 background-color: #ffabc7;
+}
+@media (max-width: 600px){
+  .breadcrumb {
+    justify-content: space-around;
+   }
+  .navbar-nav {
+    background-color: grey;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    z-index: 1000;
+   }
+  .dropdown-menu {
+    display: none;
+   }
+  .breadcrumb a {
+    font-size: 1rem;
+   }
+  .dropdowns li a {
+   font-size: 14px;
+  }
+  .dropdown-menu.show {
+   display: block;
+   position: static;
+   float: none;
+   background-color: white;
+   border: 1px solid rgba(0, 0, 0, 0.15);
+   margin-top: 0;
+  }
+  .header .row > div {
+    margin-bottom: 10px;
+  }
+  .header .row > div:last-child {
+    margin-bottom: 0;
+  }
+  .header input.form-control {
+    width: 80%; 
+    padding: 8px 15px; 
+    font-size: 12px; 
+    margin: 0 auto;
+  }
+  .modal-dialog {
+    margin: 20px auto;
+    max-width: 90%;
+}
+
+/* Ensure form fields are properly spaced and sized */
+#contactForm .form-control {
+    font-size: 14px;
+    padding: 8px;
+}
+
+/* Full-width submit button for mobile */
+#contactForm button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* Adjust label font size for better readability */
+#contactForm .form-label {
+    font-size: 14px;
+}
+
+/* Reduce padding around modal content */
+.modal-content {
+    padding: 10px;
+}
+
+/* Ensure the modal title and close button align correctly */
+.modal-header {
+    padding: 10px 15px;
+}
+
+.modal-title {
+    font-size: 18px;
+}
+
+.btn-close {
+    padding: 0;
+    margin-top: -5px;
+}
 }

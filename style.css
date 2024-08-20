@@ -545,12 +545,22 @@ input[type="radio"]:checked + .radios-buttons label[for="radio3"] {
     width: 100%;
     height: 10%;
     margin: auto;
+    object-fit: cover !important; 
   }
-  .user-satisfaction {
+  .banner-sliders {
+    width: 98%;
+    height: auto;
+  }
+  .ad-banner{
+    padding: 0px;
+  }
+  .main-page{
+    padding: 0px;
+  }
+ .user-satisfaction {
     font-size: 1rem;
   }
-
-  .item {
+ .item {
     min-width: calc(100%);
     text-align: center;
     height: 23rem;
@@ -565,5 +575,9 @@ input[type="radio"]:checked + .radios-buttons label[for="radio3"] {
     right: 0px;
     font-size: 2rem;
   }
-  
+  .what-we-do .item-img{
+    min-width: calc(50% - 1rem); /* Two items per row with spacing */
+    margin: 0.5rem; /* Space between items */
+    height: auto; /* Adjust height to maintain aspect ratio */
+  }
 }

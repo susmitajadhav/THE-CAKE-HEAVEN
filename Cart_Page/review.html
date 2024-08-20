@@ -23,99 +23,6 @@
       body {
         font-family: "Poppins", sans-serif;
       }
-
-      body.dark-mode {
-        background-color: rgb(60, 60, 60);
-        color: white;
-
-        #Order-Summary {
-          background-color: rgb(60, 60, 60);
-          color: white;
-          border: 1px solid white;
-        }
-        #order-details-card {
-          background-color: rgb(60, 60, 60);
-          color: white;
-          border: 1px solid white;
-        }
-        .form-text {
-          color: white;
-        }
-        .empty-cart-image {
-          mix-blend-mode: color-dodge;
-          border-radius: 20px;
-        }
-        .fa-cart-shopping {
-          color: pink;
-        }
-        .fa-heart {
-          color: red;
-        }
-        .fa-user {
-          color: skyblue;
-        }
-
-        section {
-          color: black;
-        }
-        #rewardHistory,
-        #rewardBalance {
-          color: black;
-        }
-      }
-
-      .toggle-switch {
-        top: 20px;
-        right: 20px;
-      }
-
-      .toggle-switch input[type="checkbox"] {
-        display: none;
-      }
-
-      .toggle-switch label {
-        display: block;
-        width: 50px;
-        height: 25px;
-        background-color: black;
-        border-radius: 25px;
-        position: relative;
-        cursor: pointer;
-      }
-
-      .toggle-switch label .icon {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .toggle-switch label .sun {
-        left: 5px;
-        color: #f7df06;
-        opacity: 1;
-        transition: opacity 0.3s;
-      }
-
-      .toggle-switch label .moon {
-        right: 5px;
-        color: #ffff;
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
-
-      .toggle-switch input[type="checkbox"]:checked + label .sun {
-        opacity: 0;
-      }
-
-      .toggle-switch input[type="checkbox"]:checked + label .moon {
-        opacity: 1;
-      }
-
       .breadcrumb {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         background-color: #ffabc7;
@@ -174,7 +81,6 @@
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
-
       .sticky-filter {
         position: sticky;
         top: 20px;
@@ -203,71 +109,211 @@
       .form-text {
         color: black;
       }
+      @media (max-width: 600px) {
+       .main-page {
+        padding: 15px 0;
+       }
 
+      .order-container {
+        margin: 0 auto;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+       }
 
+       #cartItems .cake-card {
+        flex-direction: column;
+        text-align: center;
+       }
+
+       #cartItems .cake-card img.cake-img {
+         width: 100%;
+         height: auto;
+         margin-bottom: 10px;
+        }
+
+        #cartItems .cake-card div {
+          width: 100%;
+        }
+
+        #cartItems .cake-card .d-flex {
+          justify-content: center;
+          margin-top: 10px;
+        }
+
+        #cartItems .cake-card .btn {
+         padding: 5px 10px;
+         font-size: 0.9rem;
+        }
+
+        .form-check-label {
+          font-size: 1rem;
+        }
+
+       .form-check-input {
+         margin-right: 10px;
+        }
+
+       .form-label {
+         font-size: 1rem;
+        }
+
+       .form-select, .form-control, .btn {
+         width: 100%;
+         font-size: 1rem;
+        }
+
+       .empty-cart-image {
+         width: 80%;
+         margin: 20px auto;
+        }
+
+       .address-card {
+         padding: 10px;
+        }
+
+       .btn-sm {
+         padding: 5px 10px;
+         font-size: 0.9rem;
+        }
+
+        #deliveryCard {
+          padding: 10px;
+        }
+
+        #Order-Summary-Card, #Address-box, #cart-Container {
+          width: 100%;
+          margin-top: 20px;
+        }
+
+        #proceed-btn {
+          width: 100%;
+        }
+        .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #ffabc7;
+        z-index: 1000;
+        overflow-y: auto;
+      }
+
+      .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        background-color: #ffabc7;
+      }
+
+      .navbar-nav .nav-link { 
+        font-size: 20px;
+        margin: 10px 0;
+      }
+      }
     </style>
   </head>
-
-  <body>
-    <div class="d-flex header justify-content-between pb-2">
-      <div class="col-2 pt-2 px-2">
-        <a href="../index.html"
-          ><img
-            src="../Media/logo.jpg"
-            class="border-end border-dark rounded-pill"
-            width="80px"
-            height="80px"
-            alt=""
-        /></a>
-      </div>
-      <div class="col-8 mt-4 align-self-center">
-        <div class="d-flex justify-content-evenly align-items-center">
-          <h5><i class="fa-solid fa-truck mx-2"></i>100% On Time Delivery</h5>
-          <h5>
-            <i class="fa-solid fa-cake-candles mx-2"></i>100%Fresh And Hygienic
-          </h5>
-          <h5><i class="fas fa-certificate mx-2"></i>fssai Certified</h5>
+<body>
+  <div class="container">
+    <div class="header pb-2">
+      <div class="row">
+        <!-- Logo and Icons Row for Mobile View -->
+        <div class="col-12 d-flex d-md-none justify-content-between align-items-center">
+          <div class="col-2 pt-2 px-2">
+            <a href="../index.html">
+              <img
+                src="../Media/logo.jpg"
+                class="border-end border-dark rounded-pill"
+                width="60px"
+                height="60px"
+                alt="Logo"
+              />
+            </a>
+          </div>
+          <div class="d-flex justify-content-end text-end icons">
+            <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-2"></i></a>
+            <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s px-2"></i></a>
+            <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-2"></i></a>
+          </div>
+        </div>
+  
+        <!-- Middle Content for Mobile View -->
+        <!-- <div class="col-12 d-md-none mt-3 align-self-center text-center">
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex align-items-center">
+              <i class="fa-solid fa-truck mx-2"></i>
+              <h6 class="mb-0">100% On Time Delivery</h6>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+              <i class="fa-solid fa-cake-candles mx-2"></i>
+              <h6 class="mb-0">100% Fresh And Hygienic</h6>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+              <i class="fas fa-certificate mx-2"></i>
+              <h6 class="mb-0">FSSAI Certified</h6>
+            </div>
+          </div>
+        </div> -->
+  
+        <!-- Logo for Laptop View -->
+        <div class="col-md-2 d-none d-md-flex align-items-center pt-2 px-2">
+          <a href="../index.html">
+            <img
+              src="../Media/logo.jpg"
+              class="border-end border-dark rounded-pill"
+              width="80px"
+              height="80px"
+              alt="Logo"
+            />
+          </a>
+        </div>
+  
+        <!-- Middle Content for Laptop View -->
+        <div class="col-md-8 d-none d-md-flex mt-4 align-self-center">
+          <div class="d-flex justify-content-evenly align-items-center">
+            <h5><i class="fa-solid fa-truck mx-2"></i>100% On Time Delivery</h5>
+            <h5><i class="fa-solid fa-cake-candles mx-2"></i>100% Fresh And Hygienic</h5>
+            <h5><i class="fas fa-certificate mx-2"></i>FSSAI Certified</h5>
+          </div>
+        </div>
+  
+        <!-- Icons for Laptop View -->
+        <div class="col-md-2 d-none d-md-flex justify-content-end text-end icons align-self-center mb-1">
+          <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-3 mt-3"></i></a>
+          <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s px-3 mt-3"></i></a>
+          <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-3 mt-3"></i></a>
         </div>
       </div>
-      <div
-        class="col d-flex justify-content-end text-end icons align-self-center mb-1"
-      >
-        <div class="toggle-switch">
-          <input type="checkbox" id="darkModeSwitch" />
-          <label for="darkModeSwitch">
-            <span class="icon sun"><i class="fas fa-sun"></i></span>
-            <span class="icon moon"><i class="fas fa-moon"></i></span>
-          </label>
-        </div>
-        <a href="../Cart_Page/cart.html"
-          ><i class="fas fa-cart-shopping icon-s px-3"></i
-        ></a>
+    </div>
+  </div>
 
-        <a href="../Cart_Page/wishlist.html"
-          ><i class="fas fa-heart icon-s"></i
-        ></a>
-        <a href="../Profile_Page/profile.html"
-          ><i class="fa fa-user icon-s px-3" aria-hidden="true"></i
-        ></a>
+
+  <nav class="navbar navbar-expand-lg breadcrumb">
+    <!-- Navbar Toggler for Mobile View -->
+    <button
+      class="navbar-toggler d-md-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#breadcrumbMenu"
+      aria-controls="breadcrumbMenu"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Breadcrumb Menu -->
+    <div class="collapse navbar-collapse" id="breadcrumbMenu">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="../Cart_Page/cart.html">Cart /</a>
+        <a class="nav-item nav-link" href="../Address_Page/address.html">Delivery Address /</a>
+        <a class="nav-item nav-link" href="../Cart_Page/review.html">Review Order</a>
       </div>
     </div>
-
-    <div class="breadcrumb mb-0 border-top border-bottom">
-      <div class="mt-1 mb-1">
-        <a class="nav-link" href="../Cart_Page/cart.html">Cart /</a>
-      </div>
-      <div class="mt-1 mb-1">
-        <a class="nav-link" href="../Address_Page/address.html"
-          >Delivery Address /</a
-        >
-      </div>
-      <div class="mt-1 mb-1">
-        <a class="nav-link active" href="../Cart_Page/review.html"
-          >Review Order</a
-        >
-      </div>
-    </div>
-
+  </nav>
     <div class="container col-lg-12 main-page text-center my-4 py-4">
       <h2 class="fw-bold">Review Your Order</h2>
       <div class="empty-message text-center" id="empty-message">

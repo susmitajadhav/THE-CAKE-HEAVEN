@@ -576,6 +576,18 @@ section a {
 
 
 @media (max-width: 600px) {
+  .header .row > div {
+    margin-bottom: 10px;
+  }
+  .header .row > div:last-child {
+    margin-bottom: 0;
+  }
+  .header input.form-control {
+    width: 80%; 
+    padding: 8px 15px; 
+    font-size: 12px; 
+    margin: 0 auto;
+  }
   .breadcrumb {
     justify-content: space-around;
   }
@@ -632,4 +644,83 @@ section a {
     margin-bottom: 4px;
     margin-left: 50px;
   }
+  .a{
+    padding: 0px;
+  } /* Adjust heading size and margins */
+  h1.text-center {
+      font-size: 24px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+
+  /* Adjust banner image size */
+  .banner img {
+      height: auto;
+  }
+
+  /* Adjust padding and alignment for About Us section */
+  .a .content {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .a .content .col-lg-6, 
+  .a .content .col-md-6 {
+      padding: 0 15px;
+      text-align: center;
+  }
+
+  .a .content .px-5 {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+  }
+
+  .a .content img.about-img {
+      margin-bottom: 20px;
+  }
+
+  /* Adjust video dimensions */
+  video {
+      height: auto;
+      max-height: 250px;
+  }
+
+  /* Contact Form adjustments */
+  .contact1 .container-xxl {
+      padding: 15px;
+  }
+
+  .contact1 .col-md-6 {
+      padding: 15px;
+  }
+
+  .contact1 .form-floating input,
+  .contact1 .form-floating textarea {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .contact1 .form-floating label {
+      font-size: 12px;
+  }
+
+  .contact1 .btn {
+      padding: 10px;
+      font-size: 16px;
+  }
+  .banner img {
+    height: 50vh; 
 }
+
+.content img.about-img {
+    height: auto; 
+}
+.about-img {
+  width: 120%; 
+  margin-left: -10%; 
+}
+  .contact1 video {
+    height: 250px; 
+}
+}
+

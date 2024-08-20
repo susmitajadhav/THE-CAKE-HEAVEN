@@ -23,85 +23,7 @@
       body {
         font-family: "Poppins", sans-serif;
       }
-
-      body.dark-mode {
-        background-color: rgb(60, 60, 60);
-        color: white;
-
-        .sticky-filter {
-          background-color: rgb(60, 60, 60);
-        }
-        .sticky-filter a {
-          background-color: rgb(60, 60, 60);
-          color: white;
-        }
-        footer,
-        section {
-          color: black;
-        }
-        .fa-cart-shopping {
-          color: pink;
-        }
-        .fa-heart {
-          color: red;
-        }
-        .fa-user {
-          color: skyblue;
-        }
-      }
-
-      .toggle-switch {
-        top: 20px;
-        right: 20px;
-      }
-
-      .toggle-switch input[type="checkbox"] {
-        display: none;
-      }
-
-      .toggle-switch label {
-        display: block;
-        width: 50px;
-        height: 25px;
-        background-color: black;
-        border-radius: 25px;
-        position: relative;
-        cursor: pointer;
-      }
-
-      .toggle-switch label .icon {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .toggle-switch label .sun {
-        left: 5px;
-        color: #f7df06;
-        opacity: 1;
-        transition: opacity 0.3s;
-      }
-
-      .toggle-switch label .moon {
-        right: 5px;
-        color: #ffff;
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
-
-      .toggle-switch input[type="checkbox"]:checked + label .sun {
-        opacity: 0;
-      }
-
-      .toggle-switch input[type="checkbox"]:checked + label .moon {
-        opacity: 1;
-      }
-      .icon-s {
+     .icon-s {
         font-size: 22px;
         cursor: pointer;
         color: black;
@@ -154,8 +76,7 @@
       section a {
         text-decoration: none;
       }
-
-      .order-card {
+     .order-card {
         border: 1px solid #ddd;
         width: 50rem;
         padding: 20px;
@@ -179,54 +100,76 @@
       .order-items img {
         margin-right: 10px;
       }
+      @media (max-width: 600px) {
+        .header .row > div {
+          margin-bottom: 10px;
+        }
+        .header .row > div:last-child {
+          margin-bottom: 0;
+        }
+        .header input.form-control {
+          width: 80%; 
+          padding: 8px 15px; 
+          font-size: 12px; 
+          margin: 0 auto;
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="d-flex header justify-content-between pb-2">
-      <div class="col pt-2 px-2">
-        <a href="../index.html"
-        ><img
-          src="../Media/logo.jpg"
-          class="border-end border-dark rounded-pill"
-          width="80px"
-          height="80px"
-          alt=""
-      /></a>
-      </div>
-      <div class="col mt-2 align-self-center">
-        <input
-          class="form-control rounded-pill"
-          type="search"
-          placeholder="Search for cakes, desserts, and more"
-          aria-label="Search"
-        />
-      </div>
-      <div
-        class="col d-flex justify-content-end text-end icons align-self-center mb-1"
-      >
-        <div class="toggle-switch">
-          <input type="checkbox" id="darkModeSwitch" />
-          <label for="darkModeSwitch">
-            <span class="icon sun"><i class="fas fa-sun"></i></span>
-            <span class="icon moon"><i class="fas fa-moon"></i></span>
-          </label>
+    <div class="container">
+      <div class="header pb-2">
+        <div class="row">
+          <!-- Logo and Icons Row for Mobile View -->
+          <div class="col-12 d-flex d-md-none justify-content-between align-items-center">
+            <div class="pt-2">
+              <a href="../index.html">
+                <img
+                  src="../Media/logo.jpg"
+                  class="border-end border-dark rounded-circle"
+                  width="60px"
+                  height="60px"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="d-flex justify-content-end text-end icons">
+              <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-2"></i></a>
+              <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s px-2"></i></a>
+              <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-2"></i></a>
+            </div>
+          </div>
+    
+          <!-- Logo for Laptop View -->
+          <div class="col-md-4 d-none d-md-flex align-items-center pt-2 px-2">
+            <a href="../index.html">
+              <img
+                src="../Media/logo.jpg"
+                class="border-end border-dark rounded-circle"
+                width="80px"
+                height="80px"
+                alt=""
+              />
+            </a>
+          </div>
+    
+          <!-- Search Bar -->
+          <div class="col-12 col-md-4 mt-2 align-self-center">
+            <input
+              class="form-control rounded-pill p-2 text-center"
+              type="search"
+              placeholder="Search for cakes, desserts, and more"
+              aria-label="Search"
+            />
+          </div>
+    
+          <!-- Icons for Laptop View -->
+          <div class="col-md-4 d-none d-md-flex justify-content-end text-end icons align-self-center mb-2">
+            <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-4"></i></a>
+            <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s"></i></a>
+            <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-4" aria-hidden="true"></i></a>
+          </div>
         </div>
-        <a href="../Cart_Page/cart.html"
-          ><i
-            class="fas fa-cart-shopping icon-s px-3"
-          ></i
-        ></a>
-        <a href="../Cart_Page/wishlist.html"
-          ><i
-            class="fas fa-heart icon-s"
-          ></i
-        ></a>
-        <a href="../Profile_Page/profile.html"
-          ><i
-            class="fa fa-user icon-s px-3"
-            aria-hidden="true"
-          ></i
-        ></a>
       </div>
     </div>
 
