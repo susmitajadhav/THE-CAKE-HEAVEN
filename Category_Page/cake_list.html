@@ -397,49 +397,61 @@
   </head>
 
   <body>
-    <div class="d-flex header justify-content-between pb-2">
-      <div class="col pt-2 px-2">
-        <a href="./index.html">
-          <img
-            src="./Media/logo.jpg"
-            class="border-end border-dark rounded-circle"
-            width="80px"
-            height="80px"
-            alt=""
-          />
-        </a>
-      </div>
-      <div class="col mt-2 align-self-center">
-        <input
-          class="form-control rounded-pill"
-          type="search"
-          placeholder="Search for cakes, desserts, and more"
-          aria-label="Search"
-        />
-      </div>
-      <div
-        class="col d-flex justify-content-end text-end icons align-self-center mb-2"
-      >
-        <div class="toggle-switch">
-          <input type="checkbox" id="darkModeSwitch" />
-          <label for="darkModeSwitch">
-            <span class="icon sun"><i class="fas fa-sun"></i></span>
-            <span class="icon moon"><i class="fas fa-moon"></i></span>
-          </label>
+    <div class="container">
+      <div class="header pb-2">
+        <div class="row">
+          <!-- Logo and Icons Row for Mobile View -->
+          <div class="col-12 d-flex d-md-none justify-content-between align-items-center">
+            <div class="pt-2">
+              <a href="../index.html">
+                <img
+                  src="../Media/logo.jpg"
+                  class="border-end border-dark rounded-circle"
+                  width="60px"
+                  height="60px"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="d-flex justify-content-end text-end icons">
+              <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-2"></i></a>
+              <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s px-2"></i></a>
+              <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-2"></i></a>
+            </div>
+          </div>
+    
+          <!-- Logo for Laptop View -->
+          <div class="col-md-4 d-none d-md-flex align-items-center pt-2 px-2">
+            <a href="../index.html">
+              <img
+                src="../Media/logo.jpg"
+                class="border-end border-dark rounded-circle"
+                width="80px"
+                height="80px"
+                alt=""
+              />
+            </a>
+          </div>
+    
+          <!-- Search Bar -->
+          <div class="col-12 col-md-4 mt-2 align-self-center">
+            <input
+              class="form-control rounded-pill p-2 text-center"
+              type="search"
+              placeholder="Search for cakes, desserts, and more"
+              aria-label="Search"
+            />
+          </div>
+    
+          <!-- Icons for Laptop View -->
+          <div class="col-md-4 d-none d-md-flex justify-content-end text-end icons align-self-center mb-2">
+            <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-4"></i></a>
+            <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s"></i></a>
+            <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-4" aria-hidden="true"></i></a>
+          </div>
         </div>
-        <a href="../Cart_Page/cart.html"
-          ><i class="fas fa-cart-shopping icon-s px-4"></i
-        ></a>
-
-        <a href="../Cart_Page/wishlist.html"
-          ><i class="fas fa-heart icon-s"></i
-        ></a>
-        <a href="../Profile_Page/profile.html"
-          ><i class="fa fa-user icon-s px-4" aria-hidden="true"></i
-        ></a>
       </div>
     </div>
-
     <nav
       class="navbar navbar-expand-lg breadcrumb navbar-light border-bottom border-top"
     >
@@ -1651,3 +1663,5 @@
     </script>
   </body>
 </html>
+
+
