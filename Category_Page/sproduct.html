@@ -439,169 +439,277 @@
         line-height: 25px;
       }
     }
+
+    @media (max-width: 600px) {
+         .breadcrumb {
+           justify-content: space-around;
+          }
+         .navbar-nav {
+           background-color: grey;
+           width: 100%;
+           height: auto;
+           display: flex;
+           flex-direction: column;
+           position: absolute;
+           top: 4rem;
+           left: 0;
+           z-index: 1000;
+          }
+         .dropdown-menu {
+           display: none;
+          }
+         .breadcrumb a {
+           font-size: 1rem;
+          }
+         .dropdowns li a {
+          font-size: 14px;
+         }
+         .dropdown-menu.show {
+          display: block;
+          position: static;
+          float: none;
+          background-color: white;
+          border: 1px solid rgba(0, 0, 0, 0.15);
+          margin-top: 0;
+         }
+         #searchInput{
+          width: 100%;
+          padding: 8px;
+          font-size: 14px;
+        }
+        input.form-control {
+          padding: 6px 10px;
+          font-size: 12px;
+          width: 100%;
+        }
+        .header .row > div {
+          margin-bottom: 10px;
+        }
+        .header .row > div:last-child {
+          margin-bottom: 0;
+        }
+        .header input.form-control {
+          width: 80%; 
+          padding: 8px 15px; 
+          font-size: 12px; 
+          margin: 0 auto;
+        }
+      }
     </style>
   </head>
 
   <body>
-    <div class="d-flex header justify-content-between pb-2">
-      <div class="col pt-2 px-2">
-        <a href="./index.html">
-          <img
-            src="./Media/logo.jpg"
-            class="border-end border-dark rounded-circle"
-            width="80px"
-            height="80px"
-            alt=""
-          />
-        </a>
-      </div>
-      <div class="col mt-2 align-self-center">
-        <input
-          class="form-control rounded-pill p-2 text-center"
-          type="search"
-          placeholder="Search for cakes, desserts, and more"
-          aria-label="Search"
-        />
-      </div>
-      <div
-        class="col d-flex justify-content-end text-end icons align-self-center mt-4 mb-2"
-      >
-        <div class="toggle-switch">
-          <input type="checkbox" id="darkModeSwitch" />
-          <label for="darkModeSwitch">
-            <span class="icon sun"><i class="fas fa-sun"></i></span>
-            <span class="icon moon"><i class="fas fa-moon"></i></span>
-          </label>
-        </div>
-        <a href="./Cart Page/cart.html"
-          ><i class="fas fa-cart-shopping icon-s px-4"></i
-        ></a>
-
-        <a href="./Cart Page/wishlist.html"
-          ><i class="fas fa-heart icon-s"></i
-        ></a>
-        <a href="./Profile Page/profile.html"
-          ><i class="fa fa-user icon-s px-4" aria-hidden="true"></i
-        ></a>
-      </div>
-    </div>
-    <div
-      class="d-flex breadcrumb justify-content-center border-bottom border-top gap-5 mb-0 pt-0 px-5"
-    >
-      <div class="dropdown mx-3">
-        <label
-          class="dropdown-toggle"
-          id="dropdownMenuButton1"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <a class="" href="">Cakes</a>
-        </label>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <div class="d-flex m-0">
-            <div class="dropdowns">
-              <li>
-                <a class="dropdown-item" href="#"><b>Layers</b></a>
-              </li>
-              <li><a class="dropdown-item" href="#">One</a></li>
-              <li><a class="dropdown-item" href="#">Two</a></li>
-              <li><a class="dropdown-item" href="#">Three</a></li>
+    <div class="container">
+      <div class="header pb-2">
+        <div class="row">
+          <!-- Logo and Icons Row for Mobile View -->
+          <div class="col-12 d-flex d-md-none justify-content-between align-items-center">
+            <div class="pt-2">
+              <a href="../index.html">
+                <img
+                  src="../Media/logo.jpg"
+                  class="border-end border-dark rounded-circle"
+                  width="60px"
+                  height="60px"
+                  alt=""
+                />
+              </a>
             </div>
-            <div class="dropdowns d-flex flex-column">
-              <li>
-                <a class="dropdown-item" href="#"><b>By Shapes</b></a>
-              </li>
-              <li><a class="dropdown-item" href="#">Square</a></li>
-              <li><a class="dropdown-item" href="#">Circle</a></li>
-              <li><a class="dropdown-item" href="#">Heart</a></li>
-              <li><a class="dropdown-item" href="#">Tall</a></li>
-            </div>
-            <div class="dropdowns d-flex flex-column">
-              <li>
-                <a class="dropdown-item" href="#"><b>By Flavour</b></a>
-              </li>
-              <li><a class="dropdown-item" href="#">Choclate</a></li>
-              <li><a class="dropdown-item" href="#">Blueberry</a></li>
-              <li><a class="dropdown-item" href="#">Pineapple</a></li>
-              <li><a class="dropdown-item" href="#">Fresh Fruit</a></li>
-              <li><a class="dropdown-item" href="#">Red Velvet</a></li>
-              <li><a class="dropdown-item" href="#">Vanilla</a></li>
-              <li><a class="dropdown-item" href="#">Butterscotch</a></li>
-            </div>
-            <div class="dropdowns d-flex flex-column">
-              <li>
-                <a class="dropdown-item" href="#"><b>By Occasion</b></a>
-              </li>
-              <li><a class="dropdown-item" href="#">Birthday</a></li>
-              <li><a class="dropdown-item" href="#">Anniversary</a></li>
-              <li><a class="dropdown-item" href="#">Wedding</a></li>
-              <li><a class="dropdown-item" href="#">Baby Shower</a></li>
-              <li><a class="dropdown-item" href="#">Engagement</a></li>
-              <li><a class="dropdown-item" href="#">Mother's Day</a></li>
-              <li><a class="dropdown-item" href="#">Father's Day</a></li>
-            </div>
-            <div class="dropdowns d-flex flex-column">
-              <li>
-                <a class="dropdown-item" href="#"><b>By Occasion</b></a>
-              </li>
-              <li><a class="dropdown-item" href="#">Valentines Day</a></li>
-              <li><a class="dropdown-item" href="#">Classic Cakes</a></li>
-              <li><a class="dropdown-item" href="#">Friendships Day</a></li>
-              <li><a class="dropdown-item" href="#">New Year</a></li>
-              <li><a class="dropdown-item" href="#">Christmas</a></li>
-              <li><a class="dropdown-item" href="#">Teacher's Day</a></li>
-              <li><a class="dropdown-item" href="#">Fairwell Cakes</a></li>
-            </div>
-            <div class="dropdowns d-flex flex-column">
-              <li>
-                <a class="dropdown-item" href="#"><b>Trending Cakes</b></a>
-              </li>
-              <li><a class="dropdown-item" href="#">Pull Me Up Cake</a></li>
-              <li><a class="dropdown-item" href="#">Pinata Cake</a></li>
-              <li><a class="dropdown-item" href="#">Half Cake</a></li>
-              <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
-              <li><a class="dropdown-item" href="#">Bento Cake</a></li>
-              <li><a class="dropdown-item" href="#">Surprise Cake Box</a></li>
-              <li>
-                <a class="dropdown-item" href="#">Photo Pulling Cake</a>
-              </li>
-            </div>
-            <div class="dropdowns d-flex flex-column h-25">
-              <li>
-                <a class="dropdown-item" href="#"><b>Unique Cakes</b></a>
-              </li>
-              <li><a class="dropdown-item" href="#">Moose Cake</a></li>
-              <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
-            </div>
-            <div class="dropdowns d-flex flex-column h-25">
-              <li>
-                <a class="dropdown-item" href="#"><b>Premium Cakes</b></a>
-              </li>
+            <div class="d-flex justify-content-end text-end icons">
+              <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-2"></i></a>
+              <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s px-2"></i></a>
+              <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-2"></i></a>
             </div>
           </div>
-        </ul>
-      </div>
-
-      <div class="mt-1 mx mb-3">
-        <a class="nav-link" href="./Category Page/cake_list.html">Cup-Cakes</a>
-      </div>
-      <div class="mt-1 mx-3 mb-3">
-        <a class="nav-link" href="./Category Page/cake_list.html">Pastrey</a>
-      </div>
-      <div class="mt-1 mx-3 mb-3">
-        <a class="nav-link" href="./Category Page/cake_list.html">Desserts</a>
-      </div>
-      <div class="mt-1 mx-3 mb-3">
-        <a class="nav-link" href="./Category Page/cake_list.html"
-          >Trending Cakes</a
-        >
-      </div>
-      <div class="mt-1 mb-3">
-        <a class="nav-link" href="./Category Page/cake_list.html"
-          >Unique Cakes</a
-        >
+    
+          <!-- Logo for Laptop View -->
+          <div class="col-md-4 d-none d-md-flex align-items-center pt-2 px-2">
+            <a href="../index.html">
+              <img
+                src="../Media/logo.jpg"
+                class="border-end border-dark rounded-circle"
+                width="80px"
+                height="80px"
+                alt=""
+              />
+            </a>
+          </div>
+    
+          <!-- Search Bar -->
+          <div class="col-12 col-md-4 mt-2 align-self-center">
+            <input
+              class="form-control rounded-pill p-2 text-center"
+              type="search"
+              placeholder="Search for cakes, desserts, and more"
+              aria-label="Search"
+            />
+          </div>
+    
+          <!-- Icons for Laptop View -->
+          <div class="col-md-4 d-none d-md-flex justify-content-end text-end icons align-self-center mb-2">
+            <a href="../Cart_Page/cart.html"><i class="fas fa-cart-shopping icon-s px-4"></i></a>
+            <a href="../Cart_Page/wishlist.html"><i class="fas fa-heart icon-s"></i></a>
+            <a href="../Profile_Page/profile.html"><i class="fa fa-user icon-s px-4" aria-hidden="true"></i></a>
+          </div>
+        </div>
       </div>
     </div>
+    <nav
+      class="navbar navbar-expand-lg breadcrumb navbar-light border-bottom border-top"
+    >
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" onclick="toggleNavbar()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown mx-3">
+              <a
+                class="nav-link text-dark dropdown-toggle"
+                href="#"
+                id="dropdownMenuButton1"
+                onclick="toggleDropdown(event)"
+                >Cakes</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <div class="d-flex flex-wrap">
+                  <div class="dropdowns">
+                    <li>
+                      <a class="dropdown-item" href="#"><b>Layers</b></a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">One</a></li>
+                    <li><a class="dropdown-item" href="#">Two</a></li>
+                    <li><a class="dropdown-item" href="#">Three</a></li>
+                  </div>
+                  <div class="dropdowns">
+                    <li>
+                      <a class="dropdown-item" href="#"><b>By Shapes</b></a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Square</a></li>
+                    <li><a class="dropdown-item" href="#">Circle</a></li>
+                    <li><a class="dropdown-item" href="#">Heart</a></li>
+                    <li><a class="dropdown-item" href="#">Tall</a></li>
+                  </div>
+                  <div class="dropdowns">
+                    <li>
+                      <a class="dropdown-item" href="#"><b>By Flavour</b></a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Chocolate</a></li>
+                    <li><a class="dropdown-item" href="#">Blueberry</a></li>
+                    <li><a class="dropdown-item" href="#">Pineapple</a></li>
+                    <li><a class="dropdown-item" href="#">Fresh Fruit</a></li>
+                    <li><a class="dropdown-item" href="#">Red Velvet</a></li>
+                    <li><a class="dropdown-item" href="#">Vanilla</a></li>
+                    <li><a class="dropdown-item" href="#">Butterscotch</a></li>
+                  </div>
+                  <div class="dropdowns">
+                    <li>
+                      <a class="dropdown-item" href="#"><b>By Occasion</b></a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Birthday</a></li>
+                    <li><a class="dropdown-item" href="#">Anniversary</a></li>
+                    <li><a class="dropdown-item" href="#">Wedding</a></li>
+                    <li><a class="dropdown-item" href="#">Baby Shower</a></li>
+                    <li><a class="dropdown-item" href="#">Engagement</a></li>
+                    <li><a class="dropdown-item" href="#">Mother's Day</a></li>
+                    <li><a class="dropdown-item" href="#">Father's Day</a></li>
+                  </div>
+                  <div class="dropdowns">
+                    <li>
+                      <a class="dropdown-item" href="#"><b>By Occasion</b></a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Valentine's Day</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Classic Cakes</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Friendship's Day</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">New Year</a></li>
+                    <li><a class="dropdown-item" href="#">Christmas</a></li>
+                    <li><a class="dropdown-item" href="#">Teacher's Day</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Farewell Cakes</a>
+                    </li>
+                  </div>
+                  <div class="dropdowns">
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><b>Trending Cakes</b></a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Pull Me Up Cake</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Pinata Cake</a></li>
+                    <li><a class="dropdown-item" href="#">Half Cake</a></li>
+                    <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
+                    <li><a class="dropdown-item" href="#">Bento Cake</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Surprise Cake Box</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Photo Pulling Cake</a>
+                    </li>
+                  </div>
+                  <div class="dropdowns">
+                    <li>
+                      <a class="dropdown-item" href="#"><b>Unique Cakes</b></a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Mousse Cake</a></li>
+                    <li><a class="dropdown-item" href="#">Bomb Cake</a></li>
+                  </div>
+                  <div class="dropdowns">
+                    <li>
+                      <a class="dropdown-item" href="#"><b>Premium Cakes</b></a>
+                    </li>
+                  </div>
+                </div>
+              </ul>
+            </li>
+            <li class="nav-item mt-1 mx-3 mb-3">
+              <a
+                class="nav-link text-dark"
+                href="../Category_Page/cake_list.html"
+                >Cup-Cakes</a
+              >
+            </li>
+            <li class="nav-item mt-1 mx-3 mb-3">
+              <a
+                class="nav-link text-dark"
+                href="../Category_Page/cake_list.html"
+                >Pastry</a
+              >
+            </li>
+            <li class="nav-item mt-1 mx-3 mb-3">
+              <a
+                class="nav-link text-dark"
+                href="../Category_Page/cake_list.html"
+                >Desserts</a
+              >
+            </li>
+            <li class="nav-item mt-1 mx-3 mb-3">
+              <a
+                class="nav-link text-dark"
+                href="../Category_Page/cake_list.html"
+                >Trending Cakes</a
+              >
+            </li>
+            <li class="nav-item mt-1 mx-3 mb-3">
+              <a
+                class="nav-link text-dark"
+                href="../Category_Page/cake_list.html"
+                >Unique Cakes</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
 
     <div class="col-sm-12 col-md-12 col-lg-12 container p-4">
       <div class="col-sm-12 col-md-12 col-lg-12 row justify-content-center p-4">
@@ -1039,6 +1147,18 @@
         toggleSwitch.addEventListener("change", toggleDarkMode);
         applyDarkModePreference();
       });
+      function toggleNavbar() {
+    const navbar = document.getElementById("navbarNavDropdown");
+    navbar.classList.toggle("show");
+  }
+
+  function toggleDropdown(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    const dropdown = event.target.nextElementSibling;
+    if (dropdown) {
+      dropdown.classList.toggle("show");
+    }
+  }
       document.addEventListener("DOMContentLoaded", function () {
         var currentLocation = window.location.pathname;
         var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
@@ -1270,4 +1390,6 @@ function updatePrice() {
     </script>
   </body>
 </html>
+
+
 
