@@ -1062,24 +1062,24 @@
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 class="text-uppercase fw-bold mb-4">QUICK LINKS</h6>
               <p>
-                <a href="about.html" class="text-reset">Contact Us</a>
+                <a href="../Quick_Pages/about.html" class="text-reset">Contact Us</a>
               </p>
               <p>
-                <a href="about.html" class="text-reset">About us</a>
+                <a href="../Quick_Pages/about.html" class="text-reset">About us</a>
               </p>
               <p>
-                <a href="privacy-policy.html" class="text-reset"
+                <a href="../Quick_Pages/privacy-policy.html" class="text-reset"
                   >Privacy Policy</a
                 >
               </p>
               <p>
-                <a href="terms.html" class="text-reset">Terms & Conditions</a>
+                <a href="../Quick_Pages/terms.html" class="text-reset">Terms & Conditions</a>
               </p>
               <p>
-                <a href="shipping.html" class="text-reset">Shipping Policy</a>
+                <a href="../Quick_Pages/shipping.html" class="text-reset">Shipping Policy</a>
               </p>
               <p>
-                <a href="cancellation.html" class="text-reset"
+                <a href="../Quick_Pages/cancellation.html" class="text-reset"
                   >Return & Refund Policy</a
                 >
               </p>
@@ -1087,7 +1087,7 @@
                 <a href="FAQ.html" class="text-reset">FAQs</a>
               </p>
               <p>
-                <a href="career.html" class="text-reset">Career</a>
+                <a href="../Quick_Pages/career.html" class="text-reset">Career</a>
               </p>
             </div>
             <div class="col-md-4 col-lg-3 col-xl-4 mx-auto mb-md-0 mb-4">
@@ -1121,32 +1121,7 @@
     <script src="cakes.js"></script>
 
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const toggleSwitch = document.getElementById("darkModeSwitch");
-
-        function applyDarkModePreference() {
-          if (localStorage.getItem("darkMode") === "enabled") {
-            document.body.classList.add("dark-mode");
-            toggleSwitch.checked = true;
-          } else {
-            document.body.classList.remove("dark-mode");
-            toggleSwitch.checked = false;
-          }
-        }
-
-        function toggleDarkMode() {
-          if (toggleSwitch.checked) {
-            document.body.classList.add("dark-mode");
-            localStorage.setItem("darkMode", "enabled");
-          } else {
-            document.body.classList.remove("dark-mode");
-            localStorage.setItem("darkMode", "disabled");
-          }
-        }
-
-        toggleSwitch.addEventListener("change", toggleDarkMode);
-        applyDarkModePreference();
-      });
+   
       function toggleNavbar() {
     const navbar = document.getElementById("navbarNavDropdown");
     navbar.classList.toggle("show");
@@ -1390,6 +1365,4 @@ function updatePrice() {
     </script>
   </body>
 </html>
-
-
 
