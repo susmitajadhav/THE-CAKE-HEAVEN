@@ -1025,97 +1025,95 @@
     </div>
 
     <!-- Quick Buy Modal -->
-    <div
-      class="modal fade"
-      id="quickBuyModal"
-      tabindex="-1"
-      aria-labelledby="quickBuyModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="quickBuyModalLabel">Product Details</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
+<div
+  class="modal fade"
+  id="quickBuyModal"
+  tabindex="-1"
+  aria-labelledby="quickBuyModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="quickBuyModalLabel">Product Details</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <img
+              src=""
+              class="img-thumbnail"
+              id="modalProductImage"
+              alt="Product Image"
+            />
           </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-md-6">
-                <img
-                  src=""
-                  class="img-thumbnail"
-                  id="modalProductImage"
-                  alt="Product Image"
+          <div class="col-md-6">
+            <h5 id="modalProductName">Product Name</h5>
+            <p id="modalProductDescription">Product Description</p>
+            <form>
+              <div class="form-group">
+                <label for="modalProductWeight">Weight</label>
+                <select
+                  class="form-control"
+                  id="modalProductWeight"
+                  onchange="updatePrice()"
+                >
+                  <option value="0.5">0.5 kg</option>
+                  <option value="1">1 kg</option>
+                  <option value="2">2 kg</option>
+                  <option value="3">3 kg</option>
+                  <option value="4">4 kg</option>
+                  <option value="5">5 kg</option>
+                </select>
+              </div>
+              <div class="form-group mt-2">
+                <label for="modalProductFlavor">Flavor</label>
+                <select class="form-control" id="modalProductFlavor">
+                  <option>Chocolate</option>
+                  <option>Vanilla</option>
+                  <option>Strawberry</option>
+                </select>
+              </div>
+              <div class="form-group mt-2">
+                <label for="modalProductEgg">Egg/Eggless</label>
+                <select
+                  class="form-control"
+                  id="modalProductEgg"
+                  onchange="updatePrice()"
+                >
+                  <option value="withEgg">With Egg</option>
+                  <option value="eggless">Eggless</option>
+                </select>
+              </div>
+              <div class="form-group mt-2">
+                <label for="modalProductPrice">Price</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="modalProductPrice"
+                  readonly
                 />
               </div>
-              <div class="col-md-6">
-                <h5 id="modalProductName">Product Name</h5>
-                <p id="modalProductDescription">Product Description</p>
-                <form>
-                  <div class="form-group">
-                    <label for="modalProductWeight">Weight</label>
-                    <select
-                      class="form-control"
-                      id="modalProductWeight"
-                      onchange="updatePrice()"
-                    >
-                      <option value="0.5">0.5 kg</option>
-                      <option value="1">1 kg</option>
-                      <option value="2">2 kg</option>
-                      <option value="3">3 kg</option>
-                      <option value="4">4 kg</option>
-                      <option value="5">5 kg</option>
-                    </select>
-                  </div>
-                  <div class="form-group mt-2">
-                    <label for="modalProductFlavor">Flavor</label>
-                    <select class="form-control" id="modalProductFlavor">
-                      <option>Chocolate</option>
-                      <option>Vanilla</option>
-                      <option>Strawberry</option>
-                    </select>
-                  </div>
-                  <div class="form-group mt-2">
-                    <label for="modalProductEgg">Egg/Eggless</label>
-                    <select
-                      class="form-control"
-                      id="modalProductEgg"
-                      onchange="updatePrice()"
-                    >
-                      <option value="withEgg">With Egg</option>
-                      <option value="eggless">Eggless</option>
-                    </select>
-                  </div>
-                  <div class="form-group mt-2">
-                    <label for="modalProductPrice">Price</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="modalProductPrice"
-                      readonly
-                    />
-                  </div>
-                  <button
-                    type="button"
-                    class="btn btn-primary mt-2"
-                    onclick="buyNow()"
-                  >
-                    Buy Now
-                  </button>
-                </form>
-              </div>
-            </div>
+              <button
+                type="button"
+                class="btn btn-primary mt-2"
+                onclick="buyNow()"
+              >
+                Buy Now
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
     <nav aria-label="Page navigation">
       <ul class="pagination justify-content-center">
