@@ -155,6 +155,57 @@
          z-index: 1100; 
         }
       }
+      @media (max-width: 600px) {
+  /* Center the wishlist items */
+  #wishlistItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* Wishlist card styling */
+  .wishlist-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 350px;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  /* Image styling */
+  .wishlist-card .cake-img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+
+  /* Buttons in one row */
+  .wishlist-card .px-4 {
+    width: 100%;
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: space-between; /* Space buttons apart */
+    align-items: center; /* Align buttons vertically */
+    margin-top: 10px; /* Optional spacing above buttons */
+  }
+
+  /* Button styling */
+  .wishlist-card .btn {
+    flex: 1; /* Allow buttons to evenly share available space */
+    margin: 0 5px; /* Add spacing between buttons */
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 8px; /* Adjust padding for uniform appearance */
+    max-width: 120px; /* Prevent buttons from becoming too large */
+  }
+}
+
+
      </style>
   </head>
   <body>
@@ -479,13 +530,9 @@
           </div>
             
           <div class="px-4">
-            <div class="pt-4">
-              <button class="btn btn-sm btn-primary" onclick="addFromWishlistToCart(${index})">Add to Cart</button>
-            </div>
-            <div class="pt-2">
-              <button class="btn btn-sm btn-danger" onclick="removeFromWishlist(${index})">Remove</button>
-            </div>
-          </div>
+           <button class="btn btn-sm btn-primary" onclick="addFromWishlistToCart(${index})">Add to Cart</button>
+          <button class="btn btn-sm btn-danger" onclick="removeFromWishlist(${index})">Remove</button>
+        </div>
       </div>
     `;
               wishlistItems.innerHTML += wishlistCard;
