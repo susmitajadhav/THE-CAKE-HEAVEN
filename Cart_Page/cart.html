@@ -265,6 +265,30 @@
           margin: 0 auto;
         }
 }
+    @media (max-width: 600px) {
+  #recommendationItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the recommendation cards */
+    gap: 15px;
+  }
+
+  #recommendationItems .row > div {
+    flex: 1 0 100%; 
+    text-align: center;
+  }
+
+  #recommendationItems .card, 
+  #recommendationItems .cake-img {
+    width: 100%; 
+    max-width: 300px; 
+  }
+
+  #recommendationItems .cake-img {
+    height: auto;
+  }
+}
+    
  </style>
   </head>
 
